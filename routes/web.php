@@ -3,11 +3,6 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LecturerController;
-use App\Models\Course;
-use App\Models\Module;
-use App\Models\Schedule;
-use App\Models\Timetable;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +21,9 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::resource('courses', CourseController::class)->only([
-    'index', 'show'
+    'index', 'show',
 ]);
 
 Route::resource('lecturers', LecturerController::class)->only([
-    'index', 'show'
+    'index', 'show',
 ]);
-

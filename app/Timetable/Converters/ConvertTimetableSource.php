@@ -2,15 +2,14 @@
 
 namespace App\Timetable\Converters;
 
-use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Scraped a timetable page.
  */
-class ConvertTimetableSource {
-
+class ConvertTimetableSource
+{
     /**
      * Create an associative table from the content table.
      *
@@ -25,7 +24,7 @@ class ConvertTimetableSource {
         // collect timetable information...
         $rawTable = self::GetRawTableFromHTML($crawler);
 
-        for($i = 1, $iMax = count($rawTable); $i < $iMax; $i++) {
+        for ($i = 1, $iMax = count($rawTable); $i < $iMax; $i++) {
             if ($rawTable[$i]['rowspan'] > 1) {
                 self::AssignMissingDayToRawTableData($rawTable[$i], $rawTable, $i);
             }
@@ -50,9 +49,9 @@ class ConvertTimetableSource {
     private static function GetRawTableMetaFromHtml(Crawler $crawler)
     {
         return [
-            'group' => $crawler->filter("body>table>tr:nth-child(4)>td>table:nth-child(1)>tr>td>table>tr>td:nth-child(1)>font")->text(),
-            'department' => $crawler->filter("body>table>tr:nth-child(4)>td>table:nth-child(1)>tr>td>table>tr>td:nth-child(2)>font")->text(),
-            'week' => $crawler->filter("body>table>tr:nth-child(4)>td>table:nth-child(1)>tr>td>table>tr>td:nth-child(3)>font")->text(),
+            'group' => $crawler->filter('body>table>tr:nth-child(4)>td>table:nth-child(1)>tr>td>table>tr>td:nth-child(1)>font')->text(),
+            'department' => $crawler->filter('body>table>tr:nth-child(4)>td>table:nth-child(1)>tr>td>table>tr>td:nth-child(2)>font')->text(),
+            'week' => $crawler->filter('body>table>tr:nth-child(4)>td>table:nth-child(1)>tr>td>table>tr>td:nth-child(3)>font')->text(),
         ];
     }
 
@@ -64,12 +63,12 @@ class ConvertTimetableSource {
      */
     private static function GetRawTableFromHTML(Crawler $crawler): array
     {
-        $results = $crawler->filter("body>table>tr:nth-child(4)>td>table:nth-child(2)>tr")->each(function(Crawler $row, int $rowIndex) use (&$currentTime) {
+        $results = $crawler->filter('body>table>tr:nth-child(4)>td>table:nth-child(2)>tr')->each(function (Crawler $row, int $rowIndex) use (&$currentTime) {
             $timetracking = 1;
+
             return [
                 'rowspan' => $row->filter('td')->first()->attr('rowspan'),
-                'columns' => $row->children()->each(function(Crawler $col, int $colIndex) use ($rowIndex, &$timetracking)
-                {
+                'columns' => $row->children()->each(function (Crawler $col, int $colIndex) use ($rowIndex, &$timetracking) {
                     if ($rowIndex == 0) {
                         return $col->text();
                     }
@@ -90,7 +89,8 @@ class ConvertTimetableSource {
                     }
 
                     $timetracking++;
-                    return " ";
+
+                    return ' ';
                 }),
             ];
         });
@@ -118,7 +118,6 @@ class ConvertTimetableSource {
     private static function PushScheduleToCollection(Collection $schedules, array $times, $row): void
     {
         foreach (array_splice($row['columns'], 1) as $key => $value) {
-
             if (is_array($value)) {
                 $schedules->push([
                     'module' => $value['module'],
@@ -135,6 +134,6 @@ class ConvertTimetableSource {
 
     private static function getScheduleColumnPosition(int $column_position)
     {
-        return now()->setTime(config('timetable.time.starting_hour'),0,0,0)->addMinutes(config('timetable.time.increment_minutes') * ($column_position - 1))->format('H:i');
+        return now()->setTime(config('timetable.time.starting_hour'), 0, 0, 0)->addMinutes(config('timetable.time.increment_minutes') * ($column_position - 1))->format('H:i');
     }
 }

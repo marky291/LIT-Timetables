@@ -26,5 +26,4 @@ class LecturerTest extends TestCase
 
         $this->assertCount(3, $lecturer->schedules);
     }
-
 }

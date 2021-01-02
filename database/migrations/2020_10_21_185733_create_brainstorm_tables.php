@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateBrainstormTables extends Migration
 {
-     /**
+    /**
      * Run the migrations.
      *
      * @return void
@@ -57,13 +57,13 @@ class CreateBrainstormTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('campuses', function(Blueprint $table) {
+        Schema::create('campuses', function (Blueprint $table) {
             $table->id();
             $table->string('location');
             $table->timestamps();
         });
 
-        Schema::create('schedules', function(Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('academic_week');
             $table->timestamp('starting_date');

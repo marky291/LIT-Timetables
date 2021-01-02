@@ -25,6 +25,5 @@ class RequestsFactory extends DataFactory
         return array_merge([
             'course_id' => Course::factory(),
         ], $this->fromFile('requests'));
-
     }
 }

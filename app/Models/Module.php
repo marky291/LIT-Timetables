@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * Class Module
+ * Class Module.
  *
- * @package App
  * @method static updateOrCreate(array $array, array $array1)
  * @method static Builder where(string $string, $i)
  * @method static firstOrCreate(array $array)

@@ -7,8 +7,7 @@ use App\Models\Lecturer;
 use App\Models\Module;
 use App\Models\Room;
 use App\Models\Schedule;
-use App\Models\Requests;
-use App\Timetable;
+use App\Models\Type;
 use App\Timetable\Converters\ConvertTimetableSource;
 use App\Timetable\DateConverter;
 use App\Timetable\Events\ScheduledDayHasChanged;
@@ -21,18 +20,15 @@ use App\Timetable\Events\TimetableFetchFailed;
 use App\Timetable\Events\TimetableFetchSuccesfully;
 use App\Timetable\Events\TimetableWasChanged;
 use App\Timetable\Exceptions\ReturnedBadResponseException;
-use App\Models\Type;
 use Carbon\Carbon;
 use Exception;
 use Goutte\Client;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Spatie\Regex\Regex;
 
 class CreateCourseSchedules implements ShouldQueue
@@ -83,7 +79,7 @@ class CreateCourseSchedules implements ShouldQueue
             $responseTime = $afterTime - $beforeTime;
 
             if ($http->getInternalResponse()->getStatusCode() !== 200) {
-                throw new ReturnedBadResponseException('Response ' . $http->getInternalResponse()->getStatusCode() . ' from ' . $this->timetableLink);
+                throw new ReturnedBadResponseException('Response '.$http->getInternalResponse()->getStatusCode().' from '.$this->timetableLink);
             }
 
             $parsedHtml = ConvertTimetableSource::GetAvailableSchedulesFromCrawler($rawHtml);
@@ -114,7 +110,6 @@ class CreateCourseSchedules implements ShouldQueue
             $course = $this->course;
 
             DB::transaction(function () use ($course, $parsedHtml, $http, $responseTime) {
-
                 $course->requests()->create([
                     'response' => $http->getInternalResponse()->getStatusCode(),
                     'time' => round($responseTime, 3),
@@ -125,7 +120,6 @@ class CreateCourseSchedules implements ShouldQueue
 
                 /** @var Schedule $schedules */
                 foreach ($parsedHtml->get('schedules') as $schedule) {
-
                     $module = Module::firstOrCreate([
                         'name' => $schedule['module'],
                     ]);
@@ -144,15 +138,15 @@ class CreateCourseSchedules implements ShouldQueue
                         'ending_date' => $this->extractDatesFromSchedule($schedule, $parsedHtml['meta'])['end'],
                         'module_id' => $module->id,
                         'lecturer_id' => $lecturer->id,
-                        'academic_week' => (int)Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/', $parsedHtml['meta']['week'])->result(),
+                        'academic_week' => (int) Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/', $parsedHtml['meta']['week'])->result(),
                         'room_id' => $room->id,
                         'type_id' => $type->id,
                     ]);
                 }
             });
-
         } catch (Exception $e) {
             event(new TimetableFetchFailed($this->course));
+
             return;
         }
 
@@ -171,7 +165,7 @@ class CreateCourseSchedules implements ShouldQueue
         preg_match_all("/\d{1,2} [a-zA-Z]{3} \d{4}/", $meta['week'], $matches);
 
         $carbonStart = Carbon::parse($matches[0][0])->addRealDays(DateConverter::convertShorthandDateToInt($schedule['day_of_week']))->setTimeFromTimeString($schedule['starting_time'])->toDateTimeString();
-        $carbonEnd   = Carbon::parse($matches[0][0])->addRealDays(DateConverter::convertShorthandDateToInt($schedule['day_of_week']))->setTimeFromTimeString($schedule['ending_time'])->toDateTimeString();
+        $carbonEnd = Carbon::parse($matches[0][0])->addRealDays(DateConverter::convertShorthandDateToInt($schedule['day_of_week']))->setTimeFromTimeString($schedule['ending_time'])->toDateTimeString();
 
         return ['start' => $carbonStart, 'end' => $carbonEnd];
     }

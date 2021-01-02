@@ -3,13 +3,11 @@
 namespace App\Models;
 
 use App\Interfaces\RoutableInterface;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
 use Laravel\Scout\Searchable;
 
@@ -25,7 +23,6 @@ use Laravel\Scout\Searchable;
 class Course extends Model implements RoutableInterface
 {
     use HasFactory;
-
     use Searchable;
 
     /**

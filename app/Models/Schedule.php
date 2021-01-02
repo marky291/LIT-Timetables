@@ -40,7 +40,7 @@ class Schedule extends Model
         'academic_week',
         'lecturer_id',
         'room_id',
-        'type_id'
+        'type_id',
     ];
 
     /**

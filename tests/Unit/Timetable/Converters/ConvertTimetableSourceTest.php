@@ -3,9 +3,9 @@
 namespace Tests\Unit\Timetable\Converters;
 
 use App\Timetable\Converters\ConvertTimetableSource;
-use Mockery;
 use Goutte\Client;
 use Illuminate\Support\Facades\File;
+use Mockery;
 use Mockery\MockInterface;
 use Symfony\Component\DomCrawler\Crawler;
 use Tests\TestCase;

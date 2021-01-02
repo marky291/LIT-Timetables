@@ -12,7 +12,7 @@ class Upcoming extends Component
     public function render()
     {
         return view('livewire.schedules.upcoming', [
-            'today' => $this->schedules->today()->upcoming()
+            'today' => $this->schedules->today()->upcoming(),
         ]);
     }
 }

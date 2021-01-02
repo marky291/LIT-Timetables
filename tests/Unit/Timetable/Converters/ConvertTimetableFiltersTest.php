@@ -17,7 +17,7 @@ class ConvertTimetableFiltersTest extends TestCase
     private $filter;
 
     /**
-     * Setup
+     * Setup.
      */
     protected function setUp(): void
     {

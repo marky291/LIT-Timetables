@@ -11,7 +11,6 @@ use App\Timetable\Regex\RegexDataFromCourseName;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
@@ -67,17 +66,16 @@ class CreateDepartmentCourses implements ShouldQueue
         // create campus and cources associated with department
         foreach ($this->decoder->courses()->unique('slug')->all() as $index => $scraped_course) {
             try {
-                DB::transaction(function() use ($scraped_course) {
-                    $regex  = $this->getRegexFromValue($scraped_course);
+                DB::transaction(function () use ($scraped_course) {
+                    $regex = $this->getRegexFromValue($scraped_course);
                     $campus = Campus::firstOrCreate(['location' => $regex->getLocation()]);
                     Course::where('identifier', $regex->getIdentifier())->firstOr(function () use ($regex, $campus, $scraped_course) {
                         $course = Course::make($regex->toArray());
                         $course = $course->campus()->associate($campus);
-                        $dept   = $this->departments->firstWhere('filter', $scraped_course->filter);
+                        $dept = $this->departments->firstWhere('filter', $scraped_course->filter);
                         $course = $course->department()->associate($dept);
                         $course->save();
                     });
-
                 });
             } catch (UnknownCourseLocationException $e) {
                 Log::info($e->getMessage());

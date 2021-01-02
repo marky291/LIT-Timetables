@@ -4,11 +4,9 @@ namespace App\Http\Livewire;
 
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
-use stdClass;
 
 class Weather extends Component
 {
-
     private $api;
 
     public $city;
@@ -37,6 +35,6 @@ class Weather extends Component
 
     private function getWeatherIcon()
     {
-       return "https://openweathermap.org/img/wn/{$this->api->weather[0]->icon}@2x.png";
+        return "https://openweathermap.org/img/wn/{$this->api->weather[0]->icon}@2x.png";
     }
 }

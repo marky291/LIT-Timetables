@@ -2,8 +2,6 @@
 
 namespace App\Http\Livewire\Schedules;
 
-use App\Models\Course;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
@@ -15,9 +13,9 @@ class Week extends Component
     public function render()
     {
         return view('livewire.schedules.week', [
-            'days' => $this->schedules->groupBy(function($schedule) {
+            'days' => $this->schedules->groupBy(function ($schedule) {
                 return $schedule->starting_date->format('l');
-            })
+            }),
         ]);
     }
 }

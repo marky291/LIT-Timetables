@@ -7,8 +7,8 @@ use Illuminate\Support\Collection;
 /**
  * Mainly scraped @filter.js from lit timetable service.
  */
-class ConvertTimetableFilters {
-
+class ConvertTimetableFilters
+{
     private $content;
 
     public function __construct(string $content)
@@ -21,12 +21,12 @@ class ConvertTimetableFilters {
         return $this->getEntries('deptarray', ['name' => 0, 'filter' => 1]);
     }
 
-    public function modules() : Collection
+    public function modules(): Collection
     {
         return $this->getEntries('modulearray', ['name' => 0, 'filter' => 1, 'slug' => 2]);
     }
 
-    public function courses() : Collection
+    public function courses(): Collection
     {
         return $this->getEntries('studsetarray', ['name' => 0, 'filter' => 1, 'slug' => 2]);
     }
@@ -41,19 +41,16 @@ class ConvertTimetableFilters {
         $scraper = new Collection();
 
         // create matches, singular arrays.
-        foreach ($generator as $name => $position)
-        {
+        foreach ($generator as $name => $position) {
             $scraper->put($name, $this->getAllMatches($pattern, $position));
         }
 
         $entries = new Collection();
 
         // create multi-dimentional array, not singular.
-        for ($i = 0; $i < count($scraper[$scraper->keys()->first()]); $i++)
-        {
+        for ($i = 0; $i < count($scraper[$scraper->keys()->first()]); $i++) {
             $std = new \stdClass();
-            for ($j = 0; $j < count($scraper->keys()); $j++)
-            {
+            for ($j = 0; $j < count($scraper->keys()); $j++) {
                 $std->{$scraper->keys()[$j]} = $scraper->get($scraper->keys()[$j])[$i];
             }
             $entries->add($std);
@@ -67,9 +64,11 @@ class ConvertTimetableFilters {
      * @param int $position
      * @return mixed
      */
-    private function getAllMatches(string $pattern, int $position) {
+    private function getAllMatches(string $pattern, int $position)
+    {
         $matches = [];
         preg_match_all("/\b".$pattern."\[\d+\] \[".$position."\] = \"(.*?)\"/", $this->content, $matches);
+
         return $matches[1];
     }
 }

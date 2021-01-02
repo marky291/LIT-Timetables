@@ -3,25 +3,21 @@
 namespace App\Models;
 
 use App\Interfaces\RoutableInterface;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 
 /**
- * Class Lecturer
+ * Class Lecturer.
  *
  * @property string $forename
  * @property string $lastname
  *
- * @package App
  * @method static firstOrCreate(array $array)
  */
 class Lecturer extends Model implements RoutableInterface
 {
     use HasFactory;
-
     use Searchable;
 
     /**
