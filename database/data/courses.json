@@ -1,0 +1,4018 @@
+[
+  {
+    "name": "Business Studies with Sports Management - Year 4 Group B",
+    "title": "m_sltSmgmt4B - (Moylish) Business Studies with Sports Management - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt4B"
+  },
+  {
+    "name": "Sustainable Building and Energy Engineering - Year 3 Group A",
+    "title": "m_beSbee3A - (Moylish) Sustainable Building and Energy Engineering - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beSbee3A"
+  },
+  {
+    "name": "Beauty and Spa Management - Year 1 Group C",
+    "title": "m_sltBsm1C - (Moylish) Beauty and Spa Management - Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_sltBsm1C"
+  },
+  {
+    "name": "Game Art and Design (L8) - Year 2 Group A",
+    "title": "dcmGad2 - (Clonmel) Game Art and Design (L8) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmGad2"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 1 Group B",
+    "title": "m_sltEm1B - (Moylish) Business Studies with Event Management - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltEm1B"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group E2",
+    "title": "m_assScw4E2 - (Moylish) Social Care Work - Year 4 Group E2",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw4E2"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group A",
+    "title": "e_assScw1A - (Ennis) Social Care Work -  Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assScw1A"
+  },
+  {
+    "name": "Early Childhood Care and Education -  Year 1 Group A",
+    "title": "t_assEcce1A - (Thurles) Early Childhood Care and Education -  Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assEcce1A"
+  },
+  {
+    "name": "Community Sports Development - Year 1 Group A",
+    "title": "m_sltCsd1A - (Moylish) Community Sports Development - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltCsd1A"
+  },
+  {
+    "name": "Business - Year 1 Group D",
+    "title": "m_bfsBu1D - (Moylish) Business - Year 1 Group D",
+    "year": 1,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_bfsBu1D"
+  },
+  {
+    "name": "Business - Year 1 Group A",
+    "title": "e_bfsBu1A - (Ennis) Business - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_bfsBu1A"
+  },
+  {
+    "name": "Software Development - Year 1 Group B",
+    "title": "m_itSd1B - (Moylish) Software Development - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_itSd1B"
+  },
+  {
+    "name": "Phase 4 Carpentry and Joinery - Group A",
+    "title": "m_beP4CJA - (Moylish) Phase 4 Carpentry and Joinery - Group A",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beP4CJA"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 3 Group A",
+    "title": "m_sltSmgmt3A - (Moylish) Business Studies with Sports Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt3A"
+  },
+  {
+    "name": "Master of Arts in Social Care Management - Year 1",
+    "title": "m_assMAScm1 - (Moylish) Master of Arts in Social Care Management - Year 1",
+    "year": 1,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_assMAScm1"
+  },
+  {
+    "name": "Digital Animation (L8) - Year 2 Group A",
+    "title": "dcmDap2 - (Clonmel) Digital Animation (L8) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmDap2"
+  },
+  {
+    "name": "Biotechnology and Biopharmaceutical Science - Year 1 Group A",
+    "title": "m_scBbs1A - (Moylish) Biotechnology and Biopharmaceutical Science - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_scBbs1A"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group CB2",
+    "title": "scFps1CB2 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group CB2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scFps1CB2"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group CB1",
+    "title": "scFps1CB1 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group CB1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scFps1CB1"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group CA2",
+    "title": "scFps1CA2 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group CA2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scFps1CA2"
+  },
+  {
+    "name": "Drug and Medicinal Product Analysis - Year 1 Group B",
+    "title": "scDmpa1B - (Moylish) Drug and Medicinal Product Analysis - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scDmpa1B"
+  },
+  {
+    "name": "Masters in Quantity Surveying (L9) Group B",
+    "title": "m_beMScQsB - (Moylish) Masters in Quantity Surveying (L9) Group B",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beMScQsB"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group B",
+    "title": "t_assScw1B - (Thurles) Social Care Work -  Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_assScw1B"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group CA1",
+    "title": "scFps1CA1 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group CA1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scFps1CA1"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group B2",
+    "title": "scFps1B2 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group B2",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scFps1B2"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group A2",
+    "title": "scFps1A2 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group A2",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scFps1A2"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group C",
+    "title": "t_assScw1C - (Thurles) Social Care Work -  Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Thurles",
+    "identifier": "t_assScw1C"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group C2",
+    "title": "e_assScw1C2 - (Ennis) Social Care Work -  Year 1 Group C2",
+    "year": 1,
+    "group": "C",
+    "location": "Ennis",
+    "identifier": "e_assScw1C2"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group C1",
+    "title": "e_assScw1C1 - (Ennis) Social Care Work -  Year 1 Group C1",
+    "year": 1,
+    "group": "C",
+    "location": "Ennis",
+    "identifier": "e_assScw1C1"
+  },
+  {
+    "name": "Process and Engineering Management - Year 4 Group B",
+    "title": "m_mechPro4B - (Moylish) Process and Engineering Management - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechPro4B"
+  },
+  {
+    "name": "Music Technology and Production - Year 3 Group C1",
+    "title": "m_adMtp3C1 - (Moylish) Music Technology and Production - Year 3 Group C1",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp3C1"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 3 Group B",
+    "title": "m_sltEm3B - (Moylish) Business Studies with Event Management - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltEm3B"
+  },
+  {
+    "name": "Phase 4 Electrical - Group D",
+    "title": "elP4ElectD - (Moylish) Phase 4 Electrical - Group D",
+    "year": null,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "elP4ElectD"
+  },
+  {
+    "name": "Phase 6 Electrical - Group D",
+    "title": "m_elP6ElectD - (Moylish) Phase 6 Electrical - Group D",
+    "year": null,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_elP6ElectD"
+  },
+  {
+    "name": "Game Art and Design (L8) - Year 3 Group A",
+    "title": "c_dcmGad3A - (Clonmel) Game Art and Design (L8) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "c_dcmGad3A"
+  },
+  {
+    "name": "Higher Certificate in Marketing and Management (L6) - Year 2 Group B",
+    "title": "t_sltMm2B(C) - (Thurles) Higher Certificate in Marketing and Management (L6) - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm2B%28C%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 2 Group B",
+    "title": "t_sltMm2B(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm2B%28H%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management Degree (L7) - Year 2 Group B",
+    "title": "t_sltMm2B(O) - (Thurles) Bachelor of Marketing and Management Degree (L7) - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm2B%28O%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 3 Group B",
+    "title": "t_sltMm3B(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm3B%28H%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management Degree (L7) - Year 3 Group B",
+    "title": "t_sltMm3B(O) - (Thurles) Bachelor of Marketing and Management Degree (L7) - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm3B%28O%29"
+  },
+  {
+    "name": "Creative Multimedia (L7) - Year 2",
+    "title": "dcmCm2(O) - (Clonmel) Creative Multimedia (L7) - Year 2",
+    "year": 2,
+    "group": null,
+    "location": "Clonmel",
+    "identifier": "dcmCm2%28O%29"
+  },
+  {
+    "name": "Creative Multimedia (L8) - Year 2",
+    "title": "dcmCm2(H) - (Clonmel) Creative Multimedia (L8) - Year 2",
+    "year": 2,
+    "group": null,
+    "location": "Clonmel",
+    "identifier": "dcmCm2%28H%29"
+  },
+  {
+    "name": "Precision Engineering - Year 3 Group A",
+    "title": "m_mechPre3A - (Moylish) Precision Engineering - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechPre3A"
+  },
+  {
+    "name": "Precision Engineering - Year 3 Group C",
+    "title": "m_mechPre3C - (Moylish) Precision Engineering - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_mechPre3C"
+  },
+  {
+    "name": "Applied Biology - Year 2 Group B",
+    "title": "scAb2B - (Moylish) Applied Biology - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scAb2B"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group A1",
+    "title": "scFps1A1 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group A1",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scFps1A1"
+  },
+  {
+    "name": "Marketing and Management - Year 1 Group C",
+    "title": "m_medcMm1C - (Moylish) Marketing and Management - Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_medcMm1C"
+  },
+  {
+    "name": "Creative Media and Design (L8) - Year 1",
+    "title": "dcmCm1(H) - (Clonmel) Creative Media and Design (L8) - Year 1",
+    "year": 1,
+    "group": null,
+    "location": "Clonmel",
+    "identifier": "dcmCm1%28H%29"
+  },
+  {
+    "name": "Creative Multimedia (L8) - Year 3 Group A",
+    "title": "dcmCm3A(H) - (Clonmel) Creative Multimedia (L8) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmCm3A%28H%29"
+  },
+  {
+    "name": "Mechanical Engineering - Year 2 Group C",
+    "title": "m_mechMeng2C - (Moylish) Mechanical Engineering - Year 2 Group C",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_mechMeng2C"
+  },
+  {
+    "name": "Creative Broadcast - Year 2 Group B",
+    "title": "m_adCb2B - (Moylish) Creative Broadcast - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adCb2B"
+  },
+  {
+    "name": "Electrical Engineering - Year 3 Group A",
+    "title": "m_elEl3A - (Moylish) Electrical Engineering - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEl3A"
+  },
+  {
+    "name": "Agricultural Mechanisation - Year 1 Group B",
+    "title": "m_mechAgri1B - (Moylish) Agricultural Mechanisation - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechAgri1B"
+  },
+  {
+    "name": "Higher Diploma in Digital Marketing",
+    "title": "m_medcHDipDm - (Moylish) Higher Diploma in Digital Marketing",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_medcHDipDm"
+  },
+  {
+    "name": "Software Development - Year 1 Group C",
+    "title": "m_itSd1C - (Moylish) Software Development - Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_itSd1C"
+  },
+  {
+    "name": "Accounting and Finance - Year 1 Group A",
+    "title": "m_bfsAf1A - (Moylish) Accounting and Finance - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsAf1A"
+  },
+  {
+    "name": "Accounting and Finance - Year 2 Group A",
+    "title": "m_bfsAf2A - (Moylish) Accounting and Finance - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsAf2A"
+  },
+  {
+    "name": "Accounting and Finance - Year 3 Group A",
+    "title": "m_bfsAf3A - (Moylish) Accounting and Finance - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsAf3A"
+  },
+  {
+    "name": "Accounting and Finance - Year 4 Group A",
+    "title": "m_bfsAf4A - (Moylish) Accounting and Finance - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsAf4A"
+  },
+  {
+    "name": "Law and Taxation - Year 1 Group A",
+    "title": "m_bfsLt1A - (Moylish) Law and Taxation - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsLt1A"
+  },
+  {
+    "name": "Law and Taxation - Year 2 Group A",
+    "title": "m_bfsLt2A - (Moylish) Law and Taxation - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsLt2A"
+  },
+  {
+    "name": "Law and Taxation - Year 3 Group A",
+    "title": "m_bfsLt3A - (Moylish) Law and Taxation - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsLt3A"
+  },
+  {
+    "name": "Law and Taxation - Year 4 Group A",
+    "title": "m_bfsLt4A - (Moylish) Law and Taxation - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsLt4A"
+  },
+  {
+    "name": "Marketing and Management - Year 1 Group A",
+    "title": "m_medcMm1A - (Moylish) Marketing and Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcMm1A"
+  },
+  {
+    "name": "Marketing and Management - Year 2 Group A",
+    "title": "m_medcMm2A - (Moylish) Marketing and Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcMm2A"
+  },
+  {
+    "name": "Marketing and Management - Year 3 Group A",
+    "title": "m_medcMm3A - (Moylish) Marketing and Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcMm3A"
+  },
+  {
+    "name": "Marketing and Management - Year 4 Group A",
+    "title": "m_medcMm4A - (Moylish) Marketing and Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcMm4A"
+  },
+  {
+    "name": "Industrial Automation and Robotics - Year 1 Group A",
+    "title": "m_elIar1A - (Moylish) Industrial Automation and Robotics - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elIar1A"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 2 Group A",
+    "title": "m_elIar2A - (Moylish) Industrial Automation and Robotic Systems - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elIar2A"
+  },
+  {
+    "name": "Electronic Engineering - Year 1 Group A",
+    "title": "m_elEc1A - (Moylish) Electronic Engineering - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEc1A"
+  },
+  {
+    "name": "Electronic Engineering - Year 2 Group A",
+    "title": "m_elEc2A - (Moylish) Electronic Engineering - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEc2A"
+  },
+  {
+    "name": "Electronic Engineering - Year 3 Group A",
+    "title": "m_elEc3A - (Moylish) Electronic Engineering - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEc3A"
+  },
+  {
+    "name": "Electronic Systems - Year 4 Group A",
+    "title": "m_elEc4A - (Moylish) Electronic Systems - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEc4A"
+  },
+  {
+    "name": "Music Technology and Production - Year 1 Group A",
+    "title": "m_adMtp1A - (Moylish) Music Technology and Production - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adMtp1A"
+  },
+  {
+    "name": "Music Technology and Production - Year 2 Group A",
+    "title": "m_adMtp2A - (Moylish) Music Technology and Production - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adMtp2A"
+  },
+  {
+    "name": "Music Technology and Production - Year 3 Group A1",
+    "title": "m_adMtp3A1 - (Moylish) Music Technology and Production - Year 3 Group A1",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adMtp3A1"
+  },
+  {
+    "name": "Phase 4 Electrical - Group A",
+    "title": "m_elP4ElectA - (Moylish) Phase 4 Electrical - Group A",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elP4ElectA"
+  },
+  {
+    "name": "Phase 6 Electrical - Group A",
+    "title": "m_elP6ElectA - (Moylish) Phase 6 Electrical - Group A",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elP6ElectA"
+  },
+  {
+    "name": "Renewable and Electrical Energy Systems - Year 1 Group A",
+    "title": "m_elRe1A - (Moylish) Renewable and Electrical Energy Systems - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elRe1A"
+  },
+  {
+    "name": "Renewable and Electrical Energy Systems - Year 3 Group A",
+    "title": "m_elRe3A - (Moylish) Renewable and Electrical Energy Systems - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elRe3A"
+  },
+  {
+    "name": "Creative Broadcast - Year 1 Group A",
+    "title": "m_adCb1A - (Moylish) Creative Broadcast - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adCb1A"
+  },
+  {
+    "name": "Creative Broadcast - Year 2 Group A",
+    "title": "m_adCb2A - (Moylish) Creative Broadcast - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adCb2A"
+  },
+  {
+    "name": "Creative Broadcast - Year 3 Group A",
+    "title": "m_adCb3A - (Moylish) Creative Broadcast - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adCb3A"
+  },
+  {
+    "name": "Business Studies with Travel and Tourism - Year 2 Group A",
+    "title": "m_sltBst2A - (Moylish) Business Studies with Travel and Tourism - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltBst2A"
+  },
+  {
+    "name": "Business Studies with Travel and Tourism - Year 3 Group A",
+    "title": "m_sltBst3A - (Moylish) Business Studies with Travel and Tourism - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltBst3A"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 1 Group A",
+    "title": "m_sltEm1A - (Moylish) Business Studies with Event Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltEm1A"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 2 Group A",
+    "title": "m_sltEm2A - (Moylish) Business Studies with Event Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltEm2A"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 3 Group A",
+    "title": "m_sltEm3A - (Moylish) Business Studies with Event Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltEm3A"
+  },
+  {
+    "name": "Front Office Management - Year 1 Group A",
+    "title": "m_sltFom1A - (Moylish) Front Office Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltFom1A"
+  },
+  {
+    "name": "Front Office Management - Year 2 Group A",
+    "title": "m_sltFom2A - (Moylish) Front Office Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltFom2A"
+  },
+  {
+    "name": "Culinary Arts - Year 1 Group A",
+    "title": "m_sltCa1A - (Moylish) Culinary Arts - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltCa1A"
+  },
+  {
+    "name": "Culinary Arts - Year 2 Group A",
+    "title": "m_sltCa2A - (Moylish) Culinary Arts - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltCa2A"
+  },
+  {
+    "name": "Apprenticeship",
+    "title": "m_sltApprenticeship - (Moylish) Apprenticeship",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_sltApprenticeship"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group A1",
+    "title": "m_assScw1A1 - (Moylish) Social Care Work - Year 1 Group A1",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw1A1"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group A1",
+    "title": "m_assScw2A1 - (Moylish) Social Care Work - Year 2 Group A1",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw2A1"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group A1",
+    "title": "m_assScw3A1 - (Moylish) Social Care Work - Year 3 Group A1",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw3A1"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group A1",
+    "title": "m_assScw4A1 - (Moylish) Social Care Work - Year 4 Group A1",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw4A1"
+  },
+  {
+    "name": "Hospitality Studies - Year 1 Group A",
+    "title": "m_sltHs1A - (Moylish) Hospitality Studies - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltHs1A"
+  },
+  {
+    "name": "Hospitality Studies - Year 2 Group A",
+    "title": "m_sltHs2A - (Moylish) Hospitality Studies - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltHs2A"
+  },
+  {
+    "name": "Business Computing - Year 1 Group A",
+    "title": "m_bfsBc1A - (Moylish) Business Computing - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBc1A"
+  },
+  {
+    "name": "Business Computing - Year 2 Group A",
+    "title": "m_bfsBc2A - (Moylish) Business Computing - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBc2A"
+  },
+  {
+    "name": "Computer Networks and Systems Management - Year 1 Group A",
+    "title": "m_itCnsm1A - (Moylish) Computer Networks and Systems Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itCnsm1A"
+  },
+  {
+    "name": "Computer Networks and Systems Management - Year 2 Group A",
+    "title": "m_itCnsm2A - (Moylish) Computer Networks and Systems Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itCnsm2A"
+  },
+  {
+    "name": "Computer Networks and Systems Management - Year 3 Group A",
+    "title": "m_itCnsm3A - (Moylish) Computer Networks and Systems Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itCnsm3A"
+  },
+  {
+    "name": "Internet Systems Development - Year 1 Group A",
+    "title": "m_itIsd1A - (Moylish) Internet Systems Development - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itIsd1A"
+  },
+  {
+    "name": "Internet Systems Development - Year 2 Group A",
+    "title": "m_itIsd2A - (Moylish) Internet Systems Development - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itIsd2A"
+  },
+  {
+    "name": "Interactive Digital Media - Year 1 Group A",
+    "title": "m_itIdm1A - (Moylish) Interactive Digital Media - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itIdm1A"
+  },
+  {
+    "name": "Interactive Digital Media - Year 2 Group A",
+    "title": "m_itIdm2A - (Moylish) Interactive Digital Media - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itIdm2A"
+  },
+  {
+    "name": "Interactive Digital Media - Year 3 Group A",
+    "title": "m_itIdm3A - (Moylish) Interactive Digital Media - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itIdm3A"
+  },
+  {
+    "name": "Interactive Digital Media - Year 4 (Data Visualisation)",
+    "title": "m_itIdm4 (Data Visualisation) - (Moylish) Interactive Digital Media - Year 4 (Data Visualisation)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itIdm4+%28Data+Visualisation%29"
+  },
+  {
+    "name": "Software Development - Year 1 Group A",
+    "title": "m_itSd1A - (Moylish) Software Development - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itSd1A"
+  },
+  {
+    "name": "Software Development - Year 2 Group A",
+    "title": "m_itSd2A - (Moylish) Software Development - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itSd2A"
+  },
+  {
+    "name": "Software Development - Year 3 Group A",
+    "title": "m_itSd3A - (Moylish) Software Development - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itSd3A"
+  },
+  {
+    "name": "Software Development - Year 4 Group 4 (Mobile Application Development)",
+    "title": "m_itSd4 (Mobile Application Development) - (Moylish) Software Development - Year 4 Group 4 (Mobile Application Development)",
+    "year": 4,
+    "group": "4",
+    "location": "Moylish",
+    "identifier": "m_itSd4+%28Mobile+Application+Development%29"
+  },
+  {
+    "name": "Agricultural Mechanisation - Year 1 Group A",
+    "title": "m_mechAgri1A - (Moylish) Agricultural Mechanisation - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechAgri1A"
+  },
+  {
+    "name": "Agricultural Mechanisation - Year 2 Group A",
+    "title": "m_mechAgri2A - (Moylish) Agricultural Mechanisation - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechAgri2A"
+  },
+  {
+    "name": "Automotive Engineering and Transport Management - Year 1 Group A",
+    "title": "m_mechAutoRttm1A - (Moylish) Automotive Engineering and Transport Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechAutoRttm1A"
+  },
+  {
+    "name": "Automotive Engineering and Transport Management - Year 2 Group A",
+    "title": "m_mechAutoRttm2A - (Moylish) Automotive Engineering and Transport Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechAutoRttm2A"
+  },
+  {
+    "name": "Mechanical Engineering - Year 1 Group A",
+    "title": "m_mechMeng1A - (Moylish) Mechanical Engineering - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechMeng1A"
+  },
+  {
+    "name": "Mechanical Engineering - Year 3 Group A",
+    "title": "m_mechMeng3A - (Moylish) Mechanical Engineering - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechMeng3A"
+  },
+  {
+    "name": "Phase 4 Fitter - Group A (MAMF)",
+    "title": "m_mechP4FitterA (MAMF) - (Moylish) Phase 4 Fitter - Group A (MAMF)",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechP4FitterA+%28MAMF%29"
+  },
+  {
+    "name": "Phase 6 Fitter - Group A (MAMF)",
+    "title": "m_mechP6FitterA (MAMF) - (Moylish) Phase 6 Fitter - Group A (MAMF)",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechP6FitterA+%28MAMF%29"
+  },
+  {
+    "name": "Phase 6 Motor - Group A (LVM)",
+    "title": "m_mechP6MotorA (LVM) - (Moylish) Phase 6 Motor - Group A (LVM)",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechP6MotorA+%28LVM%29"
+  },
+  {
+    "name": "Automobile Engineering and Road Transport - Year 3 Group A",
+    "title": "m_mechAutoRttm3A - (Moylish) Automobile Engineering and Road Transport - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechAutoRttm3A"
+  },
+  {
+    "name": "Applied Biology - Year 1 Group A",
+    "title": "scAb1A - (Moylish) Applied Biology - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scAb1A"
+  },
+  {
+    "name": "Applied Biology - Year 2 Group A",
+    "title": "scAb2A - (Moylish) Applied Biology - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scAb2A"
+  },
+  {
+    "name": "Applied Biology - Year 3 Group A",
+    "title": "scAb3A - (Moylish) Applied Biology - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scAb3A"
+  },
+  {
+    "name": "Bioanalysis and Biotechnology - Year 4 Group A",
+    "title": "scBb4A - (Moylish) Bioanalysis and Biotechnology - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scBb4A"
+  },
+  {
+    "name": "Chemical Instrumentation and Analytical Methods - Year 4 Group A",
+    "title": "scCiam4A - (Moylish) Chemical Instrumentation and Analytical Methods - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scCiam4A"
+  },
+  {
+    "name": "Drug and Medicinal Product Analysis - Year 1 Group A",
+    "title": "scDmpa1A - (Moylish) Drug and Medicinal Product Analysis - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scDmpa1A"
+  },
+  {
+    "name": "Drug and Medicinal Product Analysis - Year 2 Group A",
+    "title": "scDmpa2A - (Moylish) Drug and Medicinal Product Analysis - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scDmpa2A"
+  },
+  {
+    "name": "Drug and Medicinal Product Analysis - Year 3 Group A",
+    "title": "scDmpa3A - (Moylish) Drug and Medicinal Product Analysis - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scDmpa3A"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 1 Group B1",
+    "title": "scFps1B1 - (Moylish) Forensic and Pharmaceutical Studies - Year 1 Group B1",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scFps1B1"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 2 Group A",
+    "title": "scFps2A - (Moylish) Forensic and Pharmaceutical Studies - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scFps2A"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 3 Group A",
+    "title": "scFps3A - (Moylish) Forensic and Pharmaceutical Studies - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scFps3A"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 4 Group A",
+    "title": "scFps4A - (Moylish) Forensic and Pharmaceutical Studies - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scFps4A"
+  },
+  {
+    "name": "Clinical Technology / Medical Technology - Year 2 Group B",
+    "title": "scCt2Mt2B - (Moylish) Clinical Technology / Medical Technology - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scCt2Mt2B"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 2 Group C",
+    "title": "scFps2C - (Moylish) Forensic and Pharmaceutical Studies - Year 2 Group C",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scFps2C"
+  },
+  {
+    "name": "Phase 4 Motor - Group A (LVM)",
+    "title": "m_mechP4MotorA (LVM) - (Moylish) Phase 4 Motor - Group A (LVM)",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechP4MotorA+%28LVM%29"
+  },
+  {
+    "name": "Phase 6 Motor - Group B (LVM)",
+    "title": "m_mechP6MotorB (LVM) - (Moylish) Phase 6 Motor - Group B (LVM)",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechP6MotorB+%28LVM%29"
+  },
+  {
+    "name": "Phase 6 Fitter - Group B (MAMF)",
+    "title": "m_mechP6FitterB (MAMF) - (Moylish) Phase 6 Fitter - Group B (MAMF)",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechP6FitterB+%28MAMF%29"
+  },
+  {
+    "name": "Phase 4 Fitter - Group B (MAMF)",
+    "title": "m_mechP4FitterB (MAMF) - (Moylish) Phase 4 Fitter - Group B (MAMF)",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechP4FitterB+%28MAMF%29"
+  },
+  {
+    "name": "Creative Broadcast - Year 4 Group C",
+    "title": "m_adCb4C - (Moylish) Creative Broadcast - Year 4 Group C",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adCb4C"
+  },
+  {
+    "name": "Music Technology and Production - Year 4 Group C1",
+    "title": "m_adMtp4C1 - (Moylish) Music Technology and Production - Year 4 Group C1",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp4C1"
+  },
+  {
+    "name": "Music Technology and Production - Year 4 Group C2",
+    "title": "m_adMtp4C2 - (Moylish) Music Technology and Production - Year 4 Group C2",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp4C2"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 3 Group C",
+    "title": "scFps3C - (Moylish) Forensic and Pharmaceutical Studies - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scFps3C"
+  },
+  {
+    "name": "Drug and Medicinal Product Analysis - Year 4 Group B",
+    "title": "scDmpa4B - (Moylish) Drug and Medicinal Product Analysis - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scDmpa4B"
+  },
+  {
+    "name": "Clinical Technology / Medical Technology - Year 3 Group B",
+    "title": "scCt3Mt3B - (Moylish) Clinical Technology / Medical Technology - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scCt3Mt3B"
+  },
+  {
+    "name": "Business - Year 1 Group A",
+    "title": "t_bfsBu1A - (Thurles) Business - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_bfsBu1A"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 4 Group A",
+    "title": "m_sltEm4A - (Moylish) Business Studies with Event Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltEm4A"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 4 Group A",
+    "title": "m_sltSmgmt4A - (Moylish) Business Studies with Sports Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt4A"
+  },
+  {
+    "name": "Enterprise and Innovation - Year 1 Group A",
+    "title": "m_medcEnt1A - (Moylish) Enterprise and Innovation - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcEnt1A"
+  },
+  {
+    "name": "Springboard - Food Innovation",
+    "title": "m_sltFin - (Moylish) Springboard - Food Innovation",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_sltFin"
+  },
+  {
+    "name": "Drug and Medicinal Product Analysis - Year 4 Group A",
+    "title": "scDmpa4A - (Moylish) Drug and Medicinal Product Analysis - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scDmpa4A"
+  },
+  {
+    "name": "Phase 4 Motor - Group B (LVM)",
+    "title": "m_mechP4MotorB (LVM) - (Moylish) Phase 4 Motor - Group B (LVM)",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechP4MotorB+%28LVM%29"
+  },
+  {
+    "name": "Marketing and Management - Year 2 Group D",
+    "title": "m_medcMm2D - (Moylish) Marketing and Management - Year 2 Group D",
+    "year": 2,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_medcMm2D"
+  },
+  {
+    "name": "Precision Engineering - Year 3 Group B",
+    "title": "m_mechPre3B - (Moylish) Precision Engineering - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechPre3B"
+  },
+  {
+    "name": "Mechanical Engineering - Year 1 Group C",
+    "title": "m_mechMeng1C - (Moylish) Mechanical Engineering - Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_mechMeng1C"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group A",
+    "title": "t_assScw1A - (Thurles) Social Care Work -  Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assScw1A"
+  },
+  {
+    "name": "Certificate in Engineering (Special Purpose Award)",
+    "title": "m_elEt2 - (Moylish) Certificate in Engineering (Special Purpose Award)",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elEt2"
+  },
+  {
+    "name": "Renewable and Electrical Energy Systems - Year 1 Group B",
+    "title": "m_elRe1B - (Moylish) Renewable and Electrical Energy Systems - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elRe1B"
+  },
+  {
+    "name": "Electrical Engineering - Year 2 Group B",
+    "title": "m_elEl2B - (Moylish) Electrical Engineering - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elEl2B"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 4 Group D (Access)",
+    "title": "m_elIar4D - (Moylish) Industrial Automation and Robotic Systems - Year 4 Group D (Access)",
+    "year": 4,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_elIar4D"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 4 Group E (Access)",
+    "title": "m_elIar4E - (Moylish) Industrial Automation and Robotic Systems - Year 4 Group E (Access)",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_elIar4E"
+  },
+  {
+    "name": "Marketing and Management - Year 2 Group C",
+    "title": "m_medcMm2C - (Moylish) Marketing and Management - Year 2 Group C",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_medcMm2C"
+  },
+  {
+    "name": "Social Care Work -  Year 3 Group A",
+    "title": "e_assScw3A - (Ennis) Social Care Work -  Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assScw3A"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 1 Group A",
+    "title": "e_assEcce1A - (Ennis) Early Childhood Care and Education - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assEcce1A"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group E2",
+    "title": "m_assScw3E2 - (Moylish) Social Care Work - Year 3 Group E2",
+    "year": 3,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw3E2"
+  },
+  {
+    "name": "Quantity Surveying - Year 2 Group B",
+    "title": "m_beQs2B - (Moylish) Quantity Surveying - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beQs2B"
+  },
+  {
+    "name": "Business Studies with Travel and Tourism - Year 4 Group B",
+    "title": "m_sltBst4B - (Moylish) Business Studies with Travel and Tourism - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltBst4B"
+  },
+  {
+    "name": "Interactive Digital Media - Year 4 (Mobile Application Development)",
+    "title": "m_itIdm4 (Mobile Application Development) - (Moylish) Interactive Digital Media - Year 4 (Mobile Application Development)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itIdm4+%28Mobile+Application+Development%29"
+  },
+  {
+    "name": "Marketing and Management - Year 3 Group C",
+    "title": "m_medcMm3C - (Moylish) Marketing and Management - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_medcMm3C"
+  },
+  {
+    "name": "Digital Marketing - Year 2 Group A",
+    "title": "m_medcDm2 - (Moylish) Digital Marketing - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcDm2"
+  },
+  {
+    "name": "Masters of Science in Digital Marketing Group A",
+    "title": "m_medcMScDmA - (Moylish) Masters of Science in Digital Marketing Group A",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcMScDmA"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 2 Group A",
+    "title": "e_assEcce2A - (Ennis) Early Childhood Care and Education - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assEcce2A"
+  },
+  {
+    "name": "Social Care Work -  Year 4 Group A",
+    "title": "e_assScw4A - (Ennis) Social Care Work -  Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assScw4A"
+  },
+  {
+    "name": "Community Development - Year 3 Group A",
+    "title": "m_assCd3A - (Moylish) Community Development - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assCd3A"
+  },
+  {
+    "name": "Early Childhood Care and Education -  Year 4 Group A",
+    "title": "t_assEcce4A - (Thurles) Early Childhood Care and Education -  Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assEcce4A"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 1 Group A",
+    "title": "m_assEcce1A - (Moylish) Early Childhood Care and Education - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assEcce1A"
+  },
+  {
+    "name": "Precision Engineering - Year 2 Group B",
+    "title": "m_mechPre2B - (Moylish) Precision Engineering - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechPre2B"
+  },
+  {
+    "name": "Precision Engineering - Year 2 Group C",
+    "title": "m_mechPre2C - (Moylish) Precision Engineering - Year 2 Group C",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_mechPre2C"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group D3",
+    "title": "m_assScw1D3 - (Moylish) Social Care Work - Year 1 Group D3",
+    "year": 1,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw1D3"
+  },
+  {
+    "name": "Civil Engineering - Year 2 Group B",
+    "title": "m_beCe2B - (Moylish) Civil Engineering - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCe2B"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group D1",
+    "title": "m_assScw3D1 - (Moylish) Social Care Work - Year 3 Group D1",
+    "year": 3,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw3D1"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group D2",
+    "title": "m_assScw3D2 - (Moylish) Social Care Work - Year 3 Group D2",
+    "year": 3,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw3D2"
+  },
+  {
+    "name": "Digital Marketing - Year 3 Group A",
+    "title": "m_medcDm3 - (Moylish) Digital Marketing - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcDm3"
+  },
+  {
+    "name": "Built Environment Undenominated - Year 1 Group A",
+    "title": "m_beBeu1A - (Moylish) Built Environment Undenominated - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beBeu1A"
+  },
+  {
+    "name": "Higher Diploma in Science Software Development (L8) (Enterprise Application Development)",
+    "title": "m_itHDipSd (Enterprise Application Development) - (Moylish) Higher Diploma in Science Software Development (L8) (Enterprise Application Development)",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itHDipSd+%28Enterprise+Application+Development%29"
+  },
+  {
+    "name": "Creative Broadcast - Year 4 Group B",
+    "title": "m_adCb4B - (Moylish) Creative Broadcast - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adCb4B"
+  },
+  {
+    "name": "Internet Systems Development - Year 4 (Reactive Systems)",
+    "title": "m_itIsd4 (Reactive Systems) - (Moylish) Internet Systems Development - Year 4 (Reactive Systems)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itIsd4+%28Reactive+Systems%29"
+  },
+  {
+    "name": "Electrical Engineering - Year 1 Group B",
+    "title": "m_elEl1B - (Moylish) Electrical Engineering - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elEl1B"
+  },
+  {
+    "name": "Electrical Engineering - Year 4 Group A",
+    "title": "m_elEl4A - (Moylish) Electrical Engineering - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEl4A"
+  },
+  {
+    "name": "Electrical Engineering - Year 4 Group C - (Access Part 1)",
+    "title": "m_elEl4C - (Moylish) Electrical Engineering - Year 4 Group C - (Access Part 1)",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_elEl4C"
+  },
+  {
+    "name": "Electrical Engineering - Year 4 Group D1 (Access Part 2)",
+    "title": "m_elEl4D1 - (Moylish) Electrical Engineering - Year 4 Group D1 (Access Part 2)",
+    "year": 4,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_elEl4D1"
+  },
+  {
+    "name": "Electrical Engineering - Year 4 Group E (Access Part 3)",
+    "title": "m_elEl4E - (Moylish) Electrical Engineering - Year 4 Group E (Access Part 3)",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_elEl4E"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 4 Group A",
+    "title": "m_elIar4A - (Moylish) Industrial Automation and Robotic Systems - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elIar4A"
+  },
+  {
+    "name": "Renewable and Electrical Energy Systems - Year 4 Group B",
+    "title": "m_elRe4B - (Moylish) Renewable and Electrical Energy Systems - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elRe4B"
+  },
+  {
+    "name": "Electrical Engineering - Year 4 Group B",
+    "title": "m_elEl4B - (Moylish) Electrical Engineering - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elEl4B"
+  },
+  {
+    "name": "Renewable and Electrical Energy Engineering  - Year 4 Access (Part 2)",
+    "title": "m_elRe4D2 - (Moylish) Renewable and Electrical Energy Engineering  - Year 4 Access (Part 2)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elRe4D2"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 4 Group C (Access)",
+    "title": "m_elIar4C - (Moylish) Industrial Automation and Robotic Systems - Year 4 Group C (Access)",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_elIar4C"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 4 Group B",
+    "title": "m_elIar4B - (Moylish) Industrial Automation and Robotic Systems - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elIar4B"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 2 Group B",
+    "title": "m_elIar2B - (Moylish) Industrial Automation and Robotic Systems - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elIar2B"
+  },
+  {
+    "name": "Internet Systems Development - Year 4 (Entrepeneurship)",
+    "title": "m_itIsd4 (Entrepeneurship) - (Moylish) Internet Systems Development - Year 4 (Entrepeneurship)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itIsd4+%28Entrepeneurship%29"
+  },
+  {
+    "name": "Software Development - Year 4 Group 1 (Entrepreneurship)",
+    "title": "m_itSd4 (Entrepreneurship) - (Moylish) Software Development - Year 4 Group 1 (Entrepreneurship)",
+    "year": 4,
+    "group": "1",
+    "location": "Moylish",
+    "identifier": "m_itSd4+%28Entrepreneurship%29"
+  },
+  {
+    "name": "Interactive Digital Media - Year 4 (Entrepreneurship)",
+    "title": "m_itIdm4 (Entrepreneurship) - (Moylish) Interactive Digital Media - Year 4 (Entrepreneurship)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itIdm4+%28Entrepreneurship%29"
+  },
+  {
+    "name": "Computer Networks and Systems Management - Year 4 (Digital Forensics)",
+    "title": "m_itCnsm4 (Digital Forensics) - (Moylish) Computer Networks and Systems Management - Year 4 (Digital Forensics)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itCnsm4+%28Digital+Forensics%29"
+  },
+  {
+    "name": "Music Technology and Production - Year 1 Group C2",
+    "title": "m_adMtp1C2 - (Moylish) Music Technology and Production - Year 1 Group C2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp1C2"
+  },
+  {
+    "name": "Music Technology and Production - Year 2 Group C2",
+    "title": "m_adMtp2C2 - (Moylish) Music Technology and Production - Year 2 Group C2",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp2C2"
+  },
+  {
+    "name": "Masters of Business in Marketing and Marketing Strategy",
+    "title": "m_medcMBsMms - (Moylish) Masters of Business in Marketing and Marketing Strategy",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_medcMBsMms"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 3 Group A",
+    "title": "t_sltSports3A(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports3A%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 3 Group A",
+    "title": "t_sltSports3A(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports3A%28O%29"
+  },
+  {
+    "name": "Smart Factory Technician - Stage 1",
+    "title": "m_elSftS1A - (Moylish) Smart Factory Technician - Stage 1",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elSftS1A"
+  },
+  {
+    "name": "Smart Factory Technician - Stage 1 B",
+    "title": "m_elSftS1B - (Moylish) Smart Factory Technician - Stage 1 B",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elSftS1B"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group E3",
+    "title": "m_assScw3E3 - (Moylish) Social Care Work - Year 3 Group E3",
+    "year": 3,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw3E3"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group E4",
+    "title": "m_assScw3E4 - (Moylish) Social Care Work - Year 3 Group E4",
+    "year": 3,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw3E4"
+  },
+  {
+    "name": "Built Environment Undenominated - Year 1 Group B",
+    "title": "m_beBeu1B - (Moylish) Built Environment Undenominated - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beBeu1B"
+  },
+  {
+    "name": "Higher Certificate in Marketing and Management (L6) - Year 1 Group B",
+    "title": "t_sltMm1B(C) - (Thurles) Higher Certificate in Marketing and Management (L6) - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm1B%28C%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 1 Group B",
+    "title": "t_sltMm1B(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm1B%28H%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management Degree (L7) - Year 1 Group B",
+    "title": "t_sltMm1B(O) - (Thurles) Bachelor of Marketing and Management Degree (L7) - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm1B%28O%29"
+  },
+  {
+    "name": "Industrial Electrical Apprenticeship - Stage 2",
+    "title": "m_elAppS2 - (Moylish) Industrial Electrical Apprenticeship - Stage 2",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elAppS2"
+  },
+  {
+    "name": "Industrial Electrical Apprenticeship - Stage 3",
+    "title": "m_elAppS3 - (Moylish) Industrial Electrical Apprenticeship - Stage 3",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elAppS3"
+  },
+  {
+    "name": "Industrial Electrical Apprenticeship - Stage 4",
+    "title": "m_elAppS4 - (Moylish) Industrial Electrical Apprenticeship - Stage 4",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elAppS4"
+  },
+  {
+    "name": "Industrial Electrical Apprenticeship - Stage 5",
+    "title": "m_elAppS5 - (Moylish) Industrial Electrical Apprenticeship - Stage 5",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elAppS5"
+  },
+  {
+    "name": "Manufacturing Apprenticeship - Stage 2",
+    "title": "m_elManS2A - (Moylish) Manufacturing Apprenticeship - Stage 2",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManS2A"
+  },
+  {
+    "name": "Manufacturing Apprenticeship - Stage 4",
+    "title": "m_elManS4A - (Moylish) Manufacturing Apprenticeship - Stage 4",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManS4A"
+  },
+  {
+    "name": "Manufacturing Apprenticeship - Stage 3",
+    "title": "m_elManS3A - (Moylish) Manufacturing Apprenticeship - Stage 3",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManS3A"
+  },
+  {
+    "name": "Social Care Work -  Year 4 Group A",
+    "title": "t_assScw4A - (Thurles) Social Care Work -  Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assScw4A"
+  },
+  {
+    "name": "Social Care Work -  Year 4 Group B",
+    "title": "t_assScw4B - (Thurles) Social Care Work -  Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_assScw4B"
+  },
+  {
+    "name": "Early Childhood Care and Education -  Year 3 Group A",
+    "title": "t_assEcce3A - (Thurles) Early Childhood Care and Education -  Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assEcce3A"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 3 Group B",
+    "title": "m_sltSmgmt3B - (Moylish) Business Studies with Sports Management - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt3B"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 3 Group B",
+    "title": "m_elIar3B - (Moylish) Industrial Automation and Robotic Systems - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elIar3B"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 1 Group A",
+    "title": "m_sltSmgmt1A - (Moylish) Business Studies with Sports Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt1A"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 3 Group B",
+    "title": "scFps3B - (Moylish) Forensic and Pharmaceutical Studies - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scFps3B"
+  },
+  {
+    "name": "Bioanalysis and Biotechnology - Year 4 Group C",
+    "title": "scBb4C - (Moylish) Bioanalysis and Biotechnology - Year 4 Group C",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scBb4C"
+  },
+  {
+    "name": "Environmental Management in Agriculture - Year 1 Group A",
+    "title": "scEma1A - (Thurles) Environmental Management in Agriculture - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEma1A"
+  },
+  {
+    "name": "Clinical Technology / Medical Technology - Year 1",
+    "title": "scCt1Mt1A - (Moylish) Clinical Technology / Medical Technology - Year 1",
+    "year": 1,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "scCt1Mt1A"
+  },
+  {
+    "name": "Social Care Work -  Year 3 Group B",
+    "title": "e_assScw3B - (Ennis) Social Care Work -  Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Ennis",
+    "identifier": "e_assScw3B"
+  },
+  {
+    "name": "Business Computing - Year 4 Group ASD/ES",
+    "title": "m_bfsBt4 ASD/ES - (Moylish) Business Computing - Year 4 Group ASD/ES",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBt4+ASD%2FES"
+  },
+  {
+    "name": "Bioanalysis and Biotechnology - Year 4 Group B",
+    "title": "scBb4B - (Moylish) Bioanalysis and Biotechnology - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scBb4B"
+  },
+  {
+    "name": "Creative Broadcast - Year 4 Group A",
+    "title": "m_adCb4A - (Moylish) Creative Broadcast - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adCb4A"
+  },
+  {
+    "name": "Music Technology and Production - Year 3 Group B1",
+    "title": "m_adMtp3B1 - (Moylish) Music Technology and Production - Year 3 Group B1",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adMtp3B1"
+  },
+  {
+    "name": "Civil Engineering Management - Year 2 Group B",
+    "title": "m_beCivm2B - (Moylish) Civil Engineering Management - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCivm2B"
+  },
+  {
+    "name": "Construction Studies - Year 2 Group B",
+    "title": "m_beCs2B - (Moylish) Construction Studies - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCs2B"
+  },
+  {
+    "name": "Quantity Surveying - Year 2 Group C1",
+    "title": "m_beQs2C1 - (Moylish) Quantity Surveying - Year 2 Group C1",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_beQs2C1"
+  },
+  {
+    "name": "Quantity Surveying - Year 2 Group C2",
+    "title": "m_beQs2C2 - (Moylish) Quantity Surveying - Year 2 Group C2",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_beQs2C2"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group E3",
+    "title": "m_assScw2E3 - (Moylish) Social Care Work - Year 2 Group E3",
+    "year": 2,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw2E3"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group E4",
+    "title": "m_assScw2E4 - (Moylish) Social Care Work - Year 2 Group E4",
+    "year": 2,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw2E4"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group E3",
+    "title": "m_assScw4E3 - (Moylish) Social Care Work - Year 4 Group E3",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw4E3"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group E4",
+    "title": "m_assScw4E4 - (Moylish) Social Care Work - Year 4 Group E4",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw4E4"
+  },
+  {
+    "name": "Accounting and Finance - Year 1 Group B",
+    "title": "m_bfsAf1B - (Moylish) Accounting and Finance - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsAf1B"
+  },
+  {
+    "name": "Marketing and Management - Year 1 Group B",
+    "title": "m_medcMm1B - (Moylish) Marketing and Management - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_medcMm1B"
+  },
+  {
+    "name": "Business Computing/Business Information Systems - Year 3 Group A",
+    "title": "m_bfsBc3A - (Moylish) Business Computing/Business Information Systems - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBc3A"
+  },
+  {
+    "name": "Business Computing - Year 4 Group ASD/SA",
+    "title": "m_bfsBc4 ASD/SA - (Moylish) Business Computing - Year 4 Group ASD/SA",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBc4+ASD%2FSA"
+  },
+  {
+    "name": "Software Development - Year 4 Group (Cryptographic Techniques)",
+    "title": "m_itSd4 (Cryptographic Techniques) - (Moylish) Software Development - Year 4 Group (Cryptographic Techniques)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itSd4+%28Cryptographic+Techniques%29"
+  },
+  {
+    "name": "Marketing and Management - Year 2 Group B",
+    "title": "m_medcMm2B - (Moylish) Marketing and Management - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_medcMm2B"
+  },
+  {
+    "name": "Marketing and Management - Year 3 Group B",
+    "title": "m_medcMm3B - (Moylish) Marketing and Management - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_medcMm3B"
+  },
+  {
+    "name": "Marketing and Management - Year 4 Group B",
+    "title": "m_medcMm4B - (Moylish) Marketing and Management - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_medcMm4B"
+  },
+  {
+    "name": "Accounting and Finance - Year 2 Group B",
+    "title": "m_bfsAf2B - (Moylish) Accounting and Finance - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsAf2B"
+  },
+  {
+    "name": "Accounting and Finance - Year 3 Group B",
+    "title": "m_bfsAf3B - (Moylish) Accounting and Finance - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsAf3B"
+  },
+  {
+    "name": "Accounting and Finance - Year 4 Group B",
+    "title": "m_bfsAf4B - (Moylish) Accounting and Finance - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsAf4B"
+  },
+  {
+    "name": "Construction Studies - Year 2 Group A",
+    "title": "m_beCs2A - (Moylish) Construction Studies - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCs2A"
+  },
+  {
+    "name": "Construction Management - Year 1 Group B",
+    "title": "m_beCm1B - (Moylish) Construction Management - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCm1B"
+  },
+  {
+    "name": "Construction Management - Year 2 Group B",
+    "title": "m_beCm2B - (Moylish) Construction Management - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCm2B"
+  },
+  {
+    "name": "Quantity Surveying - Year 3 Group B",
+    "title": "m_beQs3B - (Moylish) Quantity Surveying - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beQs3B"
+  },
+  {
+    "name": "Construction Management - Year 4 Group B",
+    "title": "m_beCm4B - (Moylish) Construction Management - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCm4B"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 3 Group A",
+    "title": "e_assEcce3A - (Ennis) Early Childhood Care and Education - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assEcce3A"
+  },
+  {
+    "name": "Community Development - Year 4 Group A",
+    "title": "m_assCd4A - (Moylish) Community Development - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assCd4A"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 2 Group A",
+    "title": "m_assEcce2A - (Moylish) Early Childhood Care and Education - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assEcce2A"
+  },
+  {
+    "name": "Social Care Work -  Year 4 Group B",
+    "title": "e_assScw4B - (Ennis) Social Care Work -  Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Ennis",
+    "identifier": "e_assScw4B"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 1 Group C",
+    "title": "m_assEcce1C - (Moylish) Early Childhood Care and Education - Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assEcce1C"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 2 Group B",
+    "title": "m_assEcce2B - (Moylish) Early Childhood Care and Education - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assEcce2B"
+  },
+  {
+    "name": "Social Care Work -  Year 2 Group B",
+    "title": "e_assScw2B - (Ennis) Social Care Work -  Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Ennis",
+    "identifier": "e_assScw2B"
+  },
+  {
+    "name": "Quantity Surveying - Year 4 Group B",
+    "title": "m_beQs4B - (Moylish) Quantity Surveying - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beQs4B"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 1 Group C1",
+    "title": "m_sltEm1C1 - (Moylish) Business Studies with Event Management - Year 1 Group C1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_sltEm1C1"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 1 Group C2",
+    "title": "m_sltEm1C2 - (Moylish) Business Studies with Event Management - Year 1 Group C2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_sltEm1C2"
+  },
+  {
+    "name": "Foundation Studies for International Students",
+    "title": "m_flexFSIS - (Moylish) Foundation Studies for International Students",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_flexFSIS"
+  },
+  {
+    "name": "Construction Management - Year 1 Group C1",
+    "title": "m_beCm1C1 - (Moylish) Construction Management - Year 1 Group C1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_beCm1C1"
+  },
+  {
+    "name": "Construction Management - Year 1 Group C2",
+    "title": "m_beCm1C2 - (Moylish) Construction Management - Year 1 Group C2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_beCm1C2"
+  },
+  {
+    "name": "Environmental Management in Agriculture - Year 2 Group A",
+    "title": "scEma2A - (Thurles) Environmental Management in Agriculture - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEma2A"
+  },
+  {
+    "name": "Interior Design - Year 1 Group A",
+    "title": "m_beId1A - (Moylish) Interior Design - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beId1A"
+  },
+  {
+    "name": "Software Development - Year 4 Group 3 (Data Visualisation)",
+    "title": "m_itSd4 (Data Visualisation) - (Moylish) Software Development - Year 4 Group 3 (Data Visualisation)",
+    "year": 4,
+    "group": "3",
+    "location": "Moylish",
+    "identifier": "m_itSd4+%28Data+Visualisation%29"
+  },
+  {
+    "name": "Higher Diploma in Business Management",
+    "title": "m_bfsHDipBm - (Moylish) Higher Diploma in Business Management",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_bfsHDipBm"
+  },
+  {
+    "name": "Business Computing - Year 1 Group B",
+    "title": "m_bfsBc1B - (Moylish) Business Computing - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsBc1B"
+  },
+  {
+    "name": "Enterprise and Innovation - Year 2 Group A",
+    "title": "m_medcEnt2A - (Moylish) Enterprise and Innovation - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcEnt2A"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 4 Group B",
+    "title": "t_sltMm4B(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltMm4B%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 2 Group B",
+    "title": "t_sltSports2B(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports2B%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 2 Group B",
+    "title": "t_sltSports2B(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports2B%28O%29"
+  },
+  {
+    "name": "Sports Development and Coaching - Year 2 Group A",
+    "title": "m_sltSdc2A - (Moylish) Sports Development and Coaching - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltSdc2A"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 4 Group B",
+    "title": "t_sltSports4B(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports4B%28H%29"
+  },
+  {
+    "name": "Marketing and Management - Year 1 Group D",
+    "title": "m_medcMm1D - (Moylish) Marketing and Management - Year 1 Group D",
+    "year": 1,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_medcMm1D"
+  },
+  {
+    "name": "Software Development - Year 3 Group B",
+    "title": "m_itSd3B - (Moylish) Software Development - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_itSd3B"
+  },
+  {
+    "name": "Clinical Technology - Year 4 Group A",
+    "title": "m_scCt4A - (Moylish) Clinical Technology - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_scCt4A"
+  },
+  {
+    "name": "Business Information Systems - Year 4 Group SM",
+    "title": "m_bfsBIS4 SM - (Moylish) Business Information Systems - Year 4 Group SM",
+    "year": 4,
+    "group": "S",
+    "location": "Moylish",
+    "identifier": "m_bfsBIS4+SM"
+  },
+  {
+    "name": "Phase 4 Brick AND Stone",
+    "title": "m_beP4BS - (Moylish) Phase 4 Brick AND Stone",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_beP4BS"
+  },
+  {
+    "name": "Environmental and Analytical Science - Year 4 Group A",
+    "title": "scEas4A - (Moylish) Environmental and Analytical Science - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scEas4A"
+  },
+  {
+    "name": "Electronic Systems - Year 4 Group C (Electronic Engineering Access Students)",
+    "title": "m_elEc4C - (Moylish) Electronic Systems - Year 4 Group C (Electronic Engineering Access Students)",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_elEc4C"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 1 Group A",
+    "title": "t_sltMm1A(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm1A%28H%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 2 Group A",
+    "title": "t_sltMm2A(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm2A%28H%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 3 Group A",
+    "title": "t_sltMm3A(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm3A%28H%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management (Hons) Degree (L8) - Year 4 Group A",
+    "title": "t_sltMm4A(H) - (Thurles) Bachelor of Marketing and Management (Hons) Degree (L8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm4A%28H%29"
+  },
+  {
+    "name": "Higher Certificate in Marketing and Management (L6) - Year 2 Group A",
+    "title": "t_sltMm2A(C) - (Thurles) Higher Certificate in Marketing and Management (L6) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm2A%28C%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management Degree (L7) - Year 1 Group A",
+    "title": "t_sltMm1A(O) - (Thurles) Bachelor of Marketing and Management Degree (L7) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm1A%28O%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management Degree (L7) - Year 2 Group A",
+    "title": "t_sltMm2A(O) - (Thurles) Bachelor of Marketing and Management Degree (L7) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm2A%28O%29"
+  },
+  {
+    "name": "Bachelor of Marketing and Management Degree (L7) - Year 3 Group A",
+    "title": "t_sltMm3A(O) - (Thurles) Bachelor of Marketing and Management Degree (L7) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm3A%28O%29"
+  },
+  {
+    "name": "Social Care Work -  Year 2 Group A",
+    "title": "e_assScw2A - (Ennis) Social Care Work -  Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Ennis",
+    "identifier": "e_assScw2A"
+  },
+  {
+    "name": "Community Development - Year 2 Group A",
+    "title": "m_assCd2A - (Moylish) Community Development - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assCd2A"
+  },
+  {
+    "name": "Phase 6 Carpentry and Joinery - Group B",
+    "title": "m_beP6CJB - (Moylish) Phase 6 Carpentry and Joinery - Group B",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beP6CJB"
+  },
+  {
+    "name": "Industrial Automation and Robotic Systems - Year 3 Group A",
+    "title": "m_elIar3A - (Moylish) Industrial Automation and Robotic Systems - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elIar3A"
+  },
+  {
+    "name": "Renewable and Electrical Energy Engineering  - Year 4 Access (Part 1)",
+    "title": "m_elRe4C - (Moylish) Renewable and Electrical Energy Engineering  - Year 4 Access (Part 1)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elRe4C"
+  },
+  {
+    "name": "Clinical Technology / Medical Technology - Year 3 Group A",
+    "title": "scCt3Mt3A - (Moylish) Clinical Technology / Medical Technology - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scCt3Mt3A"
+  },
+  {
+    "name": "Precision Engineering - Year 1 Group A",
+    "title": "m_mechPre1A - (Moylish) Precision Engineering - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechPre1A"
+  },
+  {
+    "name": "Precision Engineering - Year 2 Group A",
+    "title": "m_mechPre2A - (Moylish) Precision Engineering - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechPre2A"
+  },
+  {
+    "name": "Civil Engineering - Year 1 Group B",
+    "title": "m_beCe1B - (Moylish) Civil Engineering - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beCe1B"
+  },
+  {
+    "name": "Mechanical Engineering - Year 2 Group D",
+    "title": "m_mechMeng2D - (Moylish) Mechanical Engineering - Year 2 Group D",
+    "year": 2,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_mechMeng2D"
+  },
+  {
+    "name": "Mechanical Engineering - Year 3 Group C",
+    "title": "m_mechMeng3C - (Moylish) Mechanical Engineering - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_mechMeng3C"
+  },
+  {
+    "name": "Software Development - Year 2 Group B",
+    "title": "m_itSd2B - (Moylish) Software Development - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_itSd2B"
+  },
+  {
+    "name": "Digital Animation (L8) - Year 3 Group A",
+    "title": "dcmDap3A - (Clonmel) Digital Animation (L8) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmDap3A"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 2 Group A",
+    "title": "t_sltSports2A(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports2A%28O%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 1 Group B",
+    "title": "t_sltSports1B(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports1B%28O%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 1 Group A",
+    "title": "t_sltSports1A(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports1A%28O%29"
+  },
+  {
+    "name": "Masters of Science in Digital Marketing Group B",
+    "title": "m_medcMScDmB - (Moylish) Masters of Science in Digital Marketing Group B",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_medcMScDmB"
+  },
+  {
+    "name": "Phase 6 Carpentry and Joinery - Group A",
+    "title": "m_beP6CJA - (Moylish) Phase 6 Carpentry and Joinery - Group A",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beP6CJA"
+  },
+  {
+    "name": "Quantity Surveying - Year 1 Group A",
+    "title": "m_beQs1A - (Moylish) Quantity Surveying - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beQs1A"
+  },
+  {
+    "name": "Quantity Surveying - Year 2 Group A",
+    "title": "m_beQs2A - (Moylish) Quantity Surveying - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beQs2A"
+  },
+  {
+    "name": "Quantity Surveying - Year 3 Group A",
+    "title": "m_beQs3A - (Moylish) Quantity Surveying - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beQs3A"
+  },
+  {
+    "name": "Quantity Surveying - Year 4 Group A",
+    "title": "m_beQs4A - (Moylish) Quantity Surveying - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beQs4A"
+  },
+  {
+    "name": "Property Valuation and Management - Year 1 Group A",
+    "title": "m_bePvm1A - (Moylish) Property Valuation and Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bePvm1A"
+  },
+  {
+    "name": "Property Valuation and Management - Year 2 Group A",
+    "title": "m_bePvm2A - (Moylish) Property Valuation and Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bePvm2A"
+  },
+  {
+    "name": "Property Valuation and Management - Year 3 Group A",
+    "title": "m_bePvm3A - (Moylish) Property Valuation and Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bePvm3A"
+  },
+  {
+    "name": "Property Valuation and Management - Year 4 Group A",
+    "title": "m_bePvm4A - (Moylish) Property Valuation and Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bePvm4A"
+  },
+  {
+    "name": "Digital Marketing - Year 1 Group A",
+    "title": "m_medcDm1 - (Moylish) Digital Marketing - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcDm1"
+  },
+  {
+    "name": "Civil Engineering - Year 3 Group A",
+    "title": "m_beCe3A - (Moylish) Civil Engineering - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCe3A"
+  },
+  {
+    "name": "Higher Diploma in Science Software Development (L8) (Software Product Development)",
+    "title": "m_itHDipSd (Software Product Development) - (Moylish) Higher Diploma in Science Software Development (L8) (Software Product Development)",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itHDipSd+%28Software+Product+Development%29"
+  },
+  {
+    "name": "Phase 4 Electrical - Group C",
+    "title": "elP4ElectC - (Moylish) Phase 4 Electrical - Group C",
+    "year": null,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "elP4ElectC"
+  },
+  {
+    "name": "Phase 6 Electrical - Group C",
+    "title": "m_elP6ElectC - (Moylish) Phase 6 Electrical - Group C",
+    "year": null,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_elP6ElectC"
+  },
+  {
+    "name": "Culinary Arts - Year 3 Group A",
+    "title": "m_sltCa3A - (Moylish) Culinary Arts - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltCa3A"
+  },
+  {
+    "name": "Phase 4 Electrical - Group B",
+    "title": "m_elP4ElectB - (Moylish) Phase 4 Electrical - Group B",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elP4ElectB"
+  },
+  {
+    "name": "Phase 6 Electrical - Group B",
+    "title": "m_elP6ElectB - (Moylish) Phase 6 Electrical - Group B",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elP6ElectB"
+  },
+  {
+    "name": "Master of Arts in Social Care Management - Year 2",
+    "title": "m_assMAScm2 - (Moylish) Master of Arts in Social Care Management - Year 2",
+    "year": 2,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_assMAScm2"
+  },
+  {
+    "name": "Masters in Quantity Surveying (L9) Group A",
+    "title": "m_beMScQsA - (Moylish) Masters in Quantity Surveying (L9) Group A",
+    "year": null,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beMScQsA"
+  },
+  {
+    "name": "Games Design and Development (L8) - Year 1 Group A",
+    "title": "t_itGdd1A - (Thurles) Games Design and Development (L8) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_itGdd1A"
+  },
+  {
+    "name": "Beauty and Spa Management - Year 2 Group A",
+    "title": "m_sltBsm2A - (Moylish) Beauty and Spa Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltBsm2A"
+  },
+  {
+    "name": "Beauty and Spa Management - Year 2 Group B",
+    "title": "m_sltBsm2B - (Moylish) Beauty and Spa Management - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltBsm2B"
+  },
+  {
+    "name": "Business - Year 2 Group A",
+    "title": "m_bfsBu2A - (Moylish) Business - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBu2A"
+  },
+  {
+    "name": "Business - Year 2 Group B",
+    "title": "m_bfsBu2B - (Moylish) Business - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsBu2B"
+  },
+  {
+    "name": "Business - Year 2 Group C",
+    "title": "m_bfsBu2C - (Moylish) Business - Year 2 Group C",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_bfsBu2C"
+  },
+  {
+    "name": "Clinical Technology / Medical Technology - Year 2 Group A",
+    "title": "scCt2Mt2A - (Moylish) Clinical Technology / Medical Technology - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "scCt2Mt2A"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 4 Group B",
+    "title": "scFps4B - (Moylish) Forensic and Pharmaceutical Studies - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scFps4B"
+  },
+  {
+    "name": "Automotive Engineering and Transport Management - Year 1 Group B",
+    "title": "m_mechAutoRttm1B - (Moylish) Automotive Engineering and Transport Management - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechAutoRttm1B"
+  },
+  {
+    "name": "Manufacturing Data Integration Apprenticeship - Stage 1",
+    "title": "m_elManDiS1A - (Moylish) Manufacturing Data Integration Apprenticeship - Stage 1",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManDiS1A"
+  },
+  {
+    "name": "Manufacturing Data Integration Apprenticeship - Stage 2",
+    "title": "m_elManDiS2A - (Moylish) Manufacturing Data Integration Apprenticeship - Stage 2",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManDiS2A"
+  },
+  {
+    "name": "Community Sports Development - Year 2 Group A",
+    "title": "m_sltCsd2A - (Moylish) Community Sports Development - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltCsd2A"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 2 Group B",
+    "title": "m_sltSmgmt2B - (Moylish) Business Studies with Sports Management - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt2B"
+  },
+  {
+    "name": "Game Art and Design (L8) - Year 4 Group A",
+    "title": "c_dcmGad4A - (Clonmel) Game Art and Design (L8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "c_dcmGad4A"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 2 Group A",
+    "title": "m_sltSmgmt2A - (Moylish) Business Studies with Sports Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt2A"
+  },
+  {
+    "name": "Business Studies with Travel and Tourism - Year 4 Group A",
+    "title": "m_sltBst4A - (Moylish) Business Studies with Travel and Tourism - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltBst4A"
+  },
+  {
+    "name": "Business Studies with Sports Management - Year 1 Group B",
+    "title": "m_sltSmgmt1B - (Moylish) Business Studies with Sports Management - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltSmgmt1B"
+  },
+  {
+    "name": "Business - Year 1 Group A",
+    "title": "m_bfsBu1A - (Moylish) Business - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_bfsBu1A"
+  },
+  {
+    "name": "Business - Year 1 Group B",
+    "title": "m_bfsBu1B - (Moylish) Business - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_bfsBu1B"
+  },
+  {
+    "name": "Mechanical Engineering - Year 1 Group D",
+    "title": "m_mechMeng1D - (Moylish) Mechanical Engineering - Year 1 Group D",
+    "year": 1,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_mechMeng1D"
+  },
+  {
+    "name": "Mechanical Engineering - Year 2 Group B",
+    "title": "m_mechMeng2B - (Moylish) Mechanical Engineering - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechMeng2B"
+  },
+  {
+    "name": "Quantity Surveying - Year 1 Group C1",
+    "title": "m_beQs1C1 - (Moylish) Quantity Surveying - Year 1 Group C1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_beQs1C1"
+  },
+  {
+    "name": "Quantity Surveying - Year 1 Group C2",
+    "title": "m_beQs1C2 - (Moylish) Quantity Surveying - Year 1 Group C2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_beQs1C2"
+  },
+  {
+    "name": "Hospitality Studies - Year 3 Group A",
+    "title": "m_sltHs3A - (Moylish) Hospitality Studies - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltHs3A"
+  },
+  {
+    "name": "Business Studies with Travel and Tourism - Year 1 Group A",
+    "title": "m_sltBst1A - (Moylish) Business Studies with Travel and Tourism - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltBst1A"
+  },
+  {
+    "name": "Digital Animation (L8) - Year 1 Group A",
+    "title": "dcmDap1 - (Clonmel) Digital Animation (L8) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmDap1"
+  },
+  {
+    "name": "Forensic and Pharmaceutical Studies - Year 2 Group B",
+    "title": "scFps2B - (Moylish) Forensic and Pharmaceutical Studies - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scFps2B"
+  },
+  {
+    "name": "Computing - Year 1 Group A",
+    "title": "m_itComp1A - (Moylish) Computing - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itComp1A"
+  },
+  {
+    "name": "Biotechnology and Biopharmaceutical Science - Year 2 Group A",
+    "title": "m_scBbs2A - (Moylish) Biotechnology and Biopharmaceutical Science - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_scBbs2A"
+  },
+  {
+    "name": "Applied Biology - Year 3 Group C",
+    "title": "scAb3C - (Moylish) Applied Biology - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scAb3C"
+  },
+  {
+    "name": "Community Development - Year 1 Group A",
+    "title": "m_assCd1A - (Moylish) Community Development - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assCd1A"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group E1",
+    "title": "m_assScw2E1 - (Moylish) Social Care Work - Year 2 Group E1",
+    "year": 2,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw2E1"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group E2",
+    "title": "m_assScw2E2 - (Moylish) Social Care Work - Year 2 Group E2",
+    "year": 2,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw2E2"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group E1",
+    "title": "m_assScw3E1 - (Moylish) Social Care Work - Year 3 Group E1",
+    "year": 3,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw3E1"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group C2",
+    "title": "m_assScw4C2 - (Moylish) Social Care Work - Year 4 Group C2",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw4C2"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group D1",
+    "title": "m_assScw4D1 - (Moylish) Social Care Work - Year 4 Group D1",
+    "year": 4,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw4D1"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group D2",
+    "title": "m_assScw4D2 - (Moylish) Social Care Work - Year 4 Group D2",
+    "year": 4,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw4D2"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group E1",
+    "title": "m_assScw4E1 - (Moylish) Social Care Work - Year 4 Group E1",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_assScw4E1"
+  },
+  {
+    "name": "Quantity Surveying - Year 1 Group B",
+    "title": "m_beQs1B - (Moylish) Quantity Surveying - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beQs1B"
+  },
+  {
+    "name": "Social Care Work -  Year 2 Group A",
+    "title": "t_assScw2A - (Thurles) Social Care Work -  Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assScw2A"
+  },
+  {
+    "name": "Community Sports Development - Year 3 Group A",
+    "title": "m_sltCsd3A - (Moylish) Community Sports Development - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltCsd3A"
+  },
+  {
+    "name": "Manufacturing Apprenticeship - Stage 1",
+    "title": "m_elManS1A - (Moylish) Manufacturing Apprenticeship - Stage 1",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManS1A"
+  },
+  {
+    "name": "Manufacturing Apprenticeship - Stage 5",
+    "title": "m_elManS5A - (Moylish) Manufacturing Apprenticeship - Stage 5",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elManS5A"
+  },
+  {
+    "name": "Environmental Management in Agriculture - Year 3 Group A",
+    "title": "scEma3A - (Thurles) Environmental Management in Agriculture - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEma3A"
+  },
+  {
+    "name": "Creative Broadcast - Year 3 Group B",
+    "title": "m_adCb3B - (Moylish) Creative Broadcast - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adCb3B"
+  },
+  {
+    "name": "Game Art and Design (L8) - Year 1 Group A",
+    "title": "dcmGad1 - (Clonmel) Game Art and Design (L8) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmGad1"
+  },
+  {
+    "name": "Digital Animation (L8) - Year 4 Group A",
+    "title": "dcmDap4 - (Clonmel) Digital Animation (L8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmDap4"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 4 Group B",
+    "title": "m_sltEm4B - (Moylish) Business Studies with Event Management - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltEm4B"
+  },
+  {
+    "name": "Beauty and Spa Management - Year 1 Group A",
+    "title": "m_sltBsm1A - (Moylish) Beauty and Spa Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltBsm1A"
+  },
+  {
+    "name": "Beauty and Spa Management - Year 1 Group B",
+    "title": "m_sltBsm1B - (Moylish) Beauty and Spa Management - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltBsm1B"
+  },
+  {
+    "name": "Business Computing - Year 4 Group ES/SA",
+    "title": "m_bfsBc4 ES/SA - (Moylish) Business Computing - Year 4 Group ES/SA",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_bfsBc4+ES%2FSA"
+  },
+  {
+    "name": "Business Information Systems - Year 4 Group E",
+    "title": "m_bfsBIS4 E - (Moylish) Business Information Systems - Year 4 Group E",
+    "year": 4,
+    "group": "E",
+    "location": "Moylish",
+    "identifier": "m_bfsBIS4+E"
+  },
+  {
+    "name": "Business Information Systems - Year 4 Group ISM",
+    "title": "m_bfsBIS4 ISM - (Moylish) Business Information Systems - Year 4 Group ISM",
+    "year": 4,
+    "group": "I",
+    "location": "Moylish",
+    "identifier": "m_bfsBIS4+ISM"
+  },
+  {
+    "name": "Music Technology and Production - Year 3 Group A2",
+    "title": "m_adMtp3A2 - (Moylish) Music Technology and Production - Year 3 Group A2",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adMtp3A2"
+  },
+  {
+    "name": "Music Technology and Production - Year 3 Group B2",
+    "title": "m_adMtp3B2 - (Moylish) Music Technology and Production - Year 3 Group B2",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adMtp3B2"
+  },
+  {
+    "name": "Music Technology and Production - Year 3 Group C2",
+    "title": "m_adMtp3C2 - (Moylish) Music Technology and Production - Year 3 Group C2",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp3C2"
+  },
+  {
+    "name": "Bachelor of Business (Hons) Degree (L8) - Year 4 Group A",
+    "title": "c_sltBus4A(H) - (Clonmel) Bachelor of Business (Hons) Degree (L8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "c_sltBus4A%28H%29"
+  },
+  {
+    "name": "Creative Media and Design (L6) - Year 1",
+    "title": "dcmCm1(C) - (Clonmel) Creative Media and Design (L6) - Year 1",
+    "year": 1,
+    "group": null,
+    "location": "Clonmel",
+    "identifier": "dcmCm1%28C%29"
+  },
+  {
+    "name": "Creative Multimedia (L6) - Year 2",
+    "title": "dcmCm2(C) - (Clonmel) Creative Multimedia (L6) - Year 2",
+    "year": 2,
+    "group": null,
+    "location": "Clonmel",
+    "identifier": "dcmCm2%28C%29"
+  },
+  {
+    "name": "Creative Multimedia (L7) - Year 3 Group A",
+    "title": "dcmCm3A(O) - (Clonmel) Creative Multimedia (L7) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmCm3A%28O%29"
+  },
+  {
+    "name": "Creative Media and Design (L7) - Year 1",
+    "title": "dcmCm1(O) - (Clonmel) Creative Media and Design (L7) - Year 1",
+    "year": 1,
+    "group": null,
+    "location": "Clonmel",
+    "identifier": "dcmCm1%28O%29"
+  },
+  {
+    "name": "Higher Certificate in Marketing and Management (L6) - Year 1 Group A",
+    "title": "t_sltMm1A(C) - (Thurles) Higher Certificate in Marketing and Management (L6) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltMm1A%28C%29"
+  },
+  {
+    "name": "Environmental and Geographical Sciences - Year 1 Group A",
+    "title": "scEgs1A - (Thurles) Environmental and Geographical Sciences - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEgs1A"
+  },
+  {
+    "name": "Environmental and Geographical Sciences - Year 2 Group A",
+    "title": "scEgs2A - (Thurles) Environmental and Geographical Sciences - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEgs2A"
+  },
+  {
+    "name": "Environmental and Geographical Sciences - Year 3 Group A",
+    "title": "scEgs3A - (Thurles) Environmental and Geographical Sciences - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEgs3A"
+  },
+  {
+    "name": "Environmental and Geographical Sciences - Year 4 Group A",
+    "title": "scEgs4A - (Thurles) Environmental and Geographical Sciences - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEgs4A"
+  },
+  {
+    "name": "Games Design and Development (L8) - Year 2 Group A",
+    "title": "t_itGdd2A - (Thurles) Games Design and Development (L8) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_itGdd2A"
+  },
+  {
+    "name": "Games Design and Development (L8) - Year 3 Group A",
+    "title": "t_itGdd3A - (Thurles) Games Design and Development (L8) - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_itGdd3A"
+  },
+  {
+    "name": "Games Design and Development (L8) - Year 4 Group A",
+    "title": "t_itGdd4A - (Thurles) Games Design and Development (L8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_itGdd4A"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 1 Group A",
+    "title": "t_sltSports1A(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports1A%28H%29"
+  },
+  {
+    "name": "Computer Networks and Systems Management - Year 4 (Entrepreneurship)",
+    "title": "m_itCnsm4 (Entrepreneurship) - (Moylish) Computer Networks and Systems Management - Year 4 (Entrepreneurship)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itCnsm4+%28Entrepreneurship%29"
+  },
+  {
+    "name": "Mechanical Engineering - Year 1 Group B",
+    "title": "m_mechMeng1B - (Moylish) Mechanical Engineering - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechMeng1B"
+  },
+  {
+    "name": "Mechanical Engineering - Year 2 Group A",
+    "title": "m_mechMeng2A - (Moylish) Mechanical Engineering - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechMeng2A"
+  },
+  {
+    "name": "Mechanical Engineering - Year 3 Group B",
+    "title": "m_mechMeng3B - (Moylish) Mechanical Engineering - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechMeng3B"
+  },
+  {
+    "name": "Enterprise and Innovation - Year 3 Group A",
+    "title": "m_medcEnt3A - (Moylish) Enterprise and Innovation - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcEnt3A"
+  },
+  {
+    "name": "Marketing and Management - Year 4 Group C",
+    "title": "m_medcMm4C - (Moylish) Marketing and Management - Year 4 Group C",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_medcMm4C"
+  },
+  {
+    "name": "Interior Design - Year 3 Group A",
+    "title": "m_beId3A - (Moylish) Interior Design - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beId3A"
+  },
+  {
+    "name": "Industrial Automation and Robotics - Year 1 Group B",
+    "title": "m_elIar1B - (Moylish) Industrial Automation and Robotics - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elIar1B"
+  },
+  {
+    "name": "Applied Biology - Year 2 Group C",
+    "title": "scAb2C - (Moylish) Applied Biology - Year 2 Group C",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "scAb2C"
+  },
+  {
+    "name": "Social Care Work -  Year 1 Group B",
+    "title": "e_assScw1B - (Ennis) Social Care Work -  Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Ennis",
+    "identifier": "e_assScw1B"
+  },
+  {
+    "name": "Internet Systems Development - Year 3 Group A",
+    "title": "m_itIsd3A - (Moylish) Internet Systems Development - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_itIsd3A"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 1 Group B",
+    "title": "t_sltSports1B(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports1B%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 2 Group A",
+    "title": "t_sltSports2A(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports2A%28H%29"
+  },
+  {
+    "name": "Music Technology and Production - Year 1 Group C1",
+    "title": "m_adMtp1C1 - (Moylish) Music Technology and Production - Year 1 Group C1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp1C1"
+  },
+  {
+    "name": "Music Technology and Production - Year 2 Group C1",
+    "title": "m_adMtp2C1 - (Moylish) Music Technology and Production - Year 2 Group C1",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_adMtp2C1"
+  },
+  {
+    "name": "Industrial Electrical Apprenticeship - Stage 1",
+    "title": "m_elAppS1 - (Moylish) Industrial Electrical Apprenticeship - Stage 1",
+    "year": null,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elAppS1"
+  },
+  {
+    "name": "Business - Year 1 Group C",
+    "title": "m_bfsBu1C - (Moylish) Business - Year 1 Group C",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_bfsBu1C"
+  },
+  {
+    "name": "Early Childhood Care and Education -  Year 2 Group A",
+    "title": "t_assEcce2A - (Thurles) Early Childhood Care and Education -  Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assEcce2A"
+  },
+  {
+    "name": "Social Care Work -  Year 3 Group A",
+    "title": "t_assScw3A - (Thurles) Social Care Work -  Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_assScw3A"
+  },
+  {
+    "name": "Social Care Work -  Year 3 Group B",
+    "title": "t_assScw3B - (Thurles) Social Care Work -  Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_assScw3B"
+  },
+  {
+    "name": "Phase 4 Carpentry and Joinery - Group B",
+    "title": "m_beP4CJB - (Moylish) Phase 4 Carpentry and Joinery - Group B",
+    "year": null,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_beP4CJB"
+  },
+  {
+    "name": "Data Analytics and Cyber Security (L8) - Year 1 Group A",
+    "title": "t_itDacc1A - (Thurles) Data Analytics and Cyber Security (L8) - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_itDacc1A"
+  },
+  {
+    "name": "Electrical Engineering - Year 2 Group A",
+    "title": "m_elEl2A - (Moylish) Electrical Engineering - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEl2A"
+  },
+  {
+    "name": "Music Technology and Production - Year 4 Group B",
+    "title": "m_adMtp4B - (Moylish) Music Technology and Production - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adMtp4B"
+  },
+  {
+    "name": "Creative Multimedia (L8) - Year 4 Group A",
+    "title": "dcmCm4A(H) - (Clonmel) Creative Multimedia (L8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Clonmel",
+    "identifier": "dcmCm4A%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 3 Group B",
+    "title": "t_sltSports3B(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports3B%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 3 Group C",
+    "title": "t_sltSports3C(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Thurles",
+    "identifier": "t_sltSports3C%28H%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 3 Group B",
+    "title": "t_sltSports3B(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Thurles",
+    "identifier": "t_sltSports3B%28O%29"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 7) - Year 3 Group C",
+    "title": "t_sltSports3C(O) - (Thurles) Sports Strength and Conditioning (Level 7) - Year 3 Group C",
+    "year": 3,
+    "group": "C",
+    "location": "Thurles",
+    "identifier": "t_sltSports3C%28O%29"
+  },
+  {
+    "name": "Enterprise and Innovation - Year 4 Group A",
+    "title": "m_medcEnt4A - (Moylish) Enterprise and Innovation - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_medcEnt4A"
+  },
+  {
+    "name": "Internet Systems Development - Year 4 (Data Visualisation)",
+    "title": "m_itIsd4 (Data Visualisation) - (Moylish) Internet Systems Development - Year 4 (Data Visualisation)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_itIsd4+%28Data+Visualisation%29"
+  },
+  {
+    "name": "Business Studies with Event Management - Year 2 Group B",
+    "title": "m_sltEm2B - (Moylish) Business Studies with Event Management - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltEm2B"
+  },
+  {
+    "name": "Culinary Arts - Year 1 Group B",
+    "title": "m_sltCa1B - (Moylish) Culinary Arts - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltCa1B"
+  },
+  {
+    "name": "Culinary Arts - Year 2 Group B",
+    "title": "m_sltCa2B - (Moylish) Culinary Arts - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltCa2B"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group B1",
+    "title": "m_assScw1B1 - (Moylish) Social Care Work - Year 1 Group B1",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw1B1"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group C1",
+    "title": "m_assScw1C1 - (Moylish) Social Care Work - Year 1 Group C1",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw1C1"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group A2",
+    "title": "m_assScw1A2 - (Moylish) Social Care Work - Year 1 Group A2",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw1A2"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group B2",
+    "title": "m_assScw1B2 - (Moylish) Social Care Work - Year 1 Group B2",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw1B2"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group C2",
+    "title": "m_assScw1C2 - (Moylish) Social Care Work - Year 1 Group C2",
+    "year": 1,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw1C2"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group B1",
+    "title": "m_assScw2B1 - (Moylish) Social Care Work - Year 2 Group B1",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw2B1"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group C1",
+    "title": "m_assScw2C1 - (Moylish) Social Care Work - Year 2 Group C1",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw2C1"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group D1",
+    "title": "m_assScw2D1 - (Moylish) Social Care Work - Year 2 Group D1",
+    "year": 2,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw2D1"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group A2",
+    "title": "m_assScw2A2 - (Moylish) Social Care Work - Year 2 Group A2",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw2A2"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group B2",
+    "title": "m_assScw2B2 - (Moylish) Social Care Work - Year 2 Group B2",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw2B2"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group C2",
+    "title": "m_assScw2C2 - (Moylish) Social Care Work - Year 2 Group C2",
+    "year": 2,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw2C2"
+  },
+  {
+    "name": "Social Care Work - Year 2 Group D2",
+    "title": "m_assScw2D2 - (Moylish) Social Care Work - Year 2 Group D2",
+    "year": 2,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw2D2"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group B1",
+    "title": "m_assScw3B1 - (Moylish) Social Care Work - Year 3 Group B1",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw3B1"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group C1",
+    "title": "m_assScw3C1 - (Moylish) Social Care Work - Year 3 Group C1",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw3C1"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group C2",
+    "title": "m_assScw3C2 - (Moylish) Social Care Work - Year 3 Group C2",
+    "year": 3,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw3C2"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group B2",
+    "title": "m_assScw3B2 - (Moylish) Social Care Work - Year 3 Group B2",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw3B2"
+  },
+  {
+    "name": "Social Care Work - Year 3 Group A2",
+    "title": "m_assScw3A2 - (Moylish) Social Care Work - Year 3 Group A2",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw3A2"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group B1",
+    "title": "m_assScw4B1 - (Moylish) Social Care Work - Year 4 Group B1",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw4B1"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group C1",
+    "title": "m_assScw4C1 - (Moylish) Social Care Work - Year 4 Group C1",
+    "year": 4,
+    "group": "C",
+    "location": "Moylish",
+    "identifier": "m_assScw4C1"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group B2",
+    "title": "m_assScw4B2 - (Moylish) Social Care Work - Year 4 Group B2",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assScw4B2"
+  },
+  {
+    "name": "Social Care Work - Year 4 Group A2",
+    "title": "m_assScw4A2 - (Moylish) Social Care Work - Year 4 Group A2",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_assScw4A2"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group D2",
+    "title": "m_assScw1D2 - (Moylish) Social Care Work - Year 1 Group D2",
+    "year": 1,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw1D2"
+  },
+  {
+    "name": "Social Care Work - Year 1 Group D1",
+    "title": "m_assScw1D1 - (Moylish) Social Care Work - Year 1 Group D1",
+    "year": 1,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_assScw1D1"
+  },
+  {
+    "name": "MSc in Strength and Conditioning",
+    "title": "t_sltMScSc - (Thurles) MSc in Strength and Conditioning",
+    "year": null,
+    "group": null,
+    "location": "Thurles",
+    "identifier": "t_sltMScSc"
+  },
+  {
+    "name": "Electronic Systems - Year 4 Group B",
+    "title": "m_elEc4B - (Moylish) Electronic Systems - Year 4 Group B",
+    "year": 4,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_elEc4B"
+  },
+  {
+    "name": "Agricultural Mechanisation - Year 3 Group A",
+    "title": "m_mechAgri3A - (Moylish) Agricultural Mechanisation - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechAgri3A"
+  },
+  {
+    "name": "Creative Broadcast - Year 1 Group B",
+    "title": "m_adCb1B - (Moylish) Creative Broadcast - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adCb1B"
+  },
+  {
+    "name": "Civil Engineering - Year 1 Group A",
+    "title": "m_beCe1A - (Moylish) Civil Engineering - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCe1A"
+  },
+  {
+    "name": "Civil Engineering - Year 2 Group A",
+    "title": "m_beCe2A - (Moylish) Civil Engineering - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCe2A"
+  },
+  {
+    "name": "Civil Engineering Management - Year 1 Group A",
+    "title": "m_beCivm1A - (Moylish) Civil Engineering Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCivm1A"
+  },
+  {
+    "name": "Civil Engineering Management - Year 2 Group A",
+    "title": "m_beCivm2A - (Moylish) Civil Engineering Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCivm2A"
+  },
+  {
+    "name": "Civil Engineering Management - Year 3 Group A",
+    "title": "m_beCivm3A - (Moylish) Civil Engineering Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCivm3A"
+  },
+  {
+    "name": "Civil Engineering Management - Year 4 Group A",
+    "title": "m_beCivm4A - (Moylish) Civil Engineering Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCivm4A"
+  },
+  {
+    "name": "Construction Management - Year 1 Group A",
+    "title": "m_beCm1A - (Moylish) Construction Management - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCm1A"
+  },
+  {
+    "name": "Construction Management - Year 2 Group A",
+    "title": "m_beCm2A - (Moylish) Construction Management - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCm2A"
+  },
+  {
+    "name": "Construction Management - Year 3 Group A",
+    "title": "m_beCm3A - (Moylish) Construction Management - Year 3 Group A",
+    "year": 3,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCm3A"
+  },
+  {
+    "name": "Construction Management - Year 4 Group A",
+    "title": "m_beCm4A - (Moylish) Construction Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beCm4A"
+  },
+  {
+    "name": "Marketing and Management - Year 3 Group D",
+    "title": "m_medcMm3D - (Moylish) Marketing and Management - Year 3 Group D",
+    "year": 3,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_medcMm3D"
+  },
+  {
+    "name": "Agricultural Mechanisation - Year 2 Group B",
+    "title": "m_mechAgri2B - (Moylish) Agricultural Mechanisation - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechAgri2B"
+  },
+  {
+    "name": "Electrical Engineering - Year 1 Group A",
+    "title": "m_elEl1A - (Moylish) Electrical Engineering - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elEl1A"
+  },
+  {
+    "name": "Sports Development and Coaching - Year 1 Group A",
+    "title": "m_sltSdc1A - (Moylish) Sports Development and Coaching - Year 1 Group A",
+    "year": 1,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_sltSdc1A"
+  },
+  {
+    "name": "Marketing and Management - Year 4 Group D",
+    "title": "m_medcMm4D - (Moylish) Marketing and Management - Year 4 Group D",
+    "year": 4,
+    "group": "D",
+    "location": "Moylish",
+    "identifier": "m_medcMm4D"
+  },
+  {
+    "name": "Early Childhood Care and Education - Year 1 Group B",
+    "title": "m_assEcce1B - (Moylish) Early Childhood Care and Education - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_assEcce1B"
+  },
+  {
+    "name": "Interior Design - Year 2 Group A",
+    "title": "m_beId2A - (Moylish) Interior Design - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_beId2A"
+  },
+  {
+    "name": "Sports Strength and Conditioning (Level 8) - Year 4 Group A",
+    "title": "t_sltSports4A(H) - (Thurles) Sports Strength and Conditioning (Level 8) - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "t_sltSports4A%28H%29"
+  },
+  {
+    "name": "Mechanical Engineering - Year 4 Group A",
+    "title": "m_mechMeng4A - (Moylish) Mechanical Engineering - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechMeng4A"
+  },
+  {
+    "name": "Applied Biology - Year 3 Group B",
+    "title": "scAb3B - (Moylish) Applied Biology - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "scAb3B"
+  },
+  {
+    "name": "Process and Engineering Management - Year 4 Group A",
+    "title": "m_mechPro4A - (Moylish) Process and Engineering Management - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_mechPro4A"
+  },
+  {
+    "name": "Renewable and Electrical Energy Systems - Year 4 Group A",
+    "title": "m_elRe4A - (Moylish) Renewable and Electrical Energy Systems - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elRe4A"
+  },
+  {
+    "name": "Music Technology and Production - Year 4 Group A",
+    "title": "m_adMtp4A - (Moylish) Music Technology and Production - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_adMtp4A"
+  },
+  {
+    "name": "Renewable and Electrical Energy Systems - Year 2 Group A",
+    "title": "m_elRe2A - (Moylish) Renewable and Electrical Energy Systems - Year 2 Group A",
+    "year": 2,
+    "group": "A",
+    "location": "Moylish",
+    "identifier": "m_elRe2A"
+  },
+  {
+    "name": "Music Technology and Production - Year 1 Group B",
+    "title": "m_adMtp1B - (Moylish) Music Technology and Production - Year 1 Group B",
+    "year": 1,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adMtp1B"
+  },
+  {
+    "name": "Music Technology and Production - Year 2 Group B",
+    "title": "m_adMtp2B - (Moylish) Music Technology and Production - Year 2 Group B",
+    "year": 2,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_adMtp2B"
+  },
+  {
+    "name": "Agricultural Mechanisation - Year 3 Group B",
+    "title": "m_mechAgri3B - (Moylish) Agricultural Mechanisation - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_mechAgri3B"
+  },
+  {
+    "name": "Renewable and Electrical Energy Engineering  - Year 4 Access (Part 2)",
+    "title": "m_elRe4D1 - (Moylish) Renewable and Electrical Energy Engineering  - Year 4 Access (Part 2)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elRe4D1"
+  },
+  {
+    "name": "Renewable and Electrical Energy Engineering - Year 4 Access (Colm)",
+    "title": "m_elRe4E - (Moylish) Renewable and Electrical Energy Engineering - Year 4 Access (Colm)",
+    "year": 4,
+    "group": null,
+    "location": "Moylish",
+    "identifier": "m_elRe4E"
+  },
+  {
+    "name": "Environmental Management in Agriculture - Year 4 Group A",
+    "title": "scEma4A - (Thurles) Environmental Management in Agriculture - Year 4 Group A",
+    "year": 4,
+    "group": "A",
+    "location": "Thurles",
+    "identifier": "scEma4A"
+  },
+  {
+    "name": "Business Studies with Travel and Tourism - Year 3 Group B",
+    "title": "m_sltBst3B - (Moylish) Business Studies with Travel and Tourism - Year 3 Group B",
+    "year": 3,
+    "group": "B",
+    "location": "Moylish",
+    "identifier": "m_sltBst3B"
+  }
+]

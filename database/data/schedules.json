@@ -1,0 +1,1252 @@
+[
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 10:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 13:00:00",
+    "ending_date": "2020-11-02 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 12:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 13:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 17:00:00",
+    "ending_date": "2020-11-04 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 17:00:00",
+    "ending_date": "2020-11-05 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 12:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 15:00:00",
+    "ending_date": "2020-11-06 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 16:00:00",
+    "ending_date": "2020-11-06 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 17:00:00",
+    "ending_date": "2020-11-06 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 13:00:00",
+    "ending_date": "2020-11-02 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 15:00:00",
+    "ending_date": "2020-11-02 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 17:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 10:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 16:00:00",
+    "ending_date": "2020-11-03 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 17:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 09:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 11:00:00",
+    "ending_date": "2020-11-05 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 17:00:00",
+    "ending_date": "2020-11-05 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 14:00:00",
+    "ending_date": "2020-11-06 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 15:00:00",
+    "ending_date": "2020-11-06 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 17:00:00",
+    "ending_date": "2020-11-06 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 15:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 13:00:00",
+    "ending_date": "2020-11-05 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 11:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 13:00:00",
+    "ending_date": "2020-11-02 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 10:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 16:00:00",
+    "ending_date": "2020-11-03 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 17:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 17:00:00",
+    "ending_date": "2020-11-04 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 13:00:00",
+    "ending_date": "2020-11-05 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 17:00:00",
+    "ending_date": "2020-11-05 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 10:00:00",
+    "ending_date": "2020-11-06 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 15:00:00",
+    "ending_date": "2020-11-06 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 16:00:00",
+    "ending_date": "2020-11-06 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 10:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 15:00:00",
+    "ending_date": "2020-11-02 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 15:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 12:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 17:00:00",
+    "ending_date": "2020-11-04 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 09:00:00",
+    "ending_date": "2020-11-06 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 10:00:00",
+    "ending_date": "2020-11-06 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 13:00:00",
+    "ending_date": "2020-11-06 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 10:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 15:00:00",
+    "ending_date": "2020-11-02 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 12:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 15:00:00",
+    "ending_date": "2020-11-03 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 16:00:00",
+    "ending_date": "2020-11-03 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 12:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 13:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 09:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 11:00:00",
+    "ending_date": "2020-11-05 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 15:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 13:00:00",
+    "ending_date": "2020-11-02 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 10:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 12:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 11:00:00",
+    "ending_date": "2020-11-05 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 12:00:00",
+    "ending_date": "2020-11-05 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 15:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 10:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 13:00:00",
+    "ending_date": "2020-11-02 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 17:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 12:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 10:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 09:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 12:00:00",
+    "ending_date": "2020-11-05 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 13:00:00",
+    "ending_date": "2020-11-05 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 11:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 14:00:00",
+    "ending_date": "2020-11-06 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 17:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 12:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 16:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 10:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 13:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 17:00:00",
+    "ending_date": "2020-11-04 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 10:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 11:00:00",
+    "ending_date": "2020-11-05 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 12:00:00",
+    "ending_date": "2020-11-05 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 13:00:00",
+    "ending_date": "2020-11-05 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 15:00:00",
+    "ending_date": "2020-11-05 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 09:00:00",
+    "ending_date": "2020-11-06 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 10:00:00",
+    "ending_date": "2020-11-06 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 14:00:00",
+    "ending_date": "2020-11-06 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 10:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 13:00:00",
+    "ending_date": "2020-11-02 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 16:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 10:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 13:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 10:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 11:00:00",
+    "ending_date": "2020-11-05 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 15:00:00",
+    "ending_date": "2020-11-05 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 09:00:00",
+    "ending_date": "2020-11-06 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 10:00:00",
+    "ending_date": "2020-11-06 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 11:00:00",
+    "ending_date": "2020-11-06 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 12:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 14:00:00",
+    "ending_date": "2020-11-06 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 10:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 17:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 13:00:00",
+    "ending_date": "2020-11-03 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 13:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 09:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 11:00:00",
+    "ending_date": "2020-11-05 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 14:00:00",
+    "ending_date": "2020-11-02 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 15:00:00",
+    "ending_date": "2020-11-02 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 17:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 10:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 14:00:00",
+    "ending_date": "2020-11-04 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 09:00:00",
+    "ending_date": "2020-11-05 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 14:00:00",
+    "ending_date": "2020-11-05 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 15:00:00",
+    "ending_date": "2020-11-05 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 09:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 11:00:00",
+    "ending_date": "2020-11-02 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 12:00:00",
+    "ending_date": "2020-11-02 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 16:00:00",
+    "ending_date": "2020-11-02 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 17:00:00",
+    "ending_date": "2020-11-02 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 09:00:00",
+    "ending_date": "2020-11-03 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 11:00:00",
+    "ending_date": "2020-11-03 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 12:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 10:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 10:00:00",
+    "ending_date": "2020-11-04 12:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 13:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 10:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 13:00:00",
+    "ending_date": "2020-11-05 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 16:00:00",
+    "ending_date": "2020-11-05 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 17:00:00",
+    "ending_date": "2020-11-05 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 12:00:00",
+    "ending_date": "2020-11-06 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 13:00:00",
+    "ending_date": "2020-11-06 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 16:00:00",
+    "ending_date": "2020-11-06 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-06 17:00:00",
+    "ending_date": "2020-11-06 18:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-02 09:00:00",
+    "ending_date": "2020-11-02 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 10:00:00",
+    "ending_date": "2020-11-03 13:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 14:00:00",
+    "ending_date": "2020-11-03 15:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 15:00:00",
+    "ending_date": "2020-11-03 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-03 16:00:00",
+    "ending_date": "2020-11-03 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 09:00:00",
+    "ending_date": "2020-11-04 11:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 11:00:00",
+    "ending_date": "2020-11-04 14:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 15:00:00",
+    "ending_date": "2020-11-04 16:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-04 16:00:00",
+    "ending_date": "2020-11-04 17:00:00"
+  },
+  {
+    "academic_week": 10,
+    "starting_date": "2020-11-05 09:00:00",
+    "ending_date": "2020-11-05 11:00:00"
+  }
+]

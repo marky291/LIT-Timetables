@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Limerick Institute of Technology",
+    "filter": "D100"
+  },
+  {
+    "name": "Business and Financial Services",
+    "filter": "D242"
+  },
+  {
+    "name": "Information Technology",
+    "filter": "D210"
+  },
+  {
+    "name": "Art and Design",
+    "filter": "D300"
+  },
+  {
+    "name": "Electrical and Electronic Engineering",
+    "filter": "D401"
+  },
+  {
+    "name": "Mechanical and Automobile Engineering",
+    "filter": "D420"
+  },
+  {
+    "name": "Applied Science",
+    "filter": "D470"
+  },
+  {
+    "name": "N/a",
+    "filter": "D600"
+  },
+  {
+    "name": "Built Environment",
+    "filter": "D510"
+  },
+  {
+    "name": "Flexible Learning",
+    "filter": "D120 - Flexible Learning"
+  },
+  {
+    "name": "International Office",
+    "filter": "D101"
+  },
+  {
+    "name": "Design and Creative Media (Clonmel)",
+    "filter": "D306"
+  },
+  {
+    "name": "Estates Department",
+    "filter": "D131 - Estates"
+  },
+  {
+    "name": "Applied Social Sciences",
+    "filter": "D246"
+  },
+  {
+    "name": "Marketing Enterprise and Digital Communication",
+    "filter": "D244"
+  },
+  {
+    "name": "Sport Leisure and Tourism",
+    "filter": "D248"
+  }
+]

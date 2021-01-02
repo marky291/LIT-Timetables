@@ -1,0 +1,100 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBrainstormTables extends Migration
+{
+     /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('departments', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('filter');
+            $table->timestamps();
+        });
+
+        Schema::create('modules', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
+
+        Schema::create('rooms', function (Blueprint $table) {
+            $table->id();
+            $table->string('door');
+            $table->timestamps();
+        });
+
+        Schema::create('lecturers', function (Blueprint $table) {
+            $table->id();
+            $table->uuid('uuid')->unique();
+            $table->string('fullname');
+            $table->timestamps();
+        });
+
+        Schema::create('types', function (Blueprint $table) {
+            $table->id();
+            $table->string('abbreviation');
+            $table->timestamps();
+        });
+
+        Schema::create('courses', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('title');
+            $table->integer('year')->nullable();
+            $table->string('group')->nullable();
+            $table->string('campus_id');
+            $table->string('identifier');
+            $table->foreignId('department_id');
+            $table->timestamps();
+        });
+
+        Schema::create('campuses', function(Blueprint $table) {
+            $table->id();
+            $table->string('location');
+            $table->timestamps();
+        });
+
+        Schema::create('schedules', function(Blueprint $table) {
+            $table->id();
+            $table->unsignedInteger('academic_week');
+            $table->timestamp('starting_date');
+            $table->timestamp('ending_date');
+            $table->foreignId('course_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('module_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('lecturer_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('room_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('type_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->timestamps();
+        });
+
+        Schema::create('requests', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('course_id');
+            $table->string('response');
+            $table->double('time');
+            $table->string('link');
+            $table->json('mined');
+            $table->json('meta');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

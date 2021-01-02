@@ -1,0 +1,638 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Student Set Individual</title>
+</head>
+
+<body>
+
+<!-- START REPORT HEADER -->
+<table   border='0' cellspacing='0' width='100%'><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td><table border='0' width='100%'><tr><td width='40%' align='left' valign='middle'><font face='arial' size='3'><b>Student Gp: m_itSd4 (Entrepreneurship)<font size='1'> </td><td width='20%' align='center' valign='middle'><font face='arial' size='1'>Dept: D210 - Information Technology</td><td width='40%' align='right' valign='middle'><font face='arial' size='2'><b>Weeks selected for output: 8 (19 Oct 2020-25 Oct 2020)</td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- END REPORT HEADER -->
+
+<table  cellspacing='0'  border='1'>
+
+<!-- START COLUMN LABELS ONE -->
+<tr>
+    <td></td>
+
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>8:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>8:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>9:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>9:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>10:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>10:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>11:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>11:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>12:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>12:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>13:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>13:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>14:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>14:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>15:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>15:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>16:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>16:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>17:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>17:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>18:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>18:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>19:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>19:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>20:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>20:30</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>21:00</font></td>
+    <td   bgcolor='#C0C0C0' colspan='1'><font color='#FFFFFF'>21:30</font></td>
+</tr>
+
+<!-- END COLUMN LABELS ONE -->
+
+<!-- START ROW OUTPUT -->
+<tr >
+    <td style="border-bottom:3px solid #000000;" rowspan='1' bgcolor='#C0C0C0'><font color='#FFFFFF'>Mon</font></td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+</tr>
+<tr >
+    <td style="border-bottom:3px solid #000000;" rowspan='1' bgcolor='#C0C0C0'><font color='#FFFFFF'>Tue</font></td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Reactive Systems</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>8A306</font></td>
+  <td align='right'><font color='#008000'>Online Practical</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>James Fennell</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+</tr>
+<tr >
+    <td style="border-bottom:3px solid #000000;" rowspan='1' bgcolor='#C0C0C0'><font color='#FFFFFF'>Wed</font></td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Management Techniques in Software Engineering</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>1B20</font></td>
+  <td align='right'><font color='#008000'>Online Practical</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Sharon Byrne</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Enterprise Application Development</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>1B20</font></td>
+  <td align='right'><font color='#008000'>Online Lab Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Mark Hester</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;"  colspan='4' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Enterprise Application Development</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>8A106</font></td>
+  <td align='right'><font color='#008000'>Online Practical</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Alan Ryan</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;"  colspan='4' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Reactive Systems</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>1A17</font></td>
+  <td align='right'><font color='#008000'>Online Lab Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>James Fennell</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;"  colspan='4' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Secure Cloud Services Deployment</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>1B20</font></td>
+  <td align='right'><font color='#008000'>Online Lab Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>John Jennings</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+</tr>
+<tr >
+    <td style="border-bottom:3px solid #000000;" rowspan='1' bgcolor='#C0C0C0'><font color='#FFFFFF'>Thu</font></td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Management Techniques in Software Engineering</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>8A501</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Sharon Byrne</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Management Techniques in Software Engineering</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>8A501</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Sharon Byrne</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Secure Cloud Services Deployment</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>PF3.2</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>John Jennings</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Final Year Project</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>8A503</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Niall Corcoran</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;"  colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Enterprise Application Development</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>PF4.1</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Alan Ryan</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+    <td style="border-bottom:3px solid #000000;" >&nbsp;</td>
+</tr>
+<tr >
+    <td  rowspan='1' bgcolor='#C0C0C0'><font color='#FFFFFF'>Fri</font></td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td   colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Entrepreneurship</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>PF3.2</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Nicholas Brady</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td   colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Entrepreneurship</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>PF3.2</font></td>
+  <td align='right'><font color='#008000'>Online Lecture</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Nicholas Brady</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td   colspan='2' rowspan='1' >
+<!-- START OBJECT-CELL -->
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#FF0000'>Entrepreneurship</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+  <col align='right' />
+<tr>
+  <td align='left'><font color='#000000'>PF5.2</font></td>
+  <td align='right'><font color='#008000'>Online Tutorial</font></td>
+</tr>
+</table>
+<table  cellspacing='0' border='0' width='100%'>
+  <col align='left' />
+<tr>
+  <td align='left'><font color='#000080'>Nicholas Brady</font></td>
+</tr>
+</table>
+<!-- END OBJECT-CELL -->
+    </td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+    <td  >&nbsp;</td>
+</tr>
+
+<!-- END ROW OUTPUT -->
+</table>
+
+<!-- START REPORT FOOTER -->
+<table   border='0' cellspacing='0' width='100%'><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td><script language='javascript' src='/js/form.js'></script>
+<table border='0' width='100%'><tr><td align='left' width='33%'><font face='arial' size='1'>
+<script language='javascript'>
+   document.write("<font size='1'><a href='javascript:PrevNextWks("+ String.fromCharCode(34) + escape(location.href) + String.fromCharCode(34) + ",true);'>< Previous Week's Timetable</a>");
+</script>
+</td><td align='center' width='33%'><font face='arial' size='1'>
+<script>javascript:document.write("<a href='"+location.href+"_PF' target='_blank'>Smaller Version (Printer Friendly)</a>");</script><td align='right' width='33%'>
+<script language='javascript'>
+   document.write("<font size='1'><a href='javascript:PrevNextWks("+ String.fromCharCode(34) + escape(location.href) + String.fromCharCode(34) + ",false);'>Next Week's Timetable ></a>");
+</script>
+</td></tr></table></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td><table border='0' width='100%'><tr><td width='33%' align='left' valign='middle'><font face='arial' size='1'><script language='javascript' src='js/form.js'></script><script language='javascript'>document.write("<a href='http://" + pagehost + "/Student Timetable.htm'><< Back</a>");</script></td><td width='33%' align='center' valign='middle'><font face='arial' size='1'><a href="javascript:window.print();" onmouseover="status='Print this page'; return true;" onmouseout="status=''; return true;">Print Timetable</a></td><td width='33%' align='right' valign='middle'><font face='arial' size='1'>Date/Time: 23 Oct 2020 21:31</td></tr></table></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td><table border='0' width='100%'><tr><td width='33%' align='left' valign='middle'><font face='arial' size='1'></td><td width='33%' align='center' valign='middle'></td><td width='33%' align='right' valign='middle'></td></tr></table></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr><tr>
+<td>
+<table cellspacing='0' border='0' width='100%' >
+<col align='left' /><col align='center' /><col align='right' />
+  <tr>
+    <td><div style="page-break-before: always"></div></td><td></td><td></td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- END REPORT FOOTER -->
+<hr />
