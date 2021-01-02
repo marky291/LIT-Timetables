@@ -7,7 +7,6 @@ use App\Models\Lecturer;
 use App\Models\Module;
 use App\Models\Room;
 use App\Models\Schedule;
-use App\Models\Timetable;
 use App\Models\Type;
 
 class ScheduleFactory extends DataFactory

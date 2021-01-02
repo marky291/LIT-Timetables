@@ -31,5 +31,4 @@ class CampusTest extends TestCase
 
         $this->assertEquals('limerick', $campus->city);
     }
-
 }

@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
- * Class Department
+ * Class Department.
  *
- * @package App
  * @method static updateOrCreate(array $array, array $array1)
  * @method static firstWhere(string $string, $i)
  * @method static firstOrCreate(array $array)

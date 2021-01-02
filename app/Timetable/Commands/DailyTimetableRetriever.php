@@ -8,7 +8,6 @@ use App\Timetable\Exceptions\ReturnedBadResponseException;
 use App\Timetable\Jobs\CreateCourseSchedules;
 use App\Timetable\Jobs\CreateDepartmentCourses;
 use App\Timetable\TimetableSourceLinkCreator;
-use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\DB;
@@ -52,7 +51,7 @@ class DailyTimetableRetriever extends Command
     public function handle()
     {
         try {
-            DB::transaction(function() {
+            DB::transaction(function () {
                 $this->info('Dispatching filter crawlers...');
                 CreateDepartmentCourses::dispatchNow(new ConvertTimetableFilters(Http::get(config('timetable.url.filter'))->body()));
                 $this->info('Completed...');
@@ -62,13 +61,12 @@ class DailyTimetableRetriever extends Command
 
                 $courses = Course::all();
 
-                $this->info($courses->count() . " courses found");
+                $this->info($courses->count().' courses found');
 
                 $this->output->progressStart($courses->count());
                 $this->info('Dispatching timetable jobs...');
 
-                foreach ($courses as $course)
-                {
+                foreach ($courses as $course) {
                     try {
                         CreateCourseSchedules::dispatch($course, $this->createLinkForCourse($course));
                     } catch (ReturnedBadResponseException $e) {
@@ -78,21 +76,17 @@ class DailyTimetableRetriever extends Command
                     $this->output->progressAdvance();
                 }
 
-                $this->info("Done!");
+                $this->info('Done!');
 
                 $this->output->progressFinish();
                 $this->info('Completed...');
             });
-        }
-        catch (ConnectionException $exception) {
+        } catch (ConnectionException $exception) {
             $this->error($exception->getMessage());
-            $this->error("Website offline or bad connection.");
+            $this->error('Website offline or bad connection.');
         }
     }
 
-    /**
-     *
-     */
     private function createLinkForCourse(Course $course)
     {
         if ($week = $this->argument('week')) {

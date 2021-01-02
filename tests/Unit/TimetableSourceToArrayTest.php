@@ -2,20 +2,16 @@
 
 namespace Tests\Unit;
 
-use Carbon\Carbon;
+use App\Timetable\Converters\ConvertTimetableSource;
 use Goutte\Client;
-use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\File;
 use Mockery;
+use Mockery\MockInterface;
 use Symfony\Component\DomCrawler\Crawler;
 use Tests\TestCase;
-use Mockery\MockInterface;
-use Illuminate\Support\Facades\File;
-use App\Timetable\Converters\ConvertTimetableSource;
 
 /**
- * Class TimetableSourceToArrayTest
- *
- * @package Tests\Unit
+ * Class TimetableSourceToArrayTest.
  */
 class TimetableSourceToArrayTest extends TestCase
 {
@@ -34,5 +30,4 @@ class TimetableSourceToArrayTest extends TestCase
 
         $this->assertCount(14, $timetable->get('schedules'));
     }
-
 }

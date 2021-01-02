@@ -4,9 +4,8 @@ namespace Tests\Unit\Models;
 
 use App\Models\Campus;
 use App\Models\Course;
-use App\Models\Schedule;
 use App\Models\Requests;
-use Carbon\Carbon;
+use App\Models\Schedule;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

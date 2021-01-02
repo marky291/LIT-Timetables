@@ -18,7 +18,7 @@ class Course extends JsonResource
             'location' => $this->location,
             'identifier' => $this->identifier,
             'course' => $this->name,
-            'timetable' => sprintf(config('timetable.url.source'), $this->identifier, ""),
+            'timetable' => sprintf(config('timetable.url.source'), $this->identifier, ''),
             'department' => new Department($this->whenLoaded('department')),
         ];
     }

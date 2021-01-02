@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Timetable\Regex;
 
 use Illuminate\Support\Str;
@@ -9,11 +8,11 @@ use Spatie\Regex\Regex;
 class RegexDataFromCourseName
 {
     /**
-     * @var String
+     * @var string
      */
     private $title;
 
-    public function __construct(String $title)
+    public function __construct(string $title)
     {
         $this->title = Str::of($title);
     }
@@ -25,12 +24,12 @@ class RegexDataFromCourseName
 
     public function getIdentifier()
     {
-        return urlencode($this->regResult("/(.*?)(?= -)/", $this->title));
+        return urlencode($this->regResult('/(.*?)(?= -)/', $this->title));
     }
 
     public function getLocation()
     {
-        $available = implode("|", ["Moylish", "Thurles", "Ennis", "Clonmel"]);
+        $available = implode('|', ['Moylish', 'Thurles', 'Ennis', 'Clonmel']);
 
         return $this->regResult("/(?<=\()($available)(?=\))/", $this->title);
     }

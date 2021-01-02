@@ -3,8 +3,6 @@
 namespace App\Timetable;
 
 use App\Models\Course;
-use http\QueryString;
-use http\Url;
 
 class TimetableSourceLinkCreator
 {
@@ -31,6 +29,6 @@ class TimetableSourceLinkCreator
             return sprintf(config('timetable.url.source'), $this->course, "&weeks={$this->weekNumber}");
         }
 
-       return sprintf(config('timetable.url.source'), $this->course, '');
+        return sprintf(config('timetable.url.source'), $this->course, '');
     }
 }

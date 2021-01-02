@@ -3,12 +3,10 @@
 namespace Tests\Unit\Timetable\Jobs;
 
 use App\Models\Course;
-use App\Models\Department;
 use App\Timetable\Converters\ConvertTimetableFilters;
 use App\Timetable\Jobs\CreateDepartmentCourses;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 
 class CreateDepartmentCoursesTest extends TestCase

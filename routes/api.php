@@ -28,6 +28,6 @@ Route::get('courses', function () {
     });
 });
 
-Route::get('course/{course}/schedules', function(Course $course) {
+Route::get('course/{course}/schedules', function (Course $course) {
     return new ScheduleCollection($course->timetable->schedules);
 });

@@ -26,10 +26,11 @@ class Search extends Component
             $this->results = Cache::remember($this->query, now()->addMinutes(45), function () {
                 $results['courses'] = Course::search($this->query)->get();
                 $results['lecturers'] = Lecturer::search($this->query)->get();
+
                 return $results;
             });
         }
 
         return view('livewire.search');
-}
+    }
 }
