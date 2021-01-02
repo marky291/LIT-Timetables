@@ -1,5 +1,5 @@
 # LIT Timetables
-[![Build Status](https://travis-ci.com/marky291/lit-timetables.svg?token=rSzsJZBSMZpGe42pERU9&branch=main)](https://travis-ci.com/marky291/lit-timetables)
+![Laravel](https://github.com/marky291/lit-timetables/workflows/Laravel/badge.svg)
 [![Latest Version](https://img.shields.io/github/v/release/marky291/lit-timetable.svg?style=flat-square)](https://github.com/marky291/lit-timetable/releases)
 
 ## Installation
