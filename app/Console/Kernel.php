@@ -30,8 +30,6 @@ class Kernel extends ConsoleKernel
         //$schedule->command('inspire')->everyMinute();
 
         $schedule->command('crawl:daily')->daily();
-
-        $schedule->command('horizon:snapshot')->everyFiveMinutes();
     }
 
     /**
