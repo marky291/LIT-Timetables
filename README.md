@@ -15,7 +15,8 @@ Download and use [Composer](https://getcomposer.org/), in the root of the projec
 $ composer install
 ```
 
-Deploy the [Laravel Docker Container](https://laravel.com/docs/8.x/sail) to run locally
+Deploy the [Laravel Docker Container](https://laravel.com/docs/8.x/sail) for environment setup.
+If you are missing docker then you should install [Docker](https://docs.docker.com/engine/install/)
 ```
 $ ./vendor/bin/sail up
 ```
@@ -30,28 +31,23 @@ Or use live timetable data for testing
 $ ./vendor/bin/sail artisan scrape:week {week_number}
 ```
 
-## MeiliSearch
-Meilisearch is an open-source search engine that requires a seperate service to run in the background, if you do not wish to use mysql as the test engine and would rather recreate the live environment, Currently this only supports mac and ubuntu installations. This is a client and server service.
+## Installation on Windows
 
-Modify your `.env` file and alter the following configurations, to enable client side.
+Laravel sail support MacOS, Linux and Windows (WSL2)
+https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10
+
+Using WSL2 on windows you can now follow the installation for linux operating systems.
+
+## MeiliSearch
+Meilisearch is an open-source search engine that powers the search in the application by default this is preconfigured with the laravel sail docker container and defined in the `.env` environment file.
 
 ```sh
 $ SCOUT_DRIVER=meiliesearch
 $ SCOUT_QUEUE=true
 ```
 
-Follow the documentation on meilisearch to install server side with tool of choice.
-https://docs.meilisearch.com/guides/advanced_guides/installation.html#download-and-launch
-
-The engine used on the client side for interaction against server is Laravel Scout.
-Laravel scout will automatically track and alter server based on model observation.
-https://laravel.com/docs/8.x/scout
-
-You can manually use commands to pertain certain actions if required.
-| Action | Command |
-| ------ | ------ |
-| Import | php artisan scout:import "App\Models\\{Model}" |
-| Flush | php artisan scout:flush "App\Models\\{Model}" |
+[Laravel Scout](https://laravel.com/docs/8.x/scout) is the engine driver that allows automatic synchronization of the application models.
+For more information on library usage you can check out the [laravel documentation](https://laravel.com/docs/8.x/scout).
 
 ## Testing
 
