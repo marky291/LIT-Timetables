@@ -21,15 +21,15 @@ class DailyTimetableRetriever extends Command
      *
      * @var string
      */
-    protected $signature = 'scrape:week
-                            {week? : The week to be scraped.}';
+    protected $signature = 'fetch:week
+                            {week? : The week to be fetched.}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Scrap schedules for the week, defaults to current week.';
+    protected $description = 'Fetch schedules for the week, defaults to current week.';
 
     /**
      * Create a new command instance.
