@@ -36,8 +36,6 @@ class ScheduleCollectionTest extends TestCase
         $schedule1 = Schedule::factory()->create(['starting_date' => Carbon::create(2020, 1, 8, 10, 00, 00), 'ending_date' => Carbon::create(2020, 1, 8, 11, 00, 00)]);
         $schedule2 = Schedule::factory()->create(['starting_date' => Carbon::create(2020, 1, 8, 12, 00, 00), 'ending_date' => Carbon::create(2020, 01, 8, 13, 00, 00)]);
 
-        dd(Schedule::latestAcademicWeek()->get()->upcoming()->first());
-
         $this->assertEquals($schedule2->id, Schedule::latestAcademicWeek()->get()->upcoming()->first()->id);
     }
 }
