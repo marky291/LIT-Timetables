@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\Schedules;
 
-use App\Models\Schedule;
 use App\Timetable\Collections\ScheduleCollection;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -19,7 +18,7 @@ class Upcoming extends Component
     public $upcoming;
 
     /**
-     * Mount the component
+     * Mount the component.
      */
     public function mount()
     {
@@ -27,7 +26,7 @@ class Upcoming extends Component
     }
 
     /**
-     * Render the component
+     * Render the component.
      *
      * @return Application|Factory|View
      */

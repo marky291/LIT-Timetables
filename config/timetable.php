@@ -10,12 +10,12 @@ return [
     'semester' => [
         'first' => [
             'start' => '31 August',
-            'end' => '14 December'
+            'end' => '14 December',
         ],
         'second' => [
             'start' => '11 January',
             'end' =>'10 May',
-        ]
+        ],
     ],
 
     'day_position' => [
