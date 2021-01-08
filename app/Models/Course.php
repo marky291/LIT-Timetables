@@ -33,7 +33,7 @@ class Course extends Model implements RoutableInterface
     protected $fillable = ['name', 'identifier', 'year', 'group', 'title'];
 
     /**
-     * @return HasMany
+     * @return HasMany|Schedule
      */
     public function schedules()
     {

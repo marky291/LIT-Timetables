@@ -9,8 +9,8 @@
     </div>
     {{--        Schedule::latestAcademicWeek()->get()->today()--}}
     <div class="grid grid-cols-4 gap-4 px-4 py-5 rounded sm:p-6">
-        @if(count($today))
-            @foreach ($today as $schedule)
+        @if(count($upcoming))
+            @foreach ($upcoming as $schedule)
                 <div class="col-span-4 md:col-span-2 lg:col-span-1 p-4 {{ $schedule->isCurrentTime() ? 'bg-green-100 text-green-800 font-medium' : 'bg-gray-100' }} border-2 border-gray-100 rounded">
                     <p class="mb-4"><span class="text-lg font-bold text-gray-800">{{ $schedule->starting_date->format('H:i') }}</span> <span class="ml-1 text-lg font-normal text-gray-500"> - {{ $schedule->ending_date->format('H:i') }}</span></p>
                     <p class="mb-4">{{ $schedule->room->door }}</p>
@@ -21,7 +21,7 @@
             @endforeach
         @else
             <div class="col-span-4">
-                <h3>There are currently no schedules for today</h3>
+                <h3>There are currently no upcoming schedules for today</h3>
             </div>
         @endif
     </div>

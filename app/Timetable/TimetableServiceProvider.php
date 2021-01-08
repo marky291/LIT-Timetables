@@ -13,7 +13,9 @@ class TimetableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(Semester::class, function ($app) {
+            return new Semester(now());
+        });
     }
 
     /**

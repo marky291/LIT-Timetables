@@ -23,10 +23,10 @@ class ScheduleCollection extends Collection
     /**
      * @return ScheduleCollection
      */
-    public function upcoming()
+    public function upcoming(): ScheduleCollection
     {
         return $this->filter(function (Schedule $schedule) {
-            return now() <= $schedule->ending_date;
+            return now() < $schedule->ending_date;
         });
     }
 
