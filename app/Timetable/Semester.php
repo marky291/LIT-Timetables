@@ -3,7 +3,6 @@
 namespace App\Timetable;
 
 use Carbon\Carbon;
-use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
@@ -47,14 +46,14 @@ class Semester
      */
     private function createPeriodFrom(string $config_start, string $config_finish): Collection
     {
-        $start  = $this->parse(Str::of(config($config_start))->append(" ")->append($this->currentDate->year));
-        $finish  = $this->parse(Str::of(config($config_finish))->append(" ")->append($this->currentDate->year));
+        $start = $this->parse(Str::of(config($config_start))->append(' ')->append($this->currentDate->year));
+        $finish = $this->parse(Str::of(config($config_finish))->append(' ')->append($this->currentDate->year));
 
         // if current date is less than the configuration date, then it must be last year;
         if ($this->currentDate < $start) {
             $start->subYear(1);
             $finish->subYear(1);
-        } else if ($this->currentDate > $finish) {
+        } elseif ($this->currentDate > $finish) {
             $start->addYear(1);
             $finish->addYear(1);
         }
@@ -63,7 +62,7 @@ class Semester
     }
 
     /**
-     * Parse a date string to carbon
+     * Parse a date string to carbon.
      *
      * @param $date
      * @return Carbon
