@@ -37,34 +37,36 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 
             <section class="px-6 overflow-auto" style="max-height: 50vh">
 
-                @foreach(array_keys($results) as $key)
+                @if (array_keys($results))
+                    @foreach(array_keys($results) as $key)
+                        @if(count($results[$key]))
+                            <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 capitalize">{{ $key }}</div>
+                            <ul class="list-none">
+                                @foreach ($results[$key] as $i => $model)
+                                    <li class="relative mt-2" id="item-{{$i+1}}">
+                                        <a href="{{ $model->route }}" class="flex items-center p-4 rounded-lg hover:bg-indigo-500 hover:text-white" :class="{ 'bg-indigo-500 text-white': selected === {{$i}} }">
+                                            <div class="mr-2">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                                            </div>
+                                            <div class="flex items-center h-8">
+                                                @if ($model instanceof \App\Interfaces\RoutableInterface)
+                                                    <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->routeTitle }}</p>
+                                                @else
+                                                    <p class="font-semibold overflow-ellipsis whitespace-nowrap">Missing linkable interface</p>
+                                                @endif
+                                            </div>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    @endforeach
+                @else
+                    <div class="py-12 text-gray-500 text-lg">
+                        No recent searches
+                    </div>
+                @endif
 
-                    @if(count($results[$key]))
-
-                    <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 capitalize">{{ $key }}</div>
-
-                    <ul class="list-none">
-                        @foreach ($results[$key] as $i => $model)
-                        <li class="relative mt-2" id="item-{{$i+1}}">
-                            <a href="{{ $model->route }}" class="flex items-center p-4 rounded-lg hover:bg-indigo-500 hover:text-white" :class="{ 'bg-indigo-500 text-white': selected === {{$i}} }">
-                                <div class="mr-2">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                                </div>
-                                <div class="flex items-center h-8">
-                                    @if ($model instanceof \App\Interfaces\RoutableInterface)
-                                        <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->routeTitle }}</p>
-                                    @else
-                                        <p class="font-semibold overflow-ellipsis whitespace-nowrap">Missing linkable interface</p>
-                                    @endif
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
-                    </ul>
-
-                    @endif
-
-                @endforeach
 
 
                 {{-- @if (count($results))
