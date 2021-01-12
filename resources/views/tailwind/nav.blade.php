@@ -23,7 +23,7 @@
                 <a href="{{ route('home') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
                     Home
                 </a>
-                <div x-data="{ flyoutMenuOpen: false }" @click.away="flyoutMenuOpen = false" class="relative">
+                {{-- <div x-data="{ flyoutMenuOpen: false }" @click.away="flyoutMenuOpen = false" class="relative">
                     <button type="button" @click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active"
                             x-state:off="Item inactive"
                             :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }"
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </nav>
             <div x-data>
                 <button @click="$dispatch('search');" type="button" class="flex items-center space-x-3 font-medium leading-6 transition-colors duration-200 group sm:space-x-4 hover:text-gray-600">
@@ -246,7 +246,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="mt-6">
+                {{-- <div class="mt-6">
                     <nav class="grid gap-6">
 
                         <a href="#" class="flex items-center p-3 -m-3 rounded-lg hover:bg-gray-50">
@@ -346,37 +346,13 @@
                         </a>
 
                     </nav>
-                </div>
+                </div> --}}
             </div>
             <div class="px-5 py-6">
                 <div class="grid grid-cols-2 gap-4">
 
                     <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
                         Home
-                    </a>
-
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Enterprise
-                    </a>
-
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Blog
-                    </a>
-
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Help Center
-                    </a>
-
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Guides
-                    </a>
-
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Security
-                    </a>
-
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Events
                     </a>
 
                 </div>
