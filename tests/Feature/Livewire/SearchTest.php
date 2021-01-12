@@ -6,14 +6,11 @@ use App\Models\Course;
 use App\Models\Lecturer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
-use Laravel\Scout\Searchable;
 use Livewire\Livewire;
-use Sti3bas\ScoutArray\Facades\Search;
 use Tests\TestCase;
 
 class SearchTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test */
@@ -52,7 +49,6 @@ class SearchTest extends TestCase
         $course = Course::factory()->create(['name' => 'Fake Course']);
         $lecturer = Lecturer::factory()->create(['fullname' => 'Fake Lecturer']);
 
-
         Livewire::test('search')
             ->set('search', 'fake')
             ->assertsee('lecturers')
@@ -65,7 +61,6 @@ class SearchTest extends TestCase
     public function the_recent_course_is_shown_on_search()
     {
         $course = Course::factory()->create();
-
 
         Livewire::test('search')
             ->set('recent', collect($course))

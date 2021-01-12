@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use App\Interfaces\RoutableInterface;
 use App\Models\Course;
 use App\Models\Lecturer;
 use Illuminate\Support\Collection;
@@ -22,7 +21,8 @@ class Search extends Component
         $this->results->dump();
     }
 
-    public function clicked(mixed $model) {
+    public function clicked(mixed $model)
+    {
         Cookie::queue('recent_searches', $this->recent->add($model), 3);
     }
 
