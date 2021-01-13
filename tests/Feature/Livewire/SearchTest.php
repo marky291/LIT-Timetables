@@ -68,7 +68,6 @@ class SearchTest extends TestCase
 
 
         Livewire::test('search')
-            ->set('recent', collect($course))
             ->assertSee($course->name);
     }
 }

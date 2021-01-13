@@ -2,45 +2,66 @@
 
 namespace App\Http\Livewire;
 
-use App\Interfaces\RoutableInterface;
 use App\Models\Course;
 use App\Models\Lecturer;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Str;
 use Livewire\Component;
+use \App\Models\Search as SearchModel;
 
 class Search extends Component
 {
     public string $search = '';
+    public string $tracker = '';
     public Collection $results;
     public Collection $recent;
 
-    public function resetForm()
-    {
-        $this->search = '';
-        $this->results->dump();
-    }
-
-    public function clicked(mixed $model) {
-        Cookie::queue('recent_searches', $this->recent->add($model), 3);
-    }
-
+    /**
+     * Mount the component.
+     */
     public function mount()
     {
-        $this->recent = collect();
-
-        $cookie = Cookie::get('recent_searches', collect());
-
-//        dd(json_decode(($cookie))[0]);
+        $this->defineCookieStorage();
     }
 
+    /**
+     * When a item is clicked in the search bar.
+     *
+     * @param int $course_id
+     */
+    public function clickedCourse(int $course_id) {
+        $course = Course::firstWhere('id', $course_id);
+        $course->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
+        $this->redirect($course->route);
+    }
+
+    /**
+     * When a item is clicked in the search bar.
+     *
+     * @param int $lecturer_id
+     */
+    public function clickedLecturer(int $lecturer_id) {
+        $lecturer = Lecturer::firstWhere('id', $lecturer_id);
+        $lecturer->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
+        $this->redirect($lecturer->route);
+    }
+
+    /**
+     * Render the view of hte component.
+     *
+     * @return Application|Factory|View
+     */
     public function render()
     {
         $this->results = new Collection;
 
         if (strlen($this->search)) {
-            $this->results = Cache::remember($this->search, now()->addMinutes(45), function () {
+            $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function () {
                 return collect([
                     'courses' => Course::search($this->search)->get(),
                     'lecturers' => Lecturer::search($this->search)->get(),
@@ -49,5 +70,27 @@ class Search extends Component
         }
 
         return view('livewire.search');
+    }
+
+    /**
+     * We use cookie storage with identifier to database, for search clicks.
+     */
+    private function defineCookieStorage()
+    {
+        if (Cookie::has(config('search.cookie.name'))) {
+            $this->tracker = (string) Cookie::get(config('search.cookie.name'));
+            $this->recent = SearchModel::where('cookie_id', $this->tracker)
+                ->with('searchable')
+                ->latest()
+                ->limit(config('search.limits.recent'))
+                ->get();
+
+            return;
+        } else {
+            $this->tracker = (string) Str::uuid();
+            Cookie::queue(config('search.cookie.name'), $this->tracker, config('search.cookie.time'));
+        }
+
+        $this->recent = collect();
     }
 }

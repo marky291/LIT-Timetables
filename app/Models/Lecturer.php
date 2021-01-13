@@ -14,6 +14,7 @@ use Laravel\Scout\Searchable;
  * @property string $lastname
  *
  * @method static firstOrCreate(array $array)
+ * @method static firstWhere(string $string, int $lecturer_id)
  */
 class Lecturer extends Model implements RoutableInterface
 {
@@ -33,6 +34,14 @@ class Lecturer extends Model implements RoutableInterface
     public function schedules()
     {
         return $this->hasMany(Schedule::class);
+    }
+
+    /**
+     * Get the lecturer searches.
+     */
+    public function searches()
+    {
+        return $this->morphOne(Search::class, 'searchable');
     }
 
     /**

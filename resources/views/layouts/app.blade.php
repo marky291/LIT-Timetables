@@ -39,7 +39,7 @@
             <div class="relative">
 
                 <div class="relative">
-                    @livewire('search')
+                    @livewire('search');
                 </div>
 
                 @include('tailwind.nav')
@@ -55,7 +55,6 @@
         @stack('scripts')
 
         @livewireScripts
-
     </body>
 
 </html>
