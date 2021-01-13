@@ -43,7 +43,6 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 capitalize">{{ $title }}</div>
                             <ul class="list-none">
                                 @foreach ($collection as $i => $model)
-                                {{ var_dump($model::class)}}
                                     <li class="relative mt-2" id="item-{{$i+1}}">
                                         <div wire:click="clicked('{{ addslashes($model::class) }}', '{{ $model->id }}')"  class="flex items-center p-4 rounded-lg cursor-pointer hover:bg-indigo-500 hover:text-white" :class="{ 'bg-indigo-500 text-white': selected === {{$i}} }">
                                             <div class="mr-2">

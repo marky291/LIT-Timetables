@@ -4,8 +4,10 @@ namespace Tests\Feature\Livewire;
 
 use App\Models\Course;
 use App\Models\Lecturer;
+use App\Models\Search;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cookie;
 use Livewire\Livewire;
 use Tests\TestCase;
 
@@ -58,11 +60,17 @@ class SearchTest extends TestCase
     }
 
     /** @test */
-    public function the_recent_course_is_shown_on_search()
+    public function one_recent_item_is_displayed_on_search()
     {
         $course = Course::factory()->create();
 
+        $search = Search::factory()->create([
+            'searchable_id' => $course->id,
+            'searchable_type' => Course::class,
+        ])->get();
+
         Livewire::test('search')
+            ->set('recent', $search)
             ->assertSee($course->name);
     }
 }
