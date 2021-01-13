@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Course;
 use App\Models\Lecturer;
+use App\Models\Search as SearchModel;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -12,7 +13,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
 use Livewire\Component;
-use \App\Models\Search as SearchModel;
 
 class Search extends Component
 {
@@ -34,7 +34,8 @@ class Search extends Component
      *
      * @param int $course_id
      */
-    public function clickedCourse(int $course_id) {
+    public function clickedCourse(int $course_id)
+    {
         $course = Course::firstWhere('id', $course_id);
         $course->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
         $this->redirect($course->route);
@@ -45,7 +46,8 @@ class Search extends Component
      *
      * @param int $lecturer_id
      */
-    public function clickedLecturer(int $lecturer_id) {
+    public function clickedLecturer(int $lecturer_id)
+    {
         $lecturer = Lecturer::firstWhere('id', $lecturer_id);
         $lecturer->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
         $this->redirect($lecturer->route);
