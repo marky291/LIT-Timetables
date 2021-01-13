@@ -73,4 +73,20 @@ class SearchTest extends TestCase
             ->set('recent', $search)
             ->assertSee($course->name);
     }
+
+    /** @test */
+    public function one_recent_item_is_displayed_and_deleted_on_search()
+    {
+        $course = Course::factory()->create();
+
+        $search = Search::factory()->create([
+            'searchable_id' => $course->id,
+            'searchable_type' => Course::class,
+        ])->get();
+
+        Livewire::test('search')
+            ->set('recent', $search)
+            ->call('delete', $search->first()->id)
+            ->assertDontSee($course->name);
+    }
 }

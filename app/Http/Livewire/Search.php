@@ -34,13 +34,28 @@ class Search extends Component
     /**
      * When a item is clicked in the search bar.
      *
-     * @param int $course_id
+     * @param string $classname
+     * @param int $id
      */
-    public function clicked(string $classname, int $id)
+    public function click(string $classname, int $id)
     {
         $model = $classname::firstWhere('id', $id);
         $model->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
         $this->redirect($model->route);
+    }
+
+    /**
+     * When a item is clicked in the search bar.
+     *
+     * @param int $search_id
+     */
+    public function delete(int $search_id)
+    {
+        $model = SearchModel::find($search_id);
+
+        $this->recent = $this->recent->except($model->id);
+
+        $model->delete(); // soft deletion.
     }
 
     /**
