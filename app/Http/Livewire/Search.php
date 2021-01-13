@@ -34,21 +34,10 @@ class Search extends Component
      *
      * @param int $course_id
      */
-    public function clickedCourse(int $course_id) {
-        $course = Course::firstWhere('id', $course_id);
-        $course->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
-        $this->redirect($course->route);
-    }
-
-    /**
-     * When a item is clicked in the search bar.
-     *
-     * @param int $lecturer_id
-     */
-    public function clickedLecturer(int $lecturer_id) {
-        $lecturer = Lecturer::firstWhere('id', $lecturer_id);
-        $lecturer->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
-        $this->redirect($lecturer->route);
+    public function clicked(string $classname, int $id) {
+        $model = $classname::firstWhere('id', $id);
+        $model->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
+        $this->redirect($model->route);
     }
 
     /**

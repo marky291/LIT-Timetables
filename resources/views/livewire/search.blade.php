@@ -43,8 +43,9 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 capitalize">{{ $title }}</div>
                             <ul class="list-none">
                                 @foreach ($collection as $i => $model)
+                                {{ var_dump($model::class)}}
                                     <li class="relative mt-2" id="item-{{$i+1}}">
-                                        <div wire:click="clicked{{class_basename($model)}}({{ $model->id }})"  class="flex items-center p-4 rounded-lg cursor-pointer hover:bg-indigo-500 hover:text-white" :class="{ 'bg-indigo-500 text-white': selected === {{$i}} }">
+                                        <div wire:click="clicked('{{ addslashes($model::class) }}', '{{ $model->id }}')"  class="flex items-center p-4 rounded-lg cursor-pointer hover:bg-indigo-500 hover:text-white" :class="{ 'bg-indigo-500 text-white': selected === {{$i}} }">
                                             <div class="mr-2">
                                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                                             </div>
