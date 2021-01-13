@@ -26,7 +26,7 @@ class Search extends Component
      */
     public function mount()
     {
-        if (!$this->tracker) {
+        if (! $this->tracker) {
             $this->defineCookieStorage();
         }
     }

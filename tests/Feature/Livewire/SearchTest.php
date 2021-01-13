@@ -7,7 +7,6 @@ use App\Models\Lecturer;
 use App\Models\Search;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cookie;
 use Livewire\Livewire;
 use Tests\TestCase;
 
