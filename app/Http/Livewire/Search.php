@@ -81,7 +81,8 @@ class Search extends Component
         return view('livewire.search');
     }
 
-    private function latestSearchedByCookie(string $cookie) {
+    private function latestSearchedByCookie(string $cookie)
+    {
         return SearchModel::where('cookie_id', $cookie)
             ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
             ->with('searchable')
@@ -90,6 +91,7 @@ class Search extends Component
             ->get()
             ->unique('searchable_id', 'searchable_type');
     }
+
     /**
      * We use cookie storage with identifier to database, for search clicks.
      */

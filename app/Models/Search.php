@@ -14,7 +14,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Search extends Model
 {
     use HasFactory;
-
     use SoftDeletes;
 
     /**
