@@ -79,10 +79,12 @@ class Search extends Component
 
     private function latestSearchedByCookie(string $cookie) {
         return SearchModel::where('cookie_id', $cookie)
+            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
             ->with('searchable')
             ->latest()
             ->limit(config('search.limits.recent'))
-            ->get();
+            ->get()
+            ->unique('searchable_id', 'searchable_type');
     }
     /**
      * We use cookie storage with identifier to database, for search clicks.
