@@ -19,6 +19,7 @@ use Laravel\Scout\Searchable;
  * @method static updateOrCreate(array $array, array $array1)
  * @method static where(string $string, Stringable $name)
  * @method static make(array $toArray)
+ * @method static firstWhere(string $string, int $course_id)
  */
 class Course extends Model implements RoutableInterface
 {
@@ -58,6 +59,14 @@ class Course extends Model implements RoutableInterface
     public function request()
     {
         return $this->hasOne(Requests::class);
+    }
+
+    /**
+     * Get the lecturer searches.
+     */
+    public function searches()
+    {
+        return $this->morphOne(Search::class, 'searchable');
     }
 
     /**

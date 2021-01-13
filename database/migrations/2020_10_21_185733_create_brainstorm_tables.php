@@ -86,6 +86,14 @@ class CreateBrainstormTables extends Migration
             $table->json('meta');
             $table->timestamps();
         });
+
+        Schema::create('searches', function (Blueprint $table) {
+            $table->id();
+            $table->uuid('cookie_id');
+            $table->morphs('searchable');
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**

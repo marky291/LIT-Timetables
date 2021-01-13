@@ -6,6 +6,7 @@ use App\Models\Campus;
 use App\Models\Course;
 use App\Models\Requests;
 use App\Models\Schedule;
+use App\Models\Search;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -39,5 +40,18 @@ class CourseTest extends TestCase
         $course = Course::factory()->has(Campus::factory(['location' => 'Moylish', 'City' => 'Limerick']))->create();
 
         $this->assertNotNull($course->campus);
+    }
+
+    /** @test */
+    public function it_has_a_search_relationship()
+    {
+        $course = Course::factory()->create();
+
+        Search::factory()->create([
+            'searchable_id' => $course->id,
+            'searchable_type' => Course::class,
+        ]);
+
+        $this->assertEquals(1, $course->searches()->count());
     }
 }

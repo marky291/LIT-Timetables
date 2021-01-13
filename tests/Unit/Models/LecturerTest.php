@@ -4,6 +4,7 @@ namespace Tests\Unit\Models;
 
 use App\Models\Lecturer;
 use App\Models\Schedule;
+use App\Models\Search;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -25,5 +26,18 @@ class LecturerTest extends TestCase
         $schedules = Schedule::factory()->count(3)->create(['lecturer_id' => $lecturer->id]);
 
         $this->assertCount(3, $lecturer->schedules);
+    }
+
+    /** @test */
+    public function it_has_a_search_relationship()
+    {
+        $lecturer = Lecturer::factory()->create();
+
+        Search::factory()->create([
+            'searchable_id' => $lecturer->id,
+            'searchable_type' => Lecturer::class,
+        ]);
+
+        $this->assertEquals(1, $lecturer->searches()->count());
     }
 }
