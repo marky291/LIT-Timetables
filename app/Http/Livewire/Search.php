@@ -34,7 +34,8 @@ class Search extends Component
      *
      * @param int $course_id
      */
-    public function clicked(string $classname, int $id) {
+    public function clicked(string $classname, int $id)
+    {
         $model = $classname::firstWhere('id', $id);
         $model->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
         $this->redirect($model->route);
