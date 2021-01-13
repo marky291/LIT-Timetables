@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Course;
 use App\Models\Lecturer;
+use App\Models\Search as SearchModel;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -12,7 +13,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
 use Livewire\Component;
-use \App\Models\Search as SearchModel;
 
 class Search extends Component
 {

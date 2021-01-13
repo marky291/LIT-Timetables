@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tests\Unit\Models;
 
 use App\Models\Course;
@@ -9,7 +8,7 @@ use App\Models\Search;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class SearchTest  extends TestCase
+class SearchTest extends TestCase
 {
     use RefreshDatabase;
 

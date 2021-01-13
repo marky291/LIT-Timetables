@@ -14,7 +14,6 @@ return [
         'recent' => 4,
     ],
 
-
     'cookie' => [
         'name' => 'recent_searches',
         'time' => 60, // minutes
