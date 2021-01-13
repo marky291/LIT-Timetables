@@ -36,16 +36,20 @@ class Search extends Component
      *
      * @param string $classname
      * @param int $id
+     * @param string $route
      */
-    public function click(string $classname, int $id)
+    public function click(string $classname, int $id, string $route)
     {
-        $model = $classname::firstWhere('id', $id);
-        $model->searches()->save(new SearchModel(['cookie_id' => $this->tracker]));
-        $this->redirect($model->route);
+        SearchModel::updateOrCreate(
+            ['searchable_type' => $classname, 'searchable_id' => $id, 'cookie_id' => $this->tracker],
+            ['updated_at' => now()]
+        );
+
+        $this->redirect($route);
     }
 
     /**
-     * When a item is clicked in the search bar.
+     * When a item is deleted in the search bar.
      *
      * @param int $search_id
      */
@@ -81,7 +85,7 @@ class Search extends Component
         return SearchModel::where('cookie_id', $cookie)
             ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
             ->with('searchable')
-            ->latest()
+            ->latest('updated_at')
             ->limit(config('search.limits.recent'))
             ->get()
             ->unique('searchable_id', 'searchable_type');

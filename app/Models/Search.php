@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @method static where(string $string, array|string|null $get)
+ * @method static updateOrCreate(array $array, array $array1)
+ * @method static find(int $search_id)
  */
 class Search extends Model
 {
     use HasFactory;
+
     use SoftDeletes;
 
     /**
@@ -19,7 +22,7 @@ class Search extends Model
      *
      * @var array
      */
-    protected $fillable = ['cookie_id'];
+    protected $fillable = ['cookie_id', 'searchable_id', 'searchable_type', 'updated_at'];
 
     /**
      * Get the parent searchable model.
