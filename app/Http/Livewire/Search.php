@@ -51,11 +51,9 @@ class Search extends Component
      */
     public function delete(int $search_id)
     {
-        $model = SearchModel::find($search_id);
+        SearchModel::find($search_id)->delete();
 
-        $this->recent = $this->recent->except($model->id);
-
-        $model->delete(); // soft deletion.
+        $this->recent = $this->latestSearchedByCookie($this->tracker);
     }
 
     /**
@@ -79,6 +77,13 @@ class Search extends Component
         return view('livewire.search');
     }
 
+    private function latestSearchedByCookie(string $cookie) {
+        return SearchModel::where('cookie_id', $cookie)
+            ->with('searchable')
+            ->latest()
+            ->limit(config('search.limits.recent'))
+            ->get();
+    }
     /**
      * We use cookie storage with identifier to database, for search clicks.
      */
@@ -86,11 +91,7 @@ class Search extends Component
     {
         if (Cookie::has(config('search.cookie.name'))) {
             $this->tracker = (string) Cookie::get(config('search.cookie.name'));
-            $this->recent = SearchModel::where('cookie_id', $this->tracker)
-                ->with('searchable')
-                ->latest()
-                ->limit(config('search.limits.recent'))
-                ->get();
+            $this->recent = $this->latestSearchedByCookie($this->tracker);
 
             return;
         } else {
