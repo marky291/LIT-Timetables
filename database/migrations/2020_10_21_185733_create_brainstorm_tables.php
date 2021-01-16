@@ -94,6 +94,14 @@ class CreateBrainstormTables extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
+
+        Schema::create('favorites', function (Blueprint $table) {
+            $table->id();
+            $table->uuid('cookie_id');
+            $table->morphs('favorable');
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**

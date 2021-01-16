@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Interfaces\RoutableInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Laravel\Scout\Searchable;
 
 /**
@@ -39,9 +40,17 @@ class Lecturer extends Model implements RoutableInterface
     /**
      * Get the lecturer searches.
      */
-    public function searches()
+    public function searches(): MorphOne
     {
         return $this->morphOne(Search::class, 'searchable');
+    }
+
+    /**
+     * Get the lecturer favorable models.
+     */
+    public function favorable(): MorphOne
+    {
+        return $this->morphOne(Favorite::class, 'favorable');
     }
 
     /**
