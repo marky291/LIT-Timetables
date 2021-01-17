@@ -21,7 +21,16 @@ class Search extends Model
      *
      * @var array
      */
-    protected $fillable = ['cookie_id', 'searchable_id', 'searchable_type', 'updated_at'];
+    protected $fillable = ['cookie_id', 'favorite', 'searchable_id', 'searchable_type', 'updated_at'];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'favorite' => 'boolean',
+    ];
 
     /**
      * Get the parent searchable model.

@@ -19,7 +19,7 @@ class Search extends Component
     public string $search = '';
     public string $tracker = '';
     public Collection $results;
-    public Collection $recent;
+    public Collection $searches;
 
     /**
      * Mount the component.
@@ -57,7 +57,18 @@ class Search extends Component
     {
         SearchModel::find($search_id)->delete();
 
-        $this->recent = $this->latestSearchedByCookie($this->tracker);
+        $this->searches = $this->latestSearchedByCookie($this->tracker);
+    }
+
+    /**
+     * Favorite an item on the search list.
+     * @param int $search_id
+     */
+    public function favorite(int $search_id)
+    {
+        SearchModel::find($search_id)->update(['favorite' => true]);
+
+        $this->searches = $this->latestSearchedByCookie($this->tracker);
     }
 
     /**
@@ -83,13 +94,13 @@ class Search extends Component
 
     private function latestSearchedByCookie(string $cookie)
     {
-        return SearchModel::where('cookie_id', $cookie)
-            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
+        //where('cookie_id', $cookie)
+        return SearchModel::
+            where('created_at', '>', now()->subHours(config('search.cache_hours')))
             ->with('searchable')
             ->latest('updated_at')
             ->limit(config('search.limits.recent'))
-            ->get()
-            ->unique('searchable_id', 'searchable_type');
+            ->get();
     }
 
     /**
@@ -99,7 +110,7 @@ class Search extends Component
     {
         if (Cookie::has(config('search.cookie.name'))) {
             $this->tracker = (string) Cookie::get(config('search.cookie.name'));
-            $this->recent = $this->latestSearchedByCookie($this->tracker);
+            $this->searches = $this->latestSearchedByCookie($this->tracker);
 
             return;
         } else {
@@ -107,6 +118,6 @@ class Search extends Component
             Cookie::queue(config('search.cookie.name'), $this->tracker, config('search.cookie.time'));
         }
 
-        $this->recent = collect();
+        $this->searches = collect();
     }
 }

@@ -88,4 +88,23 @@ class SearchTest extends TestCase
             ->call('delete', $search->first()->id)
             ->assertDontSee($course->name);
     }
+
+    /** @test */
+    public function one_recent_item_can_be_favorited()
+    {
+        $course = Course::factory()->create();
+
+        $search = Search::factory()->create([
+            'favorite' => false,
+            'searchable_id' => $course->id,
+            'searchable_type' => Course::class,
+        ])->get();
+
+        Livewire::test('search')
+            ->set('recent', $search)
+            ->assertDontSee('favorites')
+            ->call('favorite', $search->first()->id)
+            ->assertSee('favorites')
+            ->assertDontSee($course->name);
+    }
 }

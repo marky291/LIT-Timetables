@@ -13,9 +13,21 @@ class SearchTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
+    public function it_can_be_made_a_favorite_search()
+    {
+        $search = Search::factory()
+            ->for(Course::factory(), 'searchable')
+            ->create(['favorite' => true]);
+
+        $this->assertTrue($search->favorite);
+    }
+
+    /** @test */
     public function it_has_lecturer_relationship()
     {
-        $search = Search::factory()->for(Lecturer::factory(), 'searchable')->create();
+        $search = Search::factory()
+            ->for(Lecturer::factory(), 'searchable')
+            ->create();
 
         $this->assertInstanceOf(Lecturer::class, $search->searchable);
     }
@@ -23,7 +35,9 @@ class SearchTest extends TestCase
     /** @test */
     public function it_has_course_relationship()
     {
-        $search = Search::factory()->for(Course::factory(), 'searchable')->create();
+        $search = Search::factory()
+            ->for(Course::factory(), 'searchable')
+            ->create();
 
         $this->assertInstanceOf(Course::class, $search->searchable);
     }
