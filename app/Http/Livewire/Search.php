@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Course;
+use App\Models\Favorite;
 use App\Models\Lecturer;
 use App\Models\Search as SearchModel;
 use Illuminate\Contracts\Foundation\Application;
@@ -20,6 +21,7 @@ class Search extends Component
     public string $tracker = '';
     public Collection $results;
     public Collection $recent;
+    public Collection $favorites;
 
     /**
      * Mount the component.
@@ -46,6 +48,16 @@ class Search extends Component
         );
 
         $this->redirect($route);
+    }
+
+    /**
+     * @param int $search_id
+     */
+    public function favorite(int $search_id)
+    {
+        $model = SearchModel::find($search_id)->searchable;
+
+        // store...
     }
 
     /**
@@ -92,6 +104,17 @@ class Search extends Component
             ->unique('searchable_id', 'searchable_type');
     }
 
+    private function latestFavoritableByCookie(string $cookie)
+    {
+        return Favorite::where('cookie_id', $cookie)
+            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
+            ->with('favorable')
+            ->latest('updated_at')
+            ->limit(config('search.limits.recent'))
+            ->get()
+            ->unique('favorable_id', 'favorable_type');
+    }
+
     /**
      * We use cookie storage with identifier to database, for search clicks.
      */
@@ -100,6 +123,7 @@ class Search extends Component
         if (Cookie::has(config('search.cookie.name'))) {
             $this->tracker = (string) Cookie::get(config('search.cookie.name'));
             $this->recent = $this->latestSearchedByCookie($this->tracker);
+            $this->favorites = $this->latestFavoritableByCookie($this->tracker);
 
             return;
         } else {
@@ -107,6 +131,6 @@ class Search extends Component
             Cookie::queue(config('search.cookie.name'), $this->tracker, config('search.cookie.time'));
         }
 
-        $this->recent = collect();
+        $this->recent = $this->favorites = collect();
     }
 }
