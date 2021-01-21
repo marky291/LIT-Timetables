@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Course;
 use App\Models\Lecturer;
 use App\Models\Search as SearchModel;
+use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -16,6 +17,7 @@ use Livewire\Component;
 
 class Search extends Component
 {
+    public string $error = '';
     public string $search = '';
     public string $tracker = '';
     public Collection $results;
@@ -80,13 +82,17 @@ class Search extends Component
     {
         $this->results = new Collection;
 
-        if (strlen($this->search)) {
-            $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function () {
-                return collect([
-                    'courses' => Course::search($this->search)->get(),
-                    'lecturers' => Lecturer::search($this->search)->get(),
-                ]);
-            });
+        try {
+            if (strlen($this->search)) {
+                $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function () {
+                    return collect([
+                        'courses' => Course::search($this->search)->get(),
+                        'lecturers' => Lecturer::search($this->search)->get(),
+                    ]);
+                });
+            }
+        } catch (Exception $e) {
+            $this->error = 'Search is currently unavailable.';
         }
 
         return view('livewire.search');

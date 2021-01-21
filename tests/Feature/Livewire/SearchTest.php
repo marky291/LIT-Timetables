@@ -108,4 +108,14 @@ class SearchTest extends TestCase
             ->assertSee('Favorites')
             ->assertSee($course->name);
     }
+
+    /** @test */
+    public function errors_are_displayed_on_the_search()
+    {
+        $error_msg = 'Error Test';
+
+        Livewire::test('search')
+            ->set('error', $error_msg)
+            ->assertSee($error_msg);
+    }
 }
