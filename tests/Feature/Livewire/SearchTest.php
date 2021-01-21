@@ -112,7 +112,7 @@ class SearchTest extends TestCase
     /** @test */
     public function errors_are_displayed_on_the_search()
     {
-        $error_msg = "Error Test";
+        $error_msg = 'Error Test';
 
         Livewire::test('search')
             ->set('error', $error_msg)
