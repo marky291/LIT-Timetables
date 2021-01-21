@@ -37,7 +37,11 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 
             <section class="px-6 overflow-auto" style="max-height: 50vh">
 
-                @if ($results->count())
+                @if (empty($error) == false)
+                    <div class="py-12 text-lg text-gray-500">
+                        {{ $error }}
+                    </div>
+                @elseif ($results->count())
                     @foreach($results as $title => $collection)
                         @if($collection->count())
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 capitalize">{{ $title }}</div>
@@ -77,10 +81,10 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                                                     <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->searchable->routeTitle }}</p>
                                                 </div>
                                             </div>
-                                            <div class="pr-4 py-4 cursor-pointer" wire:click="favorite({{$model->id}})" >
+                                            <div class="pr-4 py-4 cursor-pointer" wire:loading.remove wire:click="favorite({{$model->id}})" >
                                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                                             </div>
-                                            <div class="pr-4 py-4 cursor-pointer" wire:click="delete({{$model->id}})" >
+                                            <div class="pr-4 py-4 cursor-pointer" wire:loading.remove wire:click="delete({{$model->id}})" >
                                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                             </div>
                                         </div>
@@ -102,7 +106,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                                                         <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->searchable->routeTitle }}</p>
                                                     </div>
                                                 </div>
-                                                <div class="pr-4 py-4 cursor-pointer" wire:click="delete({{$model->id}})" >
+                                                <div class="pr-4 py-4 cursor-pointer" wire:loading.remove wire:click="delete({{$model->id}})" >
                                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                                 </div>
                                             </div>

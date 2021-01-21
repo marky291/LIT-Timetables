@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
 use Livewire\Component;
+use Exception;
 
 class Search extends Component
 {
+    public string $error = '';
     public string $search = '';
     public string $tracker = '';
     public Collection $results;
@@ -80,13 +82,17 @@ class Search extends Component
     {
         $this->results = new Collection;
 
-        if (strlen($this->search)) {
-            $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function () {
-                return collect([
-                    'courses' => Course::search($this->search)->get(),
-                    'lecturers' => Lecturer::search($this->search)->get(),
-                ]);
-            });
+        try {
+            if (strlen($this->search)) {
+                $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function () {
+                    return collect([
+                        'courses' => Course::search($this->search)->get(),
+                        'lecturers' => Lecturer::search($this->search)->get(),
+                    ]);
+                });
+            }
+        } catch (Exception $e) {
+            $this->error = $e->getMessage();
         }
 
         return view('livewire.search');
