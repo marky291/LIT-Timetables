@@ -100,7 +100,6 @@ class SearchTest extends TestCase
             'searchable_type' => Course::class,
         ])->get();
 
-
         Livewire::test('search')
             ->set('searches', $search)
             ->set('tracker', $search->first()->cookie_id)

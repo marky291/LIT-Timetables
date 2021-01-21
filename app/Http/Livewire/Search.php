@@ -110,6 +110,7 @@ class Search extends Component
         if (Cookie::has(config('search.cookie.name'))) {
             $this->tracker = (string) Cookie::get(config('search.cookie.name'));
             $this->searches = $this->latestSearchedByCookie($this->tracker);
+
             return;
         } else {
             $this->tracker = (string) Str::uuid();
