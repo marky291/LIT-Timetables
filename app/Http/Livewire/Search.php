@@ -92,7 +92,7 @@ class Search extends Component
                 });
             }
         } catch (Exception $e) {
-            $this->error = "Search is currently unavailable.";
+            $this->error = 'Search is currently unavailable.';
         }
 
         return view('livewire.search');
