@@ -27,6 +27,7 @@ class SearchFactory extends Factory
     {
         return [
             'cookie_id' => Str::uuid(),
+            'favorite' => $this->faker->boolean(),
         ];
     }
 
