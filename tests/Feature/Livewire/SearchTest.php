@@ -17,7 +17,7 @@ class SearchTest extends TestCase
     /** @test */
     public function the_search_menu_shows_no_recent_searches()
     {
-        Livewire::test('search')->set('recent', new Collection())->assertSee('No recent searches');
+        Livewire::test('search')->set('searches', new Collection())->assertSee('No recent searches');
     }
 
     /** @test */
@@ -69,7 +69,7 @@ class SearchTest extends TestCase
         ])->get();
 
         Livewire::test('search')
-            ->set('recent', $search)
+            ->set('searches', $search)
             ->assertSee($course->name);
     }
 
@@ -84,7 +84,7 @@ class SearchTest extends TestCase
         ])->get();
 
         Livewire::test('search')
-            ->set('recent', $search)
+            ->set('searches', $search)
             ->call('delete', $search->first()->id)
             ->assertDontSee($course->name);
     }
@@ -100,11 +100,13 @@ class SearchTest extends TestCase
             'searchable_type' => Course::class,
         ])->get();
 
+
         Livewire::test('search')
-            ->set('recent', $search)
+            ->set('searches', $search)
+            ->set('tracker', $search->first()->cookie_id)
             ->assertDontSee('favorites')
             ->call('favorite', $search->first()->id)
-            ->assertSee('favorites')
-            ->assertDontSee($course->name);
+            ->assertSee('Favorites')
+            ->assertSee($course->name);
     }
 }

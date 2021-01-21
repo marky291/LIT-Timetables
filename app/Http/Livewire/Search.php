@@ -94,9 +94,8 @@ class Search extends Component
 
     private function latestSearchedByCookie(string $cookie)
     {
-        //where('cookie_id', $cookie)
-        return SearchModel::
-            where('created_at', '>', now()->subHours(config('search.cache_hours')))
+        return SearchModel::where('cookie_id', $cookie)
+            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
             ->with('searchable')
             ->latest('updated_at')
             ->limit(config('search.limits.recent'))
@@ -111,7 +110,6 @@ class Search extends Component
         if (Cookie::has(config('search.cookie.name'))) {
             $this->tracker = (string) Cookie::get(config('search.cookie.name'));
             $this->searches = $this->latestSearchedByCookie($this->tracker);
-
             return;
         } else {
             $this->tracker = (string) Str::uuid();
