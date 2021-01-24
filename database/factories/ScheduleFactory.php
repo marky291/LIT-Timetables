@@ -28,7 +28,6 @@ class ScheduleFactory extends DataFactory
         return array_merge([
             'course_id' => Course::factory(),
             'module_id' => Module::factory(),
-            'lecturer_id' => Lecturer::factory(),
             'room_id' => Room::factory(),
             'type_id' => Type::factory(),
         ], $this->fromFile('schedules'));

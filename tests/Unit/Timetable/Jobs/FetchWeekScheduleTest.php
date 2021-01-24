@@ -3,6 +3,7 @@
 namespace Tests\Unit\Timetable\Jobs;
 
 use App\Models\Course;
+use App\Models\Lecturer;
 use App\Models\Requests;
 use App\Models\Schedule;
 use App\Models\Timetable;
@@ -15,7 +16,6 @@ use App\Timetable\Events\ScheduledTypeHasChanged;
 use App\Timetable\Events\TimetableFetchFailed;
 use App\Timetable\Events\TimetableFetchSuccesfully;
 use App\Timetable\Events\TimetableWasChanged;
-use App\Timetable\Jobs\CreateCourseSchedules;
 use App\Timetable\Jobs\FetchWeekSchedules;
 use Goutte\Client;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -24,7 +24,7 @@ use Mockery;
 use Symfony\Component\DomCrawler\Crawler;
 use Tests\TestCase;
 
-class FetchTimetableWeekScheduleTest extends TestCase
+class FetchWeekScheduleTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -179,6 +179,18 @@ class FetchTimetableWeekScheduleTest extends TestCase
         $this->client->shouldReceive('getInternalResponse->getStatusCode')->andReturn(200)->twice();
         $this->client->shouldReceive('request')->once()->andReturn(new Crawler(File::get(base_path('/tests/Unit/Samples/html-snapshot.txt'))))->once();
         $this->createTimetableScheduleFrom($this->client);
+    }
+
+    public function test_fetch_stores_has_many_lecturers_relationship_data()
+    {
+        $this->withExceptionHandling();
+
+        $this->client->shouldReceive('getInternalResponse->getStatusCode')->andReturn(200)->twice();
+        $this->client->shouldReceive('request')->once()->andReturn(new Crawler(File::get(base_path('/tests/Unit/Samples/class_has_two_lecturers.txt'))))->once();
+        $this->createTimetableScheduleFrom($this->client);
+
+        $this->assertCount(7, Lecturer::all());
+        $this->assertNotContains(',', Lecturer::all());
     }
 
 //    public function test_timetable_course_fetched_failed()

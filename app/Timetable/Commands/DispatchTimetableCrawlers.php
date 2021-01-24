@@ -5,7 +5,7 @@ namespace App\Timetable\Commands;
 use App\Models\Course;
 use App\Timetable\Converters\ConvertTimetableFilters;
 use App\Timetable\Exceptions\ReturnedBadResponseException;
-use App\Timetable\Jobs\CreateCourseSchedules;
+use App\Timetable\Jobs\FetchWeekSchedules;
 use App\Timetable\Jobs\CreateDepartmentCourses;
 use App\Timetable\TimetableSourceLinkCreator;
 use Carbon\Carbon;
@@ -71,7 +71,7 @@ class DispatchTimetableCrawlers extends Command
         for ($i = 1; $i <= Carbon::now()->week; $i++) {
             foreach ($courses as $course) {
                 try {
-                    CreateCourseSchedules::dispatch($course, $this->timetable($course, $i));
+                    FetchWeekSchedules::dispatch($course, $this->timetable($course, $i));
                 } catch (ReturnedBadResponseException $exception) {
                     $this->warn($exception->getMessage());
                 }

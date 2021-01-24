@@ -5,7 +5,7 @@ namespace App\Timetable\Commands;
 use App\Models\Course;
 use App\Timetable\Converters\ConvertTimetableFilters;
 use App\Timetable\Exceptions\ReturnedBadResponseException;
-use App\Timetable\Jobs\CreateCourseSchedules;
+use App\Timetable\Jobs\FetchWeekSchedules;
 use App\Timetable\Jobs\CreateDepartmentCourses;
 use App\Timetable\TimetableSourceLinkCreator;
 use Illuminate\Console\Command;
@@ -68,7 +68,7 @@ class DailyTimetableRetriever extends Command
 
                 foreach ($courses as $course) {
                     try {
-                        CreateCourseSchedules::dispatch($course, $this->createLinkForCourse($course));
+                        FetchWeekSchedules::dispatch($course, $this->createLinkForCourse($course));
                     } catch (ReturnedBadResponseException $e) {
                         Log::info($e->getMessage());
                     }

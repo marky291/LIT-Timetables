@@ -70,10 +70,15 @@ class CreateBrainstormTables extends Migration
             $table->timestamp('ending_date');
             $table->foreignId('course_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('module_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('lecturer_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('room_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('type_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
+        });
+
+        Schema::create('lecturer_schedule', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('lecturer_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('schedule_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
         });
 
         Schema::create('requests', function (Blueprint $table) {

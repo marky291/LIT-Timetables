@@ -23,7 +23,7 @@ class LecturerTest extends TestCase
     {
         $lecturer = Lecturer::factory()->create(['fullname' => 'Unit Test']);
 
-        $schedules = Schedule::factory()->count(3)->create(['lecturer_id' => $lecturer->id]);
+        $schedules = Schedule::factory()->hasAttached($lecturer)->count(3)->create();
 
         $this->assertCount(3, $lecturer->schedules);
     }
