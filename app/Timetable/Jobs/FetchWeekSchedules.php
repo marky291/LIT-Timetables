@@ -29,9 +29,10 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Spatie\Regex\Regex;
 
-class CreateCourseSchedules implements ShouldQueue
+class FetchWeekSchedules implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -119,29 +120,21 @@ class CreateCourseSchedules implements ShouldQueue
                 ]);
 
                 /** @var Schedule $schedules */
-                foreach ($parsedHtml->get('schedules') as $schedule) {
-                    $module = Module::firstOrCreate([
-                        'name' => $schedule['module'],
-                    ]);
-                    $room = Room::firstOrCreate([
-                        'door' => $schedule['room'],
-                    ]);
-                    $lecturer = Lecturer::firstOrCreate([
-                        'fullname' => $schedule['lecturer'],
-                    ]);
-                    $type = Type::firstOrCreate([
-                        'abbreviation' => $schedule['type'],
+                foreach ($parsedHtml->get('schedules') as $csv_schedule) {
+                    $schedule = $course->schedules()->firstOrCreate([
+                        'starting_date' => $this->dateExtract($csv_schedule, $parsedHtml['meta'])['start'],
+                        'ending_date' => $this->dateExtract($csv_schedule, $parsedHtml['meta'])['end'],
+                        'module_id' => Module::firstOrCreate(['name' => $csv_schedule['module']])->id,
+                        'academic_week' => (int) Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/', $parsedHtml['meta']['week'])->result(),
+                        'room_id' => Room::firstOrCreate(['door' => $csv_schedule['room']])->id,
+                        'type_id' => Type::firstOrCreate(['abbreviation' => $csv_schedule['type']])->id,
                     ]);
 
-                    $course->schedules()->firstOrCreate([
-                        'starting_date' => $this->extractDatesFromSchedule($schedule, $parsedHtml['meta'])['start'],
-                        'ending_date' => $this->extractDatesFromSchedule($schedule, $parsedHtml['meta'])['end'],
-                        'module_id' => $module->id,
-                        'lecturer_id' => $lecturer->id,
-                        'academic_week' => (int) Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/', $parsedHtml['meta']['week'])->result(),
-                        'room_id' => $room->id,
-                        'type_id' => $type->id,
-                    ]);
+                    $schedule->lecturers()->sync(Str::of($csv_schedule['lecturer'])->explode(', ')->map(function ($value) {
+                        return Lecturer::firstOrCreate([
+                            'fullname' => $value,
+                        ])->id;
+                    })->collect()->toArray());
                 }
             });
         } catch (Exception $e) {
@@ -158,7 +151,7 @@ class CreateCourseSchedules implements ShouldQueue
      * @param array $meta
      * @return array
      */
-    private function extractDatesFromSchedule(array $schedule, array $meta)
+    private function dateExtract(array $schedule, array $meta)
     {
         $matches = [];
 

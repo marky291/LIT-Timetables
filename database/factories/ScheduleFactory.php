@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Course;
-use App\Models\Lecturer;
 use App\Models\Module;
 use App\Models\Room;
 use App\Models\Schedule;
@@ -28,7 +27,6 @@ class ScheduleFactory extends DataFactory
         return array_merge([
             'course_id' => Course::factory(),
             'module_id' => Module::factory(),
-            'lecturer_id' => Lecturer::factory(),
             'room_id' => Room::factory(),
             'type_id' => Type::factory(),
         ], $this->fromFile('schedules'));

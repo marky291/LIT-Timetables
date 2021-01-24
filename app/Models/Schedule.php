@@ -7,12 +7,12 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * @property Carbon $starting_date
  * @property Carbon $ending_date
  * @property Module $module
- * @property Lecturer $lecturer
  * @property int $academic_week
  * @property Room $room
  * @property Type $type
@@ -82,9 +82,12 @@ class Schedule extends Model
         return $this->belongsTo(Module::class);
     }
 
-    public function lecturer()
+    /**
+     * @return BelongsToMany|Schedule
+     */
+    public function lecturers()
     {
-        return $this->belongsTo(Lecturer::class);
+        return $this->belongsToMany(Lecturer::class);
     }
 
     public function course()

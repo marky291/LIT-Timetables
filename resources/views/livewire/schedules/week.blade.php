@@ -15,7 +15,9 @@
                                 <legend class="font-semibold">{{ $schedule->module->name }}</legend>
                                 <p class="my-0 text-gray-800"><span class="text-indigo-500">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span></p>
                                 <time class="text-indigo-500">{{ Str::lower($schedule->starting_date->format('H:sA')) }} - {{ Str::lower($schedule->ending_date->format('H:sA')) }}</time>
-                                <p class="mt-0 font-medium text-gray-700">{{ $schedule->lecturer->fullname }}</p>
+                                @foreach($schedule->lecturers as $lecturer)
+                                    <p class="mt-0 font-medium text-gray-700">{{ $lecturer->fullname }}</p>
+                                @endforeach
                                 {{--                                <p class="mt-0 font-medium text-gray-700">{{ $schedule->course->name }}</p>--}}
                             </div>
                         </div>
