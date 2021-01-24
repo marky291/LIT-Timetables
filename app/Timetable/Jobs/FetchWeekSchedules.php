@@ -110,8 +110,7 @@ class FetchWeekSchedules implements ShouldQueue
 
             $course = $this->course;
 
-            DB::transaction(function () use ($course, $parsedHtml, $http, $responseTime)
-            {
+            DB::transaction(function () use ($course, $parsedHtml, $http, $responseTime) {
                 $course->requests()->create([
                     'response' => $http->getInternalResponse()->getStatusCode(),
                     'time' => round($responseTime, 3),
@@ -121,8 +120,7 @@ class FetchWeekSchedules implements ShouldQueue
                 ]);
 
                 /** @var Schedule $schedules */
-                foreach ($parsedHtml->get('schedules') as $csv_schedule)
-                {
+                foreach ($parsedHtml->get('schedules') as $csv_schedule) {
                     $schedule = $course->schedules()->firstOrCreate([
                         'starting_date' => $this->dateExtract($csv_schedule, $parsedHtml['meta'])['start'],
                         'ending_date' => $this->dateExtract($csv_schedule, $parsedHtml['meta'])['end'],
@@ -132,7 +130,7 @@ class FetchWeekSchedules implements ShouldQueue
                         'type_id' => Type::firstOrCreate(['abbreviation' => $csv_schedule['type']])->id,
                     ]);
 
-                    $schedule->lecturers()->sync(Str::of($csv_schedule['lecturer'])->explode(', ')->map(function($value) {
+                    $schedule->lecturers()->sync(Str::of($csv_schedule['lecturer'])->explode(', ')->map(function ($value) {
                         return Lecturer::firstOrCreate([
                             'fullname' => $value,
                         ])->id;

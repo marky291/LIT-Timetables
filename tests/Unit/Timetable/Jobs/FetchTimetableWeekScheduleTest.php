@@ -15,7 +15,6 @@ use App\Timetable\Events\ScheduledTypeHasChanged;
 use App\Timetable\Events\TimetableFetchFailed;
 use App\Timetable\Events\TimetableFetchSuccesfully;
 use App\Timetable\Events\TimetableWasChanged;
-use App\Timetable\Jobs\CreateCourseSchedules;
 use App\Timetable\Jobs\FetchWeekSchedules;
 use Goutte\Client;
 use Illuminate\Foundation\Testing\RefreshDatabase;

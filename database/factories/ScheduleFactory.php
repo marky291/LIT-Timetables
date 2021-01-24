@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Course;
-use App\Models\Lecturer;
 use App\Models\Module;
 use App\Models\Room;
 use App\Models\Schedule;
