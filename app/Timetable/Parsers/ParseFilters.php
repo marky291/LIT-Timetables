@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Timetable\Converters;
+namespace App\Timetable\Parsers;
 
 use Illuminate\Support\Collection;
 
 /**
  * Mainly scraped @filter.js from lit timetable service.
  */
-class ConvertTimetableFilters
+class ParseFilters
 {
     private $content;
 

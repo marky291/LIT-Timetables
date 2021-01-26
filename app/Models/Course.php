@@ -20,6 +20,8 @@ use Laravel\Scout\Searchable;
  * @method static where(string $string, Stringable $name)
  * @method static make(array $toArray)
  * @method static firstWhere(string $string, int $course_id)
+ * @method static firstOrCreate(array $array, array $array1)
+ * @method static count()
  */
 class Course extends Model implements RoutableInterface
 {
@@ -93,5 +95,10 @@ class Course extends Model implements RoutableInterface
     public function getRouteAttribute()
     {
         return route('courses.show', $this);
+    }
+
+    public function source()
+    {
+        return sprintf(config('timetable.url.source'), $this->identifier, '');
     }
 }

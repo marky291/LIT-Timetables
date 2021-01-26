@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static updateOrCreate(array $array, array $array1)
  * @method static firstWhere(string $string, $i)
  * @method static firstOrCreate(array $array)
+ * @method static count()
  */
 class Department extends Model
 {

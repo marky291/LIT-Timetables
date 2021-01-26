@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Timetable\Converters;
 
-use App\Timetable\Converters\ConvertTimetableFilters;
+use App\Timetable\Parsers\ParseFilters;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
 use Tests\TestCase;
@@ -12,7 +12,7 @@ class ConvertTimetableFiltersTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * @var ConvertTimetableFilters
+     * @var ParseFilters
      */
     private $filter;
 
@@ -23,7 +23,7 @@ class ConvertTimetableFiltersTest extends TestCase
     {
         parent::setUp();
 
-        $this->filter = new ConvertTimetableFilters(File::get(base_path('tests/Unit/Samples/java-snapshot.txt')));
+        $this->filter = new ParseFilters(File::get(base_path('tests/Unit/Samples/java-snapshot.txt')));
     }
 
     /**

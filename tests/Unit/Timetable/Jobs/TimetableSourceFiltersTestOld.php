@@ -4,8 +4,8 @@ namespace Tests\Unit\Timetable\Jobs;
 
 use App\Models\Course;
 use App\Models\Department;
-use App\Timetable\Converters\ConvertTimetableFilters;
-use App\Timetable\Jobs\CreateDepartmentCourses;
+use App\Timetable\Parsers\ParseFilters;
+use App\Timetable\Jobs\FetchDepartmentsJob;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
 use Tests\TestCase;
@@ -16,7 +16,7 @@ class TimetableSourceFiltersTestOld extends TestCase
 
     private function ProcessTimetableSource()
     {
-        (new CreateDepartmentCourses(new ConvertTimetableFilters(File::get(base_path('/tests/Samples/java-snapshot.txt')))))->handle();
+        (new FetchDepartmentsJob(new ParseFilters(File::get(base_path('/tests/Samples/java-snapshot.txt')))))->handle();
 
         return $this;
     }

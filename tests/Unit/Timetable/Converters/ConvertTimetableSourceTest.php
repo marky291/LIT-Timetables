@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Timetable\Converters;
 
-use App\Timetable\Converters\ConvertTimetableSource;
+use App\Timetable\Parsers\ParseTimetable;
 use Goutte\Client;
 use Illuminate\Support\Facades\File;
 use Mockery;
@@ -23,7 +23,7 @@ class ConvertTimetableSourceTest extends TestCase
 
     public function getSchedules()
     {
-        return ConvertTimetableSource::GetAvailableSchedulesFromCrawler($this->getMockedClient('/Unit/Samples/html-snapshot')->request('GET', 'https://timetable.com'));
+        return ParseTimetable::GetAvailableSchedulesFromCrawler($this->getMockedClient('/Unit/Samples/html-snapshot')->request('GET', 'https://timetable.com'));
     }
 
     public function test_it_can_count_all_schedules()

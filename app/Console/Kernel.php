@@ -2,7 +2,8 @@
 
 namespace App\Console;
 
-use App\Timetable\Commands\DailyTimetableRetriever;
+use App\Timetable\Commands\SyncTimetableCommand;
+use App\Timetable\Commands\FetchWeekScheduleCommand;
 use App\Timetable\Commands\DispatchTimetableCrawlers;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -15,8 +16,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        DispatchTimetableCrawlers::class,
-        DailyTimetableRetriever::class,
+        SyncTimetableCommand::class,
     ];
 
     /**
@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
     {
         //$schedule->command('inspire')->everyMinute();
 
-        $schedule->command('fetch:week')->daily();
+        $schedule->command('sync:week')->daily();
     }
 
     /**

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Timetable\Regex;
+namespace App\Timetable\Parsers;
 
+use App\Timetable\Exceptions\UnknownCourseLocationException;
 use Illuminate\Support\Str;
 use Spatie\Regex\Regex;
 
-class RegexDataFromCourseName
+class ParseCourseName
 {
     /**
      * @var string
@@ -27,11 +28,21 @@ class RegexDataFromCourseName
         return urlencode($this->regResult('/(.*?)(?= -)/', $this->title));
     }
 
+    /**
+     * @return string
+     * @throws UnknownCourseLocationException
+     */
     public function getLocation()
     {
         $available = implode('|', ['Moylish', 'Thurles', 'Ennis', 'Clonmel']);
 
-        return $this->regResult("/(?<=\()($available)(?=\))/", $this->title);
+        $location = $this->regResult("/(?<=\()($available)(?=\))/", $this->title);
+
+        if (empty($location)) {
+            throw new UnknownCourseLocationException($this->title);
+        }
+
+        return $location;
     }
 
     public function getGroup()

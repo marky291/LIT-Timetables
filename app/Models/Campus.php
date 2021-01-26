@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static firstOrCreate(array $array)
+ * @method static count()
  * @property string location
  */
 class Campus extends Model
