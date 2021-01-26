@@ -4,7 +4,7 @@ namespace App\Timetable;
 
 use App\Models\Course;
 
-class TimetableSourceLinkCreator
+class TimetableLinkCreator
 {
     private $course;
     private $weekNumber;
