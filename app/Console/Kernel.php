@@ -3,8 +3,6 @@
 namespace App\Console;
 
 use App\Timetable\Commands\SyncTimetableCommand;
-use App\Timetable\Commands\FetchWeekScheduleCommand;
-use App\Timetable\Commands\DispatchTimetableCrawlers;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 

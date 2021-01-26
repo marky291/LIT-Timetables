@@ -1,11 +1,10 @@
 <?php
 
-
 namespace App\Timetable;
 
 use App\Models\Course;
-use App\Timetable\Parsers\ParseTimetable;
 use App\Timetable\Exceptions\ReturnedBadResponseException;
+use App\Timetable\Parsers\ParseTimetable;
 use Illuminate\Support\Collection;
 use Symfony\Component\BrowserKit\HttpBrowser;
 
@@ -23,7 +22,7 @@ class HttpTimetableRequests extends HttpBrowser
         $html = parent::request('GET', $course->source());
 
         if ($this->getInternalResponse()->getStatusCode() !== 200) {
-            throw new ReturnedBadResponseException('Response '. $this->getInternalResponse()->getStatusCode() . ' from ' . $course->source());
+            throw new ReturnedBadResponseException('Response '.$this->getInternalResponse()->getStatusCode().' from '.$course->source());
         }
 
         $parsed = ParseTimetable::GetAvailableSchedulesFromCrawler($html);
