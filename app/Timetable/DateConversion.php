@@ -3,7 +3,6 @@
 namespace App\Timetable;
 
 use Carbon\Carbon;
-use Illuminate\Config\Repository;
 
 class DateConversion
 {

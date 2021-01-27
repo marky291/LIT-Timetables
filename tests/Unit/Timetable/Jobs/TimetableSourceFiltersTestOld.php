@@ -4,8 +4,8 @@ namespace Tests\Unit\Timetable\Jobs;
 
 use App\Models\Course;
 use App\Models\Department;
-use App\Timetable\Parsers\ParseFilters;
 use App\Timetable\Jobs\FetchDepartmentsJob;
+use App\Timetable\Parsers\ParseFilters;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
 use Tests\TestCase;

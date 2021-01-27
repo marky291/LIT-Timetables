@@ -6,7 +6,6 @@ use App\Models\Course;
 use App\Models\Requests;
 use App\Models\Schedule;
 use App\Models\Timetable;
-use App\Timetable\Commands\SyncTimetableCommand;
 use App\Timetable\Events\ScheduledDayHasChanged;
 use App\Timetable\Events\ScheduledLecturerHasChanged;
 use App\Timetable\Events\ScheduledModuleHasChanged;
