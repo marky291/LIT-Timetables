@@ -45,21 +45,21 @@ class CreateBrainstormTables extends Migration
             $table->timestamps();
         });
 
+        Schema::create('campuses', function (Blueprint $table) {
+            $table->id();
+            $table->string('location');
+            $table->timestamps();
+        });
+
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('title');
             $table->integer('year')->nullable();
             $table->string('group')->nullable();
-            $table->string('campus_id');
             $table->string('identifier');
-            $table->foreignId('department_id');
-            $table->timestamps();
-        });
-
-        Schema::create('campuses', function (Blueprint $table) {
-            $table->id();
-            $table->string('location');
+            $table->foreignId('department_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('campus_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -83,7 +83,7 @@ class CreateBrainstormTables extends Migration
 
         Schema::create('requests', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('course_id');
+            $table->foreignId('course_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('response');
             $table->double('time');
             $table->string('link');
