@@ -111,10 +111,12 @@ class SyncTimetableCommand extends Command
             try {
                 $dept = Department::firstWhere('filter', $value->filter);
                 $camp = Campus::firstOrCreate(['location' => $data->getLocation()]);
-                $cors = Course::firstOrCreate(['identifier' => $data->getIdentifier()], $data->toArray());
-                $cors = $cors->campus()->associate($camp);
-                $cors = $cors->department()->associate($dept);
-            } catch (UnknownCourseLocationException $e) {
+
+                Course::firstOrCreate(['identifier' => $data->getIdentifier()], array_merge($data->toArray(), [
+                    'campus_id' => $camp->id,
+                    'department_id' => $dept->id,
+                ]));
+             } catch (UnknownCourseLocationException $e) {
                 Log::error("Missing course data in course title {$value->name}.");
             } finally {
                 $output->progressAdvance();
