@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static Builder today()
  * @method static Builder current()
  * @method static Builder latestAcademicWeek()
+ * @method static where(string $string, int $academic_week)
  */
 class Schedule extends Model
 {

@@ -8,6 +8,7 @@ use App\Models\Department;
 use App\Models\Lecturer;
 use App\Models\Module;
 use App\Models\Room;
+use App\Models\Schedule;
 use App\Models\Type;
 use App\Timetable\DateConversion;
 use App\Timetable\Parsers\ParseFilters;
@@ -178,10 +179,21 @@ class SyncTimetableCommand extends Command
                 }
 
                 /**
+                 * Get the academic week of the incoming request data.
+                 */
+                $academic_week = (int) Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/', $data['meta']['week'])->result();
+
+                /**
+                 * Delete the schedules for this week so we can recreate the indexing of the schedules.
+                 * in the next code block.
+                 */
+                $course->schedules()->where('academic_week', $academic_week)->delete();
+
+                /**
                  * Lastly we should storage store the schedules belongs to the
                  * course in selected by the loop.
                  */
-                $data->get('schedules')->each(function ($attribute) use ($course, $data)
+                $data->get('schedules')->each(function ($attribute) use ($course, $data, $academic_week)
                 {
                     $carbon = DateConversion::timetableScheduleToCarbon($attribute, $data['meta']);
                     $module = Module::firstOrCreate(['name' => $attribute['module']]);
@@ -192,7 +204,7 @@ class SyncTimetableCommand extends Command
                         'starting_date' => $carbon['start'],
                         'ending_date' => $carbon['end'],
                         'module_id' => $module->id,
-                        'academic_week' => (int) Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/', $data['meta']['week'])->result(),
+                        'academic_week' => $academic_week,
                         'room_id' => $room->id,
                         'type_id' => $type->id,
                     ]);
