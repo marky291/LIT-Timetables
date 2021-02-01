@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Timetable\Converters;
+namespace Tests\Unit\Timetable\Parsers;
 
 use App\Timetable\Parsers\ParseTimetable;
 use Goutte\Client;
@@ -10,7 +10,7 @@ use Mockery\MockInterface;
 use Symfony\Component\DomCrawler\Crawler;
 use Tests\TestCase;
 
-class ConvertTimetableSourceTest extends TestCase
+class ParseTimetableTest extends TestCase
 {
     private function getMockedClient(string $file)
     {

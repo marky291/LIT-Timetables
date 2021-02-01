@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\Unit\Timetable\Converters;
+namespace Tests\Unit\Timetable\Parsers;
 
 use App\Timetable\Parsers\ParseFilters;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
 use Tests\TestCase;
 
-class ConvertTimetableFiltersTest extends TestCase
+class ParseFilterTest extends TestCase
 {
     use RefreshDatabase;
 
