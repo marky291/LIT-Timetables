@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Timetable\Converters\ConvertTimetableSource;
+use App\Timetable\Parsers\ParseTimetable;
 use Goutte\Client;
 use Illuminate\Support\Facades\File;
 use Mockery;
@@ -26,7 +26,7 @@ class TimetableSourceToArrayTest extends TestCase
 
     public function test_it_can_count_all_schedules()
     {
-        $timetable = ConvertTimetableSource::GetAvailableSchedulesFromCrawler($this->getMockedClient('Samples/html-snapshot')->request('GET', 'https://timetable.com'));
+        $timetable = ParseTimetable::GetAvailableSchedulesFromCrawler($this->getMockedClient('Samples/html-snapshot')->request('GET', 'https://timetable.com'));
 
         $this->assertCount(14, $timetable->get('schedules'));
     }

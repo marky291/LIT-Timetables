@@ -15,7 +15,9 @@
                     <p class="mb-4"><span class="text-lg font-bold text-gray-800">{{ $schedule->starting_date->format('H:i') }}</span> <span class="ml-1 text-lg font-normal text-gray-500"> - {{ $schedule->ending_date->format('H:i') }}</span></p>
                     <p class="mb-4">{{ $schedule->room->door }}</p>
                     <p class="mb-4">{{ $schedule->module->name }}</p>
-                    <p class="mb-4">With {{ $schedule->lecturer->fullname }}</p>
+                    @foreach( $schedule->lecturers as $lecturer)
+                        <p class="mb-4">With {{ $lecturer->fullname }}</p>
+                    @endforeach
                     <p>{{ $schedule->type->name }}</p>
                 </div>
             @endforeach

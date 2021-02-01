@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
-class Semester
+class SemesterPeriods
 {
     /**
      * @var Carbon
@@ -14,7 +14,7 @@ class Semester
     private $currentDate;
 
     /**
-     * Semester constructor.
+     * SemesterPeriods constructor.
      *
      * @param Carbon $currentDate
      */

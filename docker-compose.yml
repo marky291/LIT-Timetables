@@ -73,19 +73,6 @@ services:
           - sail
       volumes:
           - 'meilisearch:/data.ms'
-    scheduler:
-      image: mcuadros/ofelia:latest
-      command: daemon --docker
-      networks:
-          - sail
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock:ro
-      depends_on:
-        - laravel.test
-      labels:
-        ofelia.job-exec.laravel.schedule: "@every 60s"
-        ofelia.job-exec.laravel.container: lit-timetables_laravel.test_1
-        ofelia.job-exec.laravel.command: "php /var/www/html/artisan schedule:run"
 networks:
     sail:
         driver: bridge

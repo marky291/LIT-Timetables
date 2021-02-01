@@ -23,9 +23,9 @@ class CourseTest extends TestCase
 
     public function test_it_has_requests()
     {
-        $course = Course::factory()->has(Requests::factory()->count(1))->create();
+        $course = Course::factory()->has(Requests::factory()->count(3))->create();
 
-        $this->assertNotNull(1, $course->requests);
+        $this->assertNotNull(3, $course->requests);
     }
 
     public function test_it_has_request()
@@ -40,6 +40,34 @@ class CourseTest extends TestCase
         $course = Course::factory()->has(Campus::factory(['location' => 'Moylish', 'City' => 'Limerick']))->create();
 
         $this->assertNotNull($course->campus);
+    }
+
+    public function test_course_has_a_name()
+    {
+        $course = Course::factory()->create(['name' => 'Business Studies with Sports Management - Year 4 Group B']);
+
+        $this->assertEquals('Business Studies with Sports Management - Year 4 Group B', $course->name);
+    }
+
+    public function test_course_has_a_lookup()
+    {
+        $course = Course::factory()->create(['identifier' => 'm_sltSmgmt4B']);
+
+        $this->assertEquals('m_sltSmgmt4B', $course->identifier);
+    }
+
+    public function test_course_has_a_year()
+    {
+        $course = Course::factory()->create(['year' => 4]);
+
+        $this->assertEquals(4, $course->year);
+    }
+
+    public function test_course_has_a_group()
+    {
+        $course = Course::factory()->create(['group' => 'B']);
+
+        $this->assertEquals('B', $course->group);
     }
 
     /** @test */

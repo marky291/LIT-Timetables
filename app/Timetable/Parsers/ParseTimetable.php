@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Timetable\Converters;
+namespace App\Timetable\Parsers;
 
 use Illuminate\Support\Collection;
 use Symfony\Component\DomCrawler\Crawler;
@@ -8,7 +8,7 @@ use Symfony\Component\DomCrawler\Crawler;
 /**
  * Scraped a timetable page.
  */
-class ConvertTimetableSource
+class ParseTimetable
 {
     /**
      * Create an associative table from the content table.
@@ -63,7 +63,7 @@ class ConvertTimetableSource
      */
     private static function GetRawTableFromHTML(Crawler $crawler): array
     {
-        $results = $crawler->filter('body>table>tr:nth-child(4)>td>table:nth-child(2)>tr')->each(function (Crawler $row, int $rowIndex) use (&$currentTime) {
+        return $crawler->filter('body>table>tr:nth-child(4)>td>table:nth-child(2)>tr')->each(function (Crawler $row, int $rowIndex) use (&$currentTime) {
             $timetracking = 1;
 
             return [
@@ -94,8 +94,6 @@ class ConvertTimetableSource
                 }),
             ];
         });
-
-        return $results;
     }
 
     /**
