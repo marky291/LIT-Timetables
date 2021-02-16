@@ -22,7 +22,7 @@ class CampusFactory extends Factory
     public function definition()
     {
         return [
-            'location' => $this->faker->randomElement(['Moylish', 'Clonmel', 'Ennis', 'Thurles']),
+            'location' => $this->faker->unique()->randomElement(['Moylish', 'Clonmel', 'Ennis', 'Thurles']),
         ];
     }
 }

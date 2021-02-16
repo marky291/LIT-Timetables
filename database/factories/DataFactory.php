@@ -8,6 +8,6 @@ abstract class DataFactory extends Factory
 {
     public function fromFile(string $filename)
     {
-        return $this->faker->randomElement(json_decode(file_get_contents(__DIR__."/../data/{$filename}.json"), true));
+        return $this->faker->unique()->randomElement(json_decode(file_get_contents(__DIR__."/../data/{$filename}.json"), true));
     }
 }

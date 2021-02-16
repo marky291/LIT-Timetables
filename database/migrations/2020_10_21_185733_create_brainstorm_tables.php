@@ -16,38 +16,38 @@ class CreateBrainstormTables extends Migration
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('filter');
+            $table->string('filter')->unique();
             $table->timestamps();
         });
 
         Schema::create('modules', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->timestamps();
         });
 
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->string('door');
+            $table->string('door')->unique();
             $table->timestamps();
         });
 
         Schema::create('lecturers', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('fullname');
+            $table->string('fullname')->unique();
             $table->timestamps();
         });
 
         Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->string('abbreviation');
+            $table->string('abbreviation')->unique();
             $table->timestamps();
         });
 
         Schema::create('campuses', function (Blueprint $table) {
             $table->id();
-            $table->string('location');
+            $table->string('location')->unique();
             $table->timestamps();
         });
 
@@ -57,7 +57,7 @@ class CreateBrainstormTables extends Migration
             $table->string('title');
             $table->integer('year')->nullable();
             $table->string('group')->nullable();
-            $table->string('identifier');
+            $table->string('identifier')->unique();
             $table->foreignId('department_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('campus_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
@@ -72,11 +72,11 @@ class CreateBrainstormTables extends Migration
             $table->foreignId('module_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('room_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('type_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->index('academic_week');
             $table->timestamps();
         });
 
         Schema::create('lecturer_schedule', function (Blueprint $table) {
-            $table->id();
             $table->foreignId('lecturer_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('schedule_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
         });
