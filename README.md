@@ -28,7 +28,7 @@ $ ./vendor/bin/sail artisan db:seed
 
 Or use live timetable data for testing
 ```
-$ ./vendor/bin/sail artisan scrape:week {week_number}
+$ ./vendor/bin/sail artisan sync:week
 ```
 
 ## Installation on Windows
