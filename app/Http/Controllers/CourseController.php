@@ -26,14 +26,14 @@ class CourseController extends Controller
     }
 
     /**
-     * Retrieve all the schedules belonging to a course
+     * Retrieve all the schedules belonging to a course.
      *
      * @param Course $course
      * @return mixed
      */
     private function schedules(Course $course)
     {
-        return Cache::remember($course->identifier . "_schedules", now()->addMinutes(30), function () use ($course) {
+        return Cache::remember($course->identifier.'_schedules', now()->addMinutes(30), function () use ($course) {
             return $course->schedules()->latestAcademicWeek()->with(['room', 'module', 'type', 'lecturers'])->get();
         });
     }
