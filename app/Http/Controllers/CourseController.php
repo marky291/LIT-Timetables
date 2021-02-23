@@ -7,19 +7,10 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Cache;
 
 class CourseController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View|Response
-     */
-    public function index()
-    {
-        return view('courses/index');
-    }
-
     /**
      * Display the specified resource.
      *
@@ -30,7 +21,20 @@ class CourseController extends Controller
     {
         return view('courses/show', [
             'course' => $course,
-            'schedules' => $course->schedules()->latestAcademicWeek()->get(),
+            'schedules' => $this->schedules($course),
         ]);
+    }
+
+    /**
+     * Retrieve all the schedules belonging to a course
+     *
+     * @param Course $course
+     * @return mixed
+     */
+    private function schedules(Course $course)
+    {
+        return Cache::remember($course->identifier . "_schedules", now()->addMinutes(30), function () use ($course) {
+            return $course->schedules()->latestAcademicWeek()->with(['room', 'module', 'type', 'lecturers'])->get();
+        });
     }
 }

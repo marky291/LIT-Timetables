@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property Carbon $ending_date
  * @property Module $module
  * @property int $academic_week
+ * @property int $latestAvailableWeek
  * @property Room $room
  * @property Type $type
  *
@@ -23,6 +24,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static Builder current()
  * @method static Builder latestAcademicWeek()
  * @method static where(string $string, int $academic_week)
+ * @method latest(string $string)
  */
 class Schedule extends Model
 {
@@ -69,7 +71,7 @@ class Schedule extends Model
     // scope current week.
     public function scopeLatestAcademicWeek(Builder $query)
     {
-        return $query->latest('academic_week');
+        return $query->where('academic_week', $this->latestAvailableWeek);
     }
 
     // scope last weeks schedule.
@@ -106,12 +108,22 @@ class Schedule extends Model
         return $this->belongsTo(Type::class);
     }
 
-    public function isCurrentTime()
+    public function isCurrentTime(): bool
     {
         return $this->starting_date < now() && $this->ending_date > now();
     }
 
-    public function newCollection(array $models = [])
+    /**
+     * Latest available week number from the database records.
+     *
+     * @return int
+     */
+    public function getLatestAvailableWeekAttribute() : mixed
+    {
+        return $this->latest('academic_week')->first()?->academic_week;
+    }
+
+    public function newCollection(array $models = []): ScheduleCollection
     {
         return new ScheduleCollection($models);
     }
