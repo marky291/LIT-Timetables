@@ -31,8 +31,6 @@
     <div class="bg-panel-gray">
         <div class="max-w-screen-xl px-4 py-6 mx-auto sm:px-6 lg:px-8">
 
-{{--            @livewire('schedules.today', ['schedules' => $schedules])--}}
-
             @livewire('schedules.upcoming', ['schedules' => $schedules])
 
             @livewire('schedules.week', ['schedules' => $schedules])
