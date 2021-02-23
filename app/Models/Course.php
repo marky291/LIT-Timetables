@@ -94,7 +94,7 @@ class Course extends Model implements RoutableInterface
      */
     public function getRouteAttribute()
     {
-        return route('courses.show', $this);
+        return route('course', $this);
     }
 
     public function source()
