@@ -7,16 +7,19 @@ use App\Models\Requests;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class CourseTest extends TestCase
+class PageTest extends TestCase
 {
     use RefreshDatabase;
+
+    public function testHomepageStatus()
+    {
+        $this->get('/')->assertStatus(200);
+    }
 
     public function testCourseViewPage()
     {
         $course = Course::factory()->has(Requests::factory()->count(1))->create();
 
-        $response = $this->get("courses/{$course->identifier}");
-
-        $response->assertStatus(200);
+        $this->get("courses/{$course->identifier}")->assertStatus(200);
     }
 }

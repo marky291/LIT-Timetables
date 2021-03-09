@@ -70,6 +70,6 @@ class Lecturer extends Model implements RoutableInterface
      */
     public function getRouteAttribute()
     {
-        return route('lecturers.show', $this);
+        return route('lecturer', $this);
     }
 }

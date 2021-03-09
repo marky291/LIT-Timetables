@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LecturerController;
+use App\Http\Controllers\TimetableController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,14 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
-
-Route::resource('courses', CourseController::class)->only([
-    'index', 'show',
-]);
-
-Route::resource('lecturers', LecturerController::class)->only([
-    'index', 'show',
-]);
+Route::get('/', function() { return view('homepage'); })->name('homepage');
+Route::get('/courses/{course}', [TimetableController::class, 'course'])->name('course');
+Route::get('/lecturers/{lecturer}', [TimetableController::class, 'lecturer'])->name('lecturer');

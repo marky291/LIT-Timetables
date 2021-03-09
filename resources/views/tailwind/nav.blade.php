@@ -20,7 +20,7 @@
         </div>
         <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
             <nav class="flex space-x-10">
-                <a href="{{ route('home') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="{{ route('homepage') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
                     Home
                 </a>
                 {{-- <div x-data="{ flyoutMenuOpen: false }" @click.away="flyoutMenuOpen = false" class="relative">
@@ -351,7 +351,7 @@
             <div class="px-5 py-6">
                 <div class="grid grid-cols-2 gap-4">
 
-                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="{{ route('homepage') }}" class="text-base font-medium text-gray-900 hover:text-gray-700">
                         Home
                     </a>
 
