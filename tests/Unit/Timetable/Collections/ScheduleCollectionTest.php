@@ -50,4 +50,16 @@ class ScheduleCollectionTest extends TestCase
 
         $this->assertCount(3, Schedule::all()->sortWeek());  // make sure it breaks into days (three days)
     }
+
+    public function test_it_can_sort_and_order_a_week_uniquely()
+    {
+        Carbon::setTestNow(Carbon::create(2020, 1, 8, 11, 00, 00));
+
+        // it is possible a class is made up of multiple groupings, causing
+        // a duplicate timetable schedule for a lecturer.
+        $schedule2 = Schedule::factory()->create(['starting_date' => Carbon::create(2020, 1, 9, 10, 00, 00), 'ending_date' => Carbon::create(2020, 1, 9, 11, 00, 00)]);
+        $schedule3 = Schedule::factory()->create(['starting_date' => Carbon::create(2020, 1, 9, 10, 00, 00), 'ending_date' => Carbon::create(2020, 1, 9, 10, 00, 00)]);
+
+        $this->assertCount(1, Schedule::all()->sortWeek()->first());
+    }
 }
