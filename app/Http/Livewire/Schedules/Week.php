@@ -2,20 +2,18 @@
 
 namespace App\Http\Livewire\Schedules;
 
-use Illuminate\Database\Eloquent\Collection;
+use App\Timetable\Collections\ScheduleCollection;
 use Livewire\Component;
 
 class Week extends Component
 {
-    /** @var Collection */
+    /** @var ScheduleCollection */
     public $schedules;
 
     public function render()
     {
         return view('livewire.schedules.week', [
-            'days' => $this->schedules->groupBy(function ($schedule) {
-                return $schedule->starting_date->format('l');
-            }),
+            'days' => $this->schedules->sortweek(),
         ]);
     }
 }
