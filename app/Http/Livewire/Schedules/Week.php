@@ -13,9 +13,7 @@ class Week extends Component
     public function render()
     {
         return view('livewire.schedules.week', [
-            'days' => $this->schedules->groupBy(function ($schedule) {
-                return $schedule->starting_date->format('l');
-            }),
+            'days' => $this->schedules->sortweek(),
         ]);
     }
 }
