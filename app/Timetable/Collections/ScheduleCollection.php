@@ -39,6 +39,6 @@ class ScheduleCollection extends Collection
      */
     public function sortWeek(): ScheduleCollection
     {
-        return $this->groupBy(fn ($schedule) => $schedule->starting_date->format('d-m-Y'))->sortKeys();
+        return $this->sortBy('starting_date')->groupBy(fn ($schedule) => $schedule->starting_date->format('d-m-Y'))->sortKeys();
     }
 }
