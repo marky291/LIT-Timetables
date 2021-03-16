@@ -1,29 +1,26 @@
-const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    important: true,
     purge: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './vendor/laravel/jetstream/**/*.blade.php',
+        './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
-        './resources/css/**/*.css',
     ],
+
     theme: {
         extend: {
-            colors: {
-                orange: colors.orange,
-                'panel-gray': '#f7f8fc',
-                'lit-red': '#d71d1e',
-            }
-        },
-        theme: {
             fontFamily: {
-                'sans': ['Inter var', 'Helvetica', 'Arial', 'sans-serif'],
-            }
-        }
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
-    variants: {},
-    plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-    ]
-}
+
+    variants: {
+        extend: {
+            opacity: ['disabled'],
+        },
+    },
+
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+};
