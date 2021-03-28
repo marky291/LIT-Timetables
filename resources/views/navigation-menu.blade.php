@@ -16,18 +16,18 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
+            </div>
 
-                <div x-data>
-                    <button dusk="search-nav" @click="$dispatch('search');" type="button" class="flex items-center space-x-3 font-medium leading-6 transition-colors duration-200 group sm:space-x-4 hover:text-gray-600">
-                        <svg width="24" height="24" fill="none" class="text-gray-400 transition-colors duration-200 group-hover:text-gray-500">
-                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        <span>Quick search for anything</span>
-                        <span class="hidden sm:block text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">
+            <div x-data class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <button dusk="search-nav" @click="$dispatch('search');" type="button" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                    <svg width="24" height="24" fill="none" class="mr-4 text-gray-400 transition-colors duration-200 group-hover:text-gray-500">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <span>Quick search for anything</span>
+                    <span class="ml-4 hidden sm:block text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">
                             <span class="sr-only">Press </span><kbd class="font-sans"><abbr title="Command" class="no-underline">⌘</abbr></kbd>
                             <span class="sr-only"> and </span><kbd class="font-sans">K</kbd><span class="sr-only"> to search</span>
                           </span>
-                    </button>
-                </div>
+                </button>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
