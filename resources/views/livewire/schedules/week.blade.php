@@ -1,4 +1,4 @@
-<div class="mt-10">
+<div wire:poll.60000ms class="mt-10">
     @foreach ($days as $key => $day)
 
         <div class="mt-7">

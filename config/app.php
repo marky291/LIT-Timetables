@@ -178,6 +178,7 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
 
+        App\Timetable\TimetableServiceProvider::class,
     ],
 
     /*
