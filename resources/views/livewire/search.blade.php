@@ -5,9 +5,9 @@ x-on:keydown.escape="open = false;"
 x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 >
 
-    <div x-cloak x-show="open" id="search-container" class="fixed top-0 left-0 z-10 w-full h-screen p-28" style="background: rgba(0,0,0,.25)">
+    <div x-cloak x-show="open" id="search-container" class="fixed top-0 left-0 z-10 w-full h-screen lg:h-full lg:p-28" style="background: rgba(0,0,0,.25)">
 
-        <div x-on:click.away="open = false" class="flex flex-col w-full max-w-3xl min-h-0 mx-auto bg-white rounded-2xl" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,.25)">
+        <div x-on:click.away="open = false" class="flex flex-col w-full lg:max-w-3xl h-screen lg:h-auto lg:max-h-full mx-auto bg-white lg:rounded-2xl" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,.25)">
 
             <header class="flex items-center justify-between mx-6 border-b border-gray-200">
                 <div class="flex items-center">
@@ -35,7 +35,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                 </div>
             </header>
 
-            <section class="px-6 overflow-auto" style="max-height: 50vh">
+            <section class="px-6 overflow-auto">
 
                 @if (empty($error) == false)
                     <div class="py-12 text-lg text-gray-500">
@@ -54,9 +54,9 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                                             </div>
                                             <div class="flex items-center h-8">
                                                 @if ($model instanceof \App\Interfaces\RoutableInterface)
-                                                    <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->routeTitle }}</p>
+                                                    <p class="font-semibold overflow-ellipsis px-2">{{ $model->routeTitle }}</p>
                                                 @else
-                                                    <p class="font-semibold overflow-ellipsis whitespace-nowrap">Missing linkable interface</p>
+                                                    <p class="font-semibold overflow-ellipsis px-2">Missing linkable interface</p>
                                                 @endif
                                             </div>
                                         </div>
@@ -78,7 +78,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                                 </div>
                                                 <div class="flex items-center h-8">
-                                                    <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->searchable->routeTitle }}</p>
+                                                    <p class="font-semibold overflow-ellipsis px-2">{{ $model->searchable->routeTitle }}</p>
                                                 </div>
                                             </div>
                                             <div class="py-4 pr-4 cursor-pointer" wire:loading.remove wire:click="favorite({{$model->id}})" >
@@ -103,7 +103,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                                                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
                                                     </div>
                                                     <div class="flex items-center h-8">
-                                                        <p class="font-semibold overflow-ellipsis whitespace-nowrap">{{ $model->searchable->routeTitle }}</p>
+                                                        <p class="font-semibold overflow-ellipsis px-2">{{ $model->searchable->routeTitle }}</p>
                                                     </div>
                                                 </div>
                                                 <div class="py-4 pr-4 cursor-pointer" wire:loading.remove wire:click="delete({{$model->id}})" >
@@ -148,7 +148,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 
             </section>
 
-            <footer class="flex justify-end py-5 mx-6 border-t border-gray-200">
+            <footer class="flex mt-6 justify-end py-5 mx-6 border-t border-gray-200">
                 <div class="flex items-center w-6 h-6 mr-1">
                     <img src="https://www.meilisearch.com/_nuxt/img/cf59975.svg" alt="">
                 </div>
