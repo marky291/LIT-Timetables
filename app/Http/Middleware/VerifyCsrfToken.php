@@ -12,6 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        'livewire/message/schedules.week',
+        'livewire/message/schedules.upcoming',
+        'livewire/message/schedules.today',
     ];
 }

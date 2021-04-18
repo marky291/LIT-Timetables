@@ -2,6 +2,8 @@
 
 namespace App\Timetable;
 
+use App\Timetable\View\ViewScheduleLayout;
+use Blade;
 use Illuminate\Support\ServiceProvider;
 
 class TimetableServiceProvider extends ServiceProvider
@@ -25,6 +27,6 @@ class TimetableServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Blade::component('schedule', ViewScheduleLayout::class);
     }
 }

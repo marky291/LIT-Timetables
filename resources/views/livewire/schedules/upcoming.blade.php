@@ -1,7 +1,7 @@
-<div wire:poll.500000ms class="mt-6 overflow-hidden bg-white rounded-lg shadow">
+<div wire:poll.60000ms class="mt-6 overflow-hidden bg-white rounded-lg shadow">
     <div class="px-4 py-5 sm:p-6 sm:border-b sm:border-gray-200">
         <h3 class="text-lg font-medium leading-6 text-gray-900">
-            Upcoming Schedules
+            Upcoming Schedules Today
         </h3>
         {{-- <p class="max-w-2xl mt-1 text-sm leading-5 text-gray-500">
             The Current time is {{ now()->format('H:i:s') }}
@@ -23,7 +23,7 @@
             @endforeach
         @else
             <div class="col-span-4">
-                <h3>There are currently no upcoming schedules for today</h3>
+                <h3>There are currently no upcoming schedules</h3>
             </div>
         @endif
     </div>

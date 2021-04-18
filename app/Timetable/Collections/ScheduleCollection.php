@@ -13,11 +13,9 @@ class ScheduleCollection extends Collection
      *
      * @return ScheduleCollection
      */
-    public function today()
+    public function today(): ScheduleCollection
     {
-        return $this->filter(function (Schedule $schedule) {
-            return $schedule->starting_date->dayOfWeek == now()->dayOfWeek;
-        });
+        return $this->filter(fn ($schedule) =>  $schedule->starting_date->dayOfWeek == now()->dayOfWeek);
     }
 
     /**
@@ -25,16 +23,22 @@ class ScheduleCollection extends Collection
      */
     public function upcoming(): ScheduleCollection
     {
-        return $this->filter(function (Schedule $schedule) {
-            return now() < $schedule->ending_date;
-        });
+        return $this->filter(fn ($schedule) => now() < $schedule->ending_date);
     }
 
     /**
      * @return ScheduleCollection
      */
-    public function distinct()
+    public function distinct(): ScheduleCollection
     {
         return $this->unique('starting_date')->sortBy('starting_date');
+    }
+
+    /**
+     * @return ScheduleCollection
+     */
+    public function sortWeek(): ScheduleCollection
+    {
+        return $this->distinct()->groupBy(fn ($schedule) => $schedule->starting_date->format('d-m-Y'))->sortKeys();
     }
 }

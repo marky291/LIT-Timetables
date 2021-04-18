@@ -16,10 +16,10 @@ return [
 
     'cookie' => [
         'name' => 'recent_searches',
-        'time' => 60, // minutes
+        'time' => 2629746, // 5 years (minutes)
     ],
 
     // define the result cache
-    'cache_hours' => 20, // hours
+    'cache_hours' => 24, // hours
 
 ];

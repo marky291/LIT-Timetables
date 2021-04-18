@@ -131,6 +131,6 @@ class SyncTimetableCommand extends Command
         /**
          * Let the command know it succeeded.
          */
-        return true;
+        return false;
     }
 }

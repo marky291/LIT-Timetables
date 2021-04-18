@@ -3,7 +3,7 @@ version: '3'
 services:
     laravel.test:
         build:
-            context: ./docker/8.0
+            context: ./vendor/laravel/sail/runtimes/8.0
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
@@ -20,16 +20,7 @@ services:
         depends_on:
             - mysql
             - redis
-            - meilisearch
-            # - selenium
-    # selenium:
-    #     image: 'selenium/standalone-chrome'
-    #     volumes:
-    #         - '/dev/shm:/dev/shm'
-    #     networks:
-    #         - sail
-    #     depends_on:
-    #         - laravel.test
+            - selenium
     mysql:
         image: 'mysql:8.0'
         ports:
@@ -44,6 +35,8 @@ services:
             - 'sailmysql:/var/lib/mysql'
         networks:
             - sail
+        healthcheck:
+          test: ["CMD", "mysqladmin", "ping"]
     redis:
         image: 'redis:alpine'
         ports:
@@ -52,27 +45,22 @@ services:
             - 'sailredis:/data'
         networks:
             - sail
-    # memcached:
-    #     image: 'memcached:alpine'
-    #     ports:
-    #         - '11211:11211'
-    #     networks:
-    #         - sail
-    mailhog:
-        image: 'mailhog/mailhog:latest'
+        healthcheck:
+          test: ["CMD", "redis-cli", "ping"]
+    meilisearch:
+        image: 'getmeili/meilisearch:latest'
         ports:
-            - 1025:1025
-            - 8025:8025
+            - '${FORWARD_MEILISEARCH_PORT:-7700}:7700'
+        volumes:
+            - 'sailmeilisearch:/data.ms'
         networks:
             - sail
-    meilisearch:
-      image: 'getmeili/meilisearch:latest'
-      ports:
-          - 7700:7700
-      networks:
-          - sail
-      volumes:
-          - 'meilisearch:/data.ms'
+    selenium:
+       image: 'selenium/standalone-chrome'
+       volumes:
+            - '/dev/shm:/dev/shm'
+       networks:
+           - sail
 networks:
     sail:
         driver: bridge
@@ -81,5 +69,5 @@ volumes:
         driver: local
     sailredis:
         driver: local
-    meilisearch:
+    sailmeilisearch:
         driver: local
