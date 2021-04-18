@@ -5,15 +5,15 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex items-center flex-shrink-0">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('homepage') }}">
                         <x-jet-application-mark class="block w-auto h-9" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-jet-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
+                        {{ __('Homepage') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -31,6 +31,24 @@
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                @guest
+                    <div class="relative ml-3">
+                        <span class="inline-flex rounded-md">
+                            <a href="{{ route('login') }}" class="hover:bg-gray-200 inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
+                                {{ __('Login') }}
+                            </a>
+                        </span>
+                    </div>
+                    <div class="relative ml-3">
+                        <span class="inline-flex rounded-md">
+                            <a href="{{ route('register') }}" class="text-white rounded inline-flex items-center px-3 py-2 text-sm font-medium leading-4  transition duration-150 ease-in-out bg-indigo-600 hover:bg-indigo-700 border border-transparent rounded-md hover:text-white focus:outline-none">
+                                {{ __('Register') }}
+                            </a>
+                        </span>
+                    </div>
+                @endguest
+
+                @auth
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="relative ml-3">
@@ -133,6 +151,7 @@
                         </x-slot>
                     </x-jet-dropdown>
                 </div>
+                @endauth
             </div>
 
             <!-- Hamburger -->
@@ -150,13 +169,14 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-jet-responsive-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
+                {{ __('Homepage') }}
             </x-jet-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
+        @auth
+            <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                     <div class="flex-shrink-0 mr-3">
@@ -225,5 +245,6 @@
                 @endif
             </div>
         </div>
+        @endauth
     </div>
 </nav>

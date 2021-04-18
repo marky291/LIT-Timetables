@@ -14,13 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function() {
-    return view('dashboard');
+Route::get('/', function() {
+    return view('homepage');
 })->name('homepage');
 
 Route::get('/courses/{course}', [TimetableController::class, 'course'])->name('course');
 Route::get('/lecturers/{lecturer}', [TimetableController::class, 'lecturer'])->name('lecturer');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
