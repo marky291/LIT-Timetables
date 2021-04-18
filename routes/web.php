@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function() { return view('homepage'); })->name('homepage');
+Route::get('/', function() {
+    return view('homepage');
+})->name('homepage');
+
 Route::get('/courses/{course}', [TimetableController::class, 'course'])->name('course');
 Route::get('/lecturers/{lecturer}', [TimetableController::class, 'lecturer'])->name('lecturer');
