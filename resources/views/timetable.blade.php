@@ -8,6 +8,8 @@
     <div class="bg-panel-gray bg-gray-100">
         <div class="max-w-screen-xl px-4 py-6 mx-auto sm:px-6 lg:px-8">
 
+            @livewire('weather-tile', ['location' => $model->campus->location])
+
             @livewire('schedules.upcoming', ['schedules' => $schedules])
 
             @livewire('schedules.week', ['schedules' => $schedules])
