@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Course;
 use App\Models\Lecturer;
 use App\Observers\LecturerObserver;
+use Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

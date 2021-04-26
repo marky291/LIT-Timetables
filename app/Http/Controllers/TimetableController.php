@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Lecturer;
+use App\Timetable\SemesterPeriods;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -44,6 +45,7 @@ class TimetableController extends Controller
     {
         return view('timetable', [
             'model' => $model,
+            'semester' => new SemesterPeriods(now()),
             'schedules' => $this->schedules($model),
         ]);
     }

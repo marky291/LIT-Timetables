@@ -73,6 +73,9 @@ class Lecturer extends Model implements SearchableInterface
         return route('lecturer', $this);
     }
 
+    /**
+     * @return string
+     */
     public function getIconCategoryAttribute() : string
     {
         return 'Lecturer';

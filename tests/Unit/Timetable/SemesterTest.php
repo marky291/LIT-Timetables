@@ -58,4 +58,13 @@ class SemesterTest extends TestCase
 
         $this->assertEquals(27, $semester->week());
     }
+
+    public function test_it_can_get_current_semester()
+    {
+        $semesterOne = new SemesterPeriods(Carbon::create(2020, 11, 9, 2, 13, 21));
+        $semesterTwo = new SemesterPeriods(Carbon::create(2021, 03, 9, 2, 13, 21));
+
+        $this->assertEquals(1, $semesterOne->semester());
+        $this->assertEquals(2, $semesterTwo->semester());
+    }
 }
