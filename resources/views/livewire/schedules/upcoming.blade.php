@@ -1,5 +1,5 @@
 <div wire:poll.60000ms class="mt-6 overflow-hidden bg-white rounded-lg shadow">
-    <div class="px-4 py-5 sm:p-6 sm:border-b sm:border-gray-200">
+    <div class="px-4 py-5 p-6 border-b border-gray-200">
         <h3 class="text-lg font-medium leading-6 text-gray-900">
             Upcoming Schedules Today
         </h3>
