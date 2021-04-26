@@ -63,7 +63,11 @@
                                                     <div class="prose">
                                                         <p class="my-0 text-gray-800">
                                                             <legend class="font-semibold">{{ $schedule->module->name }}</legend>
-                                                            <span class="text-indigo-500">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span><br>
+                                                            @if ($schedule->type->isOnline())
+                                                                <span class="text-indigo-500">{{ $schedule->type->name }}</span><br>
+                                                            @else
+                                                                <span class="text-indigo-500">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span><br>
+                                                            @endif
                                                             <time class="text-indigo-500">{{ Str::lower($schedule->starting_date->format('H:sA')) }} - {{ Str::lower($schedule->ending_date->format('H:sA')) }}</time><br>
                                                             @foreach($schedule->lecturers as $lecturer)
                                                                 <span class="mt-0 font-medium text-gray-700">{{ $lecturer->fullname }}</span>
