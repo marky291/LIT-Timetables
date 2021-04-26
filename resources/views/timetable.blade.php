@@ -13,9 +13,9 @@
 
                     <div class="col-span-3 text-left">
                         @if($model instanceof App\Models\Lecturer)
-                            <p><div class="mb-3">{{ $schedules[0]->course->campus->location }} Campus</div></p>
+                            <div class="mb-3"><p>{{ $schedules[0]->course->campus->location }} Campus</p></div>
                         @else
-                            <p><div class="mb-3">{{ $location }} Campus</div></p>
+                            <div class="mb-3"><p>{{$model->campus->location }} Campus</p></div>
                         @endif
                         <p class="text-2xl mb-3 font-semibold">{{ $schedules[0]->course->name }}</p>
                         <p class="text-gray-500 mb-3">Semester {{ $semester->semester() }}, Week {{ $semester->week() }}</p>
