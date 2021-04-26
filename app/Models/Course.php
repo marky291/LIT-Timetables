@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Interfaces\RoutableInterface;
+use App\Interfaces\SearchableInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,6 +16,7 @@ use Laravel\Scout\Searchable;
  * @property string $identifier
  * @property string $meta
  * @property Collection $timetables
+ * @property Department department
  * @method static updateOrCreate(array $array, array $array1)
  * @method static where(string $string, Stringable $name)
  * @method static make(array $toArray)
@@ -23,7 +24,7 @@ use Laravel\Scout\Searchable;
  * @method static firstOrCreate(array $array, array $array1)
  * @method static count()
  */
-class Course extends Model implements RoutableInterface
+class Course extends Model implements SearchableInterface
 {
     use HasFactory;
     use Searchable;
@@ -100,5 +101,10 @@ class Course extends Model implements RoutableInterface
     public function source()
     {
         return sprintf(config('timetable.url.source'), $this->identifier, '');
+    }
+
+    public function getIconCategoryAttribute(): string
+    {
+        return $this->department->name;
     }
 }

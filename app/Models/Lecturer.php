@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Interfaces\RoutableInterface;
+use App\Interfaces\SearchableInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -19,7 +19,7 @@ use Laravel\Scout\Searchable;
  * @method static first()
  * @method static count()
  */
-class Lecturer extends Model implements RoutableInterface
+class Lecturer extends Model implements SearchableInterface
 {
     use HasFactory;
     use Searchable;
@@ -71,5 +71,10 @@ class Lecturer extends Model implements RoutableInterface
     public function getRouteAttribute()
     {
         return route('lecturer', $this);
+    }
+
+    public function getIconCategoryAttribute() : string
+    {
+        return 'Lecturer';
     }
 }
