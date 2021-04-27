@@ -1,6 +1,6 @@
 <div>
     <div class="flex items-center justify-left p-4 rounded">
-        <div class="flex h-16 w-16 mr-3 align-center">
+        <div class="flex h-16 w-16 mr-3 align-center bg-white rounded-lg border border-gray-200 shadow-sm">
             <img src="http://openweathermap.org/img/wn/{{ $weather['weather'][0]['icon'] }}.png" alt="icon">
         </div>
         <div class="">
