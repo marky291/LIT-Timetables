@@ -2,7 +2,7 @@
 
 namespace App\Interfaces;
 
-interface RoutableInterface
+interface SearchableInterface
 {
     /**
      * @return mixed
@@ -18,4 +18,9 @@ interface RoutableInterface
      * @return string
      */
     public function getRouteTitleAttribute();
+
+    /**
+     * @return string
+     */
+    public function getIconCategoryAttribute();
 }

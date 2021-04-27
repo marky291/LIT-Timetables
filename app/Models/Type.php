@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 /**
  * @property string $abbreviation
@@ -24,6 +25,11 @@ class Type extends Model
     protected $fillable = [
         'abbreviation',
     ];
+
+    public function isOnline(): bool
+    {
+        return Str::of($this->abbreviation)->contains('Online');
+    }
 
     public function GetNameAttribute(): string
     {

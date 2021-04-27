@@ -21,5 +21,4 @@ return [
 
     // define the result cache
     'cache_hours' => 24, // hours
-
 ];

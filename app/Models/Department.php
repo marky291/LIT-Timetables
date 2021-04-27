@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static firstWhere(string $string, $i)
  * @method static firstOrCreate(array $array)
  * @method static count()
+ * @property string name
  */
 class Department extends Model
 {

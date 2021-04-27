@@ -1,9 +1,9 @@
-<div wire:poll.60000ms class="mt-10">
+<div wire:poll.60000ms>
     @foreach ($days as $key => $day)
 
-        <div class="p-4 bg-white rounded-lg shadow mt-7">
+        <div class="p-4 bg-white rounded-lg shadow px-10 py-6 {{ $loop->first ? '' : 'mt-7' }}">
 
-            <div class="prose">
+            <div class="prose mb-3">
                 <h3 class="text-xl font-medium leading-6 text-gray-900">{{ $days[$key][0]->starting_date->isoformat('dddd, Do MMMM') }}</h3>
             </div>
 
@@ -13,8 +13,8 @@
                     @foreach($day as $key => $schedule)
                     <!-- This example requires Tailwind CSS v2.0+ -->
                         <li>
-                            <div class="relative pb-8">
-                                <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                            <div class="relative {{ $loop->last ? 'mb-8' : '' }}">
+{{--                                <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>--}}
                                 <div class="relative flex space-x-3">
                                     <div class="flex items-center">
                                         @switch($schedule->type->name)
@@ -26,6 +26,7 @@
                                             </span>
                                             @break
                                         @case('Online Practical')
+                                        @case('Practical')
                                             <span class="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-full ring-8 ring-white">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -59,15 +60,24 @@
                                     <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                         <div>
                                             <section class="">
-                                                <div class="p-6 {{ $loop->last ? '' : 'border-b'  }}">
+                                                <div class="p-3">
                                                     <div class="prose">
                                                         <p class="my-0 text-gray-800">
                                                             <legend class="font-semibold">{{ $schedule->module->name }}</legend>
-                                                            <span class="text-indigo-500">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span><br>
+                                                            @if ($schedule->type->isOnline())
+                                                                <span class="text-indigo-500">{{ $schedule->type->name }}</span><br>
+                                                            @else
+                                                                <span class="text-indigo-500">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span><br>
+                                                            @endif
                                                             <time class="text-indigo-500">{{ Str::lower($schedule->starting_date->format('H:sA')) }} - {{ Str::lower($schedule->ending_date->format('H:sA')) }}</time><br>
-                                                            @foreach($schedule->lecturers as $lecturer)
-                                                                <span class="mt-0 font-medium text-gray-700">{{ $lecturer->fullname }}</span>
-                                                            @endforeach
+                                                            <span class="mt-0 font-medium text-gray-700">
+                                                                @foreach( $schedule->lecturers as $lecturer)
+                                                                    {{ $lecturer->fullname }}
+                                                                    @if (!$loop->last)
+                                                                        &
+                                                                    @endif
+                                                                @endforeach
+                                                            </span>
                                                         </p>
                                                         {{--                                <p class="mt-0 font-medium text-gray-700">{{ $schedule->course->name }}</p>--}}
                                                     </div>

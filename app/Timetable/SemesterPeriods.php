@@ -81,4 +81,14 @@ class SemesterPeriods
     {
         return $this->currentDate->diffInWeeks($this->firstPeriod()->get('start'));
     }
+
+    /**
+     * Get the current semester number of the semester (2 total)
+     *
+     * @return int
+     */
+    public function semester(): int
+    {
+        return $this->currentDate->gt($this->secondPeriod()['start']) ? 2 : 1;
+    }
 }
