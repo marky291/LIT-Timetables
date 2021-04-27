@@ -70,9 +70,14 @@
                                                                 <span class="text-indigo-500">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span><br>
                                                             @endif
                                                             <time class="text-indigo-500">{{ Str::lower($schedule->starting_date->format('H:sA')) }} - {{ Str::lower($schedule->ending_date->format('H:sA')) }}</time><br>
-                                                            @foreach($schedule->lecturers as $lecturer)
-                                                                <span class="mt-0 font-medium text-gray-700">{{ $lecturer->fullname }}</span>
-                                                            @endforeach
+                                                            <span class="mt-0 font-medium text-gray-700">
+                                                                @foreach( $schedule->lecturers as $lecturer)
+                                                                    {{ $lecturer->fullname }}
+                                                                    @if (!$loop->last)
+                                                                        &
+                                                                    @endif
+                                                                @endforeach
+                                                            </span>
                                                         </p>
                                                         {{--                                <p class="mt-0 font-medium text-gray-700">{{ $schedule->course->name }}</p>--}}
                                                     </div>

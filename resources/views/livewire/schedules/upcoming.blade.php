@@ -53,9 +53,16 @@
                     @endswitch
                     <p class="mb-4"><span class="text-lg font-bold text-gray-800">{{ $schedule->starting_date->format('H:i') }}</span> <span class="ml-1 text-lg font-normal text-gray-500"> - {{ $schedule->ending_date->format('H:i') }}</span></p>
                     <p class="font-semibold">{{ $schedule->module->name }}</p>
+
+                    <p class="mb-4 text-gray-500">
                     @foreach( $schedule->lecturers as $lecturer)
-                        <p class="mb-4 text-gray-500">{{ $lecturer->fullname }}</p>
+                        {{ $lecturer->fullname }}
+                        @if (!$loop->last)
+                            &
+                        @endif
                     @endforeach
+                    </p>
+
                     @if ($schedule->type->isOnline())
                         <span class="text-indigo-500">{{ $schedule->type->name }}</span><br>
                     @else
