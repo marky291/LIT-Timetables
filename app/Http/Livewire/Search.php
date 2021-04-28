@@ -12,6 +12,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
@@ -93,6 +94,7 @@ class Search extends Component
             }
         } catch (Exception $e) {
             $this->error = 'Search is currently unavailable.';
+            Log::error("Meilisearch: {$e->getMessage()}");
         }
 
         return view('livewire.search');
