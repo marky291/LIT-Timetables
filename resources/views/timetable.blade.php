@@ -6,9 +6,17 @@
 {{--    </x-slot>--}}
 
     <div style="background:#f7f8fc">
+
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
 
             <div class="-mx-28 px-28 pb-14 timetable-bg shadow">
+
+                @if (App\Models\Synchronization::lastRun()->diff(now())->days > 7)
+                    <div class="text-center text-xs py-2 bg-red-500 text-white rounded-b">
+                        <p>Timetable last sync was {{ App\Models\Synchronization::lastRun()->diffForHumans() }} and may now be outdated.</p>
+                    </div>
+                @endif
+
                 <div class="grid grid-cols-4 gap-4 justify-between items-center rounded pt-14">
 
                     <div class="col-span-3 text-left">
@@ -32,14 +40,20 @@
 
                 @livewire('schedules.upcoming', ['schedules' => $schedules])
 
-                    <button type="button" class="inline-flex mt-6 items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <!-- Heroicon name: solid/mail -->
-                        <svg class="-ml-0.5 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
-                        Subscribe to email notifications
-                    </button>
+                    <div class="flex justify-between mt-12">
+                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <!-- Heroicon name: solid/mail -->
+                            <svg class="-ml-0.5 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            Subscribe to email notifications
+                        </button>
+
+                        <a href="{{ $schedules[0]->course->source() }}" class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            View Timetable @LIT
+                        </a>
+                    </div>
             </div>
 
 

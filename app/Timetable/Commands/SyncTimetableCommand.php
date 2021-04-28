@@ -5,6 +5,7 @@ namespace App\Timetable\Commands;
 use App\Models\Campus;
 use App\Models\Course;
 use App\Models\Department;
+use App\Models\Synchronization;
 use App\Timetable\Exceptions\UnknownCourseLocationException;
 use App\Timetable\HttpTimetableRequests;
 use App\Timetable\Jobs\InspectSchedule;
@@ -31,7 +32,7 @@ class SyncTimetableCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Synchronize the data of the application with the LIT Timetable Domain.';
+    protected $description = 'Synchronization the data of the application with the LIT Timetable Domain.';
 
     /**
      * SyncTimetableCommand constructor.
@@ -125,8 +126,20 @@ class SyncTimetableCommand extends Command
             $output->progressAdvance(1);
         });
 
+        /**
+         *
+         */
         $this->comment('Schedules have been dispatched successfully to threads.');
-        $this->info('Done.');
+
+        /**
+         * Store a synchronization log in model format.
+         */
+        (new Synchronization)->save();
+
+        /**
+         *
+         */
+        $this->info('Completed Timetable Sync Successfully.');
 
         /**
          * Let the command know it succeeded.
