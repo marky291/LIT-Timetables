@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Stringable;
 use Laravel\Scout\Searchable;
@@ -70,6 +71,14 @@ class Course extends Model implements SearchableInterface
     public function searches()
     {
         return $this->morphOne(Search::class, 'searchable');
+    }
+
+    /**
+     * Get the users notified
+     */
+    public function users(): MorphToMany
+    {
+        return $this->morphToMany(User::class, 'notifiable');
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TimetableController;
+use App\Timetable\Mail\SubscribedToTimetable;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/mail', function() {
+    return new SubscribedToTimetable(1, \App\Models\Course::find(1));
+});
 
 Route::get('/', function() {
     return view('homepage');
