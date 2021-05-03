@@ -6,6 +6,7 @@ use App\Interfaces\SearchableInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Laravel\Scout\Searchable;
 
 /**
@@ -45,6 +46,14 @@ class Lecturer extends Model implements SearchableInterface
     public function searches()
     {
         return $this->morphOne(Search::class, 'searchable');
+    }
+
+    /**
+     * Get the users notified
+     */
+    public function users(): MorphToMany
+    {
+        return $this->morphToMany(User::class, 'notifiable');
     }
 
     /**

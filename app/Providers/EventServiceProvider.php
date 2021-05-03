@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Timetable\Events\TimetableSubscribed;
+use App\Timetable\Events\TimetableUnsubscribed;
+use App\Timetable\Listeners\SendSubscribedNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
