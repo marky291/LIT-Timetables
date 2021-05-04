@@ -5,11 +5,12 @@
 {{--        </h2>--}}
 {{--    </x-slot>--}}
 
-    <div style="background:#f7f8fc">
+    <div class="bg-coolgray dark:bg-dark-background">
 
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
 
-            <div class="-mx-28 px-28 pb-14 timetable-bg shadow">
+{{--            timetable-bg--}}
+            <div class="-mx-28 px-28 pb-14 dark:bg-dark-background shadow">
 
                 @if (App\Models\Synchronization::lastRun()->diff(now())->days > 7)
                     <div class="text-center text-xs py-2 bg-red-500 text-white rounded-b">
@@ -21,13 +22,13 @@
 
                     <div class="col-span-3 text-left">
                         @if($model instanceof App\Models\Lecturer)
-                            <div class="mb-3"><p>{{ $schedules[0]->course->campus->location }} Campus</p></div>
-                            <p class="text-2xl mb-3 font-semibold">Timetable for {{ $model->fullname }}</p>
+                            <div class="mb-3 dark:text-gray-500"><p>{{ $schedules[0]->course->campus->location }} Campus</p></div>
+                            <p class="text-2xl mb-3 font-semibold dark:text-gray-300">Timetable for {{ $model->fullname }}</p>
                         @else
                             <div class="mb-3"><p>{{$model->campus->location }} Campus</p></div>
                             <p class="text-2xl mb-3 font-semibold">{{ $schedules[0]->course->name }}</p>
                         @endif
-                        <p class="text-gray-500 mb-3">Semester {{ $semester->semester() }}, Week {{ $semester->week() }}</p>
+                        <p class="text-gray-500 mb-3 dark:text-gray-500">Semester {{ $semester->semester() }}, Week {{ $semester->week() }}</p>
                     </div>
 
                     @if($model instanceof App\Models\Lecturer)
@@ -57,7 +58,7 @@
                     <div class="w-full border-t border-gray-300"></div>
                 </div>
                 <div class="relative flex justify-center">
-                    <span class="px-10 rounded text-lg font-medium text-gray-900" style="background:#f7f8fc">
+                    <span class="px-10 rounded text-lg font-medium text-gray-900 dark:text-gray-300 bg-coolgray dark:bg-dark-background">
                         <b>During the Week</b>
                     </span>
                 </div>

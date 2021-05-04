@@ -7,7 +7,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 
     <div x-cloak x-show="open" id="search-container" class="fixed top-0 left-0 z-10 w-full h-screen lg:h-full lg:p-28" style="background: rgba(0,0,0,.25)">
 
-        <div x-on:click.away="open = false" class="flex flex-col w-full lg:max-w-3xl h-screen lg:h-auto lg:max-h-full mx-auto bg-white lg:rounded-2xl" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,.25)">
+        <div x-on:click.away="open = false" class="border border-gray-500 dark:border-gray-700 flex flex-col w-full lg:max-w-3xl h-screen lg:h-auto lg:max-h-full mx-auto bg-white dark:bg-dark-background dark:border dark:border-gray-200 lg:rounded-2xl" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,.25)">
 
             <header class="flex items-center justify-between mx-6 border-b border-gray-200">
                 <div class="flex items-center">
@@ -21,7 +21,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                         x-on:keydown.arrow-down.prevent
                         wire:model="search"
                         type="text"
-                        class="h-20 text-lg border-none focus:ring-0"
+                        class="h-20 text-lg border-none focus:ring-0 dark:text-gray-300 dark:bg-dark-background"
                         placeholder="Search Courses">
                 </div>
                 <div class="">
@@ -44,11 +44,11 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                 @elseif ($results->count())
                     @foreach($results as $title => $collection)
                         @if($collection->count())
-                            <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 capitalize">{{ $title }}</div>
+                            <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 dark:text-gray-300 capitalize">{{ $title }}</div>
                             <ul class="list-none">
                                 @foreach ($collection as $i => $model)
                                     <li class="relative mt-2" id="item-{{$i+1}}">
-                                        <div wire:key="result-{{ $loop->index }}" wire:click="click('{{ addslashes($model::class) }}', '{{ $model->id }}', '{{ $model->route }}')"  class="flex items-center p-4 rounded-lg cursor-pointer hover:bg-indigo-500 hover:text-white" :class="{ 'bg-indigo-500 text-white': selected === {{$i}} }">
+                                        <div wire:key="result-{{ $loop->index }}" wire:click="click('{{ addslashes($model::class) }}', '{{ $model->id }}', '{{ $model->route }}')"  class="flex items-center p-4 rounded-lg cursor-pointer hover:bg-indigo-500 dark:hover:bg-dark-panel dark:hover:border hover:text-white dark:text-gray-500 dark:hover:text-gray-300" :class="{ 'bg-indigo-500 text-white dark:text-white dark:border dark:bg-dark-panel': selected === {{$i}} }">
                                             <div class="mr-2">
                                                 @if ($model instanceof \App\Interfaces\SearchableInterface)
                                                     @switch($model->iconCategory)
@@ -206,7 +206,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 
             </section>
 
-            <footer class="flex mt-6 justify-end py-5 mx-6 border-t border-gray-200">
+            <footer class="flex mt-6 justify-end py-5 mx-6 border-t border-gray-200 dark:text-white">
                 <div class="flex items-center w-6 h-6 mr-1">
                     <img src="https://www.meilisearch.com/_nuxt/img/cf59975.svg" alt="">
                 </div>

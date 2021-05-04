@@ -17,18 +17,32 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <script>
+            localStorage.theme = 'dark'
+            
+            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        </script>
     </head>
-    <body class="font-sans antialiased bg-gray-100">
+    <body class="font-sans antialiased bg-white">
         <x-jet-banner />
 
         @livewire('search')
 
         <div class="min-h-screen">
-            @livewire('navigation-menu')
+
+            <div class="bg-dark-header">
+                @livewire('navigation-menu')
+            </div>
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
+                <header class="bg-white shadow dark:bg-dark-header">
                     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -36,7 +50,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="dark:bg-dark-background">
                 {{ $slot }}
             </main>
         </div>

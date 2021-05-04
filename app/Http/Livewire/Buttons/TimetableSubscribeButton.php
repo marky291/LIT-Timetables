@@ -82,9 +82,10 @@ class TimetableSubscribeButton extends Component
 
     public function mount()
     {
-        $this->hydrateNotifiable();
-
-        $this->mailCounter = 0;
+        if (auth()->check()) {
+            $this->hydrateNotifiable();
+            $this->mailCounter = 0;
+        }
     }
 
     public function render()
