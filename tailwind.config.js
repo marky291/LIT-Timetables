@@ -13,9 +13,18 @@ module.exports = {
         extend: {
             colors: {
                 dark: {
-                    header: '#171c23',
-                    panel: '#0f1218',
-                    background: '#090d12',
+                    header: '#232626',
+                    panel: '#232626',
+                    input: '#3a3b3c',
+                    background: '#191a1b',
+                    border: '#3d4042',
+                    button: '#393c3c',
+                    icon: '#b0b3b8',
+                    text: '#e3e6ea',
+                    red: '#f02848',
+                    green: '#43be62',
+                    yellow: '#f7ba27',
+                    blue: '#4499ff',
                 },
                 'coolgray': '#f7f8fc',
             },

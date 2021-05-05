@@ -20,7 +20,7 @@
 
         <script>
             localStorage.theme = 'dark'
-            
+
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark')
@@ -42,7 +42,7 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow dark:bg-dark-header">
+                <header class="bg-white shadow dark:bg-dark-panel">
                     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
