@@ -34,7 +34,7 @@
 
         <div class="min-h-screen">
 
-            <div class="bg-dark-header">
+            <div class="dark:bg-dark-header">
                 @livewire('navigation-menu')
             </div>
 
