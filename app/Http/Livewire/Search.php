@@ -19,19 +19,50 @@ use Livewire\Component;
 class Search extends Component
 {
     public string $error = '';
-    public string $search = '';
-    public string $tracker = '';
+    public string $search = '';  // input for the search query.
     public Collection $results;
-    public Collection $searches;
 
-    /**
-     * Mount the component.
-     */
     public function mount()
     {
-        if (! $this->tracker) {
-            $this->defineCookieStorage();
+        $this->results = new Collection;
+    }
+
+    public function updatedSearch()
+    {
+        if (strlen($this->search) == 0) {
+            return $this->results = new Collection;
         }
+        try {
+            return $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function ()
+            {
+                $collection = new Collection;
+
+                $courses    = Course::search($this->search)->get();
+                $lecturers  = Lecturer::search($this->search)->get();
+
+                if ($courses->count())   $collection->put('courses', $courses);
+                if ($lecturers->count()) $collection->put('lecturers', $lecturers);
+
+                return $collection;
+            });
+        } catch (Exception $e) {
+            $this->error = 'Search is currently unavailable.';
+            Log::error("Meilisearch: {$e->getMessage()}");
+        }
+    }
+
+    public function getSearchesProperty()
+    {
+        return $this->latestSearchedByCookie($this->tracker);
+    }
+
+    public function getTrackerProperty()
+    {
+        if (!Cookie::has(config('search.cookie.name'))) {
+            Cookie::queue(config('search.cookie.name'), (string) Str::uuid(), config('search.cookie.time'));
+        }
+
+        return(string) Cookie::get(config('search.cookie.name'));
     }
 
     /**
@@ -45,7 +76,7 @@ class Search extends Component
     {
         SearchModel::updateOrCreate(
             ['searchable_type' => $classname, 'searchable_id' => $id, 'cookie_id' => $this->tracker],
-            ['updated_at' => now()]
+            ['updated_at' => now()],
         );
 
         $this->redirect($route);
@@ -59,19 +90,19 @@ class Search extends Component
     public function delete(int $search_id)
     {
         SearchModel::find($search_id)->delete();
-
-        $this->searches = $this->latestSearchedByCookie($this->tracker);
     }
 
     /**
      * Favorite an item on the search list.
+     * @param string $classname
      * @param int $search_id
      */
-    public function favorite(int $search_id)
+    public function favorite(string $classname, int $search_id)
     {
-        SearchModel::find($search_id)->update(['favorite' => true]);
-
-        $this->searches = $this->latestSearchedByCookie($this->tracker);
+        SearchModel::updateOrCreate(
+            ['searchable_type' => $classname, 'searchable_id' => $search_id, 'cookie_id' => $this->tracker],
+            ['updated_at' => now(), 'favorite' => true]
+        );
     }
 
     /**
@@ -81,22 +112,6 @@ class Search extends Component
      */
     public function render()
     {
-        $this->results = new Collection;
-
-        try {
-            if (strlen($this->search)) {
-                $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function () {
-                    return collect([
-                        'courses' => Course::search($this->search)->get(),
-                        'lecturers' => Lecturer::search($this->search)->get(),
-                    ]);
-                });
-            }
-        } catch (Exception $e) {
-            $this->error = 'Search is currently unavailable.';
-            Log::error("Meilisearch: {$e->getMessage()}");
-        }
-
         return view('livewire.search');
     }
 
@@ -108,23 +123,5 @@ class Search extends Component
             ->latest('updated_at')
             ->limit(config('search.limits.recent'))
             ->get();
-    }
-
-    /**
-     * We use cookie storage with identifier to database, for search clicks.
-     */
-    private function defineCookieStorage()
-    {
-        if (Cookie::has(config('search.cookie.name'))) {
-            $this->tracker = (string) Cookie::get(config('search.cookie.name'));
-            $this->searches = $this->latestSearchedByCookie($this->tracker);
-
-            return;
-        } else {
-            $this->tracker = (string) Str::uuid();
-            Cookie::queue(config('search.cookie.name'), $this->tracker, config('search.cookie.time'));
-        }
-
-        $this->searches = collect();
     }
 }
