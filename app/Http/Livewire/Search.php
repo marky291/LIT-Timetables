@@ -29,11 +29,13 @@ class Search extends Component
 
     public function updatedSearch()
     {
-        if (strlen($this->search) == 0) {
-            return $this->results = new Collection;
+        if (!strlen($this->search)) {
+            $this->results = new Collection;
+            return;
         }
+
         try {
-            return $this->results = Cache::remember($this->search, now()->addHours(config('search.cache_hours')), function ()
+            $this->results = Cache::remember("search:$this->search", now()->addHours(config('search.cache_hours')), function ()
             {
                 $collection = new Collection;
 
@@ -46,7 +48,7 @@ class Search extends Component
                 return $collection;
             });
         } catch (Exception $e) {
-            $this->error = 'Search is currently unavailable.';
+            $this->error = 'Unexpected error, Search is unavailable. ' . $e->getMessage();
             Log::error("Meilisearch: {$e->getMessage()}");
         }
     }

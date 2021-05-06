@@ -55,8 +55,8 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 dark:text-dark-text capitalize">{{ $title }}</div>
                             <ul class="list-none">
                                 @foreach ($collection as $i => $model)
-                                    <li class="relative mt-2" id="item-{{$i+1}}">
-                                        <div wire:key="result-{{ $loop->index }}" wire:click="click('{{ addslashes($model::class) }}', '{{ $model->id }}', '{{ $model->route }}')"  class="search-result-item" :class="{ 'search-result-item-selected': selected === {{$i}} }">
+                                    <li wire:key="{{ class_basename($model::class) }}-{{ $model->id }}" class="relative mt-2" id="item-{{$i+1}}">
+                                        <div wire:click="click('{{ addslashes($model::class) }}', '{{ $model->id }}', '{{ $model->route }}')"  class="search-result-item" :class="{ 'search-result-item-selected': selected === {{$i}} }">
                                             <div class="mr-2">
                                                 @if ($model instanceof \App\Interfaces\SearchableInterface)
                                                     @switch($model->iconCategory)
@@ -137,8 +137,8 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 dark:text-dark-text capitalize">Recent</div>
                             <ul class="list-none">
                                 @foreach ($this->searches->where('favorite', false) as $i => $model)
-                                    <li class="relative mt-2">
-                                        <div wire:key="recent-{{ $loop->index }}" class="search-result-item" :class="{ 'search-result-item-selected': selected === {{$i}} }">
+                                    <li wire:key="recent-{{ $loop->index }}" class="relative mt-2">
+                                        <div class="search-result-item" :class="{ 'search-result-item-selected': selected === {{$i}} }">
                                             <div class="flex items-center flex-1" wire:click="click('{{ addslashes($model->searchable::class) }}', '{{ $model->searchable->id }}', '{{ $model->searchable->route }}')">
                                                 <div class="mr-2">
                                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -162,8 +162,8 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 dark:text-dark-text capitalize">Favorites</div>
                             <ul class="list-none">
                                 @foreach ($this->searches->where('favorite', true) as $i => $model)
-                                    <li class="relative mt-2">
-                                        <div wire:key="favorite-{{ $loop->index }}" class="search-result-item" :class="{ 'search-result-item-selected': selected === {{$i}} }">
+                                    <li wire:key="favorites-{{ $model->id }}" class="relative mt-2">
+                                        <div class="search-result-item" :class="{ 'search-result-item-selected': selected === {{$i}} }">
                                             <div class="flex items-center flex-1" wire:click="click('{{ addslashes($model->searchable::class) }}', '{{ $model->searchable->id }}', '{{ $model->searchable->route }}')">
                                                 <div class="mr-2">
                                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
