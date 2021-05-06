@@ -19,7 +19,7 @@
             </div>
 
             <div x-data class="space-x-8 sm:-my-px flex items-center">
-                <button dusk="search-nav" @click="$dispatch('search');" type="button" class="dark:bg-dark-input dark:text-dark-icon dark:hover:text-dark-text rounded-full py-2 px-4 inline-flex items-center border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-dark-icon focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out">
+                <button dusk="search-nav" @click="$dispatch('search');" type="button" class="dark:bg-dark-input dark:text-dark-icon dark:hover:text-dark-text bg-gray-100 rounded-full py-2 px-4 inline-flex items-center border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-dark-icon focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out">
                     <svg width="24" height="24" fill="none" class="mr-4 text-gray-400 dark:text-dark-icon transition-colors duration-200 group-hover:text-gray-500">
                         <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     <span class="">Quick search for anything</span>
@@ -53,7 +53,7 @@
                 @guest
                     <div class="relative ml-3">
                         <span class="inline-flex rounded-md">
-                            <a href="{{ route('login') }}" class="hover:bg-gray-200 inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white dark:button border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
+                            <a href="{{ route('login') }}" class="hover:bg-gray-200 bg-gray-100 inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white dark:button border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
                                 {{ __('Login') }}
                             </a>
                         </span>

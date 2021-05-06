@@ -11,7 +11,7 @@
     <div class="grid grid-cols-4 gap-4 px-4 py-5 rounded sm:p-6">
         @if(count($upcoming))
             @foreach ($upcoming as $schedule)
-                <div class="relative col-span-4 md:col-span-2 lg:col-span-1 p-4 {{ $schedule->isCurrentTime() ? 'bg-green-100 text-green-800 font-medium' : 'bg-gray-100' }} border border-gray-700 dark:border-dark-border dark:bg-dark-background rounded">
+                <div class="relative col-span-4 md:col-span-2 lg:col-span-1 p-4 {{ $schedule->isCurrentTime() ? 'bg-green-100 text-green-800 font-medium' : 'bg-gray-100' }} border border-transparent dark:border-dark-border dark:bg-dark-background rounded">
                     @switch($schedule->type->name)
                         @case('Online Lab Lecture')
                             <span class="absolute right-4 flex items-center justify-center w-6 h-6 text-white bg-red-500 rounded-full ring-2 ring-white dark:ring-dark-panel">
