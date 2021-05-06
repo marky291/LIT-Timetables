@@ -174,7 +174,7 @@ class SearchTest extends TestCase
             ->set('search', 'x')
             ->assertSee('No search results found');
     }
-
+  
     /** @test */
     public function search_clears_recent_search()
     {
