@@ -1,6 +1,8 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Two Factor Authentication') }}
+        <div class="dark:text-dark-text">
+            {{ __('Two Factor Authentication') }}
+        </div>
     </x-slot>
 
     <x-slot name="description">
@@ -8,7 +10,7 @@
     </x-slot>
 
     <x-slot name="content">
-        <h3 class="text-lg font-medium text-gray-900">
+        <h3 class="text-lg font-medium text-gray-900 dark:text-dark-text">
             @if ($this->enabled)
                 {{ __('You have enabled two factor authentication.') }}
             @else
@@ -16,7 +18,7 @@
             @endif
         </h3>
 
-        <div class="mt-3 max-w-xl text-sm text-gray-600">
+        <div class="mt-3 max-w-xl text-sm text-gray-600 dark:text-dark-icon">
             <p>
                 {{ __('When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone\'s Google Authenticator application.') }}
             </p>
