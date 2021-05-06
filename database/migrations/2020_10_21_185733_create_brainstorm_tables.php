@@ -95,9 +95,8 @@ class CreateBrainstormTables extends Migration
         Schema::create('searches', function (Blueprint $table) {
             $table->id();
             $table->uuid('cookie_id');
-            $table->boolean('favorite');
+            $table->boolean('favorite')->default(false);
             $table->morphs('searchable');
-            $table->softDeletes();
             $table->timestamps();
         });
     }

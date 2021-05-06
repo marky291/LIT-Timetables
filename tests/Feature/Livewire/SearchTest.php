@@ -17,31 +17,33 @@ class SearchTest extends TestCase
     /** @test */
     public function the_search_menu_shows_no_recent_searches()
     {
-        Livewire::test('search')->set('searches', new Collection())->assertSee('No recent searches');
+        Livewire::test('search')
+            ->set('search', '')
+            ->assertSee('No recent searches');
     }
 
     /** @test */
     public function the_courses_are_shown_on_the_results()
     {
-        $course = Course::factory()->create();
+        $course = Course::factory()->create(['name' => 'Course Name']);
 
         Livewire::test('search')
-            ->set('search', $course->name)
-            ->assertsee('courses')
+            ->set('search', 'name')
+            ->assertSeeText('courses')
             ->assertDontSee('lecturers')
-            ->assertSee($course->name);
+            ->assertSeeText('Course Name');
     }
 
     /** @test */
     public function the_lecturers_are_shown_on_the_results()
     {
-        $lecturer = Lecturer::factory()->create();
+        $course = Lecturer::factory()->create(['fullname' => 'Lecturer Name']);
 
         Livewire::test('search')
-            ->set('search', $lecturer->fullname)
-            ->assertsee('lecturers')
+            ->set('search', 'name')
+            ->assertSeeText('lecturers')
             ->assertDontSee('courses')
-            ->assertSee($lecturer->fullname);
+            ->assertSeeText('Lecturer Name');
     }
 
     /** @test */
@@ -61,52 +63,45 @@ class SearchTest extends TestCase
     /** @test */
     public function one_recent_item_is_displayed_on_search()
     {
-        $course = Course::factory()->create();
-
-        $search = Search::factory()->create([
-            'searchable_id' => $course->id,
-            'searchable_type' => Course::class,
-        ])->get();
+        Course::factory()->create(['name' => 'Course Name']);
 
         Livewire::test('search')
-            ->set('searches', $search)
-            ->assertSee($course->name);
+            ->call('click', Course::class, 1, 'test.com');
+
+        Livewire::test('search')
+            ->assertSeeText('Course Name');
     }
 
     /** @test */
     public function one_recent_item_is_displayed_and_deleted_on_search()
     {
-        $course = Course::factory()->create();
-
-        $search = Search::factory()->create([
-            'searchable_id' => $course->id,
-            'searchable_type' => Course::class,
-        ])->get();
+        Course::factory()->create(['name' => 'Course Name']);
 
         Livewire::test('search')
-            ->set('searches', $search)
-            ->call('delete', $search->first()->id)
-            ->assertDontSee($course->name);
+            ->call('click', Course::class, 1, 'test.com');
+
+        Livewire::test('search')
+            ->assertSeeText('Course Name');
+
+        Livewire::test('search')
+            ->call('delete', 1);
+
+        Livewire::test('search')
+            ->assertDontSeeText('Course Name');
     }
 
     /** @test */
     public function one_recent_item_can_be_favorited()
     {
-        $course = Course::factory()->create();
-
-        $search = Search::factory()->create([
-            'favorite' => false,
-            'searchable_id' => $course->id,
-            'searchable_type' => Course::class,
-        ])->get();
+        $course = Course::factory()->create(['name' => 'Course Name']);
 
         Livewire::test('search')
-            ->set('searches', $search)
-            ->set('tracker', $search->first()->cookie_id)
-            ->assertDontSee('favorites')
-            ->call('favorite', $search->first()->id)
-            ->assertSee('Favorites')
-            ->assertSee($course->name);
+            ->set('search', 'name')
+            ->call('favorite', $course::class, 1);
+
+        Livewire::test('search')
+            ->assertSeeText('Favorites')
+            ->assertSeeText('Course Name');
     }
 
     /** @test */
@@ -117,5 +112,66 @@ class SearchTest extends TestCase
         Livewire::test('search')
             ->set('error', $error_msg)
             ->assertSee($error_msg);
+    }
+
+    /** @test */
+    public function searched_results_are_cleared_on_text_clear()
+    {
+        $lecturer = Lecturer::factory()->create(['fullname' => 'Lecturer Name']);
+        $course   = Course::factory()->create(['name' => 'Course Name']);
+
+        Livewire::test('search')
+            ->set('search', 'name')
+            ->assertSee('Lecturer Name')
+            ->assertSee('Course Name')
+            ->set('search', '')
+            ->assertSee('No recent searches')
+            ->set('search', 'name')
+            ->assertSee('Lecturer Name')
+            ->assertSee('Course Name')
+            ->set('search', '')
+            ->assertSee('No recent searches');
+    }
+
+    /** @test */
+    public function only_one_favorite_is_shown_when_text_is_cleared()
+    {
+        Course::factory()->create(['name' => 'Course Name 1']);
+        Course::factory()->create(['name' => 'Course Name 2']);
+        Course::factory()->create(['name' => 'Course Name 3']);
+        Lecturer::factory()->create(['fullname' => 'Lecturer Name 1']);
+
+        Livewire::test('search')
+            ->call('favorite', Course::class, 2);
+
+        Livewire::test('search')
+            ->assertSeeText('Favorites')
+            ->assertDontSeeText('Course Name 1')
+            ->assertDontSeeText('Course Name 3')
+            ->assertSeeText('Course Name 2');
+
+        Livewire::test('search')
+            ->set('search', 'n')
+            ->assertSeeText('Course Name 1')
+            ->assertSeeText('Course Name 3')
+            ->assertSeeText('Course Name 2')
+            ->assertSeeText('Lecturer Name 1')
+            ->set('search', '')
+            ->assertDontSeeText('Course Name 1')
+            ->assertDontSeeText('Course Name 3')
+            ->assertDontSeeText('Lecturer Name 1')
+            ->assertSeeText('Course Name 2');
+    }
+
+    /** @test */
+    public function searched_results_no_results_found()
+    {
+        Course::factory()->create(['name' => 'Test Course']);
+
+        Livewire::test('search')
+            ->set('search', 'test')
+            ->assertSee('Test Course')
+            ->set('search', 'x')
+            ->assertSee('No search results found');
     }
 }
