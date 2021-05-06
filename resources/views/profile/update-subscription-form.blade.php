@@ -1,6 +1,8 @@
 <x-jet-form-section submit="updateSubscriptionInformation">
     <x-slot name="title">
-        {{ __('Subscriptions') }}
+        <div class="dark:text-dark-text">
+            {{ __('Subscriptions') }}
+        </div>
     </x-slot>
 
     <x-slot name="description">
@@ -23,14 +25,14 @@
         @if ($this->notifiableCourses->count() > 0)
             <div class="mt-4 sm:mt-0 sm:col-span-6">
                 <div class="max-w-lg space-y-4">
-                    <h3 class="text-lg font-medium text-gray-900">Courses</h3>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-dark-text">Courses</h3>
                     @foreach($this->notifiableCourses as $subscription)
                         <div class="relative flex items-start">
                             <div class="flex items-center h-5">
                                 <input wire:model="state.{{ $subscription->getKey() }}" value="{{ $subscription->getKey() }}" id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                             </div>
                             <div class="ml-3 text-sm">
-                                <p class="font-medium text-gray-700">{{ $subscription->notifiable->name }}</p>
+                                <p class="font-medium text-gray-700 dark:text-dark-icon">{{ $subscription->notifiable->name }}</p>
                             </div>
                         </div>
                     @endforeach
@@ -41,14 +43,14 @@
         @if ($this->notifiableLecturers->count() > 0)
             <div class="mt-4 sm:mt-0 sm:col-span-6">
                 <div class="max-w-lg space-y-4">
-                    <h3 class="text-lg font-medium text-gray-900">Lecturers</h3>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-dark-text">Lecturers</h3>
                     @foreach($this->notifiableLecturers as $subscription)
                         <div class="relative flex items-start">
                             <div class="flex items-center h-5">
                                 <input checked wire:model="state.{{ $subscription->getKey() }}" value="{{ $subscription->getKey() }}" id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                             </div>
                             <div class="ml-3 text-sm">
-                                <p class="font-medium text-gray-700">{{ $subscription->notifiable->fullname }}</p>
+                                <p class="font-medium text-gray-700 dark:text-dark-icon">{{ $subscription->notifiable->fullname }}</p>
                             </div>
                         </div>
                     @endforeach
