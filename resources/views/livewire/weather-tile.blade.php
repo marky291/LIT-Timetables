@@ -1,4 +1,4 @@
-<div wire:init="loadWeather">
+<div wire:init="loadWeather" x-show="error">
     @if ($weather != null)
         <div class="flex items-center justify-left p-4 rounded">
             <div class="flex h-16 w-16 mr-3 align-center bg-gray-200 dark:bg-dark-background rounded-full ring-2 ring-white dark:ring-dark-background">
