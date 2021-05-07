@@ -93,11 +93,10 @@ class SearchTest extends TestCase
     /** @test */
     public function one_recent_item_can_be_favorited()
     {
-        $course = Course::factory()->create(['name' => 'Course Name']);
+        Course::factory()->create(['name' => 'Course Name']);
 
         Livewire::test('search')
-            ->set('search', 'name')
-            ->call('favorite', $course::class, 1);
+            ->call('favorite', Course::class, 1);
 
         Livewire::test('search')
             ->assertSeeText('Favorites')
@@ -174,7 +173,7 @@ class SearchTest extends TestCase
             ->set('search', 'x')
             ->assertSee('No search results found');
     }
-  
+
     /** @test */
     public function search_clears_recent_search()
     {

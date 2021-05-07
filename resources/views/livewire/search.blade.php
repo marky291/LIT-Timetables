@@ -50,7 +50,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                         No search results found
                     </div>
                 @elseif ($this->results->count())
-                    @foreach($this->results as $title => $collection)
+                    @foreach($this->results as $title => $collection)s
                         @if($collection->count())
                             <div class="mt-6 mb-4 font-bold leading-normal text-gray-700 dark:text-dark-text capitalize">{{ $title }}</div>
                             <ul class="list-none">

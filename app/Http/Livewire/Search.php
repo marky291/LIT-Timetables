@@ -55,7 +55,12 @@ class Search extends Component
 
     public function getSearchesProperty()
     {
-        return $this->latestSearchedByCookie($this->tracker);
+        return SearchModel::where('cookie_id', $this->tracker)
+            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
+            ->with('searchable')
+            ->latest('updated_at')
+            ->limit(config('search.limits.recent'))
+            ->get();
     }
 
     public function getTrackerProperty()
@@ -64,7 +69,7 @@ class Search extends Component
             Cookie::queue(config('search.cookie.name'), (string) Str::uuid(), config('search.cookie.time'));
         }
 
-        return(string) Cookie::get(config('search.cookie.name'));
+        return (string) Cookie::get(config('search.cookie.name'));
     }
 
     /**
@@ -115,15 +120,5 @@ class Search extends Component
     public function render()
     {
         return view('livewire.search');
-    }
-
-    private function latestSearchedByCookie(string $cookie)
-    {
-        return SearchModel::where('cookie_id', $cookie)
-            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
-            ->with('searchable')
-            ->latest('updated_at')
-            ->limit(config('search.limits.recent'))
-            ->get();
     }
 }
