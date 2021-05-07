@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/mail', function() {
-    return new SubscribedToTimetable(1, \App\Models\Course::find(1));
-});
-
 Route::get('/', function() {
     return view('homepage');
 })->name('homepage');
