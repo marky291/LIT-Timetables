@@ -6,8 +6,8 @@
 {{--    </x-slot>--}}
 
     @if (App\Models\Synchronization::lastRun()->diff(now())->days > 7)
-        <div class="text-center text-xs py-2 bg-red-500 dark:text-dark-red text-white">
-            <p>Timetable last sync was {{ App\Models\Synchronization::lastRun()->diffForHumans() }} and may now be outdated.</p>
+        <div class="text-center text-xs py-2 bg-red-500 dark:bg-dark-red text-white">
+            <p>Timetable was last synced {{ App\Models\Synchronization::lastRun()->diffForHumans() }} and may be outdated.</p>
         </div>
     @endif
 
