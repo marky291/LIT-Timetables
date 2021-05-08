@@ -1,6 +1,6 @@
-<div wire:init="loadWeather" x-show="error">
+<div wire:init="loadWeather" x-show="error" class="col-span-3 md:col-span-1">
     @if ($weather != null)
-        <div class="hidden md:block flex items-center justify-left md:p-4 rounded">
+        <div class="hidden md:flex items-center justify-left md:p-4 rounded">
             <div class="flex md:h-16 md:w-16 mr-3 align-center bg-gray-200 dark:bg-dark-background rounded-full ring-2 ring-white dark:ring-dark-background">
                 <img src="http://openweathermap.org/img/wn/{{ $weather['weather'][0]['icon'] }}.png" alt="icon">
             </div>
