@@ -69,13 +69,15 @@
                     @if ($schedule->type->isOnline())
                         <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span><br>
                     @else
-                        <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span> at <span class="text-indigo-500">{{ $schedule->room->door }}</span><br>
+                        <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span>
+                        <span class="dark:text-dark-icon">at</span>
+                        <span class="text-indigo-500 dark:text-dark-blues">{{ $schedule->room->door }}</span><br>
                     @endif
                 </div>
             @endforeach
         @else
             <div class="col-span-4 dark:text-dark-text">
-                <h3>There are no upcoming schedules for today</h3>
+                <h3>There are no schedules left for today</h3>
             </div>
         @endif
     </div>

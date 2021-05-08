@@ -67,7 +67,7 @@
                                                             @if ($schedule->type->isOnline())
                                                                 <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span><br>
                                                             @else
-                                                                <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span> at <span class="text-indigo-500 dark:text-blue-500">{{ $schedule->room->door }}</span><br>
+                                                                <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span> <span class="dark:text-dark-icon">at</span> <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->room->door }}</span><br>
                                                             @endif
                                                             <time class="text-indigo-500 dark:text-dark-blue">{{ Str::lower($schedule->starting_date->format('H:sA')) }} - {{ Str::lower($schedule->ending_date->format('H:sA')) }}</time><br>
                                                             <span class="mt-0 font-medium text-gray-700 dark:text-dark-text">
