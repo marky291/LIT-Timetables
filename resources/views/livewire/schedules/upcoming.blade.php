@@ -74,8 +74,8 @@
                 </div>
             @endforeach
         @else
-            <div class="col-span-4">
-                <h3>There are currently no upcoming schedules</h3>
+            <div class="col-span-4 dark:text-dark-text">
+                <h3>There are no upcoming schedules for today</h3>
             </div>
         @endif
     </div>
