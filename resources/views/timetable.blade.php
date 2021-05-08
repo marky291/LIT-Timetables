@@ -5,20 +5,20 @@
 {{--        </h2>--}}
 {{--    </x-slot>--}}
 
+    @if (App\Models\Synchronization::lastRun()->diff(now())->days > 7)
+        <div class="text-center text-xs py-2 bg-red-500 dark:text-dark-red text-white">
+            <p>Timetable last sync was {{ App\Models\Synchronization::lastRun()->diffForHumans() }} and may now be outdated.</p>
+        </div>
+    @endif
+
     <div class="bg-coolgray dark:bg-dark-background">
 
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
 
 {{--            timetable-bg--}}
-            <div class="-mx-28 px-28 pb-14 dark:bg-dark-background shadow">
+            <div class="pb-14 dark:bg-dark-background shadow">
 
-                @if (App\Models\Synchronization::lastRun()->diff(now())->days > 7)
-                    <div class="text-center text-xs py-2 bg-red-500 text-white rounded-b">
-                        <p>Timetable last sync was {{ App\Models\Synchronization::lastRun()->diffForHumans() }} and may now be outdated.</p>
-                    </div>
-                @endif
-
-                <div class="grid grid-cols-4 gap-4 justify-between items-center rounded pt-14">
+                <div class="grid md:grid-cols-4 grid-cols-3 gap-4 justify-between items-center rounded pt-12">
 
                     <div class="col-span-3 text-left">
                         @if($model instanceof App\Models\Lecturer)
@@ -45,7 +45,7 @@
 
                         @livewire('buttons.timetable-subscribe-button', ['timetable' => $model])
 
-                        <a href="{{ $schedules[0]->course->source() }}" class="dark:button dark:border-gray-600 inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <a target="_blank" href="{{ $schedules[0]->course->source() }}" class="mt-2 md:mt-0 dark:button dark:border-gray-600 inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             View Timetable @LIT
                         </a>
                     </div>
@@ -65,7 +65,7 @@
             </div>
 
 
-                <div class="-mx-28 px-28">
+                <div class="">
                     @livewire('schedules.week', ['schedules' => $schedules])
                 </div>
 
