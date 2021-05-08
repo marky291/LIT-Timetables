@@ -22,7 +22,7 @@ class Upcoming extends Component
      */
     public function mount()
     {
-        $this->upcoming = $this->schedules->today();
+        $this->upcoming = $this->schedules->upcoming();
     }
 
     /**
