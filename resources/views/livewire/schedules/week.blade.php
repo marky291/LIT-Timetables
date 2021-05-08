@@ -69,7 +69,7 @@
                                                             @else
                                                                 <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->type->name }}</span> <span class="dark:text-dark-icon">at</span> <span class="text-indigo-500 dark:text-dark-blue">{{ $schedule->room->door }}</span><br>
                                                             @endif
-                                                            <time class="text-indigo-500 dark:text-dark-blue">{{ Str::lower($schedule->starting_date->format('H:sA')) }} - {{ Str::lower($schedule->ending_date->format('H:sA')) }}</time><br>
+                                                            <time class="text-indigo-500 dark:text-dark-blue">{{ Str::lower($schedule->starting_date->format('g:iA')) }} - {{ Str::lower($schedule->ending_date->format('g:iA')) }}</time><br>
                                                             <span class="mt-0 font-medium text-gray-700 dark:text-dark-text">
                                                                 @foreach( $schedule->lecturers as $lecturer)
                                                                     {{ $lecturer->fullname }}
@@ -84,8 +84,8 @@
                                                 </div>
                                             </section>
                                         </div>
-                                        <div class="text-sm text-right text-gray-500 whitespace-nowrap flex items-center">
-                                            <time datetime="2020-09-20">{{ $schedule->starting_date }}<br>{{ $schedule->ending_date }}</time>
+                                        <div class="text-sm text-right text-gray-500 whitespace-nowrap flex items-center dark:text-dark-icon">
+                                            <time datetime="2020-09-20">{{ $schedule->ending_date->diffInhours($schedule->starting_date) }} {{ \Illuminate\Support\Str::of('Hour')->plural($schedule->ending_date->diffInhours($schedule->starting_date)) }}</time>
                                         </div>
                                     </div>
                                 </div>

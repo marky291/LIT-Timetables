@@ -3,9 +3,9 @@
         <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-dark-text">
             Upcoming Schedules Today
         </h3>
-        {{-- <p class="max-w-2xl mt-1 text-sm leading-5 text-gray-500">
-            The Current time is {{ now()->format('H:i:s') }}
-        </p> --}}
+         <p class="max-w-2xl mt-1 text-sm leading-5 text-gray-500 dark:text-dark-icon">
+            The Current time is {{ now()->format('g:i A') }}
+         </p>
     </div>
     {{--        Schedule::latestAcademicWeek()->get()->today()--}}
     <div class="grid grid-cols-4 gap-4 px-4 py-5 rounded sm:p-6">
@@ -52,8 +52,8 @@
                             </span>
                     @endswitch
                     <p class="mb-4">
-                        <span class="text-lg font-bold text-gray-800 dark:text-dark-blue">{{ $schedule->starting_date->format('H:i') }}</span>
-                        <span class="ml-1 text-lg font-normal text-gray-500 dark:text-dark-blue"> - {{ $schedule->ending_date->format('H:i') }}</span>
+                        <span class="text-lg font-bold text-gray-800 dark:text-dark-blue">{{ $schedule->starting_date->format('g:iA') }}</span>
+                        <span class="ml-1 font-normal text-sm text-gray-500 dark:text-dark-icon"> {{ $schedule->ending_date->diffInhours($schedule->starting_date) }} {{ \Illuminate\Support\Str::of('Hour')->plural($schedule->ending_date->diffInhours($schedule->starting_date)) }}</span>
                     </p>
                     <p class="font-semibold dark:text-dark-text">{{ $schedule->module->name }}</p>
 

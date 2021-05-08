@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Schedules;
 
+use App\Models\Schedule;
 use App\Timetable\Collections\ScheduleCollection;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -22,7 +23,7 @@ class Upcoming extends Component
      */
     public function mount()
     {
-        $this->upcoming = $this->schedules->upcoming();
+        $this->upcoming = $this->schedules->upcoming()->distinct();
     }
 
     /**
