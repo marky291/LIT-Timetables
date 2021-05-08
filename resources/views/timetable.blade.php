@@ -16,7 +16,7 @@
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
 
 {{--            timetable-bg--}}
-            <div class="pb-14 dark:bg-dark-background shadow">
+            <div class="pb-12 dark:bg-dark-background">
 
                 <div class="grid md:grid-cols-4 grid-cols-3 gap-4 justify-between items-center rounded pt-12">
 
