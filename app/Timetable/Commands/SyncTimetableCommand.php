@@ -137,9 +137,14 @@ class SyncTimetableCommand extends Command
         (new Synchronization)->save();
 
         /**
-         *
+         * Clear caches, because things prob changed!
          */
-        $this->info('Completed Timetable Sync Successfully.');
+        $this->call('cache:clear');
+
+        /**
+         * Notify the dev
+         */
+        $this->info('Completed Timetable Synced Successfully.');
 
         /**
          * Let the command know it succeeded.
