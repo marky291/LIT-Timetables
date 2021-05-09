@@ -45,7 +45,7 @@ class InspectSchedule implements ShouldQueue
     *
     * @return array
     */
-    public function backoff()
+    public function backoff(): array
     {
         return [300, 600, 1800, 3600, 21600, 43200];
     }
@@ -54,6 +54,7 @@ class InspectSchedule implements ShouldQueue
      * Execute the job.
      *
      * @return void
+     * @throws ReturnedBadResponseException
      */
     public function handle()
     {

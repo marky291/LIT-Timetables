@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static firstOrCreate(array $array)
+ * @method static firstWhere(string $string, mixed $room)
  */
 class Room extends Model
 {

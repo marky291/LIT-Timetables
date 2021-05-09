@@ -60,6 +60,13 @@ class SyncTimetableCommand extends Command
         $this->info('Build started for timetable data.');
 
         /**
+         * We allow a hardcoded week to be defined for demo/test purposes.
+         */
+        if (config('timetable.crawl.week')) {
+            $this->comment("[Config]: Crawler is set to crawl week '" . config('timetable.crawl.week') . "'.");
+        }
+
+        /**
          * The LIT web domain that stores the data we can harvest
          * to create the departments and course lookup data.
          */

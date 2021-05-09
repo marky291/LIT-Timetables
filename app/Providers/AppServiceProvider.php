@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Lecturer;
 use App\Observers\LecturerObserver;
 use Blade;
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

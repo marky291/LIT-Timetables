@@ -109,7 +109,7 @@ class Course extends Model implements SearchableInterface
 
     public function source()
     {
-        return sprintf(config('timetable.url.source'), $this->identifier, '');
+        return sprintf(config('timetable.url.source'), $this->identifier, (string) config('timetable.crawl.week'));
     }
 
     public function getIconCategoryAttribute(): string

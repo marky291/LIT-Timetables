@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static updateOrCreate(array $array, array $array1)
  * @method static Builder where(string $string, $i)
  * @method static firstOrCreate(array $array)
+ * @method static firstWhere(string $string, mixed $module)
  */
 class Module extends Model
 {

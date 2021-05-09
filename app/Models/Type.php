@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
  * @property string $description
  *
  * @method static firstOrCreate(array $array)
+ * @method static firstWhere(string $string, mixed $type)
  */
 class Type extends Model
 {

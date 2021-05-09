@@ -4,7 +4,11 @@ return [
     'url' => [
         'base' => 'http://timetable.lit.ie:8080',
         'filter' => 'http://timetable.lit.ie:8080/js/filter.js',
-        'source' => 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;%s?t=student+set+individual&template=student+set+individual%s',
+        'source' => 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;%s?t=student+set+individual&template=student+set+individual&weeks=%s',
+    ],
+
+    'crawl' => [
+        'week' => env('TIMETABLE_CRAWL_WEEK', ''),
     ],
 
     'semester' => [
