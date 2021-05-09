@@ -1,6 +1,6 @@
 # LIT Timetables
 ![Laravel](https://github.com/marky291/lit-timetables/workflows/Laravel/badge.svg)
-[![Latest Version](https://img.shields.io/github/v/release/marky291/lit-timetable.svg?style=flat-square)](https://github.com/marky291/lit-timetable/releases)
+[![Latest Version](https://img.shields.io/github/v/release/marky291/lit-timetables.svg?style=flat-square)](https://github.com/marky291/lit-timetables/releases)
 
 ## Installation on Mac & Linux
 
