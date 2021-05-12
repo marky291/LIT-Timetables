@@ -17,5 +17,9 @@
             </div>
             <div class="md:text-2xl mb-0 font-semibold dark:text-dark-text">{{ round($weather['main']['temp']) }}&#176;C with {{ ucfirst($weather['weather'][0]['description']) }}</div>
         </div>
+    @else
+        <div class="md:text-lg mb-0 text-gray-300 font-semibold dark:text-gray-700">
+            <h2>No weather <br> information available</h2>
+        </div>
     @endif
 </div>
