@@ -12,9 +12,9 @@ use Livewire\Component;
 
 class WeatherTile extends Component
 {
-    public string $location;
+    public $location;
 
-    public bool $readyToLoad = false;
+    public $readyToLoad = false;
 
     public function loadWeather()
     {
@@ -25,17 +25,14 @@ class WeatherTile extends Component
     {
         if ($this->readyToLoad)
         {
-            try {
-                $api_key = Config::get('weather.api_key');
-                $location = Config::get("campus.".strtolower($this->location).".city");
-                $response = \Cache::remember("weather.$location", now()->addMinute(), function() use ($location, $api_key) {
-                    return Http::get("api.openweathermap.org/data/2.5/weather?q={$location}, IE&appid={$api_key}&units=metric");
-                });
-                if ($response->getStatusCode() == 200) {
-                    return view('livewire.weather-tile', ['weather' => $response]);
-                }
-            } catch (Exception $e) {
-                Log::error($e);
+            $api_key = Config::get('weather.api_key');
+            $location = Config::get("campus.".strtolower($this->location).".city");
+            $response = \Cache::remember("weather.$location", now()->addMinute(), function() use ($location, $api_key) {
+                return Http::get("api.openweathermap.org/data/2.5/weather?q={$location}, IE&appid={$api_key}&units=metric");
+            });
+
+            if ($response->getStatusCode() == 200) {
+                return view('livewire.weather-tile', ['weather' => $response]);
             }
         }
 

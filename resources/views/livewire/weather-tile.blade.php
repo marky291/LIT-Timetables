@@ -1,8 +1,10 @@
 <div wire:init="loadWeather" x-show="error" class="col-span-3 md:col-span-1">
 
-    <div wire:loading class="md:text-lg mb-0 text-gray-500 font-semibold dark:text-dark-icon">
-        <h2>Loading weather...</h2>
-    </div>
+    @if ($this->readyToLoad == false)
+        <div wire:loading class="md:text-lg mb-0 text-gray-500 font-semibold dark:text-dark-icon">
+            <h2>Loading weather...</h2>
+        </div>
+    @endif
 
     <div wire:loading.remove class="">
         @if ($weather != null)
