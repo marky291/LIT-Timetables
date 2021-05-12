@@ -28,7 +28,7 @@ class WeatherTileTest extends TestCase
         ]);
 
         Livewire::test('weather-tile')
-            ->set('location', 'Moylish')
+            ->set('campus', 'Moylish')
             ->set('readyToLoad', true)
             ->assertSeeHtml('12&#176;C with Broken clouds');
     }
@@ -40,7 +40,7 @@ class WeatherTileTest extends TestCase
         ]);
 
         Livewire::test('weather-tile')
-            ->set('location', 'Moylish')
+            ->set('campus', 'Moylish')
             ->set('readyToLoad', true)
             ->assertSeeHtml("No weather <br> information available");
     }
