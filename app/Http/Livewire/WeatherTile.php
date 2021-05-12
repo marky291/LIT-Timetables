@@ -28,7 +28,9 @@ class WeatherTile extends Component
             try {
                 $api_key = Config::get('weather.api_key');
                 $location = Config::get("campus.".strtolower($this->location).".city");
-                $response = Http::get("api.orrpenweathermap.org/data/2.5/weather?q={$location}, IE&appid={$api_key}&units=metric");
+                $response = \Cache::remember("weather.$location", now()->addMinute(), function() use ($location, $api_key) {
+                    return Http::get("api.openweathermap.org/data/2.5/weather?q={$location}, IE&appid={$api_key}&units=metric");
+                });
                 if ($response->getStatusCode() == 200) {
                     return view('livewire.weather-tile', ['weather' => $response]);
                 }
