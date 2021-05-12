@@ -24,11 +24,20 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
                         class="h-20 text-lg border-none focus:ring-0 dark:text-dark-text dark:bg-dark-background"
                         placeholder="Search Courses">
                 </div>
-                <div class="">
+                <div class="hidden lg:block">
                     <button @click="open = false">
-                        <span class="hidden sm:block text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">
+                        <span class="text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">
                             <span class="sr-only">Press </span>
                             <kbd class="font-sans">esc</kbd>
+                            <span class="sr-only"> to quit search</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="lg:hidden">
+                    <button @click="open = false">
+                        <span class="text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">
+                            <span class="sr-only">Press </span>
+                            <kbd class="font-sans">close</kbd>
                             <span class="sr-only"> to quit search</span>
                         </span>
                     </button>
