@@ -9,7 +9,7 @@ class ScheduleCollection extends Collection
 {
     /**
      * Get the latest week we have available
-     * and get the one that matches todays day.
+     * and get the one that matches today's day.
      *
      * @return ScheduleCollection
      */
@@ -19,11 +19,13 @@ class ScheduleCollection extends Collection
     }
 
     /**
+     * Get the ones that are schedule for after current time.
+     *
      * @return ScheduleCollection
      */
     public function upcoming(): ScheduleCollection
     {
-        return $this->filter(fn ($schedule) => now() < $schedule->ending_date);
+        return $this->filter(fn ($schedule) => $schedule->ending_date->format('Hi') > now()->format('Hi'));
     }
 
     /**

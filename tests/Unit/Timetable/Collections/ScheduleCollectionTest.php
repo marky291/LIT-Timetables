@@ -73,6 +73,41 @@ class ScheduleCollectionTest extends TestCase
         $this->assertCount(1, Schedule::all()->upcoming());
     }
 
+    public function test_upcoming_retrieves_next_class()
+    {
+        Carbon::setTestNow(Carbon::create(2020, 1, 8, 14, 48, 00));
+
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 1, 8, 11, 00, 00),
+            'ending_date'   => Carbon::create(2020, 1, 8, 12, 00, 00)
+        ]);
+
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 1, 8, 14, 00, 00),
+            'ending_date'   => Carbon::create(2020, 1, 8, 16, 00, 00)
+        ]);
+
+       $this->assertCount(1, Schedule::all()->upcoming()->distinct());
+    }
+
+    public function test_upcoming_today_retrieves_the_next_class_on_this_day()
+    {
+        Carbon::setTestNow(Carbon::create(2020, 1, 1, 14, 48, 00));
+
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 1, 8, 11, 00, 00),
+            'ending_date'   => Carbon::create(2020, 1, 8, 12, 00, 00)
+        ]);
+
+        $expected = Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 1, 8, 14, 00, 00),
+            'ending_date'   => Carbon::create(2020, 1, 8, 16, 00, 00)
+        ]);
+
+        $this->assertCount(1, Schedule::all()->upcoming()->today());
+        $this->assertEquals($expected->fresh(), Schedule::all()->upcoming()->today()->first());
+    }
+
     public function test_it_can_sort_and_order_a_week()
     {
         Carbon::setTestNow(Carbon::create(2020, 1, 8, 11, 00, 00));
