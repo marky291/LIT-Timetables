@@ -32,9 +32,9 @@
                     </div>
 
                     @if($model instanceof App\Models\Lecturer)
-                        @livewire('weather-tile', ['location' => $schedules[0]->course->campus->location])
+                        @livewire('weather-tile', ['campus' => $schedules[0]->course->campus->location])
                     @else
-                        @livewire('weather-tile', ['location' => $model->campus->location])
+                        @livewire('weather-tile', ['campus' => $model->campus->location])
                     @endif
 
                 </div>
