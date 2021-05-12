@@ -56,7 +56,6 @@ class Search extends Component
     public function getSearchesProperty()
     {
         return SearchModel::where('cookie_id', $this->tracker)
-            ->where('created_at', '>', now()->subHours(config('search.cache_hours')))
             ->with('searchable')
             ->latest('updated_at')
             ->limit(config('search.limits.recent'))
