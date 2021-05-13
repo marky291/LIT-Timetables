@@ -188,9 +188,12 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
+            <x-jet-responsive-nav-link class="w-full text-left dark:button dark:border-yellow-600 border-green-600" href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
                 {{ __('Homepage') }}
             </x-jet-responsive-nav-link>
+            <button onclick="toggleLights()" class="w-full text-left dark:button dark:border-yellow-600 block pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition">
+                {{ __('Toggle Dark Mode') }}
+            </button>
         </div>
 
         <!-- Responsive Settings Options -->
