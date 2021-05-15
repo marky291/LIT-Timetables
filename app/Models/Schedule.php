@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int $latestAvailableWeek
  * @property Room $room
  * @property Type $type
+ * @property Course course
  *
  * @method static Builder previousWeek()
  * @method static Builder currentWeek()

@@ -71,7 +71,11 @@ class InspectSchedule implements ShouldQueue
          * the changes to determine the changes in key and value
          * and fire an event to let the subscribed users know.
          */
-        ScrutinizeSchedule::dispatch($this->course, $data->get('schedules'));
+        $newSchedule = $data->get('schedules')->toArray();
+        $oldSchedule =  optional($this->course->requests()->latest()->first())->mined;
+
+        if ($oldSchedule != null)
+            CompareSchedule::dispatch($this->course, $oldSchedule, $newSchedule);
 
         /**
          * Get the academic week of the incoming request data.

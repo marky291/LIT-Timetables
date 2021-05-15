@@ -15,7 +15,10 @@ class ScheduleCollectionTest extends TestCase
     {
         Carbon::setTestNow(Carbon::create('2020', 01, 1, 12, 20, 02));
 
-        Schedule::factory()->create(['starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00), 'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)]);
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+        ]);
 
         $this->assertCount(1, Schedule::latestAcademicWeek()->get()->today());
     }
@@ -24,8 +27,15 @@ class ScheduleCollectionTest extends TestCase
     {
         Carbon::setTestNow(Carbon::create('2020', 01, 1, 12, 20, 02));
 
-        Schedule::factory()->create(['starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00), 'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)]);
-        Schedule::factory()->create(['starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00), 'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)]);
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+        ]);
+
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+        ]);
 
         $this->assertCount(1, Schedule::latestAcademicWeek()->get()->distinct());
     }
@@ -34,7 +44,10 @@ class ScheduleCollectionTest extends TestCase
     {
         Carbon::setTestNow(Carbon::create('2020', 01, 8, 12, 20, 02));
 
-        Schedule::factory()->create(['starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00), 'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)]);
+        Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+        ]);
 
         $this->assertCount(1, Schedule::latestAcademicWeek()->get()->today());
     }
@@ -43,8 +56,15 @@ class ScheduleCollectionTest extends TestCase
     {
         Carbon::setTestNow(Carbon::create(2020, 1, 8, 11, 00, 00));
 
-        $schedule1 = Schedule::factory()->create(['starting_date' => Carbon::create(2020, 1, 8, 10, 00, 00), 'ending_date' => Carbon::create(2020, 1, 8, 11, 00, 00)]);
-        $schedule2 = Schedule::factory()->create(['starting_date' => Carbon::create(2020, 1, 8, 12, 00, 00), 'ending_date' => Carbon::create(2020, 1, 8, 13, 00, 00)]);
+        $schedule1 = Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 1, 8, 10, 00, 00),
+            'ending_date' => Carbon::create(2020, 1, 8, 11, 00, 00)
+        ]);
+
+        $schedule2 = Schedule::factory()->create([
+            'starting_date' => Carbon::create(2020, 1, 8, 12, 00, 00),
+            'ending_date' => Carbon::create(2020, 1, 8, 13, 00, 00)
+        ]);
 
         $this->assertEquals($schedule2->id, Schedule::latestAcademicWeek()->get()->upcoming()->first()->id);
     }

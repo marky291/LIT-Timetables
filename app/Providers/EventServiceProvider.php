@@ -4,7 +4,9 @@ namespace App\Providers;
 
 use App\Timetable\Events\TimetableSubscribed;
 use App\Timetable\Events\TimetableUnsubscribed;
+use App\Timetable\Events\TimetableScheduleChanged;
 use App\Timetable\Listeners\SendSubscribedNotification;
+use App\Timetable\Listeners\SendTimetableChangedNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -21,6 +23,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        TimetableScheduleChanged::class => [
+            SendTimetableChangedNotification::class,
+        ]
     ];
 
     /**
