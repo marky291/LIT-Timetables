@@ -30,7 +30,8 @@
         "predis/predis": "^1.1",
         "rollbar/rollbar-laravel": "^7.0",
         "spatie/regex": "^1.4",
-        "symfony/http-client": "^5.2"
+        "symfony/http-client": "^5.2",
+        "yab/laravel-scout-mysql-driver": "^4.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
