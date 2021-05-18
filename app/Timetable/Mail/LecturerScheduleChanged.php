@@ -28,6 +28,9 @@ class LecturerScheduleChanged extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.timetable.changed', ['course' => $this->course->name]);
+        return $this->markdown('emails.subscriber.notification', [
+            'timetable' => $this->lecturer->fullname,
+            'url' => $this->lecturer->route,
+        ]);
     }
 }

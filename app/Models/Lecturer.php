@@ -12,8 +12,8 @@ use Laravel\Scout\Searchable;
 /**
  * Class Lecturer.
  *
- * @property string $forename
- * @property string $lastname
+ * @property string $fullname
+ * @property string $route
  *
  * @method static firstOrCreate(array $array)
  * @method static firstWhere(string $string, int $lecturer_id)

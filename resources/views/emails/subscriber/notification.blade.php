@@ -1,18 +1,18 @@
 @component('mail::message')
 
-    # Timetable Changed!
+# Timetable Changed!
 
-    Just to inform you that the following timetables have changed and should be reviewed to keep up-to-date.
+You are subscribed to the following table and because we detected changes, we want to let you know!
 
-    @component('mail::panel')
-        {{ $course }}
-    @endcomponent
+@component('mail::panel')
+    {{ $timetable }}
+@endcomponent
 
-    @component('mail::button', ['url' => config('app.url') . '/user/profile#subscriptions'])
-        Manage Your Timetable Subscriptions
-    @endcomponent
+@component('mail::button', ['url' => $url])
+    View Timetable
+@endcomponent
 
-    Best Regards,<br>
-    {{ config('app.name') }}
+Best Regards,<br>
+{{ config('app.name') }}
 
 @endcomponent

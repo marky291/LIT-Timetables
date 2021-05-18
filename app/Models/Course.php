@@ -20,6 +20,7 @@ use Laravel\Scout\Searchable;
  * @property Department department
  * @property Collection schedules
  * @property Collection subscribers
+ * @property string route
  * @method static updateOrCreate(array $array, array $array1)
  * @method static where(string $string, string $name)
  * @method static make(array $toArray)
