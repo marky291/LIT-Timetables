@@ -71,11 +71,11 @@ class InspectSchedule implements ShouldQueue
          * the changes to determine the changes in key and value
          * and fire an event to let the subscribed users know.
          */
-        $newSchedule = $data->get('schedules')->toArray();
-        $oldSchedule =  optional($this->course->requests()->latest()->first())->mined;
+        $newSchedules = $data->get('schedules')->toArray();
+        $oldSchedules =  optional($this->course->requests()->latest()->first())->mined;
 
-        if ($oldSchedule != null)
-            CompareSchedule::dispatch($this->course, $oldSchedule, $newSchedule);
+        if ($oldSchedules != null && $newSchedules != null)
+            CompareSchedule::dispatch($this->course, collect($oldSchedules), collect($newSchedules));
 
         /**
          * Get the academic week of the incoming request data.
@@ -132,13 +132,8 @@ class InspectSchedule implements ShouldQueue
      */
     public function modelThreadLock(string $model, array $attributes)
     {
-        $lock = Cache::lock("Inspect::".$attributes[array_key_first($attributes)]."_lock", 300); // 5 min
-
-        try {
-            if ($lock->get())
-                $model::firstOrCreate($attributes);
-        } finally {
-            $lock->release();
+        if (Cache::lock("create_{$attributes[array_key_first($attributes)]}_lock",300)->get()) {
+            $model::firstOrCreate($attributes);
         }
     }
 }

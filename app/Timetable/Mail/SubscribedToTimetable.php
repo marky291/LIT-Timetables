@@ -39,7 +39,7 @@ class SubscribedToTimetable extends Mailable implements ShouldQueue
             Course::class => $this->timetable->name,
         };
 
-        return $this->markdown('emails.timetable.subscribed', [
+        return $this->markdown('emails.subscription.added', [
             'timetableType' => class_basename($this->timetable),
             'timetableName' => $timetableName,
             'courses' => Notifiable::userCourses($user)->get(),

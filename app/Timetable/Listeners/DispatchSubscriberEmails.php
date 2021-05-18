@@ -2,24 +2,29 @@
 
 namespace App\Timetable\Listeners;
 
+use App\Models\Course;
 use App\Models\Lecturer;
 use App\Models\User;
 use App\Timetable\Events\TimetableScheduleChanged;
-use App\Timetable\Mail\TimetableChanged;
+use App\Timetable\Mail\CourseTimetableChanged;
+use App\Timetable\Mail\LecturerScheduleChanged;
+use App\Timetable\Mail\TimetableChanges;
+use Closure;
+use Illuminate\Contracts\Mail\Mailable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Mail;
 
-class SendTimetableChangedNotification
+class DispatchSubscriberEmails
 {
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct(public Collection $collection){}
+    public function __construct(){}
 
     /**
      * Handle the event.
@@ -34,20 +39,17 @@ class SendTimetableChangedNotification
         foreach ($event->course->schedules as $schedule) {
             foreach($schedule->lecturers as $lecturer) {
                 foreach($lecturer->subscribers as $subscriber) {
-                    $this->sendMailTo($subscriber);
+                    if (Cache::lock("email_{$lecturer->getKey()}_{$subscriber->getKey()}_lock",3600)->get()) {
+                        Mail::to($subscriber)->send(new LecturerScheduleChanged($event->course, $lecturer));
+                    }
                 }
             }
         }
 
         foreach($event->course->subscribers as $subscriber) {
-            $this->sendMailTo($subscriber);
+            if (Cache::lock("email_{$subscriber->getKey()}_lock",3600)->get()) {
+                Mail::to($subscriber)->send(new CourseTimetableChanged($event->course));
+            }
         }
-    }
-
-    private function sendMailTo(User $subscriber)
-    {
-        Cache::remember("Email::{$subscriber->email}", now()->addMinutes(30), function() use ($subscriber) {
-            Mail::to($subscriber)->later(now()->addMinutes(10), new TimetableChanged());
-        });
     }
 }

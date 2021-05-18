@@ -21,7 +21,7 @@ class TimetableScheduleChanged
     public function __construct(public Course $course){}
 
     /**
-     * Get the channels the event should broadcast on.
+     * Get the channels the event should broadcsast on.
      *
      * @return \Illuminate\Broadcasting\Channel
      */

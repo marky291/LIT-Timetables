@@ -8,15 +8,16 @@ use App\Models\Schedule;
 use App\Models\User;
 use App\Timetable\Events\TimetableScheduleChanged;
 use App\Timetable\Jobs\CompareSchedule;
-use App\Timetable\Mail\TimetableChanged;
+use App\Timetable\Mail\TimetableChanges;
 use Cache;
 use Closure;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Event;
 use Mail;
 use Tests\TestCase;
 
-class ScrutinizeScheduleTest extends TestCase
+class CompareScheduleTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -26,8 +27,8 @@ class ScrutinizeScheduleTest extends TestCase
         Course::factory()->create();
 
         (new CompareSchedule(Course::find(1),
-            $this->fakeHtmlSchedule(),
-            $this->fakeHtmlSchedule()
+            collect(array($this->schedule())),
+            collect(array($this->schedule())),
         ))->handle();
 
         Event::assertNotDispatched(TimetableScheduleChanged::class);
@@ -39,8 +40,8 @@ class ScrutinizeScheduleTest extends TestCase
         Course::factory()->create();
 
         (new CompareSchedule(Course::find(1),
-            $this->fakeHtmlSchedule(['module' => 'Before']),
-            $this->fakeHtmlSchedule(['module' => 'After'])
+            collect(array($this->schedule(['module' => 'Before']))),
+            collect(array($this->schedule(['module' => 'After'])))
         ))->handle();
 
         Event::assertDispatched(TimetableScheduleChanged::class);
@@ -55,11 +56,11 @@ class ScrutinizeScheduleTest extends TestCase
             ->create();
 
         (new CompareSchedule(Course::find(1),
-            $this->fakeHtmlSchedule(['module' => 'Before']),
-            $this->fakeHtmlSchedule(['module' => 'After'])
+            collect(array($this->schedule(['module' => 'Before']))),
+            collect(array($this->schedule(['module' => 'After'])))
         ))->handle();
 
-        Mail::assertQueued(TimetableChanged::class, 2);
+        Mail::assertQueued(TimetableChanges::class, 2);
     }
 
     public function test_email_sends_to_lecturer_subscribers()
@@ -72,11 +73,11 @@ class ScrutinizeScheduleTest extends TestCase
             ->create();
 
         (new CompareSchedule(Course::first(),
-            $this->fakeHtmlSchedule(['room' => 'A', 'lecturer' => $lecturer->fullname]),
-            $this->fakeHtmlSchedule(['room' => 'B', 'lecturer' => $lecturer->fullname]),
+            collect(array($this->schedule(['room' => 'A', 'lecturer' => $lecturer->fullname]))),
+            collect(array($this->schedule(['room' => 'B', 'lecturer' => $lecturer->fullname]))),
         ))->handle();
 
-        Mail::assertQueued(TimetableChanged::class, 1);
+        Mail::assertQueued(TimetableChanges::class, 1);
     }
 
 //    public function test_email_does_not_spam()
@@ -107,7 +108,7 @@ class ScrutinizeScheduleTest extends TestCase
 //        Mail::assertQueued(TimetableChanged::class, 1);
 //    }
 
-    private function fakeHtmlSchedule(array $attributes = [])
+    private function schedule(array $attributes = [])
     {
         return array_merge([
             "module" => "Software Development",

@@ -21,7 +21,7 @@ class CompareSchedule implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(public Course $course, public array $oldSchedule, public array $newSchedule){}
+    public function __construct(public Course $course, public Collection $oldSchedule, public Collection $newSchedule){}
 
     /**
      * Execute the job.
@@ -31,16 +31,20 @@ class CompareSchedule implements ShouldQueue
      */
     public function handle()
     {
-        if (!$this->oldSchedule || !$this->newSchedule) {
+
+        if ($this->oldSchedule->isEmpty() || $this->newSchedule->isEmpty()) {
             return;
         }
 
-        if (count(array_keys($this->oldSchedule)) != count(array_keys($this->newSchedule))) {
-            return;
-        }
+        foreach ($this->newSchedule as $key => $schedule) {
+            if (count(array_keys($schedule)) != 7) {
+                throw new \Exception("Array value does not have 7 keys for comparison");
+            }
 
-        if (array_diff_assoc($this->oldSchedule, $this->newSchedule)) {
-            event(new TimetableScheduleChanged($this->course));
+            if (count(array_diff_assoc($this->oldSchedule[$key], $this->newSchedule[$key]))) {
+                event(new TimetableScheduleChanged($this->course));
+                return;
+            }
         }
     }
 }

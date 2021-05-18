@@ -38,7 +38,7 @@ class UnsubscribedFromTimetable extends Mailable implements ShouldQueue
             Course::class => $this->timetable->name,
         };
 
-        return $this->markdown('emails.timetable.unsubscribed', [
+        return $this->markdown('emails.subscription.removed', [
             'timetableType' => class_basename($this->timetable),
             'timetableName' => $timetableName,
             'hasSubscriptions' => Notifiable::hasSubscriptions($user),
