@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Timetable\Listeners;
+namespace Tests\Unit\Timetable\Listeners;
 
 use App\Models\Course;
 use App\Models\Lecturer;

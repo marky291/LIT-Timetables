@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Timetable\Jobs;
+namespace Tests\Unit\Timetable\Jobs;
 
 use App\Exceptions\ScheduleComparisonIncorrectSize;
 use App\Models\Course;

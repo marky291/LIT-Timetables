@@ -2,7 +2,7 @@
 
 namespace App\Timetable\Parsers;
 
-use App\Timetable\Exceptions\UnknownCourseLocationException;
+use App\Exceptions\CourseMissingLocationData;
 use Illuminate\Support\Str;
 use Spatie\Regex\Regex;
 
@@ -30,7 +30,7 @@ class ParseCourseName
 
     /**
      * @return string
-     * @throws UnknownCourseLocationException
+     * @throws CourseMissingLocationData
      */
     public function getLocation()
     {
@@ -39,7 +39,7 @@ class ParseCourseName
         $location = $this->regResult("/(?<=\()($available)(?=\))/", $this->title);
 
         if (empty($location)) {
-            throw new UnknownCourseLocationException($this->title);
+            throw new CourseMissingLocationData($this->title);
         }
 
         return $location;
