@@ -9,7 +9,6 @@ use App\Models\Module;
 use App\Models\Room;
 use App\Models\Type;
 use App\Timetable\DateConversion;
-use App\Timetable\Exceptions\ReturnedBadResponseException;
 use App\Timetable\HttpTimetableRequests;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -54,7 +53,6 @@ class InspectSchedule implements ShouldQueue
      * Execute the job.
      *
      * @return void
-     * @throws ReturnedBadResponseException
      */
     public function handle()
     {

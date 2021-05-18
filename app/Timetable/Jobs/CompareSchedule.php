@@ -2,6 +2,7 @@
 
 namespace App\Timetable\Jobs;
 
+use App\Exceptions\ScheduleComparisonIncorrectSize;
 use App\Models\Course;
 use App\Timetable\Events\TimetableScheduleChanged;
 use Illuminate\Bus\Queueable;
@@ -38,7 +39,7 @@ class CompareSchedule implements ShouldQueue
 
         foreach ($this->newSchedule as $key => $schedule) {
             if (count(array_keys($schedule)) != 7) {
-                throw new \Exception("Array value does not have 7 keys for comparison");
+                throw new ScheduleComparisonIncorrectSize("Array value does not have 7 keys for comparison");
             }
 
             if (count(array_diff_assoc($this->oldSchedule[$key], $this->newSchedule[$key]))) {

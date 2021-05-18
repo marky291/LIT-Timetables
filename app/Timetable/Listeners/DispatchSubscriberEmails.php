@@ -39,17 +39,13 @@ class DispatchSubscriberEmails
         foreach ($event->course->schedules as $schedule) {
             foreach($schedule->lecturers as $lecturer) {
                 foreach($lecturer->subscribers as $subscriber) {
-                    if (Cache::lock("email_{$lecturer->getKey()}_{$subscriber->getKey()}_lock",3600)->get()) {
-                        Mail::to($subscriber)->send(new LecturerScheduleChanged($event->course, $lecturer));
-                    }
+                    Mail::to($subscriber)->send(new LecturerScheduleChanged($event->course, $lecturer));
                 }
             }
         }
 
         foreach($event->course->subscribers as $subscriber) {
-            if (Cache::lock("email_{$subscriber->getKey()}_lock",3600)->get()) {
-                Mail::to($subscriber)->send(new CourseTimetableChanged($event->course));
-            }
+            Mail::to($subscriber)->send(new CourseTimetableChanged($event->course));
         }
     }
 }

@@ -6,7 +6,7 @@ use App\Models\Campus;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Synchronization;
-use App\Timetable\Exceptions\UnknownCourseLocationException;
+use App\Exceptions\CourseMissingLocationData;
 use App\Timetable\HttpTimetableRequests;
 use App\Timetable\Jobs\InspectSchedule;
 use App\Timetable\Parsers\ParseCourseName;
@@ -105,7 +105,7 @@ class SyncTimetableCommand extends Command
                     'campus_id' => Campus::firstOrCreate(['location' => $data->getLocation()])->id,
                     'department_id' => Department::firstWhere('filter', $value->filter)->id,
                 ]));
-            } catch (UnknownCourseLocationException $e) {
+            } catch (CourseMissingLocationData $e) {
                 Log::error("Missing course data in course title {$value->name}.");
             } finally {
                 $output->progressAdvance();

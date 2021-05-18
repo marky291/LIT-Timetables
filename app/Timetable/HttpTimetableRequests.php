@@ -3,7 +3,7 @@
 namespace App\Timetable;
 
 use App\Models\Course;
-use App\Timetable\Exceptions\ReturnedBadResponseException;
+use App\Timetable\Exceptions\RequestTimetableBadResponse;
 use App\Timetable\Parsers\ParseTimetable;
 use Illuminate\Support\Collection;
 use Symfony\Component\BrowserKit\HttpBrowser;
@@ -13,7 +13,7 @@ class HttpTimetableRequests extends HttpBrowser
     /**
      * @param Course $course
      * @return Collection
-     * @throws ReturnedBadResponseException
+     * @throws RequestTimetableBadResponse
      */
     public function crawl(Course $course): Collection
     {
@@ -22,7 +22,7 @@ class HttpTimetableRequests extends HttpBrowser
         $html = parent::request('GET', $course->source());
 
         if ($this->getInternalResponse()->getStatusCode() !== 200) {
-            throw new ReturnedBadResponseException('Response '.$this->getInternalResponse()->getStatusCode().' from '.$course->source());
+            throw new RequestTimetableBadResponse('Response '.$this->getInternalResponse()->getStatusCode().' from '.$course->source());
         }
 
         $parsed = ParseTimetable::GetAvailableSchedulesFromCrawler($html);
