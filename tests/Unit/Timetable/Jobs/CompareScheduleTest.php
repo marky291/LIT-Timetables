@@ -8,6 +8,8 @@ use App\Models\Schedule;
 use App\Models\User;
 use App\Timetable\Events\TimetableScheduleChanged;
 use App\Timetable\Jobs\CompareSchedule;
+use App\Timetable\Mail\CourseTimetableChanged;
+use App\Timetable\Mail\LecturerScheduleChanged;
 use App\Timetable\Mail\TimetableChanges;
 use Cache;
 use Closure;
@@ -60,7 +62,7 @@ class CompareScheduleTest extends TestCase
             collect(array($this->schedule(['module' => 'After'])))
         ))->handle();
 
-        Mail::assertQueued(TimetableChanges::class, 2);
+        Mail::assertSent(CourseTimetableChanged::class, 2);
     }
 
     public function test_email_sends_to_lecturer_subscribers()
@@ -77,7 +79,7 @@ class CompareScheduleTest extends TestCase
             collect(array($this->schedule(['room' => 'B', 'lecturer' => $lecturer->fullname]))),
         ))->handle();
 
-        Mail::assertQueued(TimetableChanges::class, 1);
+        Mail::assertSent(LecturerScheduleChanged::class, 1);
     }
 
 //    public function test_email_does_not_spam()
