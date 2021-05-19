@@ -11,8 +11,14 @@ $ git clone https://github.com/marky291/lit-timetables.git
 
 Download and use [Composer](https://getcomposer.org/), in the root of the project.
 
+#### Composer Installation (Linux & MacOS)
 ``` bash
 $ composer install
+```
+
+#### Composer installation (Windows)
+``` bash
+$ composer install --ignore-platform-reqs
 ```
 
 Seed the database for local development
