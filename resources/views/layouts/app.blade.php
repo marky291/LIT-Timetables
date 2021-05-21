@@ -26,6 +26,16 @@
                 document.documentElement.classList.remove('dark')
             }
         </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JV7T8XGXFC"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-JV7T8XGXFC');
+        </script>
     </head>
     <body class="font-sans antialiased bg-white">
         <x-jet-banner />
