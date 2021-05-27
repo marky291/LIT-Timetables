@@ -13,7 +13,7 @@ use Livewire\Component;
  */
 class WeatherTile extends Component
 {
-    public string $campus;
+    public string $campus = '';
 
     public bool $readyToLoad = false;
 
