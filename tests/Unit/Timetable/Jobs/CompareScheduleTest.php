@@ -2,21 +2,11 @@
 
 namespace Tests\Unit\Timetable\Jobs;
 
-use App\Exceptions\ScheduleComparisonIncorrectSize;
 use App\Models\Course;
-use App\Models\Lecturer;
-use App\Models\Schedule;
-use App\Models\User;
 use App\Timetable\Events\TimetableScheduleChanged;
 use App\Timetable\Jobs\CompareSchedule;
-use App\Timetable\Mail\CourseTimetableChanged;
-use App\Timetable\Mail\LecturerScheduleChanged;
-use Cache;
-use Closure;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Event;
-use Mail;
 use Tests\TestCase;
 
 class CompareScheduleTest extends TestCase
@@ -35,14 +25,16 @@ class CompareScheduleTest extends TestCase
         Event::assertNotDispatched(TimetableScheduleChanged::class);
     }
 
-    public function test_inconsistant_array_length_handler()
+    public function test_it_can_detect_no_new_timetable()
     {
-        $this->expectException(ScheduleComparisonIncorrectSize::class);
+        Event::fake();
 
         (new CompareSchedule(Course::factory()->create(),
             collect(array($this->schedule())),
-            collect(array($this->schedule(['extra' => 'length']))),
+            collect(array()),
         ))->handle();
+
+        Event::assertDispatched(TimetableScheduleChanged::class);
     }
 
     public function test_it_can_detect_no_timetable_change()

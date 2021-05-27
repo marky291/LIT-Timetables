@@ -32,19 +32,30 @@ class CompareSchedule implements ShouldQueue
      */
     public function handle()
     {
-
-        if ($this->oldSchedule->isEmpty() || $this->newSchedule->isEmpty()) {
+        /**
+         * We do not need to check if the arrays are both empty.
+         */
+        if ($this->oldSchedule->isEmpty() && $this->newSchedule->isEmpty()) {
             return;
         }
 
-        foreach ($this->newSchedule as $key => $schedule) {
-            if (count(array_keys($schedule)) != 7) {
-                throw new ScheduleComparisonIncorrectSize("Array value does not have 7 keys for comparison");
-            }
+        /**
+         * We know its changed if they array counts do not match.
+         */
+        if ($this->oldSchedule->count() != $this->newSchedule->count()) {
+            event(new TimetableScheduleChanged($this->course));
+            return;
+        }
 
-            if (count(array_diff_assoc($this->oldSchedule[$key], $this->newSchedule[$key]))) {
-                event(new TimetableScheduleChanged($this->course));
-                return;
+        /**
+         * Same count of schedules, lets check for inner individual changes.
+         */
+        if ($this->oldSchedule->count() == $this->newSchedule->count()) {
+            foreach ($this->newSchedule as $key => $schedule) {
+                if (count(array_diff_assoc($this->newSchedule[$key], $this->oldSchedule[$key]))) {
+                    event(new TimetableScheduleChanged($this->course));
+                    return;
+                }
             }
         }
     }

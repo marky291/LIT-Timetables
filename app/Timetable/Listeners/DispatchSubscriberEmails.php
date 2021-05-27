@@ -2,23 +2,16 @@
 
 namespace App\Timetable\Listeners;
 
-use App\Models\Course;
-use App\Models\Lecturer;
-use App\Models\User;
 use App\Timetable\Events\TimetableScheduleChanged;
 use App\Timetable\Mail\CourseTimetableChanged;
 use App\Timetable\Mail\LecturerScheduleChanged;
-use App\Timetable\Mail\TimetableChanges;
-use Closure;
-use Illuminate\Contracts\Mail\Mailable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Queue\SerializesModels;
 use Mail;
 
 class DispatchSubscriberEmails
 {
+    use SerializesModels;
+
     /**
      * Create the event listener.
      *
@@ -34,8 +27,6 @@ class DispatchSubscriberEmails
      */
     public function handle(TimetableScheduleChanged $event)
     {
-        $event->course->load('schedules.lecturers.subscribers')->get();
-
         foreach ($event->course->schedules as $schedule) {
             foreach($schedule->lecturers as $lecturer) {
                 foreach($lecturer->subscribers as $subscriber) {

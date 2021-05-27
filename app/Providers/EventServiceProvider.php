@@ -2,10 +2,7 @@
 
 namespace App\Providers;
 
-use App\Timetable\Events\TimetableSubscribed;
-use App\Timetable\Events\TimetableUnsubscribed;
 use App\Timetable\Events\TimetableScheduleChanged;
-use App\Timetable\Listeners\SendSubscribedNotification;
 use App\Timetable\Listeners\DispatchSubscriberEmails;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
