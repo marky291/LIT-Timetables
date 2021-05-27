@@ -22,6 +22,7 @@
         "laravel/telescope": "^4.2",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
+        "lorisleiva/laravel-actions": "^2.1",
         "meilisearch/meilisearch-laravel-scout": "^0.12.0",
         "mll-lab/laravel-graphql-playground": "^2.4",
         "nuwave/lighthouse": "^5.1",
