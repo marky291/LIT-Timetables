@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static where(string $string, array|string|null $get)
  * @method static updateOrCreate(array $array, array $array1)
  * @method static find(int $search_id)
+ * @method whereDate(string $string, string $string1, \Carbon\Carbon $carbon)
+ * @method static count()
  */
 class Search extends Model
 {
