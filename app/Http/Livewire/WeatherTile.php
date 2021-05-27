@@ -34,9 +34,7 @@ class WeatherTile extends Component
 
     public function getWeatherProperty()
     {
-        return \Cache::remember("weather::$this->campusLocation", now()->addMinutes(5), function() {
-            return Http::get("api.openweathermap.org/data/2.5/weather?q={$this->campusLocation},IE&appid={$this->apikey}&units=metric");
-        });
+        return Http::get("api.openweathermap.org/data/2.5/weather?q={$this->campusLocation},IE&appid={$this->apikey}&units=metric");
     }
 
     public function render()
