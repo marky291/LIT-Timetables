@@ -12,8 +12,8 @@ use Laravel\Scout\Searchable;
 /**
  * Class Lecturer.
  *
- * @property string $forename
- * @property string $lastname
+ * @property string $fullname
+ * @property string $route
  *
  * @method static firstOrCreate(array $array)
  * @method static firstWhere(string $string, int $lecturer_id)
@@ -51,7 +51,7 @@ class Lecturer extends Model implements SearchableInterface
     /**
      * Get the users notified
      */
-    public function users(): MorphToMany
+    public function subscribers(): MorphToMany
     {
         return $this->morphToMany(User::class, 'notifiable');
     }

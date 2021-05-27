@@ -18,12 +18,16 @@ use Laravel\Scout\Searchable;
  * @property string $meta
  * @property Collection $timetables
  * @property Department department
+ * @property Collection schedules
+ * @property Collection subscribers
+ * @property string route
  * @method static updateOrCreate(array $array, array $array1)
- * @method static where(string $string, Stringable $name)
+ * @method static where(string $string, string $name)
  * @method static make(array $toArray)
  * @method static firstWhere(string $string, int $course_id)
  * @method static firstOrCreate(array $array, array $array1)
  * @method static count()
+ * @method static find(int $int)
  */
 class Course extends Model implements SearchableInterface
 {
@@ -35,7 +39,15 @@ class Course extends Model implements SearchableInterface
      *
      * @var array
      */
-    protected $fillable = ['name', 'identifier', 'year', 'group', 'title', 'department_id', 'campus_id'];
+    protected $fillable = [
+        'name',
+        'identifier',
+        'year',
+        'group',
+        'title',
+        'department_id',
+        'campus_id'
+    ];
 
     /**
      * @return HasMany|Schedule
@@ -66,7 +78,17 @@ class Course extends Model implements SearchableInterface
     }
 
     /**
-     * Get the lecturer searches.
+     * Get course lecturers;
+     *
+     * @return \Illuminate\Database\Eloquent\Builder|HasMany
+     */
+    public function lecturers()
+    {
+        return $this->schedules()->with('lecturers');
+    }
+
+    /**
+     * Get the course searches.
      */
     public function searches()
     {
@@ -76,7 +98,7 @@ class Course extends Model implements SearchableInterface
     /**
      * Get the users notified
      */
-    public function users(): MorphToMany
+    public function subscribers(): MorphToMany
     {
         return $this->morphToMany(User::class, 'notifiable');
     }

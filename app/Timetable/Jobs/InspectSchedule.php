@@ -9,16 +9,12 @@ use App\Models\Module;
 use App\Models\Room;
 use App\Models\Type;
 use App\Timetable\DateConversion;
-use App\Timetable\Exceptions\ReturnedBadResponseException;
 use App\Timetable\HttpTimetableRequests;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Cache;
 use Spatie\Regex\Regex;
 
@@ -54,7 +50,6 @@ class InspectSchedule implements ShouldQueue
      * Execute the job.
      *
      * @return void
-     * @throws ReturnedBadResponseException
      */
     public function handle()
     {
@@ -64,14 +59,6 @@ class InspectSchedule implements ShouldQueue
          * This fires a http request to the third party service.
          */
         $data = (new HttpTimetableRequests)->crawl($this->course);
-
-        /**
-         * Check for changes between the previously snapchat of the html
-         * to the current snapshot of the html, we can differentiate
-         * the changes to determine the changes in key and value
-         * and fire an event to let the subscribed users know.
-         */
-        ScrutinizeSchedule::dispatch($this->course, $data->get('schedules'));
 
         /**
          * Get the academic week of the incoming request data.
@@ -121,6 +108,26 @@ class InspectSchedule implements ShouldQueue
              */
             $model->lecturers()->sync(Lecturer::whereIn('fullname', explode(", ", $schedule['lecturer']))->get());
         });
+
+        /**
+         * Check for changes between the previously snapchat of the html
+         * to the current snapshot of the html, we can differentiate
+         * the changes to determine the changes in key and value
+         * and fire an event to let the subscribed users know.
+         */
+        $newSchedules = $data->get('schedules')->toArray();
+
+        /**
+         * Skip the latest because we just made a new request, we want the second first.
+         */
+        $oldSchedules = optional($this->course->requests()->latest()->skip(1)->first())->mined;
+
+        /**
+         * Lets compare the schedules and determine if we need to send emails..s
+         */
+        if (count($oldSchedules) > 0 && count($newSchedules) > 0) {
+            CompareSchedule::dispatch($this->course, collect($oldSchedules), collect($newSchedules));
+        }
     }
 
     /**
@@ -131,8 +138,9 @@ class InspectSchedule implements ShouldQueue
         $lock = Cache::lock("Inspect::".$attributes[array_key_first($attributes)]."_lock", 300); // 5 min
 
         try {
-            if ($lock->get())
+            if ($lock->get()) {
                 $model::firstOrCreate($attributes);
+            }
         } finally {
             $lock->release();
         }

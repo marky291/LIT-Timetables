@@ -4,6 +4,7 @@ namespace Tests\Unit\Models;
 
 use App\Models\Campus;
 use App\Models\Course;
+use App\Models\Lecturer;
 use App\Models\Requests;
 use App\Models\Schedule;
 use App\Models\Search;
@@ -40,6 +41,16 @@ class CourseTest extends TestCase
         $course = Course::factory()->has(Campus::factory(['location' => 'Moylish', 'City' => 'Limerick']))->create();
 
         $this->assertNotNull($course->campus);
+    }
+
+    public function test_it_has_lecturers()
+    {
+        $course = Course::factory()
+            ->has(Schedule::factory()->count(3)
+            ->hasAttached(Lecturer::factory()->count(1)))
+            ->create(['name' => 'Test Course Name']);
+
+        $this->assertCount(3, $course->fresh()->lecturers);
     }
 
     public function test_course_has_a_name()

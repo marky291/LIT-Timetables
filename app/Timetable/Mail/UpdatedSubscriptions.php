@@ -30,7 +30,7 @@ class UpdatedSubscriptions extends Mailable
     {
         $user = User::whereId($this->user_id)->first();
 
-        return $this->markdown('emails.timetable.modified', [
+        return $this->markdown('emails.subscription.updated', [
             'hasSubscriptions' => Notifiable::hasSubscriptions($user),
             'courses' => Notifiable::userCourses($user)->get(),
             'lecturers' => Notifiable::userLecturers($user)->get()
