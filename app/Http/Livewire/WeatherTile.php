@@ -3,18 +3,19 @@
 namespace App\Http\Livewire;
 
 use Config;
-use Exception;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 
+/**
+ * @property mixed campusLocation
+ * @property mixed weather
+ * @property mixed apikey
+ */
 class WeatherTile extends Component
 {
-    public $campus;
+    public string $campus = '';
 
-    public $readyToLoad = false;
+    public bool $readyToLoad = false;
 
     public function loadWeather()
     {
@@ -26,14 +27,16 @@ class WeatherTile extends Component
         return Config::get('weather.api_key');
     }
 
-    public function getLocationProperty()
+    public function getCampusLocationProperty()
     {
-        Config::get("campus.".strtolower($this->campus).".city");
+        return Config::get("campus.".strtolower($this->campus).".city");
     }
 
     public function getWeatherProperty()
     {
-        return Http::get("api.openweathermap.org/data/2.5/weather?q={$this->location}, IE&appid={$this->apikey}&units=metric");
+        return \Cache::remember("weather::$this->campusLocation", now()->addMinutes(5), function() {
+            return Http::get("api.openweathermap.org/data/2.5/weather?q={$this->campusLocation},IE&appid={$this->apikey}&units=metric");
+        });
     }
 
     public function render()

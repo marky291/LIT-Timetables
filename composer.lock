@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b51de119a1251528fde5826c1b4c0a4",
+    "content-hash": "34cf95ed859c83ce45a0fdb9df6fa9a3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2523,6 +2523,80 @@
                 }
             ],
             "time": "2021-04-28T15:31:15+00:00"
+        },
+        {
+            "name": "lorisleiva/laravel-actions",
+            "version": "v2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lorisleiva/laravel-actions.git",
+                "reference": "277d90122dad6469b1ecfc07111e8d40f1854c25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lorisleiva/laravel-actions/zipball/277d90122dad6469b1ecfc07111e8d40f1854c25",
+                "reference": "277d90122dad6469b1ecfc07111e8d40f1854c25",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.15",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "pestphp/pest": "^0.3.14",
+                "phpunit/phpunit": "^9.3.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lorisleiva\\Actions\\ActionServiceProvider"
+                    ],
+                    "aliases": {
+                        "Action": "Lorisleiva\\Actions\\Facades\\Actions"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lorisleiva\\Actions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loris Leiva",
+                    "email": "loris.leiva@gmail.com",
+                    "homepage": "https://lorisleiva.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel components that take care of one specific task",
+            "homepage": "https://github.com/lorisleiva/laravel-actions",
+            "keywords": [
+                "action",
+                "command",
+                "component",
+                "controller",
+                "job",
+                "laravel",
+                "object"
+            ],
+            "support": {
+                "issues": "https://github.com/lorisleiva/laravel-actions/issues",
+                "source": "https://github.com/lorisleiva/laravel-actions/tree/v2.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/lorisleiva",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-03-30T17:56:39+00:00"
         },
         {
             "name": "meilisearch/meilisearch-laravel-scout",
@@ -7920,7 +7994,62 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-05-17T19:21:04+00:00"
+            "time": "2021-04-23T09:26:03+00:00"
+        },
+        {
+            "name": "yab/laravel-scout-mysql-driver",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yabhq/laravel-scout-mysql-driver.git",
+                "reference": "f63480b201f0d94eb7267709e4673fc93409d113"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yabhq/laravel-scout-mysql-driver/zipball/f63480b201f0d94eb7267709e4673fc93409d113",
+                "reference": "f63480b201f0d94eb7267709e4673fc93409d113",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/scout": "~6.0|~7.0|~8.0",
+                "php": "^7.2|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Yab\\MySQLScout\\Providers\\MySQLScoutServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yab\\MySQLScout\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Crisafulli",
+                    "email": "damian.crisafulli@troyweb.com"
+                },
+                {
+                    "name": "Matt Lantz",
+                    "email": "matt@yabhq.com"
+                }
+            ],
+            "description": "MySQL driver for Laravel Scout.",
+            "support": {
+                "issues": "https://github.com/yabhq/laravel-scout-mysql-driver/issues",
+                "source": "https://github.com/yabhq/laravel-scout-mysql-driver/tree/v4.0.0"
+            },
+            "time": "2021-04-16T05:35:03+00:00"
         }
     ],
     "packages-dev": [

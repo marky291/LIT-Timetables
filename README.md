@@ -2,7 +2,7 @@
 ![Laravel](https://github.com/marky291/lit-timetables/workflows/Laravel/badge.svg)
 [![Latest Version](https://img.shields.io/github/v/release/marky291/lit-timetables.svg?style=flat-square)](https://github.com/marky291/lit-timetables/releases)
 
-## Installation on Mac & Linux
+## Installation
 
 [Git](https://git-scm.com/) pull this repository to a location of choice on your computer.
 ```
@@ -11,14 +11,14 @@ $ git clone https://github.com/marky291/lit-timetables.git
 
 Download and use [Composer](https://getcomposer.org/), in the root of the project.
 
+#### Composer Installation (Linux & MacOS)
 ``` bash
 $ composer install
 ```
 
-Deploy the [Laravel Docker Container](https://laravel.com/docs/8.x/sail) for environment setup.
-If you are missing docker then you should install [Docker](https://docs.docker.com/engine/install/)
-```
-$ ./vendor/bin/sail up
+#### Composer installation (Windows)
+``` bash
+$ composer install --ignore-platform-reqs
 ```
 
 Seed the database for local development
@@ -31,23 +31,29 @@ Or use live timetable data for testing
 $ ./vendor/bin/sail artisan sync:week
 ```
 
-## Installation on Windows
-
-Laravel sail support MacOS, Linux and Windows (WSL2)
-https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10
-
-Using WSL2 on windows you can now follow the installation for linux operating systems.
+## Docker (Linux & MacOS)
+Deploy the [Laravel Docker Container](https://laravel.com/docs/8.x/sail) for environment setup.
+If you are missing docker then you should install [Docker](https://docs.docker.com/engine/install/)
+```
+$ ./vendor/bin/sail up
+```
 
 ## MeiliSearch
 Meilisearch is an open-source search engine that powers the search in the application by default this is preconfigured with the laravel sail docker container and defined in the `.env` environment file.
 
+#### MeiliSearch Installation (Linux & MacOS)
 ```sh
 $ SCOUT_DRIVER=meiliesearch
 $ SCOUT_QUEUE=true
 ```
 
-[Laravel Scout](https://laravel.com/docs/8.x/scout) is the engine driver that allows automatic synchronization of the application models.
-For more information on library usage you can check out the [laravel documentation](https://laravel.com/docs/8.x/scout).
+#### MeiliSearch Installation (Windows)
+```sh
+$ SCOUT_DRIVER=mysql
+$ SCOUT_QUEUE=false
+```
+
+Meiliesearch uses [Laravel Scout](https://laravel.com/docs/8.x/scout) as the engine driver.
 
 ## Testing
 
