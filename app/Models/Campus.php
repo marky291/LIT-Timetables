@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static firstOrCreate(array $array)
  * @method static count()
  * @property string location
+ * @property string city
  */
 class Campus extends Model
 {
@@ -20,5 +21,16 @@ class Campus extends Model
     public function courses(): HasMany
     {
         return $this->hasMany(Course::class);
+    }
+
+    public function getCityAttribute(): string
+    {
+        return match (strtolower($this->location)) {
+            'moylish' => 'Moyross',
+            'clonmel' => 'Clonmel',
+            'ennis' => 'Ennis',
+            'thurles' => 'Thurles',
+            default => 'Unknown Location',
+        };
     }
 }

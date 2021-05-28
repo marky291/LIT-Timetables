@@ -2,7 +2,12 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Campus;
 use Config;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
@@ -13,31 +18,26 @@ use Livewire\Component;
  */
 class WeatherTile extends Component
 {
-    public string $campus = '';
+    public ?Campus $campus;
 
     public bool $readyToLoad = false;
 
-    public function loadWeather()
+    public function loadWeather(): void
     {
         $this->readyToLoad = true;
     }
 
-    public function getApikeyProperty()
+    public function getApikeyProperty(): string
     {
-        return Config::get('weather.api_key');
+        return Config::get('services.openweather.key');
     }
 
-    public function getCampusLocationProperty()
+    public function getWeatherProperty(): Response
     {
-        return Config::get("campus.".strtolower($this->campus).".city");
+        return Http::get("api.openweathermap.org/data/2.5/weather?q={$this->campus->city},IE&appid={$this->apikey}&units=metric");
     }
 
-    public function getWeatherProperty()
-    {
-        return Http::get("api.openweathermap.org/data/2.5/weather?q={$this->campusLocation},IE&appid={$this->apikey}&units=metric");
-    }
-
-    public function render()
+    public function render(): Factory|View|Application
     {
         return view('livewire.weather-tile');
     }
