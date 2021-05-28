@@ -6,68 +6,32 @@ use Illuminate\Support\Str;
 
 class LecturerObserver
 {
-    /**
-     * Handle the lecturer "creating" event.
-     *
-     * @param Lecturer $lecturer
-     * @return void
-     */
-    public function creating(Lecturer $lecturer)
+    public function creating(Lecturer $lecturer): void
     {
         $lecturer->uuid = Str::uuid();
     }
 
-    /**
-     * Handle the lecturer "created" event.
-     *
-     * @param Lecturer $lecturer
-     * @return void
-     */
-    public function created(Lecturer $lecturer)
+    public function created(Lecturer $lecturer): void
     {
         //
     }
 
-    /**
-     * Handle the lecturer "updated" event.
-     *
-     * @param Lecturer $lecturer
-     * @return void
-     */
-    public function updated(Lecturer $lecturer)
+    public function updated(Lecturer $lecturer): void
     {
         //
     }
 
-    /**
-     * Handle the lecturer "deleted" event.
-     *
-     * @param Lecturer $lecturer
-     * @return void
-     */
-    public function deleted(Lecturer $lecturer)
+    public function deleted(Lecturer $lecturer): void
     {
         //
     }
 
-    /**
-     * Handle the lecturer "restored" event.
-     *
-     * @param Lecturer $lecturer
-     * @return void
-     */
-    public function restored(Lecturer $lecturer)
+    public function restored(Lecturer $lecturer): void
     {
         //
     }
 
-    /**
-     * Handle the lecturer "force deleted" event.
-     *
-     * @param Lecturer $lecturer
-     * @return void
-     */
-    public function forceDeleted(Lecturer $lecturer)
+    public function forceDeleted(Lecturer $lecturer): void
     {
         //
     }

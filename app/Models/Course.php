@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Laravel\Scout\Searchable;
@@ -35,11 +37,6 @@ class Course extends Model implements SearchableInterface
     use HasFactory;
     use Searchable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'identifier',
@@ -50,30 +47,27 @@ class Course extends Model implements SearchableInterface
         'campus_id'
     ];
 
-    /**
-     * @return HasMany|Schedule
-     */
-    public function schedules()
+    public function schedules(): HasMany
     {
         return $this->hasMany(Schedule::class);
     }
 
-    public function campus()
+    public function campus(): BelongsTo|Campus
     {
         return $this->belongsTo(Campus::class);
     }
 
-    public function department()
+    public function department(): BelongsTo|Department
     {
         return $this->belongsTo(Department::class);
     }
 
-    public function requests()
+    public function requests(): HasMany
     {
         return $this->hasMany(Requests::class);
     }
 
-    public function request()
+    public function request(): HasOne|Requests
     {
         return $this->hasOne(Requests::class);
     }

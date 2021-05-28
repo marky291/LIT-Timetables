@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static firstOrCreate(array $array)
@@ -14,25 +15,10 @@ class Campus extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ['location'];
 
-    public function courses()
+    public function courses(): HasMany
     {
         return $this->hasMany(Course::class);
-    }
-
-    /**
-     * Only moylish is undefined in the weather.
-     *
-     * @return string
-     */
-    public function getCityAttribute()
-    {
-        return $this->location == 'Moylish' ? 'limerick' : $this->location;
     }
 }

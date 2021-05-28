@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 /**
  * @method static firstWhere(array $array)
@@ -44,10 +45,7 @@ class Notifiable extends Model
         return $query->where(['user_id' => $user->getKey(), 'notifiable_type' => Lecturer::class]);
     }
 
-    /**
-     * Get the parent searchable model.
-     */
-    public function notifiable()
+    public function notifiable(): MorphTo
     {
         return $this->morphTo();
     }
