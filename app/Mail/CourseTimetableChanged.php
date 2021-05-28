@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Timetable\Mail;
+namespace App\Mail;
 
 use App\Models\Course;
-use App\Models\Lecturer;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class LecturerScheduleChanged extends Mailable
+class CourseTimetableChanged extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -19,7 +18,7 @@ class LecturerScheduleChanged extends Mailable
      *
      * @return void
      */
-    public function __construct(public Course $course, public Lecturer $lecturer){}
+    public function __construct(public Course $course){}
 
     /**
      * Build the message.
@@ -29,8 +28,8 @@ class LecturerScheduleChanged extends Mailable
     public function build()
     {
         return $this->markdown('emails.subscriber.notification', [
-            'timetable' => $this->lecturer->fullname,
-            'url' => $this->lecturer->route,
+            'timetable' => $this->course->name,
+            'url' => $this->course->route,
         ]);
     }
 }

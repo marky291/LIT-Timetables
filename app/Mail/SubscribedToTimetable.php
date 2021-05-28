@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Timetable\Mail;
+namespace App\Mail;
 
 use App\Models\Course;
 use App\Models\Lecturer;

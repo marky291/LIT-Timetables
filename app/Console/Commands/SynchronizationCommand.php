@@ -1,31 +1,27 @@
 <?php
 
-namespace App\Timetable\Commands;
+namespace App\Console\Commands;
 
+use App\Actions\Course\SynchronizeSchedule;
 use App\Models\Campus;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Synchronization;
 use App\Exceptions\CourseMissingLocationData;
-use App\Timetable\HttpTimetableRequests;
-use App\Timetable\Jobs\InspectSchedule;
 use App\Timetable\Parsers\ParseCourseName;
 use App\Timetable\Parsers\ParseFilters;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-/**
- * @property HttpTimetableRequests $http
- */
-class SyncTimetableCommand extends Command
+class SynchronizationCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'sync:week';
+    protected $signature = 'timetable:synchronize';
 
     /**
      * The console command description.
@@ -33,18 +29,6 @@ class SyncTimetableCommand extends Command
      * @var string
      */
     protected $description = 'Synchronization the data of the application with the LIT Timetable Domain.';
-
-    /**
-     * SyncTimetableCommand constructor.
-     *
-     * @param HttpTimetableRequests $request
-     */
-    public function __construct(HttpTimetableRequests $request)
-    {
-        parent::__construct();
-
-        $this->http = $request;
-    }
 
     /**
      * Execute the console command.
@@ -129,7 +113,7 @@ class SyncTimetableCommand extends Command
         $course = Course::all();
         $output->progressStart($course->count());
         $course->each(function (Course $course) use ($output) {
-            InspectSchedule::dispatch($course);
+            SynchronizeSchedule::dispatch($course);
             $output->progressAdvance(1);
         });
 

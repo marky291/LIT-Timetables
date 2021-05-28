@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Timetable\Events;
+namespace App\Events;
 
 use App\Models\Course;
-use App\Models\Schedule;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class TimetableScheduleChanged
+class ScheduleChanged
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 

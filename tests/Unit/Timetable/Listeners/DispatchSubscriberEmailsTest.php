@@ -2,14 +2,13 @@
 
 namespace Tests\Unit\Timetable\Listeners;
 
+use App\Actions\Course\CompareSchedules;
+use App\Mail\CourseTimetableChanged;
+use App\Mail\LecturerScheduleChanged;
 use App\Models\Course;
 use App\Models\Lecturer;
 use App\Models\Schedule;
 use App\Models\User;
-use App\Timetable\Jobs\CompareSchedule;
-use App\Timetable\Listeners\DispatchSubscriberEmails;
-use App\Timetable\Mail\CourseTimetableChanged;
-use App\Timetable\Mail\LecturerScheduleChanged;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mail;
@@ -27,10 +26,11 @@ class DispatchSubscriberEmailsTest extends TestCase
             ->has(User::factory()->count(1), 'subscribers')
             ->create();
 
-        (new CompareSchedule(Course::find(1),
+        CompareSchedules::run(
+            Course::find(1),
             collect(array($this->schedule(['module' => 'Before']))),
             collect(array($this->schedule(['module' => 'After'])))
-        ))->handle();
+        );
 
         Mail::assertSent(CourseTimetableChanged::class, 1);
     }
@@ -44,10 +44,11 @@ class DispatchSubscriberEmailsTest extends TestCase
             ->has(User::factory(), 'subscribers')
             ->create();
 
-        (new CompareSchedule(Course::first(),
+        CompareSchedules::run(
+            Course::first(),
             collect(array($this->schedule(['room' => 'A', 'lecturer' => $lecturer->fullname]))),
             collect(array($this->schedule(['room' => 'B', 'lecturer' => $lecturer->fullname]))),
-        ))->handle();
+        );
 
         Mail::assertSent(LecturerScheduleChanged::class, 1);
     }

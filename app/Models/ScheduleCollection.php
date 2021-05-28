@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Timetable\Collections;
+namespace App\Models;
 
-use App\Models\Schedule;
 use Illuminate\Database\Eloquent\Collection;
 
 class ScheduleCollection extends Collection

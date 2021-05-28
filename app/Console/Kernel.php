@@ -3,9 +3,9 @@
 namespace App\Console;
 
 use App\Actions\Search\DeleteSearchesAfterDate;
-use App\Timetable\Commands\SyncTimetableCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands\SynchronizationCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        SyncTimetableCommand::class,
+        SynchronizationCommand::class,
         DeleteSearchesAfterDate::class,
     ];
 
@@ -27,13 +27,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        //$schedule->command('inspire')->everyMinute();
-
         $schedule->command('horizon:snapshot')->everyThirtyMinutes();
 
-        $schedule->command('sync:week')->daily();
+        $schedule->command('timetable:synchronize')->daily();
 
         $schedule->command('search:purge 7')->daily();
+
+        //$schedule->command('inspire')->everyMinute();
     }
 
     /**

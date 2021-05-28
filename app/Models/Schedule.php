@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Timetable\Collections\ScheduleCollection;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Observers;
+namespace App\Models;
 
-use App\Models\Lecturer;
 use Illuminate\Support\Str;
 
 class LecturerObserver
@@ -10,7 +9,7 @@ class LecturerObserver
     /**
      * Handle the lecturer "creating" event.
      *
-     * @param  \App\Models\Lecturer  $lecturer
+     * @param Lecturer $lecturer
      * @return void
      */
     public function creating(Lecturer $lecturer)
@@ -21,7 +20,7 @@ class LecturerObserver
     /**
      * Handle the lecturer "created" event.
      *
-     * @param  \App\Models\Lecturer  $lecturer
+     * @param Lecturer $lecturer
      * @return void
      */
     public function created(Lecturer $lecturer)
@@ -32,7 +31,7 @@ class LecturerObserver
     /**
      * Handle the lecturer "updated" event.
      *
-     * @param  \App\Models\Lecturer  $lecturer
+     * @param Lecturer $lecturer
      * @return void
      */
     public function updated(Lecturer $lecturer)
@@ -43,7 +42,7 @@ class LecturerObserver
     /**
      * Handle the lecturer "deleted" event.
      *
-     * @param  \App\Models\Lecturer  $lecturer
+     * @param Lecturer $lecturer
      * @return void
      */
     public function deleted(Lecturer $lecturer)
@@ -54,7 +53,7 @@ class LecturerObserver
     /**
      * Handle the lecturer "restored" event.
      *
-     * @param  \App\Models\Lecturer  $lecturer
+     * @param Lecturer $lecturer
      * @return void
      */
     public function restored(Lecturer $lecturer)
@@ -65,7 +64,7 @@ class LecturerObserver
     /**
      * Handle the lecturer "force deleted" event.
      *
-     * @param  \App\Models\Lecturer  $lecturer
+     * @param Lecturer $lecturer
      * @return void
      */
     public function forceDeleted(Lecturer $lecturer)

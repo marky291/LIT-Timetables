@@ -1,17 +1,19 @@
 <?php
 
-namespace App\Timetable;
+
+namespace App\Services;
+
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
-class SemesterPeriods
+class SemesterPeriodDateService
 {
     /**
      * @var Carbon
      */
-    private $currentDate;
+    private Carbon $currentDate;
 
     /**
      * SemesterPeriods constructor.

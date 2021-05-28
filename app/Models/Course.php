@@ -28,6 +28,7 @@ use Laravel\Scout\Searchable;
  * @method static firstOrCreate(array $array, array $array1)
  * @method static count()
  * @method static find(int $int)
+ * @method static first()
  */
 class Course extends Model implements SearchableInterface
 {
