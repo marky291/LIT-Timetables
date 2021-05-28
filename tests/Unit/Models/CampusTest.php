@@ -29,6 +29,6 @@ class CampusTest extends TestCase
     {
         $campus = Campus::factory()->create(['location' => 'Moylish']);
 
-        $this->assertEquals('limerick', $campus->city);
+        $this->assertEquals('Moyross', $campus->city);
     }
 }
