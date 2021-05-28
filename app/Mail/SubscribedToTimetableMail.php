@@ -11,8 +11,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Collection;
 
-class UnsubscribedFromTimetable extends Mailable implements ShouldQueue
+class SubscribedToTimetableMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -38,10 +39,9 @@ class UnsubscribedFromTimetable extends Mailable implements ShouldQueue
             Course::class => $this->timetable->name,
         };
 
-        return $this->markdown('emails.subscription.removed', [
+        return $this->markdown('emails.subscription.added', [
             'timetableType' => class_basename($this->timetable),
             'timetableName' => $timetableName,
-            'hasSubscriptions' => Notifiable::hasSubscriptions($user),
             'courses' => Notifiable::userCourses($user)->get(),
             'lecturers' => Notifiable::userLecturers($user)->get()
         ]);

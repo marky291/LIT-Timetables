@@ -10,7 +10,7 @@ use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class LecturerScheduleChanged extends Mailable
+class LecturerScheduleChangedMail extends Mailable
 {
     use Queueable, SerializesModels;
 

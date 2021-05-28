@@ -3,8 +3,8 @@
 namespace Tests\Unit\Timetable\Listeners;
 
 use App\Actions\Course\CompareSchedules;
-use App\Mail\CourseTimetableChanged;
-use App\Mail\LecturerScheduleChanged;
+use App\Mail\CourseTimetableChangedMail;
+use App\Mail\LecturerScheduleChangedMail;
 use App\Models\Course;
 use App\Models\Lecturer;
 use App\Models\Schedule;
@@ -32,7 +32,7 @@ class DispatchSubscriberEmailsTest extends TestCase
             collect(array($this->schedule(['module' => 'After'])))
         );
 
-        Mail::assertSent(CourseTimetableChanged::class, 1);
+        Mail::assertSent(CourseTimetableChangedMail::class, 1);
     }
 
     public function test_email_sends_one_email_to_lecturer_subscribers()
@@ -50,7 +50,7 @@ class DispatchSubscriberEmailsTest extends TestCase
             collect(array($this->schedule(['room' => 'B', 'lecturer' => $lecturer->fullname]))),
         );
 
-        Mail::assertSent(LecturerScheduleChanged::class, 1);
+        Mail::assertSent(LecturerScheduleChangedMail::class, 1);
     }
 
     private function schedule(array $attributes = [])

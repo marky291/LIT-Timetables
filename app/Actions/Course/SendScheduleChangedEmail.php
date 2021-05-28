@@ -3,9 +3,9 @@
 namespace App\Actions\Course;
 
 use App\Events\ScheduleChanged;
-use App\Mail\CourseTimetableChanged;
+use App\Mail\CourseTimetableChangedMail;
 use App\Models\Course;
-use App\Mail\LecturerScheduleChanged;
+use App\Mail\LecturerScheduleChangedMail;
 use Illuminate\Support\Facades\Mail;
 use Lorisleiva\Actions\Concerns\AsAction;
 
@@ -16,13 +16,13 @@ class SendScheduleChangedEmail
     public function handle(Course $course)
     {
         foreach($course->subscribers as $subscriber) {
-            Mail::to($subscriber)->send(new CourseTimetableChanged($course));
+            Mail::to($subscriber)->send(new CourseTimetableChangedMail($course));
         }
 
         foreach ($course->schedules as $schedule) {
             foreach($schedule->lecturers as $lecturer) {
                 foreach($lecturer->subscribers as $subscriber) {
-                    Mail::to($subscriber)->send(new LecturerScheduleChanged($course, $lecturer));
+                    Mail::to($subscriber)->send(new LecturerScheduleChangedMail($course, $lecturer));
                 }
             }
         }
