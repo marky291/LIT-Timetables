@@ -19,6 +19,7 @@ use Laravel\Scout\Searchable;
  * @method static firstWhere(string $string, int $lecturer_id)
  * @method static first()
  * @method static count()
+ * @method static whereIn(string $string, string[] $explode)
  */
 class Lecturer extends Model implements SearchableInterface
 {

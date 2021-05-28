@@ -9,7 +9,6 @@ use App\Models\Module;
 use App\Models\Room;
 use App\Models\Type;
 use App\Services\AsynchronousModelService;
-use App\Timetable\DateConversion;
 use Illuminate\Support\Str;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Spatie\Regex\Regex;
@@ -57,6 +56,8 @@ class SynchronizeSchedule
 
             /**
              * Store the schedule after looking up the relational ids.
+             *
+             * @var Course $model
              */
             $model = $course->schedules()->firstOrCreate([
                 'academic_week' => $academic_week,
@@ -79,7 +80,9 @@ class SynchronizeSchedule
              * Remove previous lecturers associated with the schedule.
              * and re-sync the collected from the new dataset.
              */
-            $model->lecturers()->sync(Lecturer::whereIn('fullname', explode(", ", $schedule['lecturer'])));
+            $model->lecturers()->sync(
+                Lecturer::whereIn('fullname', explode(", ", $schedule['lecturer'])
+            )->pluck('id'));
         });
 
         /**
@@ -98,7 +101,7 @@ class SynchronizeSchedule
         /**
          * Lets compare the schedules and determine if we need to send emails..s
          */
-        CompareSchedules::dispatchIf(count($oldSchedules) && count($newSchedules),
+        CompareSchedules::dispatchIf($oldSchedules->count() && $newSchedules->count(),
             $course, $oldSchedules, $newSchedules
         );
     }

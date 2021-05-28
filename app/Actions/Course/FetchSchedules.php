@@ -6,28 +6,32 @@ use App\Exceptions\CourseUrlReceivedBadStatusCode;
 use App\Models\Course;
 use App\Timetable\Parsers\ParseTimetable;
 use Lorisleiva\Actions\Concerns\AsAction;
+use Symfony\Component\BrowserKit\HttpBrowser;
+use \Illuminate\Support\Collection;
 
-class FetchSchedules
+class FetchSchedules extends HttpBrowser
 {
     use AsAction;
 
-    public function handle(Course $course)
+    public function handle(Course $course): Collection
     {
-        $beforeTime = microtime(1);
+        $start = microtime(1);
 
-        $request = \Http::request('GET', $course->source());
+        $response = parent::request('GET', $course->source());
 
-        if ($request->getInternalResponse()->getStatusCode() !== 200) {
-            throw new CourseUrlReceivedBadStatusCode('Response '. $request->getInternalResponse()->getStatusCode().' from '.$course->source());
+        if ($this->getInternalResponse()->getStatusCode() !== 200) {
+            throw new CourseUrlReceivedBadStatusCode(
+                'Response '. $this->getInternalResponse()->getStatusCode().' from '.$course->source()
+            );
         }
 
-        $parsed = ParseTimetable::GetAvailableSchedulesFromCrawler($request);
+        $parsed = ParseTimetable::GetAvailableSchedulesFromCrawler($response);
 
-        $afterTime = microtime(1);
+        $finish = microtime(1);
 
         $course->requests()->create([
-            'response' => $request->getInternalResponse()->getStatusCode(),
-            'time' => round(($afterTime - $beforeTime), 3),
+            'response' => $this->getInternalResponse()->getStatusCode(),
+            'time' => round(($finish - $start), 3),
             'link' => $course->source(),
             'meta' => $parsed['meta'],
             'mined' => $parsed->get('schedules'),

@@ -3,19 +3,20 @@
 namespace App\Services;
 
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 
 class AsynchronousModelService
 {
     public function create(string $model, array $attributes)
     {
-        $lock = Cache::lock("Inspect::".$attributes[array_key_first($attributes)]."_lock", 300); // 5 min
+        $modelName = strtolower(class_basename($model));
 
-        try {
-            if ($lock->get()) {
-                $model::firstOrCreate($attributes);
-            }
-        } finally {
-            $lock->release();
+        $uniqueSlug = Str::of($attributes[array_key_first($attributes)])->slug();
+
+        $lock = Cache::lock("{$modelName}-{$uniqueSlug}-lock", 60);
+
+        if ($lock->get()) {
+            $model::firstOrCreate($attributes);
         }
     }
 }
