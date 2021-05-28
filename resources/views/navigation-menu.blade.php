@@ -22,10 +22,10 @@
                 <button dusk="search-nav" @click="$dispatch('search');" type="button" class="dark:bg-dark-input dark:text-dark-icon dark:hover:text-dark-text bg-gray-100 rounded-full py-2 px-4 inline-flex items-center border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-dark-icon focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out">
                     <svg width="24" height="24" fill="none" class="mr-4 text-gray-400 dark:text-dark-icon transition-colors duration-200 group-hover:text-gray-500">
                         <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    <span class="">Quick search for anything</span>
+                    <span class="">{{ __('Quick search for anything') }}</span>
                     <span class="ml-4 hidden sm:block text-gray-400 dark:text-dark-icon text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">
                             <span class="sr-only">Press </span><kbd class="font-sans"><abbr title="Command" class="no-underline">⌘</abbr></kbd>
-                            <span class="sr-only"> and </span><kbd class="font-sans">K</kbd><span class="sr-only"> to search</span>
+                            <span class="sr-only"> and </span><kbd class="font-sans">K</kbd><span class="sr-only"> {{ __('to search') }}</span>
                           </span>
                 </button>
             </div>

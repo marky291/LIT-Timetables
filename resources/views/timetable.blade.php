@@ -7,7 +7,7 @@
 
     @if (App\Models\Synchronization::lastRun()->diff(now())->days > 7)
         <div class="text-center text-xs py-2 bg-red-500 dark:bg-dark-red text-white">
-            <p>Timetable was last synced {{ App\Models\Synchronization::lastRun()->diffForHumans() }} and may be outdated.</p>
+            <p>{{ __('Timetable was last synced') }} {{ App\Models\Synchronization::lastRun()->diffForHumans() }} {{ __('and may be outdated') }}.</p>
         </div>
     @endif
 
@@ -22,13 +22,14 @@
 
                     <div class="col-span-3 text-left">
                         @if($model instanceof App\Models\Lecturer)
-                            <div class="mb-3 dark:text-dark-icon"><p>{{ $schedules[0]->course->campus->location }} Campus</p></div>
-                            <p class="text-2xl mb-3 font-semibold dark:text-dark-text">Timetable for {{ $model->fullname }}</p>
+                            <div class="mb-3 dark:text-dark-icon"><p>{{ $schedules[0]->course->campus->location }}
+                                {{ __('Campus') }}</p></div>
+                            <p class="text-2xl mb-3 font-semibold dark:text-dark-text">{{ __('Timetable for') }} {{ $model->fullname }}</p>
                         @else
-                            <div class="mb-3 dark:text-dark-icon"><p>{{ $model->campus->location }} Campus</p></div>
+                            <div class="mb-3 dark:text-dark-icon"><p>{{ $model->campus->location }} {{ __('Campus') }}</p></div>
                             <p class="text-2xl mb-3 font-semibold dark:text-dark-text">{{ $model->name }}</p>
                         @endif
-                        <p class="text-gray-500 mb-3 dark:text-dark-icon">Semester {{ $semester->semester() }}, Week {{ $semester->week() }}</p>
+                        <p class="text-gray-500 mb-3 dark:text-dark-icon">{{ __('Semester') }} {{ $semester->semester() }}, {{ __('Week') }} {{ $semester->week() }}</p>
                     </div>
 
                     @if($model instanceof App\Models\Lecturer)
@@ -47,7 +48,7 @@
 
                         @if ($model->identifier != null)
                             <a target="_blank" href="{{ $model->source() }}" class="mt-2 md:mt-0 dark:button dark:border-gray-600 inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                View Timetable @LIT
+                                {{ __('View Timetable @LIT') }}
                             </a>
                         @endif
                     </div>
