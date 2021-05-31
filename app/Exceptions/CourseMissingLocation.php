@@ -4,7 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 
-class CourseMissingLocationData extends Exception
+class CourseMissingLocation extends Exception
 {
     //
 }

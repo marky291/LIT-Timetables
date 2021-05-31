@@ -7,12 +7,13 @@ use App\Models\Campus;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Synchronization;
-use App\Exceptions\CourseMissingLocationData;
-use App\Timetable\Parsers\ParseCourseName;
-use App\Timetable\Parsers\ParseFilters;
+use App\Exceptions\CourseMissingLocation;
+use App\Services\Parsers\ParseCourseNameService;
+use App\Services\Parsers\ParseFilterService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class SynchronizationCommand extends Command
 {
@@ -54,7 +55,7 @@ class SynchronizationCommand extends Command
          * The LIT web domain that stores the data we can harvest
          * to create the departments and course lookup data.
          */
-        $filter = new ParseFilters(Http::get(config('timetable.url.filter'))->body());
+        $filter = new ParseFilterService(Str::of(Http::get(config('timetable.url.filter'))->body()));
 
         /**
          * Get all the departments in the filter, map to an array
@@ -83,13 +84,13 @@ class SynchronizationCommand extends Command
         $output = $this->output;
         $output->progressStart($filter->courses()->unique('slug')->count());
         $filter->courses()->unique('slug')->each(function ($value) use (&$output) {
-            $data = (new ParseCourseName($value->name));
+            $data = (new ParseCourseNameService($value->name));
             try {
                 Course::firstOrCreate(['identifier' => $data->getIdentifier()], array_merge($data->toArray(), [
                     'campus_id' => Campus::firstOrCreate(['location' => $data->getLocation()])->id,
                     'department_id' => Department::firstWhere('filter', $value->filter)->id,
                 ]));
-            } catch (CourseMissingLocationData $e) {
+            } catch (CourseMissingLocation $e) {
                 Log::error("Missing course data in course title {$value->name}.");
             } finally {
                 $output->progressAdvance();

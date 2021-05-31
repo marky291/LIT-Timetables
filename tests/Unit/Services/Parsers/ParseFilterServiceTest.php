@@ -2,17 +2,18 @@
 
 namespace Tests\Unit\Timetable\Parsers;
 
-use App\Timetable\Parsers\ParseFilters;
+use App\Services\Parsers\ParseFilterService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 use Tests\TestCase;
 
-class ParseFilterTest extends TestCase
+class ParseFilterServiceTest extends TestCase
 {
     use RefreshDatabase;
 
     /**
-     * @var ParseFilters
+     * @var ParseFilterService
      */
     private $filter;
 
@@ -23,19 +24,20 @@ class ParseFilterTest extends TestCase
     {
         parent::setUp();
 
-        $this->filter = new ParseFilters(File::get(base_path('tests/Unit/Samples/java-snapshot.txt')));
+        $this->filter = new ParseFilterService(Str::of(File::get(base_path('tests/Unit/Samples/java-snapshot.txt'))));
     }
 
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
     public function test_it_returns_a_department_count_of_15(): void
     {
         $departments = $this->filter->departments();
 
         $this->assertCount(16, $departments);
+    }
+    public function test_it_returns_a_course_count(): void
+    {
+        $courses = $this->filter->courses();
+
+        $this->assertCount(1016, $courses);
     }
 
     public function test_it_returns_a_department_name(): void

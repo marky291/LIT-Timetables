@@ -4,7 +4,7 @@ namespace App\Actions\Course;
 
 use App\Exceptions\CourseUrlReceivedBadStatusCode;
 use App\Models\Course;
-use App\Timetable\Parsers\ParseTimetable;
+use App\Timetable\Parsers\ParseTimetableService;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Symfony\Component\BrowserKit\HttpBrowser;
 use \Illuminate\Support\Collection;
@@ -25,7 +25,7 @@ class FetchSchedules extends HttpBrowser
             );
         }
 
-        $parsed = ParseTimetable::GetAvailableSchedulesFromCrawler($response);
+        $parsed = ParseTimetableService::GetAvailableSchedulesFromCrawler($response);
 
         $finish = microtime(1);
 
