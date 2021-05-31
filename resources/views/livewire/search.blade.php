@@ -91,7 +91,7 @@ x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 
             <footer class="flex mt-6 justify-end py-5 mx-6 border-t border-gray-200 dark:border-dark-border dark:text-white">
                 <div class="flex items-center w-6 h-6 mr-1">
-                    <img src="https://www.meilisearch.com/_nuxt/img/cf59975.svg" alt="">
+                    <img src="{{ config('services.meilisearch.icon') }}" alt="">
                 </div>
                 MeiliSearch
             </footer>
