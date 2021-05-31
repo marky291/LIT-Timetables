@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Actions;
+namespace Tests\Unit\Actions\Search;
 
 use App\Actions\Search\DeleteSearchesAfterDate;
 use App\Models\Search;

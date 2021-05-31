@@ -24,13 +24,13 @@ class SynchronizeSchedule
          * to the timetable on the third party service.
          * This fires a http request to the third party service.
          */
-        $response = FetchSchedules::run($course);
+        $timetable = FetchTimetable::run($course);
 
         /**
-         * Get the academic week of the incoming request response.
+         * Get the academic week of the incoming request timetable.
          */
         $academic_week = (int) Regex::match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/',
-            $response['meta']['week']
+            $timetable['meta']['week']
         )->result();
 
         /**
@@ -43,7 +43,7 @@ class SynchronizeSchedule
          * Lastly we should storage store the schedules belongs to the
          * course in selected by the loop.
          */
-        $response->get('schedules')->each(function ($schedule) use ($response, $course, $academic_week)
+        $timetable->get('schedules')->each(function ($schedule) use ($timetable, $course, $academic_week)
         {
             $async = new AsynchronousModelService();
             $async->create(Module::class, ['name' => $schedule['module']]);
@@ -62,12 +62,12 @@ class SynchronizeSchedule
             $model = $course->schedules()->firstOrCreate([
                 'academic_week' => $academic_week,
                 'starting_date' =>
-                    TransformDateToCarbon::run($response['meta']['week'],
+                    TransformDateToCarbon::run($timetable['meta']['week'],
                         $schedule['day_of_week'],
                         $schedule['starting_time']
                     )->toDateTimeString(),
                 'ending_date' =>
-                    TransformDateToCarbon::run($response['meta']['week'],
+                    TransformDateToCarbon::run($timetable['meta']['week'],
                         $schedule['day_of_week'],
                         $schedule['ending_time']
                     )->toDateTimeString(),
@@ -91,7 +91,7 @@ class SynchronizeSchedule
          * the changes to determine the changes in key and value
          * and fire an event to let the subscribed users know.
          */
-        $newSchedules = collect($response->get('schedules')->toArray());
+        $newSchedules = collect($timetable->get('schedules')->toArray());
 
         /**
          * Skip the latest because we just made a new request, we want the second first.
