@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Schedules;
 
 use App\Models\Schedule;
-use App\Timetable\Collections\ScheduleCollection;
+use App\Models\ScheduleCollection;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;

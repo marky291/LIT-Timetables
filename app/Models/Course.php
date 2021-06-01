@@ -3,13 +3,15 @@
 namespace App\Models;
 
 use App\Interfaces\SearchableInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Stringable;
 use Laravel\Scout\Searchable;
 
 /**
@@ -28,17 +30,13 @@ use Laravel\Scout\Searchable;
  * @method static firstOrCreate(array $array, array $array1)
  * @method static count()
  * @method static find(int $int)
+ * @method static first()
  */
 class Course extends Model implements SearchableInterface
 {
     use HasFactory;
     use Searchable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'identifier',
@@ -49,87 +47,62 @@ class Course extends Model implements SearchableInterface
         'campus_id'
     ];
 
-    /**
-     * @return HasMany|Schedule
-     */
-    public function schedules()
+    public function schedules(): HasMany
     {
         return $this->hasMany(Schedule::class);
     }
 
-    public function campus()
+    public function campus(): BelongsTo|Campus
     {
         return $this->belongsTo(Campus::class);
     }
 
-    public function department()
+    public function department(): BelongsTo|Department
     {
         return $this->belongsTo(Department::class);
     }
 
-    public function requests()
+    public function requests(): HasMany
     {
         return $this->hasMany(Requests::class);
     }
 
-    public function request()
+    public function request(): HasOne|Requests
     {
         return $this->hasOne(Requests::class);
     }
 
-    /**
-     * Get course lecturers;
-     *
-     * @return \Illuminate\Database\Eloquent\Builder|HasMany
-     */
-    public function lecturers()
+    public function lecturers(): Builder|HasMany
     {
         return $this->schedules()->with('lecturers');
     }
 
-    /**
-     * Get the course searches.
-     */
-    public function searches()
+    public function searches(): MorphOne
     {
         return $this->morphOne(Search::class, 'searchable');
     }
 
-    /**
-     * Get the users notified
-     */
     public function subscribers(): MorphToMany
     {
         return $this->morphToMany(User::class, 'notifiable');
     }
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
+    public function getRouteKeyName(): string
     {
         return 'identifier';
     }
 
-    /**
-     * @return string
-     */
-    public function getRouteTitleAttribute()
+    public function getRouteTitleAttribute(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return string
-     */
-    public function getRouteAttribute()
+    public function getRouteAttribute(): string
     {
         return route('course', $this);
     }
 
-    public function source()
+    public function source(): string
     {
         return sprintf(config('timetable.url.source'), $this->identifier, (string) config('timetable.crawl.week'));
     }

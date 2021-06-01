@@ -6,6 +6,7 @@ use App\Interfaces\SearchableInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Laravel\Scout\Searchable;
 
@@ -14,77 +15,54 @@ use Laravel\Scout\Searchable;
  *
  * @property string $fullname
  * @property string $route
+ * @property mixed|\Ramsey\Uuid\UuidInterface uuid
  *
  * @method static firstOrCreate(array $array)
  * @method static firstWhere(string $string, int $lecturer_id)
  * @method static first()
  * @method static count()
+ * @method static whereIn(string $string, string[] $explode)
  */
 class Lecturer extends Model implements SearchableInterface
 {
     use HasFactory;
     use Searchable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ['fullname'];
 
     /**
      * @return BelongsToMany
      */
-    public function schedules()
+    public function schedules(): BelongsToMany
     {
         return $this->belongsToMany(Schedule::class);
     }
 
-    /**
-     * Get the lecturer searches.
-     */
-    public function searches()
+    public function searches(): MorphOne
     {
         return $this->morphOne(Search::class, 'searchable');
     }
 
-    /**
-     * Get the users notified
-     */
     public function subscribers(): MorphToMany
     {
         return $this->morphToMany(User::class, 'notifiable');
     }
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
+    public function getRouteKeyName(): string
     {
         return 'uuid';
     }
 
-    /**
-     * @return string
-     */
-    public function getRouteTitleAttribute()
+    public function getRouteTitleAttribute(): string
     {
         return $this->fullname;
     }
 
-    /**
-     * @return string
-     */
-    public function getRouteAttribute()
+    public function getRouteAttribute(): string
     {
         return route('lecturer', $this);
     }
 
-    /**
-     * @return string
-     */
     public function getIconCategoryAttribute() : string
     {
         return 'Lecturer';

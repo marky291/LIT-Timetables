@@ -2,11 +2,9 @@
 
 namespace App\Providers;
 
-use App\Models\Course;
 use App\Models\Lecturer;
-use App\Observers\LecturerObserver;
-use Blade;
-use Carbon\Carbon;
+use App\Models\LecturerObserver;
+use App\Services\SemesterPeriodDateService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -18,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(SemesterPeriodDateService::class, fn() => new SemesterPeriodDateService(now()));
     }
 
     /**

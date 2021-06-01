@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Schedules;
 
-use App\Timetable\Collections\ScheduleCollection;
+use App\Models\ScheduleCollection;
 use Livewire\Component;
 
 class Week extends Component

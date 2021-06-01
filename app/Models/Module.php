@@ -19,19 +19,9 @@ class Module extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ['name'];
 
-    /**
-     * A module belongs to a department.
-     *
-     * @return BelongsTo
-     */
-    public function department()
+    public function department(): BelongsTo|Department
     {
         return $this->belongsTo(Department::class);
     }

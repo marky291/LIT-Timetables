@@ -5,7 +5,6 @@ namespace App\Actions\Search;
 use App\Models\Search;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
-use Illuminate\Database\Eloquent\Model;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class DeleteSearchesAfterDate

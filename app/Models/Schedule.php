@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use App\Timetable\Collections\ScheduleCollection;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
@@ -31,11 +31,6 @@ class Schedule extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'starting_date',
         'ending_date',
@@ -47,64 +42,52 @@ class Schedule extends Model
         'type_id',
     ];
 
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
     protected $dates = [
         'starting_date',
         'ending_date',
     ];
 
-    // scope current time.
-    public function scopeCurrent(Builder $query)
+    public function scopeCurrent(Builder $query): Builder
     {
         return $query->where('starting_date', '<', now())->where('ending_date', '>', now());
     }
 
-    // scope current day.
-    public function scopeToday(Builder $query)
+    public function scopeToday(Builder $query): Builder
     {
         return $query->whereDate('starting_date', '=', now());
     }
 
-    // scope current week.
-    public function scopeLatestAcademicWeek(Builder $query)
+    public function scopeLatestAcademicWeek(Builder $query): Builder
     {
         return $query->where('academic_week', $this->latestAvailableWeek);
     }
 
-    // scope last weeks schedule.
-    public function scopePreviousWeek(Builder $query, int $week = 1)
+    public function scopePreviousWeek(Builder $query, int $week = 1): Builder
     {
         return $query->whereDate('starting_date', '=', now()->subWeeks($week));
     }
 
-    public function module()
+    public function module(): BelongsTo|Module
     {
         return $this->belongsTo(Module::class);
     }
 
-    /**
-     * @return BelongsToMany|Schedule
-     */
-    public function lecturers()
+    public function lecturers(): BelongsToMany
     {
         return $this->belongsToMany(Lecturer::class);
     }
 
-    public function course()
+    public function course(): BelongsTo|Course
     {
         return $this->belongsTo(Course::class);
     }
 
-    public function room()
+    public function room(): BelongsTo|Room
     {
         return $this->belongsTo(Room::class);
     }
 
-    public function type()
+    public function type(): BelongsTo|Type
     {
         return $this->belongsTo(Type::class);
     }

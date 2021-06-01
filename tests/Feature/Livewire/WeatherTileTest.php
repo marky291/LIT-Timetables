@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Livewire;
 
+use App\Models\Campus;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
 use Livewire\Livewire;
@@ -28,7 +29,7 @@ class WeatherTileTest extends TestCase
         ]);
 
         Livewire::test('weather-tile')
-            ->set('campus', 'Moylish')
+            ->set('campus', Campus::factory()->create())
             ->set('readyToLoad', true)
             ->assertSeeHtml('12&#176;C with Broken clouds');
     }
@@ -40,7 +41,7 @@ class WeatherTileTest extends TestCase
         ]);
 
         Livewire::test('weather-tile')
-            ->set('campus', 'Moylish')
+            ->set('campus', Campus::factory()->create())
             ->set('readyToLoad', true)
             ->assertSeeHtml("No weather <br> information available");
     }

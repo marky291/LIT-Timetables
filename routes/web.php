@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\TimetableController;
-use App\Timetable\Events\TimetableScheduleChanged;
+use App\Timetable\Events\ScheduleChanged;
 use App\Timetable\Mail\SubscribedToTimetable;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/event', function() {
-    event(new TimetableScheduleChanged(\App\Models\Course::find(1)));
+    event(new ScheduleChanged(\App\Models\Course::find(1)));
 });
 
 Route::get('/', function() {

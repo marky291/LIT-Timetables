@@ -3,11 +3,11 @@
 namespace Tests\Unit\Timetable\Jobs;
 
 use App\Models\Course;
-use App\Timetable\Events\TimetableScheduleChanged;
-use App\Timetable\Jobs\CompareSchedule;
+use App\Events\ScheduleChanged;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
+use App\Actions\Course\CompareSchedules;
 
 class CompareScheduleTest extends TestCase
 {
@@ -17,24 +17,26 @@ class CompareScheduleTest extends TestCase
     {
         Event::fake();
 
-        (new CompareSchedule(Course::factory()->create(),
+        CompareSchedules::run(
+            Course::factory()->create(),
             collect(array()),
             collect(array()),
-        ))->handle();
+        );
 
-        Event::assertNotDispatched(TimetableScheduleChanged::class);
+        Event::assertNotDispatched(ScheduleChanged::class);
     }
 
     public function test_it_can_detect_no_new_timetable()
     {
         Event::fake();
 
-        (new CompareSchedule(Course::factory()->create(),
+        CompareSchedules::run(
+            Course::factory()->create(),
             collect(array($this->schedule())),
             collect(array()),
-        ))->handle();
+        );
 
-        Event::assertDispatched(TimetableScheduleChanged::class);
+        Event::assertDispatched(ScheduleChanged::class);
     }
 
     public function test_it_can_detect_no_timetable_change()
@@ -42,12 +44,13 @@ class CompareScheduleTest extends TestCase
         Event::fake();
         Course::factory()->create();
 
-        (new CompareSchedule(Course::find(1),
+        CompareSchedules::run(
+            Course::find(1),
             collect(array($this->schedule())),
             collect(array($this->schedule())),
-        ))->handle();
+        );
 
-        Event::assertNotDispatched(TimetableScheduleChanged::class);
+        Event::assertNotDispatched(ScheduleChanged::class);
     }
 
     public function test_it_can_detect_changes()
@@ -55,12 +58,13 @@ class CompareScheduleTest extends TestCase
         Event::fake();
         Course::factory()->create();
 
-        (new CompareSchedule(Course::find(1),
+        CompareSchedules::run(
+            Course::find(1),
             collect(array($this->schedule(['module' => 'Before']))),
             collect(array($this->schedule(['module' => 'After'])))
-        ))->handle();
+        );
 
-        Event::assertDispatched(TimetableScheduleChanged::class);
+        Event::assertDispatched(ScheduleChanged::class);
     }
 
     private function schedule(array $attributes = [])

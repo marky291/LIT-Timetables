@@ -19,27 +19,14 @@ class Department extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ['name', 'filter'];
 
-    /**
-     * A department has many modules.
-     *
-     * @return HasMany
-     */
-    public function modules()
+    public function modules(): HasMany
     {
         return $this->hasMany(Module::class);
     }
 
-    /**
-     * @return HasMany
-     */
-    public function courses()
+    public function courses(): HasMany
     {
         return $this->hasMany(Course::class);
     }

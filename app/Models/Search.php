@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 /**
  * @method static where(string $string, array|string|null $get)
@@ -16,26 +17,13 @@ class Search extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ['cookie_id', 'favorite', 'searchable_id', 'searchable_type', 'updated_at'];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
     protected $casts = [
         'favorite' => 'boolean',
     ];
 
-    /**
-     * Get the parent searchable model.
-     */
-    public function searchable()
+    public function searchable(): MorphTo
     {
         return $this->morphTo();
     }
