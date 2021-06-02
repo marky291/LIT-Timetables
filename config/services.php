@@ -38,6 +38,13 @@ return [
         'host' => env('MEILISEARCH_HOST', 'http://localhost:7700'),
         'key' => env('MEILISEARCH_KEY', null),
         'icon' => 'https://www.meilisearch.com/_nuxt/img/cf59975.svg',
-    ]
+    ],
 
+    'lit' => [
+        'url' => [
+            'exam' => [
+                'timetable' => 'https://lit.ie/en-ie/current-students/exams/exam-timetables'
+            ]
+        ]
+    ]
 ];
