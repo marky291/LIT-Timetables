@@ -22,9 +22,15 @@
 
                     <div class="col-span-3 text-left">
                         @if($model instanceof App\Models\Lecturer)
-                            <div class="mb-3 dark:text-dark-icon"><p>{{ $schedules[0]->course->campus->location }}
-                                {{ __('Campus') }}</p></div>
-                            <p class="text-2xl mb-3 font-semibold dark:text-dark-text">{{ __('Timetable for') }} {{ $model->fullname }}</p>
+                            @if($schedules->count())
+                                <div class="mb-3 dark:text-dark-icon"><p>{{ $schedules[0]->course->campus->location }}
+                                    {{ __('Campus') }}</p></div>
+                                <p class="text-2xl mb-3 font-semibold dark:text-dark-text">{{ __('Timetable for') }} {{ $model->fullname }}</p>
+                            @else
+                                <div class="mb-3 dark:text-dark-icon"><p>
+                                        {{ __('Unknown Campus') }}</p></div>
+                                <p class="text-2xl mb-3 font-semibold dark:text-dark-text">{{ __('Timetable for') }} {{ $model->fullname }}</p>
+                            @endif
                         @else
                             <div class="mb-3 dark:text-dark-icon"><p>{{ $model->campus->location }} {{ __('Campus') }}</p></div>
                             <p class="text-2xl mb-3 font-semibold dark:text-dark-text">{{ $model->name }}</p>
@@ -33,7 +39,11 @@
                     </div>
 
                     @if($model instanceof App\Models\Lecturer)
-                        @livewire('weather-tile', ['campus' => $schedules[0]->course->campus])
+                        @if($model instanceof App\Models\Lecturer)
+                            @livewire('weather-tile', ['campus' => null])
+                        @else
+                            @livewire('weather-tile', ['campus' => $schedules[0]->course->campus])
+                        @endif
                     @else
                         @livewire('weather-tile', ['campus' => $model->campus])
                     @endif
