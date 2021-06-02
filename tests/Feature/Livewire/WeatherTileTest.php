@@ -46,9 +46,16 @@ class WeatherTileTest extends TestCase
             ->assertSeeHtml("No weather <br> information available");
     }
 
+    public function test_weather_no_campus_defined()
+    {
+        Livewire::test('weather-tile')
+            ->assertSeeHtml("Unknown Campus");
+    }
+
     public function test_weather_loading_state()
     {
         Livewire::test('weather-tile')
+            ->set('campus', Campus::factory()->create())
             ->assertSeeHtml("Loading weather...");
     }
 
