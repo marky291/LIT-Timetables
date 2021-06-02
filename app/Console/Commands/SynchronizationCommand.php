@@ -84,7 +84,7 @@ class SynchronizationCommand extends Command
         $output = $this->output;
         $output->progressStart($filter->courses()->unique('slug')->count());
         $filter->courses()->unique('slug')->each(function ($value) use (&$output) {
-            $data = (new ParseCourseNameService($value->name));
+            $data = (new ParseCourseNameService(Str::of($value->name)));
             try {
                 Course::firstOrCreate(['identifier' => $data->getIdentifier()], array_merge($data->toArray(), [
                     'campus_id' => Campus::firstOrCreate(['location' => $data->getLocation()])->id,
