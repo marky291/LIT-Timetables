@@ -6,36 +6,36 @@
 
 [Git](https://git-scm.com/) pull this repository to a location of choice on your computer.
 ```
-$ git clone https://github.com/marky291/lit-timetables.git
+git clone https://github.com/marky291/lit-timetables.git
 ```
 
 Download and use [Composer](https://getcomposer.org/), in the root of the project.
 
 #### Composer Installation (Linux & MacOS)
 ``` bash
-$ composer install
+composer install
 ```
 
 #### Composer installation (Windows)
 ``` bash
-$ composer install --ignore-platform-reqs
+composer install --ignore-platform-reqs
 ```
 
 Seed the database for local development
 ```
-$ ./vendor/bin/sail artisan db:seed
+./vendor/bin/sail artisan db:seed
 ```
 
 Or use live timetable data for testing
 ```
-$ ./vendor/bin/sail artisan sync:week
+./vendor/bin/sail artisan sync:week
 ```
 
 ## Docker (Linux & MacOS)
 Deploy the [Laravel Docker Container](https://laravel.com/docs/8.x/sail) for environment setup.
 If you are missing docker then you should install [Docker](https://docs.docker.com/engine/install/)
 ```
-$ ./vendor/bin/sail up
+./vendor/bin/sail up
 ```
 
 ## MeiliSearch
@@ -43,14 +43,14 @@ Meilisearch is an open-source search engine that powers the search in the applic
 
 #### MeiliSearch Installation (Linux & MacOS)
 ```sh
-$ SCOUT_DRIVER=meiliesearch
-$ SCOUT_QUEUE=true
+SCOUT_DRIVER=meiliesearch
+SCOUT_QUEUE=true
 ```
 
 #### MeiliSearch Installation (Windows)
 ```sh
-$ SCOUT_DRIVER=mysql
-$ SCOUT_QUEUE=false
+SCOUT_DRIVER=mysql
+SCOUT_QUEUE=false
 ```
 
 Meiliesearch uses [Laravel Scout](https://laravel.com/docs/8.x/scout) as the engine driver.
@@ -58,7 +58,7 @@ Meiliesearch uses [Laravel Scout](https://laravel.com/docs/8.x/scout) as the eng
 ## Testing
 
 ``` bash
-$ php artisan test
+php artisan test
 ```
 
 ## Security
