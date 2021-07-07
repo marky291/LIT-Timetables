@@ -36,7 +36,7 @@
         </div>
     </main>
 
-    @include('statistics')
+    @livewire('statistics')
 
     @include('features')
 

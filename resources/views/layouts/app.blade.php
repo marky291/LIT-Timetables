@@ -26,7 +26,7 @@
                 document.documentElement.classList.remove('dark')
             }
         </script>
-        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JV7T8XGXFC"></script>
         <script>
@@ -58,9 +58,10 @@
             @endif
 
             <!-- Page Content -->
-            <main class="bg-gray-100 dark:bg-dark-background">
+            <main class="dark:bg-dark-background">
                 {{ $slot }}
             </main>
+
         </div>
 
         @stack('modals')

@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static Builder latestAcademicWeek()
  * @method static where(string $string, int $academic_week)
  * @method latest(string $string)
+ * @method static count()
  */
 class Schedule extends Model
 {

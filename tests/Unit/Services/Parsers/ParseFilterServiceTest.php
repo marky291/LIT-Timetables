@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Timetable\Parsers;
+namespace Tests\Unit\Services\Parsers;
 
 use App\Services\Parsers\ParseFilterService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
