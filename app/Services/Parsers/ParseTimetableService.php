@@ -88,6 +88,6 @@ class ParseTimetableService
 
     private function carbonFromColumn(int $column_position): string
     {
-        return now()->setTime(config('timetable.time.starting_hour'), 0, 0, 0)->addMinutes(config('timetable.time.increment_minutes') * ($column_position - 1))->format('H:i');
+        return now()->setTime(8, 0, 0, 0)->addMinutes(30 * ($column_position - 1))->format('H:i');
     }
 }

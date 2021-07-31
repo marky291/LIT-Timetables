@@ -30,7 +30,7 @@ class SemesterPeriodDateService
      */
     public function firstPeriod(): Collection
     {
-        return $this->createPeriodFrom('timetable.semester.first.start', 'timetable.semester.first.end');
+        return $this->createPeriodFrom("31 August", "14 December");
     }
 
     /**
@@ -38,18 +38,18 @@ class SemesterPeriodDateService
      */
     public function secondPeriod(): Collection
     {
-        return $this->createPeriodFrom('timetable.semester.second.start', 'timetable.semester.second.end');
+        return $this->createPeriodFrom("11 January", "10 May");
     }
 
     /**
-     * @param string $config_start
-     * @param string $config_finish
+     * @param string $start_date
+     * @param string $finish_date
      * @return Collection
      */
-    private function createPeriodFrom(string $config_start, string $config_finish): Collection
+    private function createPeriodFrom(string $start_date, string $finish_date): Collection
     {
-        $start = $this->parse(Str::of(config($config_start))->append(' ')->append($this->currentDate->year));
-        $finish = $this->parse(Str::of(config($config_finish))->append(' ')->append($this->currentDate->year));
+        $start = $this->parse(Str::of($start_date)->append(' ')->append($this->currentDate->year));
+        $finish = $this->parse(Str::of($finish_date)->append(' ')->append($this->currentDate->year));
 
         // if current date is less than the configuration date, then it must be last year;
         if ($this->currentDate < $start) {

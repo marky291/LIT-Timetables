@@ -47,17 +47,17 @@ class SynchronizationCommand extends Command
         /**
          * We allow a hardcoded week to be defined for demo/test purposes.
          */
-        if (config('timetable.crawl.week')) {
-            $this->comment("[Config]: Crawler is set to crawl week '" . config('timetable.crawl.week') . "'.");
+        if (config('services.lit.relay.timetable.week')) {
+            $this->comment("[Config]: Crawler is set to crawl week '" . config('services.lit.relay.timetable.weeks') . "'.");
         }
 
         /**
          * The LIT web domain that stores the data we can harvest
          * to create the departments and course lookup data.
          */
-        $filter = new ParseFilterService(Str::of(Http::get(config('timetable.url.filter'))->body()));
+        $filter = new ParseFilterService(Str::of(Http::get(config('services.lit.relay.data'))->body()));
 
-        /**
+        /**s
          * Get all the departments in the filter, map to an array
          * and save into database if it does not exist.
          */

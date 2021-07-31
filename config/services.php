@@ -36,6 +36,17 @@ return [
 
     'meilisearch' => [
         'icon' => 'https://www.meilisearch.com/_nuxt/img/cf59975.svg',
-    ]
+    ],
+
+    'lit' => [
+        'relay' => [
+            'domain' => 'http://timetable.lit.ie:8080',
+            'data' => 'http://timetable.lit.ie:8080/js/filter.js',
+            'timetable' => [
+                'week' => env('TIMETABLE_WEEK', ''),
+                'route' => 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;%s?t=student+set+individual&template=student+set+individual'
+            ]
+        ],
+    ],
 
 ];
