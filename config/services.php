@@ -31,12 +31,10 @@ return [
     ],
 
     'openweather' => [
-        'key' => env('OPEN_WEATHER_API_KEY'),
+        'key' => env('OPEN_WEATHER_APP_KEY'),
     ],
 
     'meilisearch' => [
-        'host' => env('MEILISEARCH_HOST', 'http://localhost:7700'),
-        'key' => env('MEILISEARCH_KEY', null),
         'icon' => 'https://www.meilisearch.com/_nuxt/img/cf59975.svg',
     ]
 
