@@ -5,7 +5,7 @@ namespace App\Console;
 use App\Actions\Search\DeleteSearchesAfterDate;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use App\Console\Commands\SynchronizationCommand;
+use App\Console\Commands\RelaySyncCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        SynchronizationCommand::class,
+        RelaySyncCommand::class,
         DeleteSearchesAfterDate::class,
     ];
 
