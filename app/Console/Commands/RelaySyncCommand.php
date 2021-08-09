@@ -48,7 +48,7 @@ class RelaySyncCommand extends Command
          * We allow a hardcoded week to be defined for demo/test purposes.
          */
         if (config('services.lit.relay.timetable.week')) {
-            $this->comment("[Config]: Crawler is set to crawl week '" . config('services.lit.relay.timetable.weeks') . "'.");
+            $this->comment("[Config]: Crawler is set to crawl week '" . config('services.lit.relay.timetable.week') . "'.");
         }
 
         /**
