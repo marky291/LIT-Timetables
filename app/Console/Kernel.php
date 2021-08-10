@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('horizon:snapshot')->everyThirtyMinutes();
 
-        $schedule->command('timetable:synchronize')->daily();
+        $schedule->command('relay:sync')->daily();
 
         $schedule->command('search:purge 7')->daily();
 

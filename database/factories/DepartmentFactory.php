@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Department;
 
-class DepartmentFactory extends DataFactory
+class DepartmentFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -20,6 +20,6 @@ class DepartmentFactory extends DataFactory
      */
     public function definition()
     {
-        return $this->fromFile('departments');
+        return $this->withJsonDataFromFile('departments');
     }
 }

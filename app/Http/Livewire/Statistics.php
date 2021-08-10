@@ -9,9 +9,6 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
-use Stillat\Numeral\Languages\LanguageManager;
-use Stillat\Numeral\Numeral;
-use Symfony\Component\Console\Helper\FormatterHelper;
 
 class Statistics extends Component
 {

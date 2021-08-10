@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Campus;
 use Config;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Module;
 
-class ModuleFactory extends DataFactory
+class ModuleFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -20,6 +20,6 @@ class ModuleFactory extends DataFactory
      */
     public function definition()
     {
-        return $this->fromFile('modules');
+        return $this->withJsonDataFromFile('modules');
     }
 }
