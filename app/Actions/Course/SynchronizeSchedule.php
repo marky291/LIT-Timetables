@@ -35,6 +35,7 @@ class SynchronizeSchedule
              * Get the academic week of the incoming request timetable.
              */
             $academic_week = Str::of($timetable['meta']['week'])->match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/');
+            $academic_year = Str::of($timetable['meta']['week'])->match("/20[0-9][0-9]/");
 
             /**
              * Delete the schedules for this week, we can recreate the indexing of the schedules.
@@ -46,7 +47,7 @@ class SynchronizeSchedule
              * Lastly we should storage store the schedules belongs to the
              * course in selected by the loop.
              */
-            $timetable->get('schedules')->each(function ($schedule) use ($timetable, $course, $academic_week)
+            $timetable->get('schedules')->each(function ($schedule) use ($timetable, $course, $academic_week, $academic_year)
             {
                 $async = new AsynchronousModelService();
                 $async->create(Module::class, ['name' => $schedule['module']]);
@@ -64,6 +65,7 @@ class SynchronizeSchedule
                  */
                 $model = $course->schedules()->firstOrCreate([
                     'academic_week' => $academic_week,
+                    'academic_year' => $academic_year,
                     'starting_date' =>
                         TransformDateToCarbon::run(
                             $timetable['meta']['week'],
