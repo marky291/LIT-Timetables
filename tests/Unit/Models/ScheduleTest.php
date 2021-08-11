@@ -53,4 +53,28 @@ class ScheduleTest extends TestCase
 
         $this->assertCount(1, Schedule::previousWeek()->get());
     }
+
+    public function test_it_can_get_the_latest_available_week_schedule()
+    {
+        Schedule::factory()->create(['starting_date' => Carbon::create(2021, 2)]);
+        Schedule::factory()->create(['starting_date' => Carbon::create(2020, 9)]);
+
+        $this->assertEquals(10, Schedule::latestAcademicWeek()->first()->academic_week);
+    }
+
+    public function test_it_can_get_the_latest_available_year_schedule()
+    {
+        Schedule::factory()->create(['starting_date' => Carbon::create(2020)]);
+        Schedule::factory()->create(['starting_date' => Carbon::create(2021)]);
+
+        $this->assertEquals(2021, Schedule::latestAcademicWeek()->first()->academic_year);
+    }
+
+    public function test_it_can_get_the_latest_schedule()
+    {
+        Schedule::factory()->create(['academic_week' => 1, 'starting_date' => Carbon::create(2020, 6)]);
+        Schedule::factory()->create(['academic_week' => 50, 'starting_date' => Carbon::create(2020, 5)]);
+
+        $this->assertEquals(1, Schedule::latestAcademicWeek()->first()->academic_week);
+    }
 }

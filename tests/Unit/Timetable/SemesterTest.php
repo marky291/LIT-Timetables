@@ -10,7 +10,6 @@ class SemesterTest extends TestCase
 {
     public function test_it_can_get_first_semester_starting_date_in_current_year()
     {
-
         $semester = new SemesterPeriodDateService(Carbon::create(2020, 11, 25, 9, 21, 00));
 
         $expectedStart = Carbon::parse('31 August 2020');

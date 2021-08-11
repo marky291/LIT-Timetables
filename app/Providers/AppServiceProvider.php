@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\Lecturer;
 use App\Models\LecturerObserver;
+use App\Models\Schedule;
+use App\Observers\ScheduleObserver;
 use App\Services\SemesterPeriodDateService;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Lecturer::observe(LecturerObserver::class);
+        Schedule::observe(ScheduleObserver::class);
     }
 }

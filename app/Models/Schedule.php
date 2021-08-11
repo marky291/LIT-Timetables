@@ -13,8 +13,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property Carbon $starting_date
  * @property Carbon $ending_date
  * @property Module $module
+ * @property int $academic_year
  * @property int $academic_week
  * @property int $latestAvailableWeek
+ * @property int $latestAvailableYear
  * @property Room $room
  * @property Type $type
  * @property Course course
@@ -24,6 +26,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static Builder today()
  * @method static Builder current()
  * @method static Builder latestAcademicWeek()
+ * @method static Builder latestAcademicYear()
  * @method static where(string $string, int $academic_week)
  * @method latest(string $string)
  */
@@ -37,6 +40,7 @@ class Schedule extends Model
         'course_id',
         'module_id',
         'academic_week',
+        'academic_year',
         'lecturer_id',
         'room_id',
         'type_id',
@@ -59,9 +63,12 @@ class Schedule extends Model
 
     public function scopeLatestAcademicWeek(Builder $query): Builder
     {
-        return $query->where('academic_week', $this->latestAvailableWeek);
+        return $query->latestAcademicYear()->where('academic_week', $this->latestAvailableWeek);
     }
-
+    public function scopeLatestAcademicYear(Builder $query): Builder
+    {
+        return $query->where('academic_year', $this->latestAvailableYear);
+    }
     public function scopePreviousWeek(Builder $query, int $week = 1): Builder
     {
         return $query->whereDate('starting_date', '=', now()->subWeeks($week));
@@ -104,7 +111,12 @@ class Schedule extends Model
      */
     public function getLatestAvailableWeekAttribute() : mixed
     {
-        return $this->latest('academic_week')->first()?->academic_week;
+        return $this->latest('starting_date')->first()?->academic_week;
+    }
+
+    public function getLatestAvailableYearAttribute() : mixed
+    {
+        return $this->latest('starting_date')->first()?->starting_date->year;
     }
 
     public function newCollection(array $models = []): ScheduleCollection
