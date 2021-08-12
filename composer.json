@@ -25,7 +25,6 @@
         "livewire/livewire": "^2.0",
         "lorisleiva/laravel-actions": "^2.1",
         "meilisearch/meilisearch-php": "^0.18.3",
-        "rollbar/rollbar-laravel": "^7.0",
         "symfony/http-client": "^5.2"
     },
     "require-dev": {
