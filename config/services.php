@@ -31,7 +31,7 @@ return [
     ],
 
     'openweather' => [
-        'key' => env('OPEN_WEATHER_APP_KEY'),
+        'key' => env('OPEN_WEATHER_APP_KEY', ''),
     ],
 
     'meilisearch' => [
