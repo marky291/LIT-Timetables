@@ -5,7 +5,7 @@ x-on:keydown.escape="open = false;"
 x-on:search.window="open = true; $nextTick(() => $refs.searchbar.focus())"
 >
 
-    <div x-cloak x-show="open" id="search-container" class="fixed top-0 left-0 z-10 w-full h-screen lg:h-full lg:p-28" style="background: rgba(0,0,0,.25)">
+    <div x-cloak x-show="open" id="search-container" class="fixed top-0 left-0 z-50 w-full h-screen lg:h-full lg:p-28" style="background: rgba(0,0,0,.25)">
 
         <div x-on:click.away="open = false" class="border border-transparent dark:border-gray-700 flex flex-col w-full lg:max-w-3xl h-screen lg:h-auto lg:max-h-full mx-auto bg-white dark:bg-dark-background dark:border dark:border-gray-200 lg:rounded-2xl" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,.25)">
 

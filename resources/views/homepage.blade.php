@@ -2,7 +2,7 @@
 
     <main class="relative">
         <div class="absolute z-0 w-full h-full" id="particles-js"> </div>
-        <div class="z-40 w-full py-48 mx-auto text-center max-w-7xl">
+        <div class="relative z-10 w-full py-48 mx-auto text-center max-w-7xl">
             <div class="px-4 sm:px-8">
                 <div>
                     <h1 class="block text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl xl:inline dark:text-dark-text">{{ __('Smarter approach to') }}</h1>
@@ -39,7 +39,5 @@
     @livewire('statistics')
 
     @include('features')
-
-    @include('about')
 
 </x-app-layout>

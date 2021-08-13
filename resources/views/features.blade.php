@@ -2,7 +2,7 @@
     <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
       <div>
         <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Everything you need</h2>
-        <p class="mt-2 text-3xl font-extrabold text-gray-900">All-in-one platform</p>
+        <p class="mt-2 text-3xl font-extrabold text-gray-900 dark:text-dark-text">Timetable Platform</p>
         <p class="mt-4 text-lg text-gray-500">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
       </div>
       <div class="mt-12 lg:mt-0 lg:col-span-2">
@@ -13,7 +13,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Invite team members</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 dark:text-dark-text ml-9">One Click Search</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               You can manage phone, email and chat conversations all from a single mailbox.
@@ -26,7 +26,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">List view</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 dark:text-dark-text ml-9">Email Notifications</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               You can manage phone, email and chat conversations all from a single mailbox.
@@ -39,7 +39,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Keyboard shortcuts</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 dark:text-dark-text ml-9">Weather Forecast</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               You can manage phone, email and chat conversations all from a single mailbox.
@@ -52,7 +52,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Calendars</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 dark:text-dark-text ml-9">Upcoming Schedules</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               You can manage phone, email and chat conversations all from a single mailbox.
@@ -65,7 +65,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Notifications</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 dark:text-dark-text ml-9">Mobile Responsive</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               Find what you need with advanced filters, bulk actions, and quick views.
@@ -78,7 +78,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Boards</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 ml-9 dark:text-dark-text">Week Overview</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               Find what you need with advanced filters, bulk actions, and quick views.
@@ -91,7 +91,7 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Reporting</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 ml-9 dark:text-dark-text">Favorites</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
               Find what you need with advanced filters, bulk actions, and quick views.
@@ -104,10 +104,10 @@
               <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <p class="text-lg font-medium leading-6 text-gray-900 ml-9">Mobile app</p>
+              <p class="text-lg font-medium leading-6 text-gray-900 ml-9 dark:text-dark-text">24/7 Uptime</p>
             </dt>
             <dd class="mt-2 text-base text-gray-500 ml-9">
-              Find what you need with advanced filters, bulk actions, and quick views.
+              An application created to serve when others are offline, we have world class servers delivering data always.
             </dd>
           </div>
         </dl>
@@ -130,10 +130,10 @@
   }
   ```
 -->
-    <div class="bg-white">
+    <div class="">
         <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:py-32 lg:px-8 lg:flex lg:items-center">
             <div class="lg:w-0 lg:flex-1">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-dark-text sm:text-4xl">
                     Sign up for our newsletter
                 </h2>
                 <p class="mt-3 max-w-3xl text-lg text-gray-500">
