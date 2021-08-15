@@ -151,4 +151,21 @@ class ScheduleCollectionTest extends TestCase
 
         $this->assertCount(1, Schedule::all()->sortWeek()->first());
     }
+
+    public function test_it_can_sort_and_order_a_week_with_two_differnt_months()
+    {
+        Carbon::setTestNow(Carbon::create(2021, 9, 28));
+
+        Schedule::factory()->create(['starting_date' => Carbon::create(2021, 9, 29)]);
+        Schedule::factory()->create(['starting_date' => Carbon::create(2021, 9, 30)]);
+        Schedule::factory()->create(['starting_date' => Carbon::create(2021, 10, 1)]);
+        Schedule::factory()->create(['starting_date' => Carbon::create(2021, 10, 2)]);
+
+        $schedules = Schedule::all()->sortWeek();
+
+        $this->assertEquals(29, $schedules->shift()[0]->starting_date->day);
+        $this->assertEquals(30, $schedules->shift()[0]->starting_date->day);
+        $this->assertEquals(1, $schedules->shift()[0]->starting_date->day);
+        $this->assertEquals(2, $schedules->shift()[0]->starting_date->day);
+    }
 }
