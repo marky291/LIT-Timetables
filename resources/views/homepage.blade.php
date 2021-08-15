@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <main class="relative">
+    <main class="relative bg-gradient-to-b dark:from-blue-900">
         <div class="absolute z-0 w-full h-full" id="particles-js"> </div>
         <div class="relative z-10 w-full py-48 mx-auto text-center max-w-7xl">
             <div class="px-4 sm:px-8">
