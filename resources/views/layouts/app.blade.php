@@ -58,7 +58,7 @@
             @endif
 
             <!-- Page Content -->
-            <main class="dark:bg-dark-background">
+            <main class="dark:bg-dark-background bg-coolgray">
                 {{ $slot }}
             </main>
 
