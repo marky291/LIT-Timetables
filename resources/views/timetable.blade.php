@@ -83,8 +83,7 @@
                 </div>
 
             <div class="my-8 text-sm leading-9 tracking-tight text-center text-gray-500 dark:text-dark-text">
-                Want to make this your favorite place,
-                <span class="text-blue-600 hover:text-blue-500 dark:text-dark-blue dark:hover:text-yellow-500">Don't forget to bookmark us!</span>
+                Want to make this your favorite place, Don't forget to bookmark us!
             </div>
         </div>
     </div>
