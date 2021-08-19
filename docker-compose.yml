@@ -20,7 +20,7 @@ services:
         depends_on:
             - mysql
             - redis
-            - selenium
+            - meilisearch
     mysql:
         image: 'mysql:8.0'
         ports:
@@ -36,7 +36,9 @@ services:
         networks:
             - sail
         healthcheck:
-          test: ["CMD", "mysqladmin", "ping"]
+          test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+          retries: 3
+          timeout: 5s
     redis:
         image: 'redis:alpine'
         ports:
@@ -47,6 +49,8 @@ services:
             - sail
         healthcheck:
           test: ["CMD", "redis-cli", "ping"]
+          retries: 3
+          timeout: 5s
     meilisearch:
         image: 'getmeili/meilisearch:latest'
         ports:
@@ -55,12 +59,10 @@ services:
             - 'sailmeilisearch:/data.ms'
         networks:
             - sail
-    selenium:
-       image: 'selenium/standalone-chrome'
-       volumes:
-            - '/dev/shm:/dev/shm'
-       networks:
-           - sail
+        healthcheck:
+          test: ["CMD", "wget", "--no-verbose", "--spider",  "http://localhost:7700/health"]
+          retries: 3
+          timeout: 5s
 networks:
     sail:
         driver: bridge

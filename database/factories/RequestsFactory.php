@@ -6,7 +6,7 @@ use App\Models\Course;
 use App\Models\Model;
 use App\Models\Requests;
 
-class RequestsFactory extends DataFactory
+class RequestsFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -24,6 +24,6 @@ class RequestsFactory extends DataFactory
     {
         return array_merge([
             'course_id' => Course::factory(),
-        ], $this->fromFile('requests'));
+        ], $this->withJsonDataFromFile('requests'));
     }
 }

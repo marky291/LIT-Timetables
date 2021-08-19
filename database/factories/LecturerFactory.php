@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Lecturer;
 
-class LecturerFactory extends DataFactory
+class LecturerFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -20,6 +20,6 @@ class LecturerFactory extends DataFactory
      */
     public function definition()
     {
-        return $this->fromFile('lecturers');
+        return $this->withJsonDataFromFile('lecturers');
     }
 }

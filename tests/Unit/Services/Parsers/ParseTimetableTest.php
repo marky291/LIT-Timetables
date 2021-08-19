@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Timetable\Parsers;
+namespace Tests\Unit\Services\Parsers;
 
 use App\Services\Parsers\ParseTimetableService;
 use Goutte\Client;

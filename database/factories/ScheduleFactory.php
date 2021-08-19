@@ -8,7 +8,7 @@ use App\Models\Room;
 use App\Models\Schedule;
 use App\Models\Type;
 
-class ScheduleFactory extends DataFactory
+class ScheduleFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -29,6 +29,6 @@ class ScheduleFactory extends DataFactory
             'module_id' => Module::factory(),
             'room_id' => Room::factory(),
             'type_id' => Type::factory(),
-        ], $this->fromFile('schedules'));
+        ], $this->withJsonDataFromFile('schedules'));
     }
 }

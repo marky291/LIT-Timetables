@@ -23,6 +23,6 @@ class ScheduleCollection extends Collection
 
     public function sortWeek(): ScheduleCollection
     {
-        return $this->distinct()->groupBy(fn ($schedule) => $schedule->starting_date->format('d-m-Y'))->sortKeys();
+        return $this->distinct()->groupBy(fn ($schedule) => $schedule->starting_date->format('d-m-Y'));
     }
 }

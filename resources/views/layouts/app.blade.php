@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>LIT Course Finder</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -20,13 +20,13 @@
 
         <script>
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            if (!('theme' in localStorage) || localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark')
             } else {
                 document.documentElement.classList.remove('dark')
             }
         </script>
-        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JV7T8XGXFC"></script>
         <script>
@@ -58,9 +58,11 @@
             @endif
 
             <!-- Page Content -->
-            <main class="bg-gray-100 dark:bg-dark-background">
+            <main class="dark:bg-dark-background bg-coolgray">
                 {{ $slot }}
             </main>
+
+            @include('footer')
         </div>
 
         @stack('modals')

@@ -7,7 +7,7 @@ use App\Models\Course;
 use App\Models\Department;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CourseFactory extends DataFactory
+class CourseFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -23,7 +23,7 @@ class CourseFactory extends DataFactory
      */
     public function definition()
     {
-        $data = $this->fromFile('courses');
+        $data = $this->withJsonDataFromFile('courses');
 
         return [
             'department_id' => Department::factory(),

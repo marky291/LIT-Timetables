@@ -104,7 +104,13 @@ class Course extends Model implements SearchableInterface
 
     public function source(): string
     {
-        return sprintf(config('timetable.url.source'), $this->identifier, (string) config('timetable.crawl.week'));
+        $source = sprintf(config('services.lit.relay.timetable.route'), $this->identifier);
+
+        if (config('services.lit.relay.timetable.week')) {
+            $source .= sprintf("&weeks=%s", config('services.lit.relay.timetable.week'));
+        }
+
+        return $source;
     }
 
     public function getIconCategoryAttribute(): string

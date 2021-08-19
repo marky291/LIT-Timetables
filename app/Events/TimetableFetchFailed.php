@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Timetable\Events;
+namespace App\Events;
 
 use App\Models\Course;
 use Illuminate\Broadcasting\InteractsWithSockets;

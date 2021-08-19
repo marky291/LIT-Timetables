@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Type;
 
-class TypeFactory extends DataFactory
+class TypeFactory extends FileDataFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -20,6 +20,6 @@ class TypeFactory extends DataFactory
      */
     public function definition()
     {
-        return $this->fromFile('types');
+        return $this->withJsonDataFromFile('types');
     }
 }

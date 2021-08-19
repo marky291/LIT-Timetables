@@ -82,7 +82,7 @@
                     @livewire('schedules.week', ['schedules' => $schedules])
                 </div>
 
-            <div class="mt-8 text-sm leading-9 tracking-tight text-center text-gray-500 dark:text-dark-text">
+            <div class="my-8 text-sm leading-9 tracking-tight text-center text-gray-500 dark:text-dark-text">
                 Want to make this your favorite place
                 <a href="https://brainstorm.io?ref=statuspage" class="text-blue-600 hover:text-blue-500 dark:text-dark-blue dark:hover:text-yellow-500">Add us to your homescreen</a>
             </div>
