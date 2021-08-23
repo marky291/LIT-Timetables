@@ -47,12 +47,6 @@ SCOUT_DRIVER=meiliesearch
 SCOUT_QUEUE=true
 ```
 
-#### MeiliSearch Installation (Windows)
-```sh
-SCOUT_DRIVER=mysql
-SCOUT_QUEUE=false
-```
-
 Meiliesearch uses [Laravel Scout](https://laravel.com/docs/8.x/scout) as the engine driver.
 
 ## Testing
