@@ -1,4 +1,4 @@
-<div wire:poll.60000ms>
+<div>
 
     @if ($days->count())
         @foreach ($days as $key => $day)
