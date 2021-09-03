@@ -2,12 +2,9 @@
 
 namespace App\Http\Livewire\Profile;
 
-use App\Models\Course;
-use App\Models\Lecturer;
+use App\Mail\UpdatedSubscriptionsMail;
 use App\Models\Notifiable;
 use App\Models\User;
-use App\Timetable\Mail\SubscribedToTimetable;
-use App\Timetable\Mail\UpdatedSubscriptions;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
@@ -71,7 +68,7 @@ class UpdateSubscriptionForm extends Component
 
         $this->emit('saved');
 
-        Mail::to(auth()->user())->queue(new UpdatedSubscriptions(auth()->id()));
+        Mail::to(auth()->user())->queue(new UpdatedSubscriptionsMail(auth()->id()));
 
         $this->emit('refresh-navigation-menu');
     }

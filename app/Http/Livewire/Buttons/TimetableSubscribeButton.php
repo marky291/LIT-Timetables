@@ -2,11 +2,11 @@
 
 namespace App\Http\Livewire\Buttons;
 
+use App\Mail\SubscribedToTimetableMail;
+use App\Mail\UnsubscribedFromTimetableMail;
 use App\Models\Course;
 use App\Models\Lecturer;
 use App\Models\Notifiable;
-use App\Timetable\Mail\SubscribedToTimetable;
-use App\Timetable\Mail\UnsubscribedFromTimetable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
@@ -52,7 +52,7 @@ class TimetableSubscribeButton extends Component
                 break;
         }
         if ($this->mailCounter < 2) {
-            Mail::to(auth()->user())->queue(new SubscribedToTimetable(auth()->id(), $this->timetable));
+            Mail::to(auth()->user())->queue(new SubscribedToTimetableMail(auth()->id(), $this->timetable));
             $this->mailCounter++;
         }
         $this->hydrateNotifiable();
@@ -62,7 +62,7 @@ class TimetableSubscribeButton extends Component
     {
         $this->notifiable->delete();
         if ($this->mailCounter < 2) {
-            Mail::to(auth()->user())->queue(new UnsubscribedFromTimetable(auth()->id(), $this->timetable));
+            Mail::to(auth()->user())->queue(new UnsubscribedFromTimetableMail(auth()->id(), $this->timetable));
             $this->mailCounter++;
         }
         $this->hydrateNotifiable();
