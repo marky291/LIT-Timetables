@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('horizon:snapshot')->everyThirtyMinutes();
+        $schedule->command('horizon:snapshot')->daily();
 
         $schedule->command('relay:sync')->daily();
 
