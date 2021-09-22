@@ -32,8 +32,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('relay:sync')->daily();
 
         $schedule->command('search:purge 7')->daily();
-
-        $schedule->command('inspire')->everyMinute();
     }
 
     /**
