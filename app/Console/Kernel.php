@@ -33,7 +33,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('search:purge 7')->daily();
 
-        //$schedule->command('inspire')->everyMinute();
+        $schedule->command('inspire')->everyMinute();
     }
 
     /**
