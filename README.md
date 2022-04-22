@@ -28,7 +28,7 @@ Seed the database for local development
 
 Or use live timetable data for testing
 ```
-./vendor/bin/sail artisan sync:week
+./vendor/bin/sail artisan relay:sync
 ```
 
 ## Docker (Linux & MacOS)
