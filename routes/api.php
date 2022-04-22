@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Resources\Campus as CampusResource;
+use App\Http\Resources\Course as CourseResource;
 use App\Http\Resources\CourseCollection;
 use App\Http\Resources\ScheduleCollection;
+use App\Models\Campus;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -20,6 +23,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('campus', function () {
+    return Cache::remember('campus', now()->hour(1), function () {
+        return CampusResource::collection(Campus::all());
+    });
+});
+
+Route::get('campus/{campus}/course', function (Request $request, $campus_id) {
+    return Cache::remember("{$campus_id}.courses", now()->hour(1), function () use ($campus_id) {
+        return CourseResource::collection(Course::with('department')->where('campus_id', $campus_id)->get());
+    });
 });
 
 Route::get('courses', function () {

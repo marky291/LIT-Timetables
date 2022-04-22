@@ -73,12 +73,12 @@
                                                                     @endif
                                                                     <time class="text-indigo-500 dark:text-dark-blue">{{ Str::lower($schedule->starting_date->format('g:iA')) }} - {{ Str::lower($schedule->ending_date->format('g:iA')) }}</time><br>
                                                                     <span class="mt-0 font-medium text-gray-700 dark:text-dark-text">
-                                                                @foreach( $schedule->lecturers as $lecturer)
-                                                                            {{ $lecturer->fullname }}
-                                                                            @if (!$loop->last)
-                                                                                &
-                                                                            @endif
-                                                                        @endforeach
+                                                                    @foreach( $schedule->lecturers as $lecturer)
+                                                                        {{ $lecturer->fullname }}
+                                                                        @if (!$loop->last)
+                                                                            &
+                                                                        @endif
+                                                                    @endforeach
                                                             </span>
                                                                 </p>
                                                                 {{--                                <p class="mt-0 font-medium text-gray-700">{{ $schedule->course->name }}</p>--}}

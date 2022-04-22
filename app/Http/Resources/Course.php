@@ -15,11 +15,14 @@ class Course extends JsonResource
     public function toArray($request)
     {
         return [
-            'location' => $this->location,
-            'identifier' => $this->identifier,
+            'id' => $this->id,
+            'campus' => $this->campus_id,
+            'department_id' => $this->department_id,
             'course' => $this->name,
+            'identifier' => $this->identifier,
+            'group' => $this->group,
+            'year' => $this->year,
             'timetable' => sprintf(config('services.lit.relay.timetable.route'), $this->identifier, ''),
-            'department' => new Department($this->whenLoaded('department')),
         ];
     }
 }
