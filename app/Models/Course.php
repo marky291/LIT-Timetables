@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Actions\Course\CourseTimetableLink;
 use App\Interfaces\SearchableInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -102,15 +103,9 @@ class Course extends Model implements SearchableInterface
         return route('course', $this);
     }
 
-    public function source(): string
+    public function timetableLink(): string
     {
-        $source = sprintf(config('services.lit.relay.timetable.route'), $this->identifier);
-
-        if (config('services.lit.relay.timetable.week')) {
-            $source .= sprintf("&weeks=%s", config('services.lit.relay.timetable.week'));
-        }
-
-        return $source;
+        return (new CourseTimetableLink)->handle($this);
     }
 
     public function getIconCategoryAttribute(): string

@@ -57,7 +57,7 @@
                         @livewire('buttons.timetable-subscribe-button', ['timetable' => $model])
 
                         @if ($model->identifier != null)
-                            <a target="_blank" href="{{ $model->source() }}" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <a target="_blank" href="{{ $model->timetableLink() }}" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 {{ __('View Timetable @LIT') }}
                             </a>
                         @endif

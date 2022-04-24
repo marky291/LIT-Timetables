@@ -16,10 +16,10 @@ class FetchTimetable extends HttpBrowser
     public function handle(Course $course): Collection
     {
         $start    = microtime(1);
-        $response = parent::request('GET', $course->source());
+        $response = parent::request('GET', $course->timetableLink());
 
         if ($this->getInternalResponse()->getStatusCode() !== 200) {
-            throw new CourseUrlReceivedBadStatusCode('Response '. $this->getInternalResponse()->getStatusCode().' from '.$course->source());
+            throw new CourseUrlReceivedBadStatusCode('Response '. $this->getInternalResponse()->getStatusCode().' from '.$course->timetableLink());
         }
 
         $parser = (new ParseTimetableService($response))->allSchedules();
@@ -28,7 +28,7 @@ class FetchTimetable extends HttpBrowser
         $course->requests()->create([
             'response' => $this->getInternalResponse()->getStatusCode(),
             'time' => round(($finish - $start), 3),
-            'link' => $course->source(),
+            'link' => $course->timetableLink(),
             'meta' => $parser['meta'],
             'mined' => $parser->get('schedules'),
         ]);
