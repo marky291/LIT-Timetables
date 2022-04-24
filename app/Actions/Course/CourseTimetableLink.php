@@ -9,7 +9,7 @@ class CourseTimetableLink
 {
     use AsAction;
 
-    public function handle(Course $course, $week = null)
+    public function handle(Course $course, int $week = null)
     {
         // The base of a timetable link is made up of the course identifier.
         $url = sprintf(config('services.lit.relay.timetable.route'), $course->identifier);

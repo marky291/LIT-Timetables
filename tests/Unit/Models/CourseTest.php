@@ -67,15 +67,6 @@ class CourseTest extends TestCase
         $this->assertEquals('m_sltSmgmt4B', $course->identifier);
     }
 
-    public function test_course_has_a_timetable_link()
-    {
-        $course = Course::factory()->create(['identifier' => 'm_sltSmgmt4B']);
-
-        $expected = sprintf(config('services.lit.relay.timetable.route'), 'm_sltSmgmt4B');
-
-        $this->assertEquals($expected, $course->timetableLink());
-    }
-
     public function test_course_has_a_year()
     {
         $course = Course::factory()->create(['year' => 4]);

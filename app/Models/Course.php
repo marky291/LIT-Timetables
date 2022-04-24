@@ -103,11 +103,6 @@ class Course extends Model implements SearchableInterface
         return route('course', $this);
     }
 
-    public function timetableLink(): string
-    {
-        return (new CourseTimetableLink)->handle($this);
-    }
-
     public function getIconCategoryAttribute(): string
     {
         return $this->department->name;
