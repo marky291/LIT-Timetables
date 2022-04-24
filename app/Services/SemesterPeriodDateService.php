@@ -81,7 +81,7 @@ class SemesterPeriodDateService
      */
     public function week()
     {
-        return $this->currentDate->diffInWeeks($this->firstPeriod()->get('start'));
+        return $this->currentDate->diffInWeeks($this->firstPeriod()->get('start')) + 1;
     }
 
     /**
