@@ -10,6 +10,7 @@ use App\Models\Synchronization;
 use App\Exceptions\CourseMissingLocation;
 use App\Services\Parsers\ParseCourseNameService;
 use App\Services\Parsers\ParseFilterService;
+use App\Services\SemesterPeriodDateService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -108,13 +109,17 @@ class RelaySyncCommand extends Command
         /**
          * Get all the courses in the filter, map to an array
          * associate with a campus and save into database
-         * if it does not exist.
+         * if it does not exist. We use the semester period
+         * date service to get the current semester period.
          */
         $output = $this->output;
         $course = Course::all();
         $output->progressStart($course->count());
-        $course->each(function (Course $course) use ($output) {
-            SynchronizeSchedule::dispatch($course);
+
+        $period = app(SemesterPeriodDateService::class);
+
+        $course->each(function (Course $course) use ($output, $period) {
+            SynchronizeSchedule::dispatch($course, $period->week());
             $output->progressAdvance(1);
         });
 

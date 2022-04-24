@@ -9,6 +9,7 @@ use App\Models\Module;
 use App\Models\Room;
 use App\Models\Type;
 use App\Services\AsynchronousModelService;
+use App\Services\SemesterPeriodDateService;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -21,15 +22,21 @@ class SynchronizeSchedule
     /**
      * @throws Exception
      */
-    public function handle(Course $course)
+    public function handle(Course $course, int $week)
     {
         try {
+            /**
+             * Get the current week that the semester is running on so that we
+             * can get the timetable for this week, and the one after/before.
+             */
+            $timetable_link = CourseTimetableLink::run($course, $week);
+
             /**
              * A custom request class that will track outgoing requests
              * to the timetable on the third party service.
              * This fires a http request to the third party service.
              */
-            $timetable = FetchTimetable::run($course);
+            $timetable = FetchTimetable::run($course, $timetable_link);
 
             /**
              * Get the academic week of the incoming request timetable.
