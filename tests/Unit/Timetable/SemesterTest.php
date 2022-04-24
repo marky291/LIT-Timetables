@@ -6,7 +6,7 @@ use App\Services\SemesterPeriodDateService;
 use Carbon\Carbon;
 use Tests\TestCase;
 
-class SemesterTest extends TestCase
+class SemesterPeriodDateServiceTest extends TestCase
 {
     public function test_it_can_get_first_semester_starting_date_in_current_year()
     {
