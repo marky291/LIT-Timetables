@@ -52,8 +52,8 @@
                             </span>
                     @endswitch
                     <p class="mb-4">
-                        <span class="text-lg font-bold text-gray-800 dark:text-dark-blue">{{ $schedule->starting_date->format('g:iA') }}</span>
-                        <span class="ml-1 font-normal text-sm text-gray-500 dark:text-dark-icon"> {{ $schedule->ending_date->diffInhours($schedule->starting_date) }} {{ \Illuminate\Support\Str::of('Hour')->plural($schedule->ending_date->diffInhours($schedule->starting_date)) }}</span>
+                        <span class="mr-1 text-lg font-bold text-gray-800 dark:text-dark-blue">{{ $schedule->starting_date->format('g:iA') }}</span> - <span class="mr-1 text-lg font-bold text-gray-800 dark:text-dark-blue">{{ $schedule->ending_date->format('g:iA') }}</span>
+                        <span class="ml-1 font-normal text-xs text-gray-500 dark:text-dark-icon"> {{ $schedule->ending_date->diffInhours($schedule->starting_date) }} {{ \Illuminate\Support\Str::of('Hour')->plural($schedule->ending_date->diffInhours($schedule->starting_date)) }}</span>
                     </p>
                     <p class="font-semibold dark:text-dark-text">{{ $schedule->module->name }}</p>
 
