@@ -107,6 +107,12 @@ class RelaySyncCommand extends Command
         $this->info('Collecting course schedules.');
 
         /**
+         * We do have the ability to get x amount of timetables
+         * for a course in the future, so we will define that
+         * count for the progress bar and looping.
+         */
+        $weeks_to_fetch = config('services.lit.relay.weeks_to_fetch');
+        /**
          * Get all the courses in the filter, map to an array
          * associate with a campus and save into database
          * if it does not exist. We use the semester period
@@ -114,17 +120,30 @@ class RelaySyncCommand extends Command
          */
         $output = $this->output;
         $course = Course::all();
-        $output->progressStart($course->count());
+        $output->progressStart($course->count() * $weeks_to_fetch);
 
-        $period = app(SemesterPeriodDateService::class);
+        // Get the current semester period.
+        $current_week = app(SemesterPeriodDateService::class)->week();
 
-        $course->each(function (Course $course) use ($output, $period) {
-            SynchronizeSchedule::dispatch($course, $period->week());
+        // override for demo purposes.
+        if (config('services.lit.relay.timetable.week')) {
+            $current_week = config('services.lit.relay.timetable.week');
+        }
+
+        // we need to get both this weeks information and next weeks
+        // to allow users to browse future and past schedules.
+        // since past schedules would already be stored we
+        // only need to get the next weeks information.
+        $course->each(function (Course $course) use ($output, $current_week, $weeks_to_fetch) {
+            for ($i=0; $i < $weeks_to_fetch; $i++) {
+                SynchronizeSchedule::dispatch($course, $current_week + $i);
+                $output->progressAdvance(1);
+            }
             $output->progressAdvance(1);
         });
 
         /**
-         *
+         * comments that bring happiness.
          */
         $this->comment('Schedules have been dispatched successfully to threads.');
 

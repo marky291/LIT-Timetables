@@ -62,6 +62,11 @@ class Schedule extends Model
         return $query->whereDate('starting_date', '=', now());
     }
 
+    public function scopeWhereWeek(Builder $query, $week): Builder
+    {
+        return $query->latestAcademicYear()->where('academic_week', $week);
+    }
+
     public function scopeLatestAcademicWeek(Builder $query): Builder
     {
         return $query->latestAcademicYear()->where('academic_week', $this->latestAvailableWeek);

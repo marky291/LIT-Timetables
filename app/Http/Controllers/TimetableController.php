@@ -45,8 +45,7 @@ class TimetableController extends Controller
     {
         return view('timetable', [
             'model' => $model,
-            'semester' => app(SemesterPeriodDateService::class),
-            'schedules' => $this->schedules($model),
+            'semester' => app(SemesterPeriodDateService::class)
         ]);
     }
 

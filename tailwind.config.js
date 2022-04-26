@@ -19,7 +19,7 @@ module.exports = {
                     background: '#191a1b',
                     border: '#3d4042',
                     button: '#393c3c',
-                    icon: '#b0b3b8',
+                    icon: '#d8dbdf',
                     text: '#e3e6ea',
                     red: '#f02848',
                     green: '#43be62',

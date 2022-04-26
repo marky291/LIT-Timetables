@@ -22,7 +22,8 @@
 
                     <div class="col-span-3 text-left">
                         @if($model instanceof App\Models\Lecturer)
-                            @if($schedules->count())
+                        {{-- $schedules->count() --}}
+                            @if(false)
                                 <div class="mb-3 dark:text-dark-icon"><p>{{ $schedules[0]->course->campus->location }}
                                     {{ __('Campus') }}</p></div>
                                 <p class="mb-3 text-2xl font-semibold dark:text-dark-text">{{ __('Timetable for') }} {{ $model->fullname }}</p>
@@ -50,7 +51,7 @@
 
                 </div>
 
-                @livewire('schedules.upcoming', ['schedules' => $schedules])
+                {{-- @livewire('schedules.upcoming', ['schedules' => $schedules]) --}}
 
                     <div class="flex flex-col mt-12 md:flex-row md:justify-between">
 
@@ -79,7 +80,7 @@
 
 
                 <div class="">
-                    @livewire('schedules.week', ['schedules' => $schedules])
+                    @livewire('schedules.week', ['model' => $model, 'viewing_week' => $semester->week()])'])
                 </div>
 
             <div class="my-8 text-sm leading-9 tracking-tight text-center text-gray-500 dark:text-dark-text">
