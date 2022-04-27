@@ -14,16 +14,48 @@ class Week extends Component
 {
     public Lecturer|Course $model;
     public int $viewing_week;
-    public bool $loaded = false;
+    public int $this_week;
+    public int $max_viewing_week;
+    public bool $readyToLoad = false;
+
+    public function mount(int $viewing_week)
+    {
+        $this->this_week = $viewing_week;
+        $this->max_viewing_week = $viewing_week + config('services.lit.relay.weeks_to_fetch');
+    }
+
+    public function loadWeek()
+    {
+        $this->readyToLoad = true;
+    }
 
     public function incrementWeek()
     {
-        $this->viewing_week++;
+        if ($this->hasNextWeek) {
+            $this->viewing_week++;
+        }
     }
 
     public function decrementWeek()
     {
-        $this->viewing_week--;
+        if ($this->hasPreviousWeek) {
+            $this->viewing_week--;
+        }
+    }
+
+    public function getIsViewingThisWeekProperty()
+    {
+        return $this->viewing_week == $this->this_week;
+    }
+
+    public function getHasPreviousWeekProperty()
+    {
+        return $this->viewing_week > 1;
+    }
+
+    public function getHasNextWeekProperty()
+    {
+        return $this->viewing_week < $this->max_viewing_week;
     }
 
     public function getDaysProperty()
