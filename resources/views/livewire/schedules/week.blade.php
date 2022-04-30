@@ -1,36 +1,28 @@
 <div wire:init="loadWeek">
 
-    {{-- <div class="mb-8">
-        <div class="flex justify-between">
-            <button wire:click="decrementWeek()"
-            class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Previous Week</button>
-            <button wire:click="incrementWeek()"
-            class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Next Week</button>
-
-        </div>
-    </div> --}}
-
     <div class="relative my-12">
         <div class="absolute inset-0 flex items-center" aria-hidden="true">
             <div class="w-full border-t border-gray-300 dark:border-dark-border"></div>
         </div>
         <div class="relative flex justify-around">
+            <span class="px-10 text-lg font-medium text-gray-900 rounded dark:text-dark-icon bg-coolgray dark:bg-dark-background">
+                <b>Viewing Academic Week {{ $viewing_week }}</b>
+            </span>
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <div class="flex justify-between">
             <div class="">
                 @if ($this->HasPreviousWeek)
                 <button wire:click="decrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Previous Week</button>
                 @endif
             </div>
-
-            <span class="px-10 text-lg font-medium text-gray-900 rounded dark:text-dark-icon bg-coolgray dark:bg-dark-background">
-                <b>Viewing Academic Week {{ $viewing_week }}</b>
-            </span>
-
             <div class="">
                 @if ($this->HasNextWeek)
-                <button wire:click="incrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Next Week</button>
+                    <button wire:click="incrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Next Week</button>
                 @endif
             </div>
-
         </div>
     </div>
 
