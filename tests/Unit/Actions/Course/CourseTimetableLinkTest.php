@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit\Actions\Course;
 
 use App\Actions\Course\CourseTimetableLink as CourseCourseTimetableLink;
 use App\Models\Course;

@@ -30,7 +30,7 @@ class SemesterPeriodDateService
      */
     public function firstPeriod(): Collection
     {
-        return $this->createPeriodFrom("31 August", "14 December");
+        return $this->createPeriodFrom("30 August", "14 December");
     }
 
     /**

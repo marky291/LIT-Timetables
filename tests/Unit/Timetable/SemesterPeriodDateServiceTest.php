@@ -12,7 +12,7 @@ class SemesterPeriodDateServiceTest extends TestCase
     {
         $semester = new SemesterPeriodDateService(Carbon::create(2020, 11, 25, 9, 21, 00));
 
-        $expectedStart = Carbon::parse('31 August 2020');
+        $expectedStart = Carbon::parse('30 August 2020');
         $expectedFinish = Carbon::parse('14 December 2020');
 
         $this->assertEquals($expectedStart, $semester->firstPeriod()->get('start'));
@@ -23,7 +23,7 @@ class SemesterPeriodDateServiceTest extends TestCase
     {
         $semester = new SemesterPeriodDateService(Carbon::create(2021, 03, 9, 2, 13, 21));
 
-        $expectedStart = Carbon::parse('31 August 2020');
+        $expectedStart = Carbon::parse('30 August 2020');
         $expectedFinish = Carbon::parse('14 December 2020');
 
         $this->assertEquals($expectedStart, $semester->firstPeriod()->get('start'));
@@ -56,7 +56,7 @@ class SemesterPeriodDateServiceTest extends TestCase
     {
         $semester = new SemesterPeriodDateService(Carbon::create(2021, 03, 9, 2, 13, 21));
 
-        $this->assertEquals(27, $semester->week());
+        $this->assertEquals(28, $semester->week());
     }
 
     public function test_it_can_get_current_semester()

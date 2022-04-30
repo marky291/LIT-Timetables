@@ -45,21 +45,7 @@ class TimetableController extends Controller
     {
         return view('timetable', [
             'model' => $model,
-            'semester' => app(SemesterPeriodDateService::class),
-            'schedules' => $this->schedules($model),
+            'semester' => app(SemesterPeriodDateService::class)
         ]);
-    }
-
-    /**
-     * Retrieve a cached query of the schedules of the model.
-     *
-     * @param Lecturer|Course $model
-     * @return mixed
-     */
-    private function schedules(Lecturer|Course $model): mixed
-    {
-        return Cache::remember($model->getKey() . "_schedules", now()->addMinutes(30), function () use ($model) {
-            return $model->schedules()->latestAcademicWeek()->with(['room', 'module', 'type', 'lecturers'])->get();
-        });
     }
 }

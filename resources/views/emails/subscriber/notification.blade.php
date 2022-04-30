@@ -2,7 +2,7 @@
 
 # Timetable Changed!
 
-You are subscribed to the following table and because we detected changes, we want to let you know!
+You are subscribed to the following table and because we detected a change, we wanted to let you know!
 
 @component('mail::panel')
     {{ $timetable }}
