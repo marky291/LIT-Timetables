@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Schedules;
 
 use App\Models\Course;
 use App\Models\Lecturer;
+use App\Models\Schedule;
 use App\Models\ScheduleCollection;
 use App\Services\SemesterPeriodDateService;
 use Illuminate\Database\Eloquent\Collection;
@@ -13,55 +14,74 @@ use Livewire\Component;
 class Week extends Component
 {
     public Lecturer|Course $model;
-    public int $viewing_week;
-    public int $this_week;
-    public int $max_viewing_week;
+    public int $current_week;
     public bool $readyToLoad = false;
 
     public function mount(int $viewing_week)
     {
-        $this->this_week = $viewing_week;
-        $this->max_viewing_week = $viewing_week + config('services.lit.relay.weeks_to_fetch');
+        $this->current_week = $viewing_week;
+        $this->available_weeks = [];
+        $this->available_week_key = 0;
+    }
+
+    public function getAvailableWeeksProperty()
+    {
+        return Schedule::selectAcademicWeeks()->pluck('academic_week')->collect();
+    }
+
+    public function getSelectedWeekProperty()
+    {
+        return $this->available_weeks->get($this->available_week_key);
     }
 
     public function loadWeek()
     {
+        $this->available_weeks = $this->availableWeeks;
+
+        // get the key closest to the current viewing week.
+        foreach ($this->available_weeks->sortKeysDesc() as $key => $week) {
+            if ($week <= $this->current_week) {
+                $this->available_week_key = $key;
+                break;
+            }
+        }
+
         $this->readyToLoad = true;
     }
 
     public function incrementWeek()
     {
         if ($this->hasNextWeek) {
-            $this->viewing_week++;
+            $this->available_week_key++;
         }
     }
 
     public function decrementWeek()
     {
         if ($this->hasPreviousWeek) {
-            $this->viewing_week--;
+            $this->available_week_key--;
         }
     }
 
     public function getIsViewingThisWeekProperty()
     {
-        return $this->viewing_week == $this->this_week;
+        return $this->selected_week == $this->current_week;
     }
 
     public function getHasPreviousWeekProperty()
     {
-        return $this->viewing_week > 1;
+        return $this->available_weeks->has($this->available_week_key - 1);
     }
 
     public function getHasNextWeekProperty()
     {
-        return $this->viewing_week < $this->max_viewing_week;
+        return $this->available_weeks->has($this->available_week_key + 1);
     }
 
     public function getDaysProperty()
     {
-        return Cache::remember($this->model->getKey() . "_schedule_week_" . $this->viewing_week, now()->addMinutes(30), function () {
-            return $this->model->schedules()->whereWeek($this->viewing_week)->with(['room', 'module', 'type', 'lecturers'])->get()->sortWeek();
+        return Cache::remember($this->model->getKey() . "_schedule_week_" . $this->selectedWeek, now()->addMinutes(30), function () {
+            return $this->model->schedules()->whereWeek($this->selectedWeek)->with(['room', 'module', 'type', 'lecturers'])->get()->sortWeek();
         });
     }
 

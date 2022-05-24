@@ -27,6 +27,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static Builder current()
  * @method static Builder latestAcademicWeek()
  * @method static Builder latestAcademicYear()
+ * @method static Builder selectAcademicWeeks()
  * @method static where(string $string, int $academic_week)
  * @method latest(string $string)
  * @method static count()
@@ -71,6 +72,12 @@ class Schedule extends Model
     {
         return $query->latestAcademicYear()->where('academic_week', $this->latestAvailableWeek);
     }
+
+    public function scopeSelectAcademicWeeks(Builder $query): Builder
+    {
+        return $query->select('academic_week')->groupBy('academic_week');
+    }
+
     public function scopeLatestAcademicYear(Builder $query): Builder
     {
         return $query->where('academic_year', $this->latestAvailableYear);

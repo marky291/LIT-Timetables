@@ -6,28 +6,33 @@
         </div>
         <div class="relative flex justify-around">
             <span class="px-10 text-lg font-medium text-gray-900 rounded dark:text-dark-icon bg-coolgray dark:bg-dark-background">
-                <b>Viewing Academic Week {{ $viewing_week }}</b>
+               @if ($this->readyToLoad == false)
+               <b>Viewing Academic Week {{ $current_week }}</b>
+               @else
+                <b>Viewing Academic Week {{ $this->selectedWeek }}</b>
+               @endif
             </span>
-        </div>
-    </div>
-
-    <div class="mb-8">
-        <div class="flex justify-between">
-            <div class="">
-                @if ($this->HasPreviousWeek)
-                <button wire:click="decrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Previous Week</button>
-                @endif
-            </div>
-            <div class="">
-                @if ($this->HasNextWeek)
-                    <button wire:click="incrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Next Week</button>
-                @endif
-            </div>
         </div>
     </div>
 
     @if ($this->readyToLoad == false)
     @else
+        @if (config('services.lit.relay.weeks_to_fetch.enabled'))
+        <div class="mb-8">
+            <div class="flex justify-between">
+                <div class="">
+                    @if ($this->HasPreviousWeek)
+                        <button wire:click="decrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Previous Week</button>
+                    @endif
+                </div>
+                <div class="">
+                    @if ($this->HasNextWeek)
+                        <button wire:click="incrementWeek()" wire:loading.attr="disabled" class="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium leading-4 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:mt-0 dark:button dark:border-gray-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Next Week</button>
+                    @endif
+                </div>
+            </div>
+        </div>
+        @endif
         <div wire:loading class="w-full">
             <div class="p-4 flex items-center justify-center bg-white dark:text-dark-icon dark:bg-dark-panel border dark:border-dark-border rounded-lg shadow px-10 py-6">
                 <svg class="w-7 h-7 animate-spin " xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -50,7 +55,7 @@
                 </div>
                 @else
                 <div class="p-4 py-8 bg-white dark:bg-dark-panel border dark:border-dark-border rounded-lg shadow px-10 py-6 text-center dark:text-dark-icon">
-                    <h3 class="text-xl">Nothing scheduled for academic week {{ $this->viewing_week }}</h3>
+                    <h3 class="text-xl">Nothing scheduled for academic week {{ $this->selected_week }}</h3>
                     <h3 class="text-md mt-4 text-gray-400">Maybe there is something else next week.</h3>
                 </div>
                 @endif

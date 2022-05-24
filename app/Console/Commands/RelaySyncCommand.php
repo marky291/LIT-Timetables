@@ -111,7 +111,21 @@ class RelaySyncCommand extends Command
          * for a course in the future, so we will define that
          * count for the progress bar and looping.
          */
-        $weeks_to_fetch = config('services.lit.relay.weeks_to_fetch');
+        $weeks_to_fetch = 1; // 1 is current week.
+
+        /**
+         * We can get schedules in the future if we have this on.
+         */
+        if (config('services.lit.relay.weeks_to_fetch.enabled') && config('services.lit.relay.weeks_to_fetch.count'))
+        {
+            $weeks_to_fetch = config('services.lit.relay.weeks_to_fetch.count');
+        }
+
+        /**
+         * Output this so we can see in real time.
+         */
+        $this->info('Fetching ' . $weeks_to_fetch . ' week(s) of data.');
+
         /**
          * Get all the courses in the filter, map to an array
          * associate with a campus and save into database

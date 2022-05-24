@@ -42,7 +42,10 @@ return [
         'relay' => [
             'domain' => 'http://timetable.lit.ie:8080',
             'data' => 'http://timetable.lit.ie:8080/js/filter.js',
-            'weeks_to_fetch' => 4, // 0 = no weeks
+            'weeks_to_fetch' => [
+                'enabled' => env('LIT_RELAY_WEEKS_TO_FETCH_ENABLED', false),
+                'count' => env('LIT_RELAY_WEEKS_TO_FETCH', 1),
+            ],
             'timetable' => [
                 'week' => env('TIMETABLE_WEEK', ''),
                 'route' => 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;%s?t=student+set+individual&template=student+set+individual'

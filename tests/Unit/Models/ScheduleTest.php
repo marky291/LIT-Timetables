@@ -77,4 +77,12 @@ class ScheduleTest extends TestCase
 
         $this->assertEquals(1, Schedule::latestAcademicWeek()->first()->academic_week);
     }
+
+    public function test_it_can_get_all_available_academic_weeks_from_database()
+    {
+        Schedule::factory()->create(['academic_week' => 45]);
+        Schedule::factory()->create(['academic_week' => 46]);
+
+        $this->assertEquals([45, 46], Schedule::selectAcademicWeeks()->pluck('academic_week')->all());
+    }
 }
