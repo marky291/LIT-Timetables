@@ -26,7 +26,10 @@ class Week extends Component
 
     public function getAvailableWeeksProperty()
     {
-        return Schedule::selectAcademicWeeks()->pluck('academic_week')->collect();
+        // @todo: Use the new schedule_year to get the available weeks....
+
+        // hopefully this does take into account 1 = new academic year.
+        //return Schedule::latestAcademicYear()->groupBy('academic_week')->orderBy('academic_week')->pluck('academic_week')->collect();
     }
 
     public function getSelectedWeekProperty()

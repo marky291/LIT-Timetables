@@ -30,7 +30,12 @@ class SemesterPeriodDateService
      */
     public function firstPeriod(): Collection
     {
-        return $this->createPeriodFrom("30 August", "14 December");
+        return $this->createPeriodFrom("30 August", "31 December");
+    }
+
+    public function weeksInFirstPeriod() : int
+    {
+        return $this->firstPeriod()['start']->diffInWeeks($this->firstPeriod()['finish']);
     }
 
     /**
@@ -38,7 +43,7 @@ class SemesterPeriodDateService
      */
     public function secondPeriod(): Collection
     {
-        return $this->createPeriodFrom("11 January", "10 May");
+        return $this->createPeriodFrom("3 January", "28 August");
     }
 
     /**

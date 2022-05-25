@@ -43,6 +43,7 @@ class Schedule extends Model
         'module_id',
         'academic_week',
         'academic_year',
+        'schedule_year',
         'lecturer_id',
         'room_id',
         'type_id',
@@ -82,6 +83,7 @@ class Schedule extends Model
     {
         return $query->where('academic_year', $this->latestAvailableYear);
     }
+
     public function scopePreviousWeek(Builder $query, int $week = 1): Builder
     {
         return $query->whereDate('starting_date', '=', now()->subWeeks($week));

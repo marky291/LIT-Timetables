@@ -67,4 +67,11 @@ class SemesterPeriodDateServiceTest extends TestCase
         $this->assertEquals(1, $semesterOne->semester());
         $this->assertEquals(2, $semesterTwo->semester());
     }
+
+    public function test_it_can_get_total_weeks_in_first_period()
+    {
+        $semester = new SemesterPeriodDateService(now());
+
+        $this->assertEquals(17, $semester->weeksInFirstPeriod());
+    }
 }

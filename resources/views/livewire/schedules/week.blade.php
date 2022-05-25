@@ -7,7 +7,7 @@
         <div class="relative flex justify-around">
             <span class="px-10 text-lg font-medium text-gray-900 rounded dark:text-dark-icon bg-coolgray dark:bg-dark-background">
                @if ($this->readyToLoad == false)
-               <b>Viewing Academic Week {{ $current_week }}</b>
+                <b>Viewing Academic Week {{ $current_week }}</b>
                @else
                 <b>Viewing Academic Week {{ $this->selectedWeek }}</b>
                @endif
