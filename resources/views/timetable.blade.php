@@ -34,11 +34,7 @@
                     </div>
 
                     @if($model instanceof App\Models\Lecturer)
-                        @if($model instanceof App\Models\Lecturer)
-                            @livewire('weather-tile', ['campus' => null])
-                        @else
-                            @livewire('weather-tile', ['campus' => $schedules[0]->course->campus])
-                        @endif
+                        @livewire('weather-tile', ['campus' => null])
                     @else
                         @livewire('weather-tile', ['campus' => $model->campus])
                     @endif
