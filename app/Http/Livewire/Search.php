@@ -41,8 +41,8 @@ class Search extends Component
             $this->results = Cache::remember("search:$this->search", now()->addHours(config('search.cache_hours')), function () {
                 $collection = new Collection;
 
-                $courses = Course::search($this->search)->get();
-                $lecturers = Lecturer::search($this->search)->get();
+                $courses = Course::search($this->search)->take(3)->get()->load('department');
+                $lecturers = Lecturer::search($this->search)->take(3)->get();
 
                 if ($courses->count()) {
                     $collection->put('courses', $courses);

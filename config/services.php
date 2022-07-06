@@ -36,7 +36,7 @@ return [
     ],
 
     'meilisearch' => [
-        'icon' => 'https://www.meilisearch.com/_nuxt/img/cf59975.svg',
+        'icon' => 'https://www.meilisearch.com/images/meili-logo.svg',
     ],
 
     'lit' => [
