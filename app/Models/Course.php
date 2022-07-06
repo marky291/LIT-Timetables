@@ -45,7 +45,7 @@ class Course extends Model implements SearchableInterface
         'group',
         'title',
         'department_id',
-        'campus_id'
+        'campus_id',
     ];
 
     public function schedules(): HasMany

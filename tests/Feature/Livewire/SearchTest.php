@@ -117,7 +117,7 @@ class SearchTest extends TestCase
     public function searched_results_are_cleared_on_text_clear()
     {
         $lecturer = Lecturer::factory()->create(['fullname' => 'Lecturer Name']);
-        $course   = Course::factory()->create(['name' => 'Course Name']);
+        $course = Course::factory()->create(['name' => 'Course Name']);
 
         Livewire::test('search')
             ->set('search', 'name')

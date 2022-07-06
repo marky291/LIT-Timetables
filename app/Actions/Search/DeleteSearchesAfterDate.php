@@ -12,6 +12,7 @@ class DeleteSearchesAfterDate
     use AsAction;
 
     public string $commandSignature = 'search:purge {days_old}';
+
     public string $commandDescription = 'Purge cookie searches from the database.';
 
     public function handle(Carbon $carbon): void

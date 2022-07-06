@@ -45,8 +45,8 @@ return [
             'weeks_to_fetch' => 4, // 0 = no weeks
             'timetable' => [
                 'week' => env('TIMETABLE_WEEK', ''),
-                'route' => 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;%s?t=student+set+individual&template=student+set+individual'
-            ]
+                'route' => 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;%s?t=student+set+individual&template=student+set+individual',
+            ],
         ],
     ],
 

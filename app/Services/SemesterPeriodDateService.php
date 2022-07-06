@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services;
-
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
@@ -30,7 +28,7 @@ class SemesterPeriodDateService
      */
     public function firstPeriod(): Collection
     {
-        return $this->createPeriodFrom("30 August", "14 December");
+        return $this->createPeriodFrom('30 August', '14 December');
     }
 
     /**
@@ -38,7 +36,7 @@ class SemesterPeriodDateService
      */
     public function secondPeriod(): Collection
     {
-        return $this->createPeriodFrom("11 January", "10 May");
+        return $this->createPeriodFrom('11 January', '10 May');
     }
 
     /**

@@ -22,14 +22,14 @@ class TransformDateToCarbon
 
     private function dayOfWeek(string $day) : int
     {
-        switch($day) {
-            case "mon": return 0;
-            case "tue": return 1;
-            case "wed": return 2;
-            case "thu": return 3;
-            case "fri": return 4;
-            case "sat": return 5;
-            case "sun": return 6;
+        switch ($day) {
+            case 'mon': return 0;
+            case 'tue': return 1;
+            case 'wed': return 2;
+            case 'thu': return 3;
+            case 'fri': return 4;
+            case 'sat': return 5;
+            case 'sun': return 6;
         }
     }
 }

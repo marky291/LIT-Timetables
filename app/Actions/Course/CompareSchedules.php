@@ -2,8 +2,8 @@
 
 namespace App\Actions\Course;
 
-use App\Models\Course;
 use App\Events\ScheduleChanged;
+use App\Models\Course;
 use Illuminate\Support\Collection;
 use Lorisleiva\Actions\Concerns\AsAction;
 
@@ -25,6 +25,7 @@ class CompareSchedules
          */
         if ($oldSchedule->count() != $newSchedule->count()) {
             event(new ScheduleChanged($course));
+
             return;
         }
 
@@ -35,6 +36,7 @@ class CompareSchedules
             foreach ($newSchedule as $key => $schedule) {
                 if (count(array_diff_assoc($newSchedule[$key], $oldSchedule[$key]))) {
                     event(new ScheduleChanged($course));
+
                     return;
                 }
             }

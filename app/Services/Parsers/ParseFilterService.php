@@ -12,7 +12,8 @@ class ParseFilterService
 {
     public function __construct(
         public Stringable $content
-    ) {}
+    ) {
+    }
 
     public function departments(): Collection
     {
@@ -48,6 +49,7 @@ class ParseFilterService
             }
             $entries->add($std);
         }
+
         return $entries;
     }
 }

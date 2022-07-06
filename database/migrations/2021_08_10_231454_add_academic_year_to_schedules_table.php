@@ -21,12 +21,12 @@ class AddAcademicYearToSchedulesTable extends Migration
 
         $console = new ConsoleOutput();
 
-        Schedule::all()->chunk(250)->each(function($schedules) use ($console) {
-            foreach($schedules as $schedule) {
+        Schedule::all()->chunk(250)->each(function ($schedules) use ($console) {
+            foreach ($schedules as $schedule) {
                 $schedule->academic_year = $schedule->starting_date->year;
                 $schedule->save();
             }
-            $console->writeln("Completed a chunk of 250 items.");
+            $console->writeln('Completed a chunk of 250 items.');
         });
     }
 

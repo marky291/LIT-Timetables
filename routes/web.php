@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/event', function() {
+Route::get('/event', function () {
     event(new ScheduleChanged(\App\Models\Course::find(1)));
 });
 
-Route::get('/', function() {
+Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
 

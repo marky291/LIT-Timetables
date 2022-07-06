@@ -27,7 +27,7 @@ class UpdateSubscriptionForm extends Component
     {
         $notifiables = Notifiable::user($this->user)->pluck('id');
 
-        $notifiables->each(function($notification) {
+        $notifiables->each(function ($notification) {
             $this->state[$notification] = $notification;
         });
     }
@@ -63,7 +63,7 @@ class UpdateSubscriptionForm extends Component
 
         Notifiable::user($this->user)->delete();
 
-        $subscription->each(fn($subscription) => Notifiable::create($subscription->toArray()));
+        $subscription->each(fn ($subscription) => Notifiable::create($subscription->toArray()));
         Notifiable::reguard();
 
         $this->emit('saved');

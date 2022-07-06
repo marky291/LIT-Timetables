@@ -23,7 +23,9 @@ class SubscribedToTimetableMail extends Mailable implements ShouldQueue
      * @param Model $timetable
      * @return void
      */
-    public function __construct(public int $user_id, public Model $timetable){}
+    public function __construct(public int $user_id, public Model $timetable)
+    {
+    }
 
     /**
      * Build the message.
@@ -43,7 +45,7 @@ class SubscribedToTimetableMail extends Mailable implements ShouldQueue
             'timetableType' => class_basename($this->timetable),
             'timetableName' => $timetableName,
             'courses' => Notifiable::userCourses($user)->get(),
-            'lecturers' => Notifiable::userLecturers($user)->get()
+            'lecturers' => Notifiable::userLecturers($user)->get(),
         ]);
     }
 }

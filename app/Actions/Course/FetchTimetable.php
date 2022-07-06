@@ -5,9 +5,9 @@ namespace App\Actions\Course;
 use App\Exceptions\CourseUrlReceivedBadStatusCode;
 use App\Models\Course;
 use App\Services\Parsers\ParseTimetableService;
+use Illuminate\Support\Collection;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Symfony\Component\BrowserKit\HttpBrowser;
-use \Illuminate\Support\Collection;
 
 class FetchTimetable extends HttpBrowser
 {
@@ -15,11 +15,11 @@ class FetchTimetable extends HttpBrowser
 
     public function handle(Course $course, string $timetable_link): Collection
     {
-        $start    = microtime(1);
+        $start = microtime(1);
         $response = parent::request('GET', $timetable_link);
 
         if ($this->getInternalResponse()->getStatusCode() !== 200) {
-            throw new CourseUrlReceivedBadStatusCode('Response '. $this->getInternalResponse()->getStatusCode().' from '. $timetable_link);
+            throw new CourseUrlReceivedBadStatusCode('Response '.$this->getInternalResponse()->getStatusCode().' from '.$timetable_link);
         }
 
         $parser = (new ParseTimetableService($response))->allSchedules();

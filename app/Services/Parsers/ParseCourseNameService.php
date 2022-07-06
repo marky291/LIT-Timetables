@@ -9,7 +9,8 @@ class ParseCourseNameService
 {
     public function __construct(
         public Stringable $name
-    ) {}
+    ) {
+    }
 
     public function getIdentifier(): string
     {
@@ -36,7 +37,7 @@ class ParseCourseNameService
         return $this->name->match("/(?<=\({$this->getLocation()}\) )(.+)/");
     }
 
-    #[ArrayShape(['identifier' => "string", 'location' => "string", 'group' => "string", 'year' => "string", 'name' => "string", 'title' => "\Illuminate\Support\Str"])]
+    #[ArrayShape(['identifier' => 'string', 'location' => 'string', 'group' => 'string', 'year' => 'string', 'name' => 'string', 'title' => "\Illuminate\Support\Str"])]
     public function toArray(): array
     {
         return [

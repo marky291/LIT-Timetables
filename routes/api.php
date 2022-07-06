@@ -48,6 +48,7 @@ Route::get('campus/{campus}/course', function (Request $request, $campus_id) {
 Route::get('/courses/{course_id}/schedules/week/{week}', function ($course_id, $week) {
     return Cache::remember("CourseSchedule_{$course_id}_{$week}", now()->hour(1), function () use ($course_id, $week) {
         $course = Course::findOrFail($course_id)->schedules()->whereWeek($week)->get();
+
         return ScheduleResource::collection($course);
     });
 });

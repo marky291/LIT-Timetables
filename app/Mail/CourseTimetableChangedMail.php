@@ -4,8 +4,8 @@ namespace App\Mail;
 
 use App\Models\Course;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -18,7 +18,9 @@ class CourseTimetableChangedMail extends Mailable
      *
      * @return void
      */
-    public function __construct(public Course $course){}
+    public function __construct(public Course $course)
+    {
+    }
 
     /**
      * Build the message.

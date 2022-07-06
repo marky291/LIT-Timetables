@@ -12,7 +12,8 @@ class ParseTimetableService
 {
     public function __construct(
         public Crawler $crawler
-    ) {}
+    ) {
+    }
 
     public function allSchedules(): Collection
     {

@@ -22,7 +22,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         ScheduleChanged::class => [
             SendScheduleChangedEmail::class,
-        ]
+        ],
     ];
 
     /**

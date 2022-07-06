@@ -16,7 +16,7 @@ class CourseTimetableLink
 
         // we can specify a week we want to return form the url.
         if ($week) {
-            $url .= sprintf("&weeks=%s", $week);
+            $url .= sprintf('&weeks=%s', $week);
         }
 
         return $url;

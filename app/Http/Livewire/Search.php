@@ -19,7 +19,9 @@ use Livewire\Component;
 class Search extends Component
 {
     public string $error = '';
+
     public string $search = '';  // input for the search query.
+
     public Collection $results;
 
     public function mount()
@@ -29,26 +31,30 @@ class Search extends Component
 
     public function updatedSearch()
     {
-        if (!strlen($this->search)) {
+        if (! strlen($this->search)) {
             $this->results = new Collection;
+
             return;
         }
 
         try {
-            $this->results = Cache::remember("search:$this->search", now()->addHours(config('search.cache_hours')), function ()
-            {
+            $this->results = Cache::remember("search:$this->search", now()->addHours(config('search.cache_hours')), function () {
                 $collection = new Collection;
 
-                $courses    = Course::search($this->search)->get();
-                $lecturers  = Lecturer::search($this->search)->get();
+                $courses = Course::search($this->search)->get();
+                $lecturers = Lecturer::search($this->search)->get();
 
-                if ($courses->count())   $collection->put('courses', $courses);
-                if ($lecturers->count()) $collection->put('lecturers', $lecturers);
+                if ($courses->count()) {
+                    $collection->put('courses', $courses);
+                }
+                if ($lecturers->count()) {
+                    $collection->put('lecturers', $lecturers);
+                }
 
                 return $collection;
             });
         } catch (Exception $e) {
-            $this->error = 'Unexpected error, Search is unavailable. ' . $e->getMessage();
+            $this->error = 'Unexpected error, Search is unavailable. '.$e->getMessage();
             Log::error("Meilisearch: {$e->getMessage()}");
         }
     }
@@ -64,7 +70,7 @@ class Search extends Component
 
     public function getTrackerProperty()
     {
-        if (!Cookie::has(config('search.cookie.name'))) {
+        if (! Cookie::has(config('search.cookie.name'))) {
             Cookie::queue(config('search.cookie.name'), (string) Str::uuid(), config('search.cookie.time'));
         }
 

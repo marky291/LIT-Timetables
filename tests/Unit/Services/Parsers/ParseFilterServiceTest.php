@@ -33,6 +33,7 @@ class ParseFilterServiceTest extends TestCase
 
         $this->assertCount(16, $departments);
     }
+
     public function test_it_returns_a_course_count(): void
     {
         $courses = $this->filter->courses();
