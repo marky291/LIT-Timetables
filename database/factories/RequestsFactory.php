@@ -9,13 +9,6 @@ use App\Models\Requests;
 class RequestsFactory extends FileDataFactory
 {
     /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = Requests::class;
-
-    /**
      * Define the model's default state.
      *
      * @return array

@@ -11,13 +11,6 @@ use App\Models\Type;
 class ScheduleFactory extends FileDataFactory
 {
     /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = Schedule::class;
-
-    /**
      * Define the model's default state.
      *
      * @return array

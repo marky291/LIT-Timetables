@@ -7,13 +7,6 @@ use App\Models\Room;
 class RoomFactory extends FileDataFactory
 {
     /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = Room::class;
-
-    /**
      * Define the model's default state.
      *
      * @return array
