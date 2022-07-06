@@ -22,7 +22,7 @@ class SynchronizationFactory extends Factory
     public function definition()
     {
         return [
-            'created_at' => $this->faker->dateTimeThisMonth,
+            'created_at' => $this->faker->dateTimeThisMonth(),
         ];
     }
 }
