@@ -46,6 +46,7 @@ class Schedule extends Model
         'room_id',
         'type_id',
     ];
+
     protected $casts = [
         'starting_date' => 'datetime',
         'ending_date' => 'datetime',
