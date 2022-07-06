@@ -6,7 +6,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-class AddAcademicYearToSchedulesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -41,4 +41,4 @@ class AddAcademicYearToSchedulesTable extends Migration
             $table->drop('academic_year');
         });
     }
-}
+};
