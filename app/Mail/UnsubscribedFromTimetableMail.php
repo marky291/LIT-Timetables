@@ -22,7 +22,9 @@ class UnsubscribedFromTimetableMail extends Mailable implements ShouldQueue
      * @param Model $timetable
      * @return void
      */
-    public function __construct(public int $user_id, public Model $timetable){}
+    public function __construct(public int $user_id, public Model $timetable)
+    {
+    }
 
     /**
      * Build the message.
@@ -43,7 +45,7 @@ class UnsubscribedFromTimetableMail extends Mailable implements ShouldQueue
             'timetableName' => $timetableName,
             'hasSubscriptions' => Notifiable::hasSubscriptions($user),
             'courses' => Notifiable::userCourses($user)->get(),
-            'lecturers' => Notifiable::userLecturers($user)->get()
+            'lecturers' => Notifiable::userLecturers($user)->get(),
         ]);
     }
 }

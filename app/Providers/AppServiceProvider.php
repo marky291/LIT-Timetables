@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(SemesterPeriodDateService::class, fn() => new SemesterPeriodDateService(now()));
+        $this->app->singleton(SemesterPeriodDateService::class, fn () => new SemesterPeriodDateService(now()));
     }
 
     /**

@@ -3,11 +3,11 @@
 namespace App\Console\Commands;
 
 use App\Actions\Course\SynchronizeSchedule;
+use App\Exceptions\CourseMissingLocation;
 use App\Models\Campus;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Synchronization;
-use App\Exceptions\CourseMissingLocation;
 use App\Services\Parsers\ParseCourseNameService;
 use App\Services\Parsers\ParseFilterService;
 use App\Services\SemesterPeriodDateService;
@@ -49,7 +49,7 @@ class RelaySyncCommand extends Command
          * We allow a hardcoded week to be defined for demo/test purposes.
          */
         if (config('services.lit.relay.timetable.week')) {
-            $this->comment("[Config]: Crawler is set to crawl week '" . config('services.lit.relay.timetable.week') . "'.");
+            $this->comment("[Config]: Crawler is set to crawl week '".config('services.lit.relay.timetable.week')."'.");
         }
 
         /**
@@ -135,7 +135,7 @@ class RelaySyncCommand extends Command
         // since past schedules would already be stored we
         // only need to get the next weeks information.
         $course->each(function (Course $course) use ($output, $current_week, $weeks_to_fetch) {
-            for ($i=0; $i < $weeks_to_fetch; $i++) {
+            for ($i = 0; $i < $weeks_to_fetch; $i++) {
                 SynchronizeSchedule::dispatch($course, $current_week + $i);
                 $output->progressAdvance(1);
             }

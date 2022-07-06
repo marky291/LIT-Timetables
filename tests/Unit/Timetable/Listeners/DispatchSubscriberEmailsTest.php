@@ -9,13 +9,12 @@ use App\Models\Course;
 use App\Models\Lecturer;
 use App\Models\Schedule;
 use App\Models\User;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mail;
+use Tests\TestCase;
 
 class DispatchSubscriberEmailsTest extends TestCase
 {
-
     use RefreshDatabase;
 
     public function test_email_sends_one_email_to_course_subscribers()
@@ -28,8 +27,8 @@ class DispatchSubscriberEmailsTest extends TestCase
 
         CompareSchedules::run(
             Course::find(1),
-            collect(array($this->schedule(['module' => 'Before']))),
-            collect(array($this->schedule(['module' => 'After'])))
+            collect([$this->schedule(['module' => 'Before'])]),
+            collect([$this->schedule(['module' => 'After'])])
         );
 
         Mail::assertSent(CourseTimetableChangedMail::class, 1);
@@ -46,8 +45,8 @@ class DispatchSubscriberEmailsTest extends TestCase
 
         CompareSchedules::run(
             Course::first(),
-            collect(array($this->schedule(['room' => 'A', 'lecturer' => $lecturer->fullname]))),
-            collect(array($this->schedule(['room' => 'B', 'lecturer' => $lecturer->fullname]))),
+            collect([$this->schedule(['room' => 'A', 'lecturer' => $lecturer->fullname])]),
+            collect([$this->schedule(['room' => 'B', 'lecturer' => $lecturer->fullname])]),
         );
 
         Mail::assertSent(LecturerScheduleChangedMail::class, 1);
@@ -56,13 +55,13 @@ class DispatchSubscriberEmailsTest extends TestCase
     private function schedule(array $attributes = [])
     {
         return array_merge([
-            "module" => "Software Development",
-            "room" => "4A02",
-            "lecturer" => "Judith Ryan",
-            "type" => "Online Tutorial",
-            "day_of_week" => "Fri",
-            "starting_time" => "16:00",
-            "ending_time" => "17:00",
+            'module' => 'Software Development',
+            'room' => '4A02',
+            'lecturer' => 'Judith Ryan',
+            'type' => 'Online Tutorial',
+            'day_of_week' => 'Fri',
+            'starting_time' => '16:00',
+            'ending_time' => '17:00',
         ], $attributes);
     }
 }

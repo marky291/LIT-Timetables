@@ -16,7 +16,9 @@ use Livewire\Component;
 class Upcoming extends Component
 {
     public Lecturer|Course $model;
+
     public bool $readyToLoad = false;
+
     public int $viewing_week;
 
     public function loadUpcoming()
@@ -26,7 +28,7 @@ class Upcoming extends Component
 
     public function getScheduleProperty()
     {
-        return Cache::remember($this->model->getKey() . "_upcoming_schedule_week_" . $this->viewing_week, now()->addMinutes(30), function () {
+        return Cache::remember($this->model->getKey().'_upcoming_schedule_week_'.$this->viewing_week, now()->addMinutes(30), function () {
             return $this->model->schedules()->today()->with(['room', 'module', 'type', 'lecturers'])->get()->distinct();
         });
     }

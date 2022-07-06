@@ -13,9 +13,13 @@ use Livewire\Component;
 class Week extends Component
 {
     public Lecturer|Course $model;
+
     public int $viewing_week;
+
     public int $this_week;
+
     public int $max_viewing_week;
+
     public bool $readyToLoad = false;
 
     public function mount(int $viewing_week)
@@ -60,7 +64,7 @@ class Week extends Component
 
     public function getDaysProperty()
     {
-        return Cache::remember($this->model->getKey() . "_schedule_week_" . $this->viewing_week, now()->addMinutes(30), function () {
+        return Cache::remember($this->model->getKey().'_schedule_week_'.$this->viewing_week, now()->addMinutes(30), function () {
             return $this->model->schedules()->whereWeek($this->viewing_week)->with(['room', 'module', 'type', 'lecturers'])->get()->sortWeek();
         });
     }

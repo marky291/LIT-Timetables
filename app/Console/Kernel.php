@@ -3,9 +3,9 @@
 namespace App\Console;
 
 use App\Actions\Search\DeleteSearchesAfterDate;
+use App\Console\Commands\RelaySyncCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use App\Console\Commands\RelaySyncCommand;
 
 class Kernel extends ConsoleKernel
 {

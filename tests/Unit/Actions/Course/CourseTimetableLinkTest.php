@@ -30,7 +30,7 @@ class CourseTimetableLinkTest extends TestCase
 
         $timetableLink = new CourseCourseTimetableLink;
 
-        $expectedResult = "http://timetable.lit.ie:8080/reporting/individual;student+set;id;CSC108H1?t=student+set+individual&template=student+set+individual&weeks=24";
+        $expectedResult = 'http://timetable.lit.ie:8080/reporting/individual;student+set;id;CSC108H1?t=student+set+individual&template=student+set+individual&weeks=24';
 
         $this->assertEquals($expectedResult, $timetableLink->handle($course, 24));
     }

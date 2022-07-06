@@ -3,8 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Models\Course;
-use App\Models\Schedule;
 use App\Models\Lecturer;
+use App\Models\Schedule;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;

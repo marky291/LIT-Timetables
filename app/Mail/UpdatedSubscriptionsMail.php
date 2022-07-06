@@ -19,7 +19,9 @@ class UpdatedSubscriptionsMail extends Mailable
      *
      * @return void
      */
-    public function __construct(public int $user_id){}
+    public function __construct(public int $user_id)
+    {
+    }
 
     /**
      * Build the message.
@@ -33,7 +35,7 @@ class UpdatedSubscriptionsMail extends Mailable
         return $this->markdown('emails.subscription.updated', [
             'hasSubscriptions' => Notifiable::hasSubscriptions($user),
             'courses' => Notifiable::userCourses($user)->get(),
-            'lecturers' => Notifiable::userLecturers($user)->get()
+            'lecturers' => Notifiable::userLecturers($user)->get(),
         ]);
     }
 }

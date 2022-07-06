@@ -24,7 +24,7 @@ class TimetableSubscribeButton extends Component
     public $notifiable;
 
     /**
-     * @var integer
+     * @var int
      */
     public $mailCounter;
 

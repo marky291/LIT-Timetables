@@ -17,7 +17,7 @@ class ScheduleCollectionTest extends TestCase
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
-            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00),
         ]);
 
         $this->assertCount(1, Schedule::latestAcademicWeek()->get()->today());
@@ -29,12 +29,12 @@ class ScheduleCollectionTest extends TestCase
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
-            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00),
         ]);
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
-            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00),
         ]);
 
         $this->assertCount(1, Schedule::latestAcademicWeek()->get()->distinct());
@@ -46,7 +46,7 @@ class ScheduleCollectionTest extends TestCase
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 01, 01, 12, 00, 00),
-            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00)
+            'ending_date' => Carbon::create(2020, 01, 01, 13, 00, 00),
         ]);
 
         $this->assertCount(1, Schedule::latestAcademicWeek()->get()->today());
@@ -58,12 +58,12 @@ class ScheduleCollectionTest extends TestCase
 
         $schedule1 = Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 10, 00, 00),
-            'ending_date' => Carbon::create(2020, 1, 8, 11, 00, 00)
+            'ending_date' => Carbon::create(2020, 1, 8, 11, 00, 00),
         ]);
 
         $schedule2 = Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 12, 00, 00),
-            'ending_date' => Carbon::create(2020, 1, 8, 13, 00, 00)
+            'ending_date' => Carbon::create(2020, 1, 8, 13, 00, 00),
         ]);
 
         $this->assertEquals($schedule2->id, Schedule::latestAcademicWeek()->get()->upcoming()->first()->id);
@@ -87,7 +87,7 @@ class ScheduleCollectionTest extends TestCase
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 10, 00, 00),
-            'ending_date'   => Carbon::create(2020, 1, 8, 11, 00, 00)
+            'ending_date'   => Carbon::create(2020, 1, 8, 11, 00, 00),
         ]);
 
         $this->assertCount(1, Schedule::all()->upcoming());
@@ -99,15 +99,15 @@ class ScheduleCollectionTest extends TestCase
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 11, 00, 00),
-            'ending_date'   => Carbon::create(2020, 1, 8, 12, 00, 00)
+            'ending_date'   => Carbon::create(2020, 1, 8, 12, 00, 00),
         ]);
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 14, 00, 00),
-            'ending_date'   => Carbon::create(2020, 1, 8, 16, 00, 00)
+            'ending_date'   => Carbon::create(2020, 1, 8, 16, 00, 00),
         ]);
 
-       $this->assertCount(1, Schedule::all()->upcoming()->distinct());
+        $this->assertCount(1, Schedule::all()->upcoming()->distinct());
     }
 
     public function test_upcoming_today_retrieves_the_next_class_on_this_day()
@@ -116,12 +116,12 @@ class ScheduleCollectionTest extends TestCase
 
         Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 11, 00, 00),
-            'ending_date'   => Carbon::create(2020, 1, 8, 12, 00, 00)
+            'ending_date'   => Carbon::create(2020, 1, 8, 12, 00, 00),
         ]);
 
         $expected = Schedule::factory()->create([
             'starting_date' => Carbon::create(2020, 1, 8, 14, 00, 00),
-            'ending_date'   => Carbon::create(2020, 1, 8, 16, 00, 00)
+            'ending_date'   => Carbon::create(2020, 1, 8, 16, 00, 00),
         ]);
 
         $this->assertCount(1, Schedule::all()->upcoming()->today());

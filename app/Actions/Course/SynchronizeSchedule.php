@@ -42,7 +42,7 @@ class SynchronizeSchedule
              * Get the academic week of the incoming request timetable.
              */
             $academic_week = Str::of($timetable['meta']['week'])->match('/(?<=Weeks selected for output: )(.*)(?= \(\d)/');
-            $academic_year = Str::of($timetable['meta']['week'])->match("/20[0-9][0-9]/");
+            $academic_year = Str::of($timetable['meta']['week'])->match('/20[0-9][0-9]/');
 
             /**
              * Delete the schedules for this week, we can recreate the indexing of the schedules.
@@ -54,14 +54,13 @@ class SynchronizeSchedule
              * Lastly we should storage store the schedules belongs to the
              * course in selected by the loop.
              */
-            $timetable->get('schedules')->each(function ($schedule) use ($timetable, $course, $academic_week, $academic_year)
-            {
+            $timetable->get('schedules')->each(function ($schedule) use ($timetable, $course, $academic_week, $academic_year) {
                 $async = new AsynchronousModelService();
                 $async->create(Module::class, ['name' => $schedule['module']]);
-                $async->create(Room::class,   ['door' => $schedule['room']]);
-                $async->create(Type::class,   ['abbreviation' => $schedule['type']]);
+                $async->create(Room::class, ['door' => $schedule['room']]);
+                $async->create(Type::class, ['abbreviation' => $schedule['type']]);
 
-                Str::of($schedule['lecturer'])->explode(', ')->each(function($name) use ($async) {
+                Str::of($schedule['lecturer'])->explode(', ')->each(function ($name) use ($async) {
                     $async->create(Lecturer::class, ['fullname' => $name]);
                 });
 
@@ -73,14 +72,12 @@ class SynchronizeSchedule
                 $model = $course->schedules()->firstOrCreate([
                     'academic_week' => $academic_week,
                     'academic_year' => $academic_year,
-                    'starting_date' =>
-                        TransformDateToCarbon::run(
+                    'starting_date' => TransformDateToCarbon::run(
                             $timetable['meta']['week'],
                             $schedule['day_of_week'],
                             $schedule['starting_time']
                         )->toDateTimeString(),
-                    'ending_date' =>
-                        TransformDateToCarbon::run(
+                    'ending_date' => TransformDateToCarbon::run(
                             $timetable['meta']['week'],
                             $schedule['day_of_week'],
                             $schedule['ending_time']
@@ -95,7 +92,7 @@ class SynchronizeSchedule
                  * and re-sync the collected from the new dataset.
                  */
                 $model->lecturers()->sync(
-                    Lecturer::whereIn('fullname', explode(", ", $schedule['lecturer'])
+                    Lecturer::whereIn('fullname', explode(', ', $schedule['lecturer'])
                 )->pluck('id'));
             });
 
@@ -118,9 +115,7 @@ class SynchronizeSchedule
             CompareSchedules::dispatchIf($oldSchedules->count() && $newSchedules->count(),
                 $course, $oldSchedules, $newSchedules
             );
-        }
-        catch (Exception $exception)
-        {
+        } catch (Exception $exception) {
             if (app()->runningInConsole() == false) {
                 throw $exception;
             }

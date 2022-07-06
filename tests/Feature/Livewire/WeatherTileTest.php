@@ -17,14 +17,14 @@ class WeatherTileTest extends TestCase
         Http::fake([
             '*' => Http::response([
                 'main' => [
-                    'temp' => 12
+                    'temp' => 12,
                 ],
                 'weather' => [
                     [
                         'icon' => '04d',
                         'description' => 'Broken clouds',
-                    ]
-                ]
+                    ],
+                ],
             ], 200, ['Headers']),
         ]);
 
@@ -43,20 +43,19 @@ class WeatherTileTest extends TestCase
         Livewire::test('weather-tile')
             ->set('campus', Campus::factory()->create())
             ->set('readyToLoad', true)
-            ->assertSeeHtml("No weather <br> information available");
+            ->assertSeeHtml('No weather <br> information available');
     }
 
     public function test_weather_no_campus_defined()
     {
         Livewire::test('weather-tile')
-            ->assertSeeHtml("Unknown Campus");
+            ->assertSeeHtml('Unknown Campus');
     }
 
     public function test_weather_loading_state()
     {
         Livewire::test('weather-tile')
             ->set('campus', Campus::factory()->create())
-            ->assertSeeHtml("Loading weather...");
+            ->assertSeeHtml('Loading weather...');
     }
-
 }

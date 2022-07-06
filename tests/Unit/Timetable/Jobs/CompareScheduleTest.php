@@ -2,12 +2,12 @@
 
 namespace Tests\Unit\Timetable\Jobs;
 
-use App\Models\Course;
+use App\Actions\Course\CompareSchedules;
 use App\Events\ScheduleChanged;
+use App\Models\Course;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
-use App\Actions\Course\CompareSchedules;
 
 class CompareScheduleTest extends TestCase
 {
@@ -19,8 +19,8 @@ class CompareScheduleTest extends TestCase
 
         CompareSchedules::run(
             Course::factory()->create(),
-            collect(array()),
-            collect(array()),
+            collect([]),
+            collect([]),
         );
 
         Event::assertNotDispatched(ScheduleChanged::class);
@@ -32,8 +32,8 @@ class CompareScheduleTest extends TestCase
 
         CompareSchedules::run(
             Course::factory()->create(),
-            collect(array($this->schedule())),
-            collect(array()),
+            collect([$this->schedule()]),
+            collect([]),
         );
 
         Event::assertDispatched(ScheduleChanged::class);
@@ -46,8 +46,8 @@ class CompareScheduleTest extends TestCase
 
         CompareSchedules::run(
             Course::find(1),
-            collect(array($this->schedule())),
-            collect(array($this->schedule())),
+            collect([$this->schedule()]),
+            collect([$this->schedule()]),
         );
 
         Event::assertNotDispatched(ScheduleChanged::class);
@@ -60,8 +60,8 @@ class CompareScheduleTest extends TestCase
 
         CompareSchedules::run(
             Course::find(1),
-            collect(array($this->schedule(['module' => 'Before']))),
-            collect(array($this->schedule(['module' => 'After'])))
+            collect([$this->schedule(['module' => 'Before'])]),
+            collect([$this->schedule(['module' => 'After'])])
         );
 
         Event::assertDispatched(ScheduleChanged::class);
@@ -70,13 +70,13 @@ class CompareScheduleTest extends TestCase
     private function schedule(array $attributes = [])
     {
         return array_merge([
-            "module" => "Software Development",
-            "room" => "4A02",
-            "lecturer" => "Judith Ryan",
-            "type" => "Online Tutorial",
-            "day_of_week" => "Fri",
-            "starting_time" => "16:00",
-            "ending_time" => "17:00",
+            'module' => 'Software Development',
+            'room' => '4A02',
+            'lecturer' => 'Judith Ryan',
+            'type' => 'Online Tutorial',
+            'day_of_week' => 'Fri',
+            'starting_time' => '16:00',
+            'ending_time' => '17:00',
         ], $attributes);
     }
 }

@@ -17,7 +17,9 @@ class ScheduleChanged
      *
      * @return void
      */
-    public function __construct(public Course $course){}
+    public function __construct(public Course $course)
+    {
+    }
 
     /**
      * Get the channels the event should broadcsast on.

@@ -47,9 +47,9 @@ class Schedule extends Model
         'type_id',
     ];
 
-    protected $dates = [
-        'starting_date',
-        'ending_date',
+    protected $casts = [
+        'starting_date' => 'datetime',
+        'ending_date' => 'datetime',
     ];
 
     public function scopeCurrent(Builder $query): Builder
@@ -71,10 +71,12 @@ class Schedule extends Model
     {
         return $query->latestAcademicYear()->where('academic_week', $this->latestAvailableWeek);
     }
+
     public function scopeLatestAcademicYear(Builder $query): Builder
     {
         return $query->where('academic_year', $this->latestAvailableYear);
     }
+
     public function scopePreviousWeek(Builder $query, int $week = 1): Builder
     {
         return $query->whereDate('starting_date', '=', now()->subWeeks($week));

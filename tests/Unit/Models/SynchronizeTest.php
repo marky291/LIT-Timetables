@@ -16,7 +16,7 @@ class SynchronizeTest extends TestCase
         $date = Carbon::create(2021, 01, 01, 00, 00, 00);
 
         Synchronization::factory()->create([
-            'created_at' => $date
+            'created_at' => $date,
         ]);
 
         $this->assertInstanceOf(Carbon::class, Synchronization::lastRun());
@@ -30,10 +30,10 @@ class SynchronizeTest extends TestCase
         $lastRun = Carbon::create(2021, 01, 01, 00, 00, 00);
 
         Synchronization::factory()->create([
-            'created_at' => $lastRun
+            'created_at' => $lastRun,
         ]);
 
-        $this->assertEquals("2 hours ago", Synchronization::lastRun()->diffForHumans());
+        $this->assertEquals('2 hours ago', Synchronization::lastRun()->diffForHumans());
     }
 
     public function test_can_retrieve_day_difference()
@@ -43,10 +43,9 @@ class SynchronizeTest extends TestCase
         $lastRun = Carbon::create(2021, 01, 01, 00, 00, 00);
 
         Synchronization::factory()->create([
-            'created_at' => $lastRun
+            'created_at' => $lastRun,
         ]);
 
         $this->assertEquals(11, Synchronization::lastRun()->diff(now())->days);
     }
 }
-
