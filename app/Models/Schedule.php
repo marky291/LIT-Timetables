@@ -46,10 +46,9 @@ class Schedule extends Model
         'room_id',
         'type_id',
     ];
-
-    protected $dates = [
-        'starting_date',
-        'ending_date',
+    protected $casts = [
+        'starting_date' => 'datetime',
+        'ending_date' => 'datetime',
     ];
 
     public function scopeCurrent(Builder $query): Builder
